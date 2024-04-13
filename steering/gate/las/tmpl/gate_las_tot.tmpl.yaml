@@ -9,7 +9,8 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_las_pid_tot; abs( fmod(tref_las.fTiming - @RF@.fTiming + 710., 71.)  - ( @T_LAS_MIN@ + @T_LAS_MAX@ )/2. ) < abs( @T_LAS_MAX@ -@T_LAS_MIN@)/2. && pla_las_3.fCharge> @Q_LAS_MIN@ && pla_las_3.fCharge < @Q_LAS_MAX@"
+        - "las_pid_tot; abs(Sum$(vdc_las_dt.fCharge)/vdc_las_dt@.GetEntriesFast()-(@CORRECTION@)-(@QMIN@+@QMAX@)/2.0)<(@QMAX@-@QMIN@)/2.0"
+
 
 
   - name: stop_proc

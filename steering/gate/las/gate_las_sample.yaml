@@ -9,3 +9,10 @@ Processor:
         RF: rf3
 
   - include: tmpl/gate_las_pveto.tmpl.yaml
+
+  - include:
+      name: tmpl/gate_las_tot.tmpl.yaml
+      replace:
+        QMIN: 0
+        QMAX: 500
+        CORRECTION: -0.0431106*vdc_las.fX+1.05247e-05*pow(vdc_las.fX,2.0)
