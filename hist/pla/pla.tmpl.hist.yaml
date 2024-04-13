@@ -1,0 +1,65 @@
+anchor:
+ - &tbin  12000
+ - &tmin  @TMIN@
+ - &tmax  @TMAX@
+ - &tdiffmin  @TDIFFMIN@
+ - &tdiffmax  @TDIFFMAX@
+ - &qbin  500
+ - &qmin  0
+ - &qmax  @QMAX@
+
+group:
+ - name: plastic_@GRLAS@_@NUM@ 
+   title: Platic @GRLAS@ @NUM@ 
+   contents:
+
+     - name: q_@GRLAS@_@NUM@l
+       title: Plastic @GRLAS@ @NUM@ Left Charge
+       x: ["pla_@GRLAS@_@NUM@l.fCharge", *qbin, *qmin, *qmax]
+     - name: q_@GRLAS@_@NUM@r
+       title: Plastic @GRLAS@ @NUM@ Right Charge
+       x: ["pla_@GRLAS@_@NUM@r.fCharge", *qbin, *qmin, *qmax]
+     - name: q_@GRLAS@_@NUM@_ave
+       title: Plastic @GRLAS@  @NUM@ Average Charge
+       x: ["pla_@GRLAS@_@NUM@.GetQAve()", *qbin, *qmin, *qmax]
+     - name: q_@GRLAS@_@NUM@_lr
+       title: Plastic @GRLAS@ @NUM@ LR Charge 
+       x: ["pla_@GRLAS@_@NUM@l.fCharge", *qbin, *qmin, *qmax]
+       y: ["pla_@GRLAS@_@NUM@r.fCharge", *qbin, *qmin, *qmax]
+     - name: qlx_@GRLAS@_@NUM@
+       title: Plastic @GRLAS@ @NUM@ Left Charge vs Timing Differnce
+       x: ["pla_@GRLAS@_@NUM@.GetTDiff()", *tbin, *tdiffmin, *tdiffmax]     
+       y: ["pla_@GRLAS@_@NUM@l.fCharge", *qbin, *qmin, *qmax]
+     - name: qrx_@GRLAS@_@NUM@
+       title: Plastic @GRLAS@ @NUM@ Right Charge vs Timing Differnce
+       x: ["pla_@GRLAS@_@NUM@.GetTDiff()", *tbin, *tdiffmin, *tdiffmax]     
+       y: ["pla_@GRLAS@_@NUM@r.fCharge", *qbin, *qmin, *qmax]
+     - name: qx_@GRLAS@_@NUM@
+       title: Plastic @GRLAS@ @NUM@ Charge vs Timing Differnce
+       x: ["pla_@GRLAS@_@NUM@.GetTDiff()", *tbin, *tdiffmin, *tdiffmax]     
+       y: ["pla_@GRLAS@_@NUM@.fCharge", *qbin, *qmin, *qmax]       
+
+     - name: qlgrx_@GRLAS@_@NUM@
+       title: Plastic @GRLAS@ @NUM@ Left Charge vs X
+       x: ["vdc_@GRLAS@.fX", 500, -600, 600]     
+       y: ["pla_@GRLAS@_@NUM@l.fCharge", *qbin, *qmin, *qmax]
+     - name: qrgrx_@GRLAS@_@NUM@
+       title: Plastic @GRLAS@ @NUM@ Right Charge vs X
+       x: ["vdc_@GRLAS@.fX", 500, -600, 600]     
+       y: ["pla_@GRLAS@_@NUM@r.fCharge", *qbin, *qmin, *qmax]
+     - name: qgrx_@GRLAS@_@NUM@
+       title: Plastic @GRLAS@ @NUM@ Charge vs X
+       x: ["vdc_@GRLAS@.fX", 500, -600, 600]     
+       y: ["pla_@GRLAS@_@NUM@.fCharge", *qbin, *qmin, *qmax]       
+       
+     - name: t_@GRLAS@_@NUM@l
+       title: Plastic @GRLAS@ @NUM@ Left Timing
+       x: ["pla_@GRLAS@_@NUM@l.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]
+     - name: t_@GRLAS@_@NUM@r
+       title: Plastic @GRLAS@ @NUM@ Right Timing
+       x: ["pla_@GRLAS@_@NUM@r.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]
+     - name: t_@GRLAS@_@NUM@lr
+       title: Plastic @GRLAS@ @NUM@ LR Timing
+       x: ["pla_@GRLAS@_@NUM@l.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]
+       y: ["pla_@GRLAS@_@NUM@r.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]       
+

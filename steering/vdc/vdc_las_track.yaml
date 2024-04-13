@@ -1,0 +1,172 @@
+
+# file : vdc_las.yaml 
+# date : 2023.06.20 by Y.HIJIKATA
+# lastest update : 2023.06.20 by Y.HIJIKATA
+
+alias:
+  - &timegate [-1590,-1300]
+
+Processor:
+
+
+# cluster analysis
+  - name: proc_vdc_las_cluster_x1
+    type: art::TVDCClusterizationSizeSelectableProcessor
+    parameter:
+      InputCollection: vdc_las_x1
+      OutputCollection: vdc_las_clust_x1
+      ClustSize: 3
+      OutputTransparency: 0
+
+  - name: proc_vdc_las_cluster_x2
+    type: art::TVDCClusterizationSizeSelectableProcessor
+    parameter:
+      InputCollection: vdc_las_x2
+      OutputCollection: vdc_las_clust_x2
+      ClustSize: 3
+      OutputTransparency: 0
+
+  - name: proc_vdc_las_cluster_u1
+    type: art::TVDCClusterizationSizeSelectableProcessor
+    parameter:
+      InputCollection: vdc_las_u1
+      OutputCollection: vdc_las_clust_u1
+      ClustSize: 3
+      OutputTransparency: 0
+
+  - name: proc_vdc_las_cluster_u2
+    type: art::TVDCClusterizationSizeSelectableProcessor
+    parameter:
+      InputCollection: vdc_las_u2
+      OutputCollection: vdc_las_clust_u2
+      ClustSize: 3
+      OutputTransparency: 0
+      
+  - name: proc_vdc_las_cluster_v1
+    type: art::TVDCClusterizationSizeSelectableProcessor
+    parameter:
+      InputCollection: vdc_las_v1
+      OutputCollection: vdc_las_clust_v1
+      ClustSize: 3
+      OutputTransparency: 0
+      
+  - name: proc_vdc_las_cluster_v2
+    type: art::TVDCClusterizationSizeSelectableProcessor
+    parameter:
+      InputCollection: vdc_las_v2
+      OutputCollection: vdc_las_clust_v2
+      ClustSize: 3
+      OutputTransparency: 0
+
+# tracking
+
+  - name: proc_tracking_las_xu
+    type: art::TVDCTrackingProcessor
+    parameter:
+      TiltedAngleY: 0
+      InputCollection:
+        - vdc_las_clust_x1
+        - vdc_las_clust_u1
+        - vdc_las_clust_x2
+        - vdc_las_clust_u2
+      OutputCollection: vdc_las_xu
+      OutputTransparency: 0
+
+  - name: proc_tracking_las_xv
+    type: art::TVDCTrackingProcessor
+    parameter:
+      TiltedAngleY: 0
+      InputCollection:
+        - vdc_las_clust_x1
+        - vdc_las_clust_v1
+        - vdc_las_clust_x2
+        - vdc_las_clust_v2
+      OutputCollection: vdc_las_xv
+      OutputTransparency: 0
+
+  - name: proc_tracking_las_uv
+    type: art::TVDCTrackingProcessor
+    parameter:
+      TiltedAngleY: 0
+      InputCollection:
+        - vdc_las_clust_u1
+        - vdc_las_clust_v1
+        - vdc_las_clust_u2
+        - vdc_las_clust_v2
+      OutputCollection: vdc_las_uv
+      OutputTransparency: 0
+
+#merge tracking	  
+  - name: proc_tracking_merge_las
+    type: art::TVDCTrackingMergeProcessor
+    parameter:
+      InputCollection:
+        - vdc_las_xu
+        - vdc_las_xv
+        - vdc_las_uv
+      OutputCollection: vdc_las
+      OutputTransparency: 0
+
+#plane conversion
+  - name: proc_geometry_converter_las
+    type: art::TVDCGeometryConverter
+    parameter:
+      OffsetX: 5.44
+      OffsetZ: -100.36
+      FPTiltedAngleY: 0
+      VDCTiltedAngleY: 3.81
+      InputCollection:
+        - vdc_las
+#        - vdc_las_uv
+      OutputCollection: ldc
+      OutputTransparency: 0
+
+#focal plane calibration
+  - name: proc_geometry_converter_fp_las
+    type: art::TVDCGeometryConverter
+    parameter:
+      OffsetX: 43.63
+      OffsetZ: 0.0
+      VDCTiltedAngleY: 0.0
+#      FPTiltedAngleY: -57
+      FPTiltedAngleY: -58.474
+      InputCollection:
+        - ldc
+      OutputCollection: lfp
+      OutputTransparency: 0
+
+
+
+# calibration processor
+
+  - name: proc_vdc_calib_x1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_x1
+      TimingGate: *timegate
+  - name: proc_vdc_calib_x2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_x2
+      TimingGate: *timegate
+  - name: proc_vdc_calib_u1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_u1
+      TimingGate: *timegate
+  - name: proc_vdc_calib_u2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_u2
+      TimingGate: *timegate
+  - name: proc_vdc_calib_v1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_v1
+      TimingGate: *timegate
+  - name: proc_vdc_calib_v2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_v2
+      TimingGate: *timegate
+     

@@ -1,0 +1,33 @@
+anchor:
+  - &idp ["vdc_@GL@_@PLANE@.fID", @NID@, 0, @NID@]
+  - &timing ["vdc_@GL@_@PLANE@.fTiming", 500, @TMIN@, @TMAX@]
+  - &charge ["vdc_@GL@_@PLANE@.fCharge", 500, 0, @QMAX@]
+
+group:
+  - name: vdc_@GL@_@PLANE@
+    title: VDC @GL@ @PLANE@
+    contents:
+      - name: vdc_@GL@_@PLANE@_id
+        title: VDC @GL@  @PLANE@ ID
+        x: *idp
+      - name: vdc_@GL@_@PLANE@_t
+        title: VDC @GL@  @PLANE@ Timing	
+        x: *timing
+      - name: vdc_@GL@_@PLANE@_q
+        title: VDC @GL@  @PLANE@ Charge		
+        x: *charge
+      - name: vdc_@GL@_@PLANE@_idt
+        title: VDC @GL@ @PLANE@ ID vs Timing
+        x: *idp
+        y: *timing
+      - name: vdc_@GL@_@PLANE@_idq
+        title: VDC @GL@ @PLANE@ ID vs Charge	
+        x: *idp
+        y: *charge
+      - name: vdc_@GL@_tq
+        title: VDC @GL@ @PLANE@ Timing vs Charge
+        x: *timing
+        y: *charge
+      
+       
+

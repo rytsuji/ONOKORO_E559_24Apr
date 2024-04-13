@@ -1,0 +1,34 @@
+# file : pla_gr_vme.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+Processor:
+  - include:
+#      name: pla_las.tmpl.yaml  
+      name: pla_las_multi.tmpl.yaml
+      replace:
+        CATID: 22
+        TVALMIN1L: 0
+        TVALMAX1L: 0	
+        TVALMIN1R: 0
+        TVALMAX1R: 0
+        TVALMIN2L: 0
+        TVALMAX2L: 0	
+        TVALMIN2R: 0
+        TVALMAX2R: 0		
+        TVALMIN3L: 260
+        TVALMAX3L: 350
+        TVALMIN3R: 280
+        TVALMAX3R: 360
+        TVALMIN4L: 280
+        TVALMAX4L: 360
+        TVALMIN4R: 310
+        TVALMAX4R: 370		
+        TVALMIN5L: 280
+        TVALMAX5L: 370
+        TVALMIN5R: 300
+        TVALMAX5R: 380
+        TVALMIN6L: 300
+        TVALMAX6L: 360
+        TVALMIN6R: 310
+        TVALMAX6R: 380

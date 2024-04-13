@@ -1,0 +1,34 @@
+Processor:
+  - name: proc_tref_prm_ch2ns
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_tref_ch2ns
+      Type:     art::TAffineConverter
+      FileName: prm/tref_ch2ns.dat
+
+  - name: proc_tref_map
+#    type: art::TTimingChargeMappingProcessor
+    type: art::TTimingChargeMultiHitMappingProcessor
+    parameter:
+      CatID:              100
+      ChargeType:         0
+      TimingTypeID:       0
+      OutputCollection:   tref_raw
+      OutputTransparency: 0
+
+  - name: proc_tref_calib
+    type: art::TTimingChargeCalibrationProcessor
+    parameter:
+      TimingConverterArray: prm_tref_ch2ns
+      InputCollection: tref_raw
+      OutputCollection: tref
+      
+  - name: proc_tref_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: tref
+      OutputCollections:
+        - tref_las
+        - tref_grfcet
+        - tref_grtrig
+      

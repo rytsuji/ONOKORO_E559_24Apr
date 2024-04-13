@@ -1,0 +1,28 @@
+anchor:
+  - &qbin  200
+  - &qmin  0
+  - &qmax  4000
+
+include:
+  - name: hist/pla/pla.tmpl.hist.yaml
+    replace: 
+      GRLAS: gr
+      NUM: 1
+      TMIN: -3000
+      TMAX:  3000
+      QMAX:  4000
+      TDIFFMIN: -20
+      TDIFFMAX:  30
+      TREF: grtrig
+
+  - name: hist/pla/pla.tmpl.hist.yaml
+    replace: 
+      GRLAS: gr
+      NUM: 2
+      TMIN: -3000
+      TMAX: 3000
+      QMAX:  4000
+      TDIFFMIN: -20
+      TDIFFMAX:  30
+      TREF: grtrig
+

@@ -1,0 +1,100 @@
+anchor:
+ - &qbin 1000
+ - &qmin 0
+ - &qmax 8000
+
+group:
+ - name: labr
+   title: LaBr3 hist
+   contents:
+     - name: q_labr_low1
+       title: LaBr 1 LOW GAIN
+       x: ["labr_low_1.fCharge", *qbin, *qmin, *qmax]      
+     - name: q_labr_low2
+       title: LaBr 2 LOW GAIN
+       x: ["labr_low_2.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_low3
+       title: LaBr 3 LOW GAIN
+       x: ["labr_low_3.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_low4
+       title: LaBr 4 LOW GAIN
+       x: ["labr_low_4.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_low5
+       title: LaBr 5 LOW GAIN
+       x: ["labr_low_5.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_low6
+       title: LaBr 6 LOW GAIN
+       x: ["labr_low_6.fCharge", *qbin, *qmin, *qmax]=
+     - name: q_labr_low7
+       title: LaBr 7 LOW GAIN
+       x: ["labr_low_7.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_low8
+       title: LaBr 8 LOW GAIN
+       x: ["labr_low_8.fCharge", *qbin, *qmin, *qmax]
+
+     - name: q_labr_high1
+       title: LaBr 1 HIGH GAIN
+       x: ["labr_high_1.fCharge", *qbin, *qmin, *qmax]      
+     - name: q_labr_high2
+       title: LaBr 2 HIGH GAIN
+       x: ["labr_high_2.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_high3
+       title: LaBr 3 HIGH GAIN
+       x: ["labr_high_3.fCharge", *qbin, *qmin, *qmax]\
+     - name: q_labr_high4
+       title: LaBr 4 HIGH GAIN
+       x: ["labr_high_4.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_high5
+       title: LaBr 5 HIGH GAIN
+       x: ["labr_high_5.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_high6
+       title: LaBr 6 HIGH GAIN
+       x: ["labr_high_6.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_high7
+       title: LaBr 7 HIGH GAIN
+       x: ["labr_high_7.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_high8
+       title: LaBr 8 HIGH GAIN
+       x: ["labr_high_8.fCharge", *qbin, *qmin, *qmax]
+
+       
+     - name: q_labr_correlation_1
+       title: LaBr 1 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_1.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_1.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_2
+       title: LaBr 2 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_2.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_2.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_3
+       title: LaBr 3 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_3.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_3.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_4
+       title: LaBr 4 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_4.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_4.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_5
+       title: LaBr 5 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_5.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_5.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_6
+       title: LaBr 6 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_6.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_6.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_7
+       title: LaBr 7 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_7.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_7.fCharge", *qbin, *qmin, *qmax]
+     - name: q_labr_correlation_8
+       title: LaBr 8 HIGH GAIN VS LOW GAIN
+       x: ["labr_low_8.fCharge", *qbin, *qmin, *qmax]
+       y: ["labr_high_8.fCharge", *qbin, *qmin, *qmax]
+
+
+
+
+
+
+
+     

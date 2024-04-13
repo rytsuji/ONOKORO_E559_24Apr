@@ -1,0 +1,130 @@
+group:
+ - name: pid 
+   title: PID of LAS and GR
+   contents:
+
+     - name: de_rf1_gr
+       title: deltaE-RF1 GR
+       x: ["fmod(tref_grtrig.fTiming-rf1.fTiming+710.,142.0)", 300, 0, 150]
+       y: ["pla_gr_vme_1.fCharge", 1000, 0, 4000]
+     - name: de_rf2_gr
+       title: deltaE-RF2 GR
+       x: ["fmod(tref_grtrig.fTiming-rf2.fTiming+710.,142.0)", 300, 0, 150]
+       y: ["pla_gr_vme_1.fCharge", 1000, 0, 4000]
+     - name: de_rf3_gr
+       title: deltaE-RF3 GR
+       x: ["fmod(tref_grtrig.fTiming-rf3.fTiming+710.,142.0)", 300, 0, 150]
+       y: ["pla_gr_vme_1.fCharge", 1000, 0, 4000]       
+     - name: tot_rf_gr
+       title: TOT-RF of VDC GR
+       x: ["fmod(tref_grtrig.fTiming-rf1.fTiming+710.,142.0)", 300, 0, 150]
+       y: ["(vdc_gr_clust_x1.fCharge+vdc_gr_clust_x2.fCharge+vdc_gr_clust_u1.fCharge+vdc_gr_clust_u2.fCharge)/4.0", 2500, 0, 10000]
+     - name: x_de_gr
+       title: X-deltaE GR
+       x: ["pla_gr_vme_1.GetTDiff()", 300, -10, 20]       
+       y: ["pla_gr_vme_1.fCharge",1000, 0, 4000]
+     - name: de_gr
+       title: deltaE GR
+       x: ["pla_gr_vme_1.fCharge", 1000, 0, 4000]
+     - name: de1_de2_gr
+       title: deltaE1-deltaE2 GR
+       x: ["pla_gr_vme_1.fCharge", 1000, 0, 4000]
+       y: ["pla_gr_vme_2.fCharge", 1000, 0, 4000]       
+       
+
+     - name: de_rf1_las
+       title: deltaE-RF1 LAS
+       x: ["fmod(tref_las.fTiming-rf1.fTiming+710.,142.)", 300, 0, 150]
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+     - name: de_rf2_las
+       title: deltaE-RF2 LAS
+       x: ["fmod(tref_las.fTiming-rf2.fTiming+710.,142.)", 300, 0, 150]
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+     - name: de_rf3_las
+       title: deltaE-RF3 LAS
+       x: ["fmod(tref_las.fTiming-rf3.fTiming+710.,142.)", 300, 0, 150]       
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+
+     - name: de_rf1_las_pveto
+       title: deltaE-RF1 LAS with 2nd layer pla veto
+       x: ["fmod(tref_las.fTiming-rf1.fTiming+710.,142.)", 300, 0, 150]
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+       cut: "@pla_las_vme_4.GetEntriesFast()==0 && @pla_las_vme_5.GetEntriesFast()==0 && @pla_las_vme_6.GetEntriesFast()==0"
+     - name: de_rf2_las_pveto
+       title: deltaE-RF2 LAS with 2nd layer pla veto
+       x: ["fmod(tref_las.fTiming-rf2.fTiming+710.,142.)", 300, 0, 150]
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+       cut: "@pla_las_vme_4.GetEntriesFast()==0 && @pla_las_vme_5.GetEntriesFast()==0 && @pla_las_vme_6.GetEntriesFast()==0"
+     - name: de_rf3_las_pveto
+       title: deltaE-RF3 LAS with 2nd layer pla veto
+       x: ["fmod(tref_las.fTiming-rf3.fTiming+710.,142.)", 300, 0, 150]       
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]       
+       cut: "@pla_las_vme_4.GetEntriesFast()==0 && @pla_las_vme_5.GetEntriesFast()==0 && @pla_las_vme_6.GetEntriesFast()==0"
+
+     - name: de2nd_rf1_las
+       title: 2nd deltaE-RF1 LAS
+       x: ["fmod(tref_las.fTiming-rf1.fTiming+710.,142.)", 300, 0, 150]
+       y: ["pla_las_vme_5.fCharge", 1000, 0, 4000]
+     - name: de2nd_rf2_las
+       title: 2nd deltaE-RF2 LAS
+       x: ["fmod(tref_las.fTiming-rf2.fTiming+710.,142.)", 300, 0, 150]
+       y: ["pla_las_vme_5.fCharge", 1000, 0, 4000]
+     - name: de2nd_rf3_las
+       title: 2nd deltaE-RF3 LAS
+       x: ["fmod(tref_las.fTiming-rf3.fTiming+710.,142.)", 300, 0, 150] 
+       y: ["pla_las_vme_5.fCharge", 1000, 0, 4000]
+       
+     - name: tot_rf1_las     
+       title: TOT-RF1 of LAS 
+       x: ["fmod(tref_las.fTiming-rf1.fTiming+710.0,142.0)", 300, 0, 150]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 4000, 0, 16000]
+     - name: tot_rf2_las     
+       title: TOT-RF2 of LAS 
+       x: ["fmod(tref_las.fTiming-rf2.fTiming+710.0,142.0)", 300, 0, 150]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 4000, 0, 16000]
+     - name: tot_rf3_las     
+       title: TOT-RF3 of LAS 
+       x: ["fmod(tref_las.fTiming-rf3.fTiming+710.0,142.0)", 300, 0, 150]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 4000, 0, 16000]
+       
+     - name: tot_rf1_las_pveto     
+       title: TOT-RF1 of LAS with 2nd layer pla veto
+       x: ["fmod(tref_las.fTiming-rf1.fTiming+710.0,142.0)", 300, 0, 150]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 4000, 0, 16000]
+       cut: "@pla_las_vme_4.GetEntriesFast()==0 && @pla_las_vme_5.GetEntriesFast()==0 && @pla_las_vme_6.GetEntriesFast()==0"
+     - name: tot_rf2_las_pvetp     
+       title: TOT-RF2 of LAS with 2nd layer pla veto
+       x: ["fmod(tref_las.fTiming-rf2.fTiming+710.0,142.0)", 300, 0, 150]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 4000, 0, 16000]
+       cut: "@pla_las_vme_4.GetEntriesFast()==0 && @pla_las_vme_5.GetEntriesFast()==0 && @pla_las_vme_6.GetEntriesFast()==0"       
+     - name: tot_rf3_las_pvetp     
+       title: TOT-RF3 of LAS with 2nd layer pla veto
+       x: ["fmod(tref_las.fTiming-rf3.fTiming+710.0,142.0)", 300, 0, 150]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 4000, 0, 16000]
+       cut: "@pla_las_vme_4.GetEntriesFast()==0 && @pla_las_vme_5.GetEntriesFast()==0 && @pla_las_vme_6.GetEntriesFast()==0"       
+       
+     - name: x_de_las
+       title: X-deltaE LAS
+       x: ["pla_las_vme_3.GetTDiff()", 240, -50, 10]       
+       y: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+       
+     - name: de_las
+       title: deltaE LAS
+       x: ["pla_las_vme_3.GetTDiff()", 240, -50, 10]              
+     - name: de1_de2_las
+       title: deltaE1-deltaE2 LAS
+       x: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+       y: ["pla_las_vme_5.fCharge", 1000, 0, 4000]
+     - name: tot_de1_las     
+       title: TOT-dE1 of LAS 
+       x: ["pla_las_vme_3.fCharge", 1000, 0, 4000]
+       y: ["(vdc_las_clust_x1.fCharge+vdc_las_clust_x2.fCharge+vdc_las_clust_u1.fCharge+vdc_las_clust_u2.fCharge)/4.0", 2500, 0, 10000]
+
+
+
+
+
+
+
+
+     

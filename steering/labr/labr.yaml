@@ -1,0 +1,21 @@
+# file : pla_gr_vme.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+Processor:
+  - include:
+      name: labr.tmpl.yaml
+      replace:
+        CATID: 30
+        GAIN: low
+
+  - include:
+      name: labr.tmpl.yaml
+      replace:
+        CATID: 31
+        GAIN: high
+      
+      
+
+
+      

@@ -1,0 +1,54 @@
+# file : pla_gr.tmpl.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+Processor:
+
+  - name: proc_labr_@GAIN@_prm_ch2ns
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     labr_@GAIN@_ch2ns
+      Type:     art::TAffineConverter
+      FileName: prm/labr/labr_@GAIN@_ch2ns.dat
+
+  - name: proc_labr_@GAIN@_prm_ch2MeV
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_labr_@GAIN@_ch2MeV
+      Type:     art::TAffineConverter
+      FileName: prm/labr/labr_@GAIN@_ch2MeV.dat
+
+  - name: proc_labr_@GAIN@_raw
+    type: art::TTimingChargeMappingProcessor
+    parameter:
+      CatID:              @CATID@
+      ChargeType:         1
+      ChargeTypeID:       1
+      TimingTypeID:       0
+      OutputCollection:   labr_@GAIN@_raw
+      OutputTransparency: 0
+
+  - name: proc_labr_@GAIN@_calib
+    type: art::TTimingChargeCalibrationProcessor
+    parameter:
+      InputCollection:      labr_@GAIN@_raw
+      TimingConverterArray: prm_labr_@GAIN@_ch2ns
+      ChargeConverterArray: prm_labr_@GAIN@_ch2MeV
+      OutputCollection:     labr_@GAIN@_cal
+      OutputTransparency:   0
+
+  - name: proc_labr_@GAIN@_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: labr_@GAIN@_cal
+      OutputCollections:
+        - labr_@GAIN@_1
+        - labr_@GAIN@_2
+        - labr_@GAIN@_3
+        - labr_@GAIN@_4
+        - labr_@GAIN@_5
+        - labr_@GAIN@_6
+        - labr_@GAIN@_7	
+        - labr_@GAIN@_8
+
+

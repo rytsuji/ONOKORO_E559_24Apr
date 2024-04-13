@@ -1,0 +1,121 @@
+# file : tref.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+Processor:
+# VDC GR V1190
+  - name: proc_tref_v1190_0
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 0, 127]
+      SegConfig: [ 0,  0, 24, 0]
+  - name: proc_tref_v1190_1
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 1, 127]
+      SegConfig: [ 0,  0, 24, 1]
+  - name: proc_tref_v1190_2
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 2, 127]
+      SegConfig: [ 0,  0, 24, 2]
+  - name: proc_tref_v1190_3
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 3, 127]
+      SegConfig: [ 0,  0, 24, 3]
+  - name: proc_tref_v1190_4
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 4, 127]
+      SegConfig: [ 0,  0, 24, 4]
+  - name: proc_tref_v1190_5
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 5, 127]
+      SegConfig: [ 0,  0, 24, 5]
+  - name: proc_tref_v1190_6
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 6, 127]
+      SegConfig: [ 0,  0, 24, 6]
+  - name: proc_tref_v1190_7
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 7, 127]
+      SegConfig: [ 0,  0, 24, 7]
+
+# VDC LAS V1190
+  - name: proc_tref_v1190_8
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 8, 0]
+      SegConfig: [ 0,  0, 24, 8]
+  - name: proc_tref_v1190_9
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 9, 127]
+      SegConfig: [ 0,  0, 24, 9]
+  - name: proc_tref_v1190_11
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 11, 127]
+      SegConfig: [ 0,  0, 24, 11]
+  - name: proc_tref_v1190_12
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 12, 0]
+      SegConfig: [ 0,  0, 24, 12]
+  - name: proc_tref_v1190_13
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 13, 127]
+      SegConfig: [ 0,  0, 24, 13]
+  - name: proc_tref_v1190_14
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 14, 0]
+      SegConfig: [ 0,  0, 24, 14]
+  - name: proc_tref_v1190_15
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 15, 127]
+      SegConfig: [ 0,  0, 24, 15]
+  - name: proc_tref_v1190_16
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 16, 0]
+      SegConfig: [ 0,  0, 24, 16]
+  - name: proc_tref_v1190_17
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 17, 127]
+      SegConfig: [ 0,  0, 24, 17]
+  - name: proc_tref_v1190_20
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 20, 0]
+      SegConfig: [ 0,  0, 24, 20]
+  - name: proc_tref_v1190_21
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 21, 127]
+      SegConfig: [ 0,  0, 24, 21]
+  - name: proc_tref_v1190_22
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 22, 0]
+      SegConfig: [ 0,  0, 24, 22]
+  - name: proc_tref_v1190_23
+    type: art::TTimeReferenceProcessor
+    parameter:
+      RefConfig: [ 0,  0, 24, 23, 127]
+      SegConfig: [ 0,  0, 24, 23]
+
+  - name: proc_tref_v1190_30
+    type: art::TTimeReferenceProcessor
+    parameter:
+#      RefConfig: [ 0,  0, 24, 30, 15] #
+      RefConfig: [ 0,  0, 24, 30, 14]
+      SegConfig: [ 0,  0, 24, 30]
+      

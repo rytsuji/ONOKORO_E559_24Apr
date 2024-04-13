@@ -1,0 +1,215 @@
+# file : pla_las.tmpl.yaml 
+# date : 2023.06.20 by Y.HIJIKATA
+# lastest update : 2023.06.20 by Y.HIJIKATA
+
+Processor:
+
+  - name: proc_pla_las_prm_ch2ns
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_pla_las_ch2ns
+      Type:     art::TAffineConverter
+      FileName: prm/pla/pla_las_ch2ns.dat
+
+  - name: proc_pla_las_prm_ch2MeV
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_pla_las_ch2MeV
+      Type:     art::TAffineConverter
+      FileName: prm/pla/pla_las_ch2MeV.dat
+
+  - name: proc_pla_las_raw
+    type: art::TTimingChargeMultiHitMappingProcessor
+    parameter:
+      CatID:              @CATID@
+      ChargeType:         1
+      ChargeTypeID:       1
+      TimingTypeID:       0
+      OutputCollection:   pla_las_raw
+      OutputTransparency: 0
+
+  - name: proc_pla_las_calib
+    type: art::TTimingChargeCalibrationProcessor
+    parameter:
+      InputCollection:      pla_las_raw
+      TimingConverterArray: prm_pla_las_ch2ns
+      ChargeConverterArray: prm_pla_las_ch2MeV
+      OutputCollection:     pla_las_cal
+      OutputTransparency:   0
+
+  - name: proc_pla_las_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: pla_las_cal
+      OutputCollections:
+        - pla_las_1l_cal
+        - pla_las_1r_cal
+        - pla_las_2l_cal
+        - pla_las_2r_cal	
+        - pla_las_3l_cal
+        - pla_las_3r_cal
+        - pla_las_4l_cal
+        - pla_las_4r_cal
+        - pla_las_5l_cal
+        - pla_las_5r_cal
+        - pla_las_6l_cal
+        - pla_las_6r_cal
+
+
+  - name: proc_pla_las_1l_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_1l_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_1l
+      ValidTimeRange:     [@TVALMIN1L@,@TVALMAX1L@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_1R_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_1r_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_1r
+      ValidTimeRange:     [@TVALMIN1R@,@TVALMAX1R@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_2l_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_2l_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_2l
+      ValidTimeRange:     [@TVALMIN2L@,@TVALMAX2L@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_2r_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_2r_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_2r
+      ValidTimeRange:     [@TVALMIN2R@,@TVALMAX2R@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_3l_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_3l_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_3l
+      ValidTimeRange:     [@TVALMIN3L@,@TVALMAX3L@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_3r_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_3r_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_3r
+      ValidTimeRange:     [@TVALMIN3R@,@TVALMAX3R@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_4l_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_4l_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_4l
+      ValidTimeRange:     [@TVALMIN4L@,@TVALMAX4L@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_4r_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_4r_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_4r
+      ValidTimeRange:     [@TVALMIN4R@,@TVALMAX4R@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_5l_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_5l_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_5l
+      ValidTimeRange:     [@TVALMIN5L@,@TVALMAX5L@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_5r_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_5r_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_5r
+      ValidTimeRange:     [@TVALMIN5R@,@TVALMAX5R@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_6l_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_6l_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_6l
+      ValidTimeRange:     [@TVALMIN6L@,@TVALMAX6L@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_6r_validator
+    type: art::TTimingTrefValidator
+    parameter:
+      InputCollection1: pla_las_6r_cal
+      InputCollection2: tref_las
+      OutputCollection: pla_las_6r
+      ValidTimeRange:     [@TVALMIN6R@,@TVALMAX6R@,0]
+      OutputTransparency: 0
+
+  - name: proc_pla_las_1
+    type: art::TTwoSidedPlasticCalibrationProcessor
+    parameter:
+      InputCollection1:   pla_las_1l
+      InputCollection2:   pla_las_1r
+      OutputCollection:   pla_las_1
+      OutputTransparency: 0
+
+  - name: proc_pla_las_2
+    type: art::TTwoSidedPlasticCalibrationProcessor
+    parameter:
+      InputCollection1:   pla_las_2l
+      InputCollection2:   pla_las_2r
+      OutputCollection:   pla_las_2
+      OutputTransparency: 0
+
+  - name: proc_pla_las_3
+    type: art::TTwoSidedPlasticCalibrationProcessor
+    parameter:
+      InputCollection1:   pla_las_3l
+      InputCollection2:   pla_las_3r
+      OutputCollection:   pla_las_3
+      OutputTransparency: 0
+
+  - name: proc_pla_las_4
+    type: art::TTwoSidedPlasticCalibrationProcessor
+    parameter:
+      InputCollection1:   pla_las_4l
+      InputCollection2:   pla_las_4r
+      OutputCollection:   pla_las_4
+      OutputTransparency: 0
+
+  - name: proc_pla_las_5
+    type: art::TTwoSidedPlasticCalibrationProcessor
+    parameter:
+      InputCollection1:   pla_las_5l
+      InputCollection2:   pla_las_5r
+      OutputCollection:   pla_las_5
+      OutputTransparency: 0
+
+  - name: proc_pla_las_6
+    type: art::TTwoSidedPlasticCalibrationProcessor
+    parameter:
+      InputCollection1:   pla_las_6l
+      InputCollection2:   pla_las_6r
+      OutputCollection:   pla_las_6
+      OutputTransparency: 0
+
+      

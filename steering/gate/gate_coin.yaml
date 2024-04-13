@@ -1,0 +1,16 @@
+Processor:
+  - name: gate_array_init
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: trigger_gates
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_coin; trig_coin.fID==0"
+
+  - name: stop_proc
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_coin"

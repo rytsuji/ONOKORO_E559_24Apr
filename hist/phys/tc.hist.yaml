@@ -1,0 +1,15 @@
+group:
+ - name: tc
+   title: True coin
+   contents:
+
+     - name: tc
+       title: True coin (LAS-GR)
+       x: ["tref_las.fTiming-tref_grtrig.fTiming", 1500, 0, 1500]
+       cut: "trig_coin.fID==0"
+
+
+
+
+
+     

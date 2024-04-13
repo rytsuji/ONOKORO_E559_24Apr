@@ -1,0 +1,84 @@
+anchor:
+  - &tmin  -1650
+  - &tmax  -1250
+  - &qmin  0    
+  - &qmax  500  
+  - &nid   400
+  
+include:
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: las
+      PLANE: x1
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: las
+      PLANE: x2
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: las
+      PLANE: u1
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: las
+      PLANE: u2
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: las
+      PLANE: v1
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: las
+      PLANE: v2
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+group:
+  - name: vdc_las_id_corr
+    title: VDC LAS ID correlation
+    contents:
+      - name: vdc_las_id_x1x2
+        title: VDC LAS ID x1 vs x2
+        x: ["vdc_las_x1.fID",192,0,192]
+        y: ["vdc_las_x2.fID",192,0,192]
+      - name: vdc_las_id_u1u2
+        title: VDC LAS ID u1 vs u2
+        x: ["vdc_las_u1.fID",192,0,192]
+        y: ["vdc_las_u2.fID",192,0,192]
+      - name: vdc_las_id_v1v2
+        title: VDC LAS ID v1 vs v2
+        x: ["vdc_las_v1.fID",192,0,192]
+        y: ["vdc_las_v2.fID",192,0,192]	

@@ -1,0 +1,10 @@
+Processor:
+  - include:
+      name: tmpl/gate_gr.tmpl.yaml
+      replace:
+        Q_GR_MIN: 300
+        Q_GR_MAX: 2200
+        T_GR_MIN: 5
+        T_GR_MAX: 30
+        PLANUM: 1 	
+        RF: rf1

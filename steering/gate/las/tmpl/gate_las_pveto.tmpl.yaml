@@ -1,0 +1,17 @@
+Processor:
+
+  - name: gate_array_init
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: las_2ndpla_veto
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_2ndpla_veto; @pla_las_4.GetEntriesFast()==0 && @pla_las_5.GetEntriesFast()==0 && @pla_las_6.GetEntriesFast()==0"
+
+  - name: stop_proc
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_2ndpla_veto"

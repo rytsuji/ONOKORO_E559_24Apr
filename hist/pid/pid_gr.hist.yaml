@@ -1,0 +1,93 @@
+anchor:
+# - &rf1 ["tref_grtrig.fTiming-rf1.fTiming", 250, -200, -50]
+# - &rf2 ["tref_grtrig.fTiming-rf2.fTiming", 250, -200, -50]
+# - &rf3 ["tref_grtrig.fTiming-rf3.fTiming", 250, -200, -50]
+
+ - &rf1 ["fmod(tref_grtrig.fTiming-rf1.fTiming+710.0,142.0)", 300, 0, 142]
+ - &rf2 ["fmod(tref_grtrig.fTiming-rf2.fTiming+710.0,142.0)", 300, 0, 142]
+ - &rf3 ["fmod(tref_grtrig.fTiming-rf3.fTiming+710.0,142.0)", 300, 0, 142]
+
+
+ - &tot ["Sum$(vdc_gr_dt.fCharge)/(@vdc_gr_dt.GetEntriesFast())",500,0,500]
+ - &de1 ["pla_gr_1.fCharge", 1000, 0, 4000]  
+ - &de2 ["pla_gr_2.fCharge", 1000, 0, 4000]  
+ - &xpos ["vdc_gr.fX",600,-600,600]
+ - &tdiff1 ["pla_gr_1.GetTDiff()",200,-20,30]
+ - &tdiff2 ["pla_gr_2.GetTDiff()",200,-20,30]  
+
+
+group:
+ - name: pid_gr
+   title: PID of GR
+   contents:
+
+     - name: de1_rf1_gr
+       title: deltaE1-RF1 GR
+       x: *rf1
+       y: *de1
+     - name: de1_rf2_gr
+       title: deltaE1-RF1 GR
+       x: *rf2
+       y: *de1
+     - name: de1_rf3_gr
+       title: deltaE1-RF3 GR
+       x: *rf3
+       y: *de1
+
+     - name: de2_rf1_gr
+       title: deltaE2-RF1 GR
+       x: *rf1
+       y: *de2
+     - name: de2_rf2_gr
+       title: deltaE2-RF1 GR
+       x: *rf2
+       y: *de2
+     - name: de2_rf3_gr
+       title: deltaE2-RF3 GR
+       x: *rf3
+       y: *de2
+
+     - name: tot_rf1_gr
+       title: TOT-RF1 GR
+       x: *rf1
+       y: *tot
+     - name: tot_rf2_gr
+       title: TOT-RF2 GR
+       x: *rf2
+       y: *tot
+     - name: tot_rf3_gr
+       title: TOT-RF3 GR
+       x: *rf3
+       y: *tot       
+
+     - name: x_de1_gr
+       title: x-dE1 GR
+       x: *xpos
+       y: *de1
+     - name: x_de2_gr
+       title: x-dE2 GR
+       x: *xpos
+       y: *de2
+     - name: x_tot_gr
+       title: x-TOT GR
+       x: *xpos
+       y: *tot     
+
+
+     - name: tdiff_de1_gr
+       title: TDiff-dE1 GR
+       x: *tdiff1
+       y: *de1
+     - name: tdiff_de2_gr
+       title: TDiff-dE2 GR
+       x: *tdiff2
+       y: *de2
+
+
+     - name: de1_de2_gr
+       title: deltaE1-deltaE2 GR
+       x: ["pla_gr_1.fCharge", 1000, 0, 4000]
+       y: ["pla_gr_2.fCharge", 1000, 0, 4000]       
+
+
+     

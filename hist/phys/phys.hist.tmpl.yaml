@@ -1,0 +1,89 @@
+anchor:
+ - &tc "abs(tref_las.fTiming-tref_grtrig.fTiming-(@TC_MIN@+@TC_MAX@)/2.0)<abs(@TC_MAX@-@TC_MIN@)/2.0"
+ - &ac "abs(tref_las.fTiming-tref_grtrig.fTiming-(@TC_MIN@+@TC_MAX@)/2.0)>abs(@TC_MAX@-@TC_MIN@)/2.0 && abs(tref_las.fTiming-tref_grtrig.fTiming-(@TMIN@+@TMAX@)/2.0)<abs(@TMAX@-@TMIN@)/2.0"
+ 
+ - &sx ["@EB@+@MP@+@MX@-sqrt(pow(@MP@, 2.0)+pow(0.3*3.0*@BGR@*(1+gtgt.fDelta),2.0))-sqrt(pow(@MX@,2.0)+pow(0.3*1.75*@BLAS@*@ZLAS@*(1+ltgt.fDelta), 2.0) )", @SXBIN@, 0, 50]
+ - &egr ["sqrt(pow(@MP@,2.0)+pow(0.3*3.0*@BGR@*(1+gtgt.fDelta),2.0))-@MP@",150,250,400]
+ - &xgr ["gfp.fX", 200, -600, 600]
+ - &xlas ["lfp.fX", 200, -800, 800]
+ - &agr ["gfp.fA*1000", 100, -250, 100]
+ - &alas ["lfp.fA*1000", 100, -300, 300]
+ - &ygr ["gfp.fY", 100, -60, 60]
+ - &ylas ["lfp.fY", 100, -200, 200] 
+
+
+group:
+ - name: phys
+   title: phys (p,pX)
+   contents:
+
+     - name: tc_check
+       title: True coin (LAS-GR) with true coincidence cut
+       x: ["tref_las.fTiming-tref_grtrig.fTiming", 1500, 0, 1500]
+       cut: *tc
+     - name: ac_check
+       title: True coin (LAS-GR) with accidental coincidence cut
+       x: ["tref_las.fTiming-tref_grtrig.fTiming", 1500, 0, 1500]
+       cut: *ac
+
+     - name: x_gr_las_tc
+       title: X correlation GR vs LAS with true coin
+       x: *xgr
+       y: *xlas
+       cut: *tc
+     - name: x_gr_las_ac
+       title: X correlation GR vs LAS with accidental coin
+       x: *xgr
+       y: *xlas
+       cut: *ac
+
+
+     - name: sx_tc
+       title: Sx with true coin
+       x: *sx
+       cut: *tc
+     - name: sx_ac
+       title: Sx with accidental coin
+       x: *sx
+       cut: *ac
+
+
+     - name: xa_gr_tc
+       title: X-A correlation of GR  with true coin
+       x: *xgr
+       y: *agr
+       cut: *tc
+     - name: ay_gr_tc
+       title: A-& correlation of GR  with true coin
+       x: *agr
+       y: *ygr
+       cut: *tc
+     - name: xa_las_tc
+       title: X-A correlation of  LAS with true coin
+       x: *xlas
+       y: *alas
+       cut: *tc
+
+     - name: ay_las_tc
+       title: A-& correlation of LAS  with true coin
+       x: *alas
+       y: *ylas
+       cut: *tc
+
+     - name: sx_xgr
+       title: Sx vs GR X 
+       x: *xgr
+       y: *sx
+       cut: *tc
+     - name: sx_xlas
+       title: Sx vs LAS X 
+       x: *xlas
+       y: *sx
+       cut: *tc       
+
+     - name: egr_xlas
+       title: E GR vs LAS X 
+       x: *egr
+       y: *xlas
+       cut: *tc       
+

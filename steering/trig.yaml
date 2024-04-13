@@ -1,0 +1,33 @@
+Processor:
+  - name: proc_trig_prm_ch2ns
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_trig_ch2ns
+      Type:     art::TAffineConverter
+      FileName: prm/trig_ch2ns.dat
+
+  - name: proc_trig_map
+    type: art::TTimingChargeMappingProcessor
+    parameter:
+      CatID:              101
+      ChargeType:         0
+      TimingTypeID:       0
+      OutputCollection:   trig_raw
+      OutputTransparency: 0
+
+  - name: proc_trig_calib
+    type: art::TTimingChargeCalibrationProcessor
+    parameter:
+      TimingConverterArray: prm_trig_ch2ns
+      InputCollection: trig_raw
+      OutputCollection: trig
+      
+  - name: proc_trig_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: trig
+      OutputCollections:
+        - trig_gr
+        - trig_las
+        - trig_coin
+      

@@ -1,0 +1,60 @@
+anchor:
+  - &tmin  -300
+  - &tmax  100
+  - &qmin  0    
+  - &qmax  500  
+  - &nid   300
+  
+include:
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: gr
+      PLANE: x1
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: gr
+      PLANE: x2
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+      
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: gr
+      PLANE: u1
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+  - name: hist/vdc/vdc_plane.tmpl.hist.yaml
+    replace:
+      GL: gr
+      PLANE: u2
+      TMIN:  *tmin
+      TMAX:  *tmax
+      QMIN:  *qmin      
+      QMAX:  *qmax
+      NID:   *nid
+
+group:
+  - name: vdc_gr_id_corr
+    title: VDC GR ID correlation
+    contents:
+      - name: vdc_gr_id_x1x2
+        title: VDC GR ID x1 vs x2
+        x: ["vdc_gr_x1.fID",192,0,192]
+        y: ["vdc_gr_x2.fID",192,0,192]
+      - name: vdc_gr_id_u1u2
+        title: VDC GR ID u1 vs u2
+        x: ["vdc_gr_u1.fID",192,0,192]
+        y: ["vdc_gr_u2.fID",192,0,192]		

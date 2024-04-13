@@ -1,0 +1,47 @@
+\1;5202;0c###################################
+#<Example>
+#
+#BLD_VXX:
+# segid: [[dev], [fp], [det]]
+# type: V7XX
+# modules:
+#   - id: [geo1]
+#   - id: [geo2]
+###################################
+
+PLA_V1190:
+  segid: [0, 0, 24]
+  type: V1190
+  modules:
+    - id: 30
+
+PLA_MADC:
+  segid: [0, 0, 32]
+  type: MADC
+  modules:
+    - id: 0
+    - id: 1
+    - id: 15    
+
+VDC_LAS_V1190:
+  segid: [0, 0, 24]
+  type: V1190
+  modules:
+    - id: 8 
+    - id: 9
+    - id: 10 
+    - id: 11 
+    - id: 12 
+    - id: 13 
+    - id: 14 
+    - id: 15 
+    - id: 16
+    - id: 17 
+    - id: 18
+    - id: 19 
+    - id: 20
+    - id: 21 
+    - id: 22
+    - id: 23
+    
+    

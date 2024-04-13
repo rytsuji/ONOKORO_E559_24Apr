@@ -1,0 +1,107 @@
+# file : vdc_gr.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+alias:
+  - &timegate [-210,50]
+
+Processor:
+
+
+# cluster analysis
+
+  - name: proc_vdc_gr_cluster_x1
+    #type: art::TVDCClusterizationSizeSelectableProcessor
+    type: art::TVDCClusterizationProcessor
+    parameter:
+      InputCollection: vdc_gr_x1
+      OutputCollection: vdc_gr_clust_x1
+      #ClustSize: 3
+      OutputTransparency: 0
+  - name: proc_vdc_gr_cluster_x2
+    #type: art::TVDCClusterizationSizeSelectableProcessor
+    type: art::TVDCClusterizationProcessor
+    parameter:
+      InputCollection: vdc_gr_x2
+      OutputCollection: vdc_gr_clust_x2
+      #ClustSize: 3
+      OutputTransparency: 0
+  - name: proc_vdc_gr_cluster_u1
+    #type: art::TVDCClusterizationSizeSelectableProcessor  
+    type: art::TVDCClusterizationProcessor
+    parameter:
+      InputCollection: vdc_gr_u1
+      OutputCollection: vdc_gr_clust_u1
+      #ClustSize: 3
+      OutputTransparency: 0
+  - name: proc_vdc_gr_cluster_u2
+    #type: art::TVDCClusterizationSizeSelectableProcessor
+    type: art::TVDCClusterizationProcessor
+    parameter:
+      InputCollection: vdc_gr_u2
+      OutputCollection: vdc_gr_clust_u2
+      #ClustSize: 3
+      OutputTransparency: 0
+
+# tracking
+  - name: proc_tracking_gr
+    type: art::TVDCTrackingProcessor
+    parameter:
+      TiltedAngleY: 0
+      InputCollection:
+        - vdc_gr_clust_x1
+        - vdc_gr_clust_u1
+        - vdc_gr_clust_x2
+        - vdc_gr_clust_u2
+      OutputCollection: vdc_gr
+      OutputTransparency: 0
+
+#plane conversion
+  - name: proc_geometry_converter
+    type: art::TVDCGeometryConverter
+    parameter:
+      OffsetX: -36.2988
+      OffsetZ: 0.0
+      FPTiltedAngleY: 0.0
+      VDCTiltedAngleY: 0.0
+      InputCollection:
+        - vdc_gr
+      OutputCollection: gdc
+      OutputTransparency: 0
+
+#focal plane calibration
+  - name: proc_geometry_converter_fp
+    type: art::TVDCGeometryConverter
+    parameter:
+      OffsetX: 0.0
+      OffsetZ: 0.0
+      FPTiltedAngleY: 45.0
+      VDCTiltedAngleY: 0.0
+      InputCollection:
+        - gdc
+      OutputCollection: gfp
+      OutputTransparency: 0
+
+      
+# calibration processor
+
+  - name: proc_vdc_calib_x1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_gr_x1
+      TimingGate: *timegate
+  - name: proc_vdc_calib_x2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_gr_x2
+      TimingGate: *timegate
+  - name: proc_vdc_calib_u1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_gr_u1
+      TimingGate: *timegate
+  - name: proc_vdc_calib_u2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_gr_u2
+      TimingGate: *timegate

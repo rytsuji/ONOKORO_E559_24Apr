@@ -1,0 +1,63 @@
+anchor:
+ - &xbin 200
+ - &xmin -1000
+ - &xmax 1000
+ - &ybin 200
+ - &ymin -200
+ - &ymax 200
+ - &abin 300
+ - &amin -300
+ - &amax 200
+ - &bbin 200
+ - &bmin -100
+ - &bmax 100 
+
+group:
+ - name: vdc_las
+   title: VDC LAS hist
+   contents:
+     - name: x_las
+       title: X  LAS
+       x: ["lfp.fX", *xbin, *xmin, *xmax]
+#     - name: x_las_acut
+#       title: X  LAS
+#       cut: abs(lfp.fA*1000)<1
+#       x: ["lfp.fX", *xbin, *xmin, *xmax]
+     - name: a_las
+       title:  A LAS
+       x: ["lfp.fA*1000", *abin, *amin, *amax]
+     - name: y_las
+       title: Y  LAS
+       x: ["lfp.fY", *ybin, *ymin, *ymax]
+     - name: b_las
+       title:  B LAS
+       x: ["lfp.fB*1000", *bbin, *bmin, *bmax]       
+
+     - name: x_a_las
+       title: X vs A LAS
+       x: ["lfp.fX", *xbin, *xmin, *xmax]              
+       y: ["lfp.fA*1000", *abin, *amin, *amax]
+     - name: x_y_las
+       title: X vs Y LAS
+       x: ["lfp.fX", *xbin, *xmin, *xmax]
+       y: ["lfp.fY", *ybin, *ymin , *ymax]       
+     - name: y_a_las
+       title: Y vs A LAS
+       x: ["lfp.fA*1000",  *bbin, *bmin, *bmax]              
+       y: ["lfp.fY", *ybin, *ymin , *ymax]
+     - name: y_b_las
+       title: Y vs B LAS
+       x: ["lfp.fY", *ybin, *ymin , *ymax]
+       y: ["lfp.fB*1000",  *bbin, *bmin, *bmax]       
+
+
+       
+
+
+
+
+
+
+
+
+     

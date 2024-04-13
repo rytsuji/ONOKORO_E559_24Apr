@@ -1,0 +1,49 @@
+# file : chkseg.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+Anchor:
+  - &input data/run@NUM@.bld
+#  - &input data_e583/run@NUM@.bld
+  - &output output/chkseg@NUM@.root
+
+Processor:
+  - name: rcnp_es
+    type: art::TRCNPEventStore_ts
+    parameter:
+      OutputTransparency: 1
+      InputFiles:
+         - *input
+
+  - name: modlistloader
+    type: art::TParameterArrayLoader
+    parameter:
+      Name: modlist
+      Type: art::TModuleType
+      FileName: conf/seg/modulelist.yaml
+      FileFormat: yaml
+  - name: seglistloader
+    type: art::TParameterArrayLoader
+    parameter:
+      Name: seglist
+      Type: art::TSegmentInfo
+      FileName: conf/seg/seglist.yaml
+      FileFormat: yaml
+
+  - name: MyTSegmentCheckProcessor
+    type: art::TSegmentCheckProcessor
+    parameter:
+      Ignore:  # [StringVec_t] ignore segment list
+        - ""
+      ModuleList: modlist  # [TString] name of the module list
+      SegmentList: seglist  # [TString] name of the segment list
+
+  - name: mapper
+    type: art::TMappingProcessor
+    parameter:
+      OutputTransparency: 1
+
+  - name: outputtree
+    type: art::TOutputTreeProcessor
+    parameter:
+      FileName: *output
