@@ -20,6 +20,6 @@ src/compile.log
 *.pdf
 *.ps
 data
-data_share
+output_share
 build
 work
