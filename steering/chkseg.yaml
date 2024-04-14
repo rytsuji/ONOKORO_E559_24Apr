@@ -4,7 +4,6 @@
 
 Anchor:
   - &input data/run@NUM@.bld
-#  - &input data_e583/run@NUM@.bld
   - &output output/chkseg@NUM@.root
 
 Processor:
