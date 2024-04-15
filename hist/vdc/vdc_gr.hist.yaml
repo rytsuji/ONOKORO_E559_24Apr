@@ -1,14 +1,14 @@
 anchor:
- - &xbin 200
+ - &xbin 1000
  - &xmin -750
  - &xmax 750
- - &ybin 200
+ - &ybin 500
  - &ymin -60
  - &ymax 60
- - &abin 200
+ - &abin 500
  - &amin -50
  - &amax 100
- - &bbin 200
+ - &bbin 500
  - &bmin -30
  - &bmax 30 
 

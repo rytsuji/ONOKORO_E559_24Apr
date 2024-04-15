@@ -111,10 +111,13 @@ Processor:
   - name: proc_geometry_converter_las
     type: art::TVDCGeometryConverter
     parameter:
-      OffsetX: 5.44
-      OffsetZ: -100.36
+#      OffsetX: 5.44
+#      OffsetZ: -100.36
+      OffsetX: 0.0
+      OffsetZ: 0.0
       FPTiltedAngleY: 0
-      VDCTiltedAngleY: 3.81
+#      VDCTiltedAngleY: 3.81
+      VDCTiltedAngleY: 0.0
       InputCollection:
         - vdc_las
 #        - vdc_las_uv
@@ -125,11 +128,12 @@ Processor:
   - name: proc_geometry_converter_fp_las
     type: art::TVDCGeometryConverter
     parameter:
-      OffsetX: 43.63
+#      OffsetX: 43.63
+      OffsetX: 0.0
       OffsetZ: 0.0
       VDCTiltedAngleY: 0.0
-#      FPTiltedAngleY: -57
-      FPTiltedAngleY: -58.474
+      FPTiltedAngleY: -57
+#      FPTiltedAngleY: -58.474
       InputCollection:
         - ldc
       OutputCollection: lfp
