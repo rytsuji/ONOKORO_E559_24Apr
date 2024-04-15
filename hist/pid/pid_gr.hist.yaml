@@ -26,7 +26,7 @@ group:
        x: *rf1
        y: *de1
      - name: de1_rf2_gr
-       title: deltaE1-RF1 GR
+       title: deltaE1-RF2 GR
        x: *rf2
        y: *de1
      - name: de1_rf3_gr
@@ -39,7 +39,7 @@ group:
        x: *rf1
        y: *de2
      - name: de2_rf2_gr
-       title: deltaE2-RF1 GR
+       title: deltaE2-RF2 GR
        x: *rf2
        y: *de2
      - name: de2_rf3_gr

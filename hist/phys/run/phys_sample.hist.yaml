@@ -14,5 +14,5 @@ include:
 #      MX: 3727.38      #alpha
       BGR: 925.414   #BGR(mT)
       BLAS: 671.711  #BLAS(mT)
-      ZLAS: 2
+      ZLAS: 1
       SXBIN: 250

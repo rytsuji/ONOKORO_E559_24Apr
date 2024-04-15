@@ -58,8 +58,9 @@ group:
      - name: t_@GRLAS@_@NUM@r
        title: Plastic @GRLAS@ @NUM@ Right Timing
        x: ["pla_@GRLAS@_@NUM@r.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]
-     - name: t_@GRLAS@_@NUM@lr
-       title: Plastic @GRLAS@ @NUM@ LR Timing
-       x: ["pla_@GRLAS@_@NUM@l.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]
-       y: ["pla_@GRLAS@_@NUM@r.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]       
+
+#     - name: t_@GRLAS@_@NUM@lr
+#       title: Plastic @GRLAS@ @NUM@ LR Timing
+#       x: ["pla_@GRLAS@_@NUM@l.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]
+#       y: ["pla_@GRLAS@_@NUM@r.fTiming-tref_@TREF@.fTiming", *tbin, *tmin, *tmax]       
 
