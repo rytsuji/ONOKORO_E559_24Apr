@@ -43,7 +43,7 @@ group:
        y: ["lfp.fY", *ybin, *ymin , *ymax]       
      - name: y_a_las
        title: Y vs A LAS
-       x: ["lfp.fA*1000",  *bbin, *bmin, *bmax]              
+       x: ["lfp.fA*1000",  *abin, *amin, *amax]              
        y: ["lfp.fY", *ybin, *ymin , *ymax]
      - name: y_b_las
        title: Y vs B LAS
