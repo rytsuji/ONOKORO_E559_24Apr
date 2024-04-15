@@ -5,9 +5,9 @@ anchor:
 # - &rf2 ["tref_grtrig.fTiming-rf2.fTiming", 125, -200, -50]
 # - &rf3 ["tref_grtrig.fTiming-rf3.fTiming", 125, -200, -50]
  
- - &rf1 ["fmod(tref_grtrig.fTiming-rf1.fTiming+1420.6750,142.0675)", 300, 0, 142]
- - &rf2 ["fmod(tref_grtrig.fTiming-rf2.fTiming+1420.6750,142.0675)", 300, 0, 142]
- - &rf3 ["fmod(tref_grtrig.fTiming-rf3.fTiming+1420.6750,142.0675)", 300, 0, 142]
+ - &rf1 ["fmod(tref_las.fTiming-rf1.fTiming+1420.6750,142.0675)", 300, 0, 142]
+ - &rf2 ["fmod(tref_las.fTiming-rf2.fTiming+1420.6750,142.0675)", 300, 0, 142]
+ - &rf3 ["fmod(tref_las.fTiming-rf3.fTiming+1420.6750,142.0675)", 300, 0, 142]
 
 
  - &tot ["Sum$(vdc_las_dt.fCharge)/(@vdc_las_dt.GetEntriesFast())",500,0,1000]

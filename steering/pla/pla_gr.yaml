@@ -4,8 +4,8 @@
 
 Processor:
   - include:
-      name: pla_gr_multi.tmpl.yaml
-#      name: pla_gr.tmpl.yaml
+#      name: pla_gr_multi.tmpl.yaml
+      name: pla_gr.tmpl.yaml
       replace:
         CATID: 21
         TVALMIN1L: -175

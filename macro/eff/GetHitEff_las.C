@@ -30,7 +30,7 @@
   std::cout << "U1 : " << (double) u1_hit/xv_hit*100  << "%" << std::endl;
   std::cout << "U2 : " << (double) u2_hit/xv_hit*100  << "%" << std::endl;
   std::cout << "V1 : " << (double) v1_hit/xu_hit*100  << "%" << std::endl;
-  std::cout << "V2 : " << (double) v1_hit/xu_hit*100  << "%" << std::endl;
+  std::cout << "V2 : " << (double) v2_hit/xu_hit*100  << "%" << std::endl;
 
 
 }
