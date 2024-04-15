@@ -9,8 +9,8 @@ Anchor:
   - &dt2dl_las current
 
   - &input data/run@NUM@.bld
-  - &histout output/gr/run@NUM@.hist.root
-  - &output output/gr/run@NUM@.root
+  - &histout output/las/run@NUM@.hist.root
+  - &output output/las/run@NUM@.root
 
 Processor:
   - name: timer
