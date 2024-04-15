@@ -48,8 +48,8 @@
   std::cout << "V2 : " << (double) v1_hit/xu_hit*100  << "%" << std::endl;
 
   Double_t eff_xu=(double) xu_track/v_hit;
-  Double_t eff_xv=(double) xv_track/x_hit;
-  Double_t eff_uv=(double) uv_track/u_hit;
+  Double_t eff_xv=(double) xv_track/u_hit;
+  Double_t eff_uv=(double) uv_track/x_hit;
 
   std::cout << "---LAS VDC tracking efficiency---" << std::endl;
   std::cout << "X-U : " << eff_xu*100.0  << "%" << std::endl;
