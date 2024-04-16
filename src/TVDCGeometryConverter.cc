@@ -57,11 +57,11 @@ void TVDCGeometryConverter::Process(){
       TMWDCTrackingResult *trOut = (TMWDCTrackingResult*)fMWDCTrackOut->ConstructedAt(fMWDCTrackOut->GetEntriesFast());
       
       //trIn = trOut;
-
+      fOffsetX=-fOffsetX;//modified 16th April 2024 @E559
+      
       if(trIn->GetTrackingID()==TMWDCTrackingResult::kGood){
 	TVector3 HitPos(trIn->GetX(),trIn->GetY(),trIn->GetZ());
-	TVector3 Vec(trIn->GetA(),trIn->GetB(),1.0);
-	
+	TVector3 Vec(trIn->GetA(),trIn->GetB(),1.0);	
 	double HitZ=(tan(-fVDCTiltedAngleY*TMath::DegToRad())*(HitPos.X()+fOffsetX)-fOffsetZ)/(1-tan(-fVDCTiltedAngleY*TMath::DegToRad())*Vec.X());
 	
 	double ConvX = (HitPos.X()+Vec.X()*HitZ+fOffsetX)*cos(fVDCTiltedAngleY*TMath::DegToRad())-(HitZ+fOffsetZ)*sin(fVDCTiltedAngleY*TMath::DegToRad());
