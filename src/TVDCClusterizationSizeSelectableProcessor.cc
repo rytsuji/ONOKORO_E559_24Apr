@@ -145,7 +145,7 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
      for (auto& aCls : timeClusters) {
         for (auto& aHit : aCls) {
            if (fVerboseLevel > 2)  printf("timestamp %f %f %f\n",aHit->GetTimestamp(),hit->GetTimestamp(),fSearchTimeWidth.Value());
-           if (TMath::Abs(aHit->GetTimestamp() - hit->GetTimestamp()) < fSearchTimeWidth) {
+           if (TMath::Abs(aHit->GetTimestamp() - hit->GetTimestamp()) < fSearchTimeWidth && TMath::Finite(aHit->GetDriftLength())) {
               // add this hit since it is in the same time window
               aCls.push_back(hit);
               isFound = true;

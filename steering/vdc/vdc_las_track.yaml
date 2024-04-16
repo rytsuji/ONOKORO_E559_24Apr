@@ -12,14 +12,17 @@ Processor:
 # cluster analysis
   - name: proc_vdc_las_cluster_x1
     type: art::TVDCClusterizationSizeSelectableProcessor
+#    type: art::TVDCClusterizationProcessor
     parameter:
       InputCollection: vdc_las_x1
       OutputCollection: vdc_las_clust_x1
       ClustSize: 3
       OutputTransparency: 0
+#      Verbose: 3
 
   - name: proc_vdc_las_cluster_x2
     type: art::TVDCClusterizationSizeSelectableProcessor
+#    type: art::TVDCClusterizationProcessor    
     parameter:
       InputCollection: vdc_las_x2
       OutputCollection: vdc_las_clust_x2
@@ -28,6 +31,7 @@ Processor:
 
   - name: proc_vdc_las_cluster_u1
     type: art::TVDCClusterizationSizeSelectableProcessor
+#    type: art::TVDCClusterizationProcessor
     parameter:
       InputCollection: vdc_las_u1
       OutputCollection: vdc_las_clust_u1
@@ -36,6 +40,7 @@ Processor:
 
   - name: proc_vdc_las_cluster_u2
     type: art::TVDCClusterizationSizeSelectableProcessor
+#    type: art::TVDCClusterizationProcessor
     parameter:
       InputCollection: vdc_las_u2
       OutputCollection: vdc_las_clust_u2
@@ -44,6 +49,7 @@ Processor:
       
   - name: proc_vdc_las_cluster_v1
     type: art::TVDCClusterizationSizeSelectableProcessor
+#    type: art::TVDCClusterizationProcessor
     parameter:
       InputCollection: vdc_las_v1
       OutputCollection: vdc_las_clust_v1
@@ -52,6 +58,7 @@ Processor:
       
   - name: proc_vdc_las_cluster_v2
     type: art::TVDCClusterizationSizeSelectableProcessor
+#    type: art::TVDCClusterizationProcessor
     parameter:
       InputCollection: vdc_las_v2
       OutputCollection: vdc_las_clust_v2

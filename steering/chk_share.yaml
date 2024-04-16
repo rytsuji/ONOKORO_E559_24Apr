@@ -4,10 +4,10 @@
 
 Anchor:
   - &input data/run@NUM@.bld
-  - &histout output/chk/run@NUM@.hist.root
-  - &output output/chk/run@NUM@.root
-#  - &histout output_share/chk/run@NUM@.hist.root
-#  - &output output_share/chk/run@NUM@.root  
+#  - &histout output/chk/run@NUM@.hist.root
+#  - &output output/chk/run@NUM@.root
+  - &histout output_share/chk/run@NUM@.hist.root
+  - &output output_share/chk/run@NUM@.root  
 Processor:
   - name: timer
     type: art::TTimerProcessor
