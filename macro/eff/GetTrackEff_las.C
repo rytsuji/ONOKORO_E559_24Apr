@@ -37,8 +37,9 @@
   int x_hit=tree->GetEntries(x1 && x2);
   int uv_track=tree->GetEntries(x1 && x2 && tr_uv);
   
+  std::cout << "Entry: " << tree->GetEntries() << std::endl;
 
-
+  
   std::cout << "---LAS VDC cluster efficiency---" << std::endl;
   std::cout << "X1 : " << (double) x1_hit/uv_hit*100  << "%" << std::endl;
   std::cout << "X2 : " << (double) x2_hit/uv_hit*100  << "%" << std::endl;

@@ -27,5 +27,7 @@
   std::cout << "---GR VDC  tracking efficiency---" << std::endl;
 
   std::cout <<  eff_x1*eff_x2*eff_u1*eff_u2*100.0  << "%" << std::endl;
-  
+
+  std::cout << "---for copy and paste---" << std::endl;
+  std::cout << eff_x1*100 << " " << eff_x2*100 << " " << eff_u1 << " " << eff_u1 << std::endl;
 }
