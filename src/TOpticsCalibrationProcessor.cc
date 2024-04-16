@@ -49,12 +49,12 @@ TOpticsCalibrationProcessor::~TOpticsCalibrationProcessor()
 }
 
 namespace {
-  const Int_t kDimension = 5;
-  const char kXYABD[kDimension] = {'X', 'Y', 'A', 'B','D'};
-  enum EOrder { kX=0, kY, kA, kB, kD};
-  const Int_t kShift = 4;
-  const Int_t kMask  = 0x7;
-  const Int_t kMaxDegree = 7;
+   const Int_t kDimension = 4;
+   const char kXYAB[kDimension] = {'X', 'Y', 'A', 'B'};
+   enum EOrder { kX=0, kY, kA, kB};
+   const Int_t kShift = 4;
+   const Int_t kMask  = 0x7;
+   const Int_t kMaxDegree = 7;
 
    Int_t KeyToInt(const std::string& key)
    {
@@ -64,7 +64,7 @@ namespace {
       Int_t ret = 0;
 
       for (Int_t i = 0; i != kDimension; ++i) {
-	 const Int_t degree = key_.CountChar(kXYABD[i]);
+	 const Int_t degree = key_.CountChar(kXYAB[i]);
 	 if (degree > kMaxDegree) {
 	    printf("Maximum Degree is %d for each matrix element.\n",kMaxDegree);
 	    return 0;
@@ -194,22 +194,20 @@ void TOpticsCalibrationProcessor::Process(){
       const TTrack *const track= dynamic_cast<const TTrack*> (inData->GetTrack());
 
       Double_t xyab[kDimension];
-
-      Double_t Delta = 0 ;
-      Double_t A = 0;
-      Double_t B = 0;
       
       xyab[0] = track->GetX();
       xyab[1] = track->GetY();
       xyab[2] = (track->GetA())*1000;
       xyab[3] = (track->GetB())*1000;
-      xyab[4] = Delta;
       
-
       
-      //Delata
+      Double_t Delta = 0 ;
+      Double_t A = 0;
+      Double_t B = 0;
+      
+      
       for (Int_t i = 0, n = fTermsDelta.size(); i != n; ++i) {
-	Double_t elem = 0.;
+	Double_t elem = 1.;
 	for (Int_t j = 0; j != kDimension; ++j) {
 	  const Int_t power = (fTermsDelta[i] >> (j * kShift) & kMask);
 	  elem *= TMath::Power(xyab[j],power);
@@ -217,10 +215,8 @@ void TOpticsCalibrationProcessor::Process(){
 	Delta += elem * fCoefficientsDelta[i];
       }
 
-      xyab[4]=Delta;
-      
       for (Int_t i = 0, n = fTermsA.size(); i != n; ++i) {
-	Double_t elem = 0.;
+	Double_t elem = 1.;
 	for (Int_t j = 0; j != kDimension; ++j) {
 	  const Int_t power = (fTermsA[i] >> (j * kShift) & kMask);
 	  elem *= TMath::Power(xyab[j],power);
@@ -230,7 +226,7 @@ void TOpticsCalibrationProcessor::Process(){
       
       
       for (Int_t i = 0, n = fTermsB.size(); i != n; ++i) {
-	Double_t elem = 0.;
+	Double_t elem = 1.;
 	for (Int_t j = 0; j != kDimension; ++j) {
 	  const Int_t power = (fTermsB[i] >> (j * kShift) & kMask);
 	  elem *= TMath::Power(xyab[j],power);

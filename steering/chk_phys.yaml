@@ -7,7 +7,7 @@ Anchor:
   - &gate_las gate/las/gate_las_2000.yaml
   - &dt2dl_gr current 
   - &dt2dl_las current
-  - &hist_phys hist/phys/run/phys_sample.hist.yaml
+  - &hist_phys hist/phys/run/phys_2013.hist.yaml
 
   - &input data/run@NUM@.bld
   - &histout output/phys/run@NUM@.hist.root

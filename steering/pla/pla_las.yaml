@@ -16,18 +16,18 @@ Processor:
         TVALMAX2L: 0	
         TVALMIN2R: 0
         TVALMAX2R: 0		
-        TVALMIN3L: 260
-        TVALMAX3L: 350
-        TVALMIN3R: 280
+        TVALMIN3L: 300
+        TVALMAX3L: 340
+        TVALMIN3R: 328
         TVALMAX3R: 360
-        TVALMIN4L: 280
+        TVALMIN4L: 305
         TVALMAX4L: 360
-        TVALMIN4R: 310
-        TVALMAX4R: 370		
-        TVALMIN5L: 280
-        TVALMAX5L: 370
-        TVALMIN5R: 300
-        TVALMAX5R: 380
+        TVALMIN4R: 300
+        TVALMAX4R: 350		
+        TVALMIN5L: 300
+        TVALMAX5L: 340
+        TVALMIN5R: 320
+        TVALMAX5R: 360
         TVALMIN6L: 300
         TVALMAX6L: 360
         TVALMIN6R: 310

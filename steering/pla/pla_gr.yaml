@@ -4,15 +4,15 @@
 
 Processor:
   - include:
-#      name: pla_gr_multi.tmpl.yaml
-      name: pla_gr.tmpl.yaml
+      name: pla_gr_multi.tmpl.yaml
+#      name: pla_gr.tmpl.yaml
       replace:
         CATID: 21
-        TVALMIN1L: -175
-        TVALMAX1L: -155
-        TVALMIN1R: -175
-        TVALMAX1R: -160
-        TVALMIN2L: -185
-        TVALMAX2L: -160
-        TVALMIN2R: -180
-        TVALMAX2R: -160		
+        TVALMIN1L: -165
+        TVALMAX1L: -140
+        TVALMIN1R: -165
+        TVALMAX1R: -140
+        TVALMIN2L: -170
+        TVALMAX2L: -140
+        TVALMIN2R: -170
+        TVALMAX2R: -140		
