@@ -12,7 +12,7 @@ include:
 #      MX: 2808.92      #t      
       MX: 2808.39      #3He      
 #      MX: 3727.38      #alpha
-      BGR: 610.945   #BGR(mT)
-      BLAS: 526.151  #BLAS(mT)
+      BGR: 592.13   #BGR(mT)
+      BLAS: 518.449  #BLAS(mT)
       ZLAS: 2
       SXBIN: 250
