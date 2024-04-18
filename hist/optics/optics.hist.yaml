@@ -1,0 +1,47 @@
+anchor:
+ - &dbin_gr 1000
+ - &dmin_gr -0.05
+ - &dmax_gr 0.05
+ - &abin_gr 500
+ - &amin_gr -50
+ - &amax_gr 100
+ 
+ - &dbin_las 1000
+ - &dmin_las -0.2
+ - &dmax_las 0.2
+ - &abin_las 500
+ - &amin_las -300
+ - &amax_las 200 
+
+group:
+ - name: optics
+   title: optics  hist
+   contents:   
+     - name: delta_gr
+       title: delta GR
+       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
+
+     - name: delta_a_gr
+       title: delta vs A GR
+       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
+       y: ["gfp.fA*1000", *abin_gr, *amin_gr, *amax_gr]
+
+     - name: delta_las
+       title: delta LAS
+       x: ["ltgt.fDelta", *dbin_las, *dmin_las, *dmax_las]
+
+     - name: delta_a_las
+       title: delta vs A LAS
+       x: ["ltgt.fDelta", *dbin_las, *dmin_las, *dmax_las]    
+       y: ["lfp.fA*1000", *abin_las, *amin_las, *amax_las]
+
+       
+
+
+
+
+
+
+
+
+     

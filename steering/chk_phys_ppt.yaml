@@ -1,13 +1,18 @@
-# file : chk.yaml 
-# date : 2024.4.13 by R.TSUJI
+# file : chk_phys.yaml
+# date : 2024.04.13 by R.TSUJI
 # lastest update : 2024.04.13 by R.TSUJI
 
 Anchor:
+  - &gate_gr gate/gr/gate_gr_ppt_kf0.yaml
+  - &gate_las gate/las/gate_las_ppt_kf0.yaml
+  - &dt2dl_gr  2013 
+  - &dt2dl_las 2020
+  - &hist_phys hist/phys/run/phys_2020.hist.yaml
+
   - &input data/run@NUM@.bld
-  - &histout output/chk/run@NUM@.hist.root
-  - &output output/chk/run@NUM@.root
-#  - &histout output_share/chk/run@NUM@.hist.root
-#  - &output output_share/chk/run@NUM@.root  
+  - &histout output/phys/run@NUM@.hist.root
+  - &output output/phys/run@NUM@.root
+
 Processor:
   - name: timer
     type: art::TTimerProcessor
@@ -24,38 +29,74 @@ Processor:
     parameter:
       OutputTransparency: 1
       MapConfig: mapper_tamidaq.conf
-
+      
   - include: tref.yaml
-
   - include: trig.yaml
   - include: rf.yaml
   - include: tref_chk.yaml
 
+  - name: gate_array_init
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: trigger_gates
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_coin; trig_coin.fID==0"
+
+  - name: stop_proc
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_coin"
+
+#  - include: labr/labr.yaml
 
   - include: pla/pla_gr.yaml
+  - include: *gate_gr
   - include:
       name: vdc/vdc_gr.yaml
       replace:
-        DT2DL: current
-  - include: vdc/vdc_gr_track.yaml  	
+        DT2DL: *dt2dl_gr
+  - include: vdc/vdc_gr_track.yaml
 
-  - include: pla/pla_las.yaml
+#require tracking of GR VDC
+  - name: gate_array_init
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+  - name: vdc_gr_gate
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gdc; @vdc_gr.GetEntriesFast()>0"
+  - name: stop_proc
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gdc"
+
+
+  - include: pla/pla_las.yaml  
   - include:
       name: vdc/vdc_las.yaml
       replace:
         DT2DL: current
-  - include: vdc/vdc_las_track.yaml  		
-
+  - include: vdc/vdc_las_track.yaml
+  - include: *gate_las
+  
   - include:  optics/optics.yaml
 
-  - name: hist_pla_gr_track
+
+#hist
+  - name: hist_pla_gr
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
-      FileName: hist/pla/pla_gr.hist.yaml	
+      FileName: hist/pla/pla_gr.hist.yaml
       OutputFilename: *histout
 
-  - name: hist_pla_las_track
+  - name: hist_pla_las
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
@@ -75,7 +116,6 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/vdc/vdc_las_plane.hist.yaml
       OutputFilename: *histout
-
 
   - name: hist_vdc_gr_track
     type: art::TTreeProjectionProcessor
@@ -112,12 +152,13 @@ Processor:
       FileName: hist/phys/tc.hist.yaml
       OutputFilename: *histout
 
-  - name: hist_optics
+  - name: hist_phys
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
-      FileName: hist/optics/optics.hist.yaml
+      FileName: *hist_phys
       OutputFilename: *histout
+
 
   - name: outputtree
     type: art::TOutputTreeProcessor

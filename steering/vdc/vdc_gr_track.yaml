@@ -75,7 +75,7 @@ Processor:
     parameter:
 #      OffsetX: 9.336
       OffsetX: 0.0
-      OffsetZ: -122.80289
+      OffsetZ: -115.995
       FPTiltedAngleY: 0
       VDCTiltedAngleY: 0
       InputCollection:

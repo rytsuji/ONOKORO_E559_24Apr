@@ -121,10 +121,10 @@ Processor:
     parameter:
 #      OffsetX: 5.44 #for E559 23Jul
 #      OffsetZ: -100.36 #for E559 23Jul
-      OffsetX: 0.0
+#      VDCTiltedAngleY: 3.81 #for E559 23Jul
+      OffsetX: 1.64373e+02
       OffsetZ: 0.0
       FPTiltedAngleY: -57.778136
-#      VDCTiltedAngleY: 3.81 #for E559 23Jul
       VDCTiltedAngleY: 0
       InputCollection:
         - vdc_las
@@ -136,7 +136,7 @@ Processor:
     type: art::TVDCGeometryConverter
     parameter:
       OffsetX: 0
-      OffsetZ: 0.0
+      OffsetZ: 229.352
       VDCTiltedAngleY: 0.0
       FPTiltedAngleY: 0.0
       InputCollection:
