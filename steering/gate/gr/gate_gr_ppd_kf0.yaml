@@ -1,0 +1,12 @@
+#C/Mylar/Ca(p,pd)@Kf=0 with run2108
+Processor:
+  - include:
+      name: tmpl/gate_gr_2layer.tmpl.yaml
+      replace:
+        Q_GR_MIN1: 180
+        Q_GR_MAX1: 1000      
+        Q_GR_MIN2: 200
+        Q_GR_MAX2: 4000
+        T_GR_MIN: 40
+        T_GR_MAX: 60
+        RF: rf2

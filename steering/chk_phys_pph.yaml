@@ -7,7 +7,7 @@ Anchor:
   - &gate_las gate/las/gate_las_pph_kf0.yaml
   - &dt2dl_gr  2013 
   - &dt2dl_las 2036
-  - &hist_phys hist/phys/run/phys_ppt.hist.yaml
+  - &hist_phys hist/phys/run/phys_pph_48Ca.hist.yaml
 
   - &input data/run@NUM@.bld
   - &histout output/phys/run@NUM@.hist.root
