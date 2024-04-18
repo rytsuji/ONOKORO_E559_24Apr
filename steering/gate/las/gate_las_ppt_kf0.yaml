@@ -1,0 +1,18 @@
+Processor:
+  - include:
+      name: tmpl/gate_las.tmpl.yaml
+      replace:
+        Q_LAS_MIN: 100
+        Q_LAS_MAX: 20000
+        T_LAS_MIN: 20
+        T_LAS_MAX: 50
+        RF: rf1
+
+#  - include: tmpl/gate_las_pveto.tmpl.yaml
+
+  - include:
+      name: tmpl/gate_las_tot.tmpl.yaml
+      replace:
+        QMIN: 100
+        QMAX: 250
+        CORRECTION: -0.0431106*vdc_las.fX+1.05247e-05*pow(vdc_las.fX,2.0)

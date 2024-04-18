@@ -46,6 +46,8 @@ Processor:
         DT2DL: current
   - include: vdc/vdc_las_track.yaml  		
 
+  - include:  optics/optics.yaml
+
   - name: hist_pla_gr_track
     type: art::TTreeProjectionProcessor
     parameter:
@@ -108,6 +110,13 @@ Processor:
     parameter:
       Type: art::TTreeProjection
       FileName: hist/phys/tc.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_gr.yaml
       OutputFilename: *histout
 
   - name: outputtree

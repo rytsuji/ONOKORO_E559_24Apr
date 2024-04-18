@@ -57,18 +57,23 @@ void TVDCGeometryConverter::Process(){
       TMWDCTrackingResult *trOut = (TMWDCTrackingResult*)fMWDCTrackOut->ConstructedAt(fMWDCTrackOut->GetEntriesFast());
       
       //trIn = trOut;
-      fOffsetX=-fOffsetX;//modified 16th April 2024 @E559
       
       if(trIn->GetTrackingID()==TMWDCTrackingResult::kGood){
+	
 	TVector3 HitPos(trIn->GetX(),trIn->GetY(),trIn->GetZ());
 	TVector3 Vec(trIn->GetA(),trIn->GetB(),1.0);	
-	double HitZ=(tan(-fVDCTiltedAngleY*TMath::DegToRad())*(HitPos.X()+fOffsetX)-fOffsetZ)/(1-tan(-fVDCTiltedAngleY*TMath::DegToRad())*Vec.X());
+	/*
+	double HitZ=(tan(fVDCTiltedAngleY*TMath::DegToRad())*(HitPos.X()+fOffsetX)+fOffsetZ)/(1-tan(fVDCTiltedAngleY*TMath::DegToRad())*Vec.X());
 	
-	double ConvX = (HitPos.X()+Vec.X()*HitZ+fOffsetX)*cos(fVDCTiltedAngleY*TMath::DegToRad())-(HitZ+fOffsetZ)*sin(fVDCTiltedAngleY*TMath::DegToRad());
+	double ConvX = (HitPos.X()+Vec.X()*HitZ+fOffsetX)*cos(-fVDCTiltedAngleY*TMath::DegToRad())-(HitZ-fOffsetZ)*sin(-fVDCTiltedAngleY*TMath::DegToRad());
 	double ConvY = HitPos.Y()+Vec.Y()*HitZ+fOffsetY;
-	double ConvZ = (HitPos.X()+Vec.X()*HitZ+fOffsetX)*sin(fVDCTiltedAngleY*TMath::DegToRad())+(HitZ+fOffsetZ)*cos(fVDCTiltedAngleY*TMath::DegToRad());
-	Vec.RotateY((fFPTiltedAngleY-fVDCTiltedAngleY)*TMath::DegToRad());
-	
+	double ConvZ = (HitPos.X()+Vec.X()*HitZ+fOffsetX)*sin(-fVDCTiltedAngleY*TMath::DegToRad())+(HitZ-fOffsetZ)*cos(-fVDCTiltedAngleY*TMath::DegToRad());
+	Vec.RotateY((fFPTiltedAngleY+fVDCTiltedAngleY)*TMath::DegToRad());
+	*/
+	double ConvX=HitPos.X()+Vec.X()*fOffsetZ+fOffsetX;
+	double ConvY=HitPos.Y()+Vec.Y()*fOffsetZ+fOffsetY;
+	double ConvZ=0;
+	Vec.RotateY((fFPTiltedAngleY)*TMath::DegToRad());
 	trOut->SetTrack(ConvX,ConvY,ConvZ,Vec.X()/Vec.Z(),Vec.Y()/Vec.Z());
 	trOut->SetTrackingID(TMWDCTrackingResult::kGood);
       }

@@ -1,18 +1,10 @@
+#6Li(p,pd)@kF=+100
 Processor:
   - include:
       name: tmpl/gate_las.tmpl.yaml
       replace:
-<<<<<<< HEAD
         Q_LAS_MIN: 500
         Q_LAS_MAX: 20000
         T_LAS_MIN: 0
         T_LAS_MAX: 22
         RF: rf1
-=======
-        Q_LAS_MIN: 600
-        Q_LAS_MAX: 20000
-        T_LAS_MIN: 42
-        T_LAS_MAX: 67
-        RF: rf2
->>>>>>> PID parameter for run2015
-

@@ -197,8 +197,8 @@ void TOpticsCalibrationProcessor::Process(){
       
       xyab[0] = track->GetX();
       xyab[1] = track->GetY();
-      xyab[2] = (track->GetA())*1000;
-      xyab[3] = (track->GetB())*1000;
+      xyab[2] = (track->GetA());
+      xyab[3] = (track->GetB());
       
       
       Double_t Delta = 0 ;

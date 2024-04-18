@@ -1,3 +1,4 @@
+#6Li(p,pd)@kF=0
 Processor:
   - include:
       name: tmpl/gate_las.tmpl.yaml

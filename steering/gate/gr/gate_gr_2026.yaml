@@ -1,0 +1,12 @@
+#natLi(p,ph)@Kf=0
+Processor:
+  - include:
+      name: tmpl/gate_gr_2layer.tmpl.yaml
+      replace:
+        Q_GR_MIN1: 160
+        Q_GR_MAX1: 4000      
+        Q_GR_MIN2: 300
+        Q_GR_MAX2: 700
+        T_GR_MIN: 30
+        T_GR_MAX: 60
+        RF: rf2

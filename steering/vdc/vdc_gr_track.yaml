@@ -61,9 +61,9 @@ Processor:
     type: art::TVDCGeometryConverter
     parameter:
       OffsetX: 0.0
+      OffsetY: 0.0      
       OffsetZ: 0.0
-      FPTiltedAngleY: 0.0
-      VDCTiltedAngleY: 0.0
+      FPTiltedAngleY: 44.548
       InputCollection:
         - vdc_gr
       OutputCollection: gdc
@@ -73,10 +73,11 @@ Processor:
   - name: proc_geometry_converter_fp
     type: art::TVDCGeometryConverter
     parameter:
+#      OffsetX: 9.336
       OffsetX: 0.0
-      OffsetZ: 0.0
-      FPTiltedAngleY: 45.0
-      VDCTiltedAngleY: 0.0
+      OffsetZ: -122.80289
+      FPTiltedAngleY: 0
+      VDCTiltedAngleY: 0
       InputCollection:
         - gdc
       OutputCollection: gfp

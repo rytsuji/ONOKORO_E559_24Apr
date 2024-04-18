@@ -41,15 +41,15 @@ group:
 
      - name: qlgrx_@GRLAS@_@NUM@
        title: Plastic @GRLAS@ @NUM@ Left Charge vs X
-       x: ["vdc_@GRLAS@.fX", 500, -600, 600]     
+       x: ["vdc_@GRLAS@.fX", 500, -1000, 1000]     
        y: ["pla_@GRLAS@_@NUM@l.fCharge", *qbin, *qmin, *qmax]
      - name: qrgrx_@GRLAS@_@NUM@
        title: Plastic @GRLAS@ @NUM@ Right Charge vs X
-       x: ["vdc_@GRLAS@.fX", 500, -600, 600]     
+       x: ["vdc_@GRLAS@.fX", 500, -1000, 1000]     
        y: ["pla_@GRLAS@_@NUM@r.fCharge", *qbin, *qmin, *qmax]
      - name: qgrx_@GRLAS@_@NUM@
        title: Plastic @GRLAS@ @NUM@ Charge vs X
-       x: ["vdc_@GRLAS@.fX", 500, -600, 600]     
+       x: ["vdc_@GRLAS@.fX", 500, -1000, 1000]     
        y: ["pla_@GRLAS@_@NUM@.fCharge", *qbin, *qmin, *qmax]       
        
      - name: t_@GRLAS@_@NUM@l

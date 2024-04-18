@@ -5,6 +5,7 @@
 
 alias:
   - &timegate [-1590,-1300]
+  - &chargegate [15,500]  
 
 Processor:
 
@@ -118,16 +119,15 @@ Processor:
   - name: proc_geometry_converter_las
     type: art::TVDCGeometryConverter
     parameter:
-#      OffsetX: 5.44
-#      OffsetZ: -100.36
+#      OffsetX: 5.44 #for E559 23Jul
+#      OffsetZ: -100.36 #for E559 23Jul
       OffsetX: 0.0
       OffsetZ: 0.0
-      FPTiltedAngleY: 0
-#      VDCTiltedAngleY: 3.81
-      VDCTiltedAngleY: 0.0
+      FPTiltedAngleY: -57.778136
+#      VDCTiltedAngleY: 3.81 #for E559 23Jul
+      VDCTiltedAngleY: 0
       InputCollection:
         - vdc_las
-#        - vdc_las_uv
       OutputCollection: ldc
       OutputTransparency: 0
 
@@ -135,12 +135,10 @@ Processor:
   - name: proc_geometry_converter_fp_las
     type: art::TVDCGeometryConverter
     parameter:
-#      OffsetX: 43.63
-      OffsetX: 0.0
+      OffsetX: 0
       OffsetZ: 0.0
       VDCTiltedAngleY: 0.0
-      FPTiltedAngleY: -57
-#      FPTiltedAngleY: -58.474
+      FPTiltedAngleY: 0.0
       InputCollection:
         - ldc
       OutputCollection: lfp
@@ -155,29 +153,35 @@ Processor:
     parameter:
       InputCollection: vdc_las_x1
       TimingGate: *timegate
+      ChargeGate: *chargegate      
   - name: proc_vdc_calib_x2
     type: art::TMWDCCalibrationProcessor
     parameter:
       InputCollection: vdc_las_x2
       TimingGate: *timegate
+      ChargeGate: *chargegate            
   - name: proc_vdc_calib_u1
     type: art::TMWDCCalibrationProcessor
     parameter:
       InputCollection: vdc_las_u1
       TimingGate: *timegate
+      ChargeGate: *chargegate            
   - name: proc_vdc_calib_u2
     type: art::TMWDCCalibrationProcessor
     parameter:
       InputCollection: vdc_las_u2
       TimingGate: *timegate
+      ChargeGate: *chargegate            
   - name: proc_vdc_calib_v1
     type: art::TMWDCCalibrationProcessor
     parameter:
       InputCollection: vdc_las_v1
       TimingGate: *timegate
+      ChargeGate: *chargegate            
   - name: proc_vdc_calib_v2
     type: art::TMWDCCalibrationProcessor
     parameter:
       InputCollection: vdc_las_v2
       TimingGate: *timegate
+      ChargeGate: *chargegate            
      
