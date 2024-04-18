@@ -4,7 +4,7 @@
 
 Anchor:
 
-  - &gate_las gate/las/gate_las_teff.yaml
+  - &gate_las gate/las/gate_las_pph_kf0.yaml
   - &dt2dl_gr current  
   - &dt2dl_las current
 
@@ -49,6 +49,7 @@ Processor:
         DT2DL: *dt2dl_las
   - include: *gate_las  
   - include: vdc/vdc_las_track.yaml
+#  - include: *gate_las
 
 #  - name: hist_pla_gr
 #    type: art::TTreeProjectionProcessor

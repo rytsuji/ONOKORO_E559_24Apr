@@ -9,7 +9,9 @@ anchor:
  - &agr ["gfp.fA*1000", 100, -250, 100]
  - &alas ["lfp.fA*1000", 100, -300, 300]
  - &ygr ["gfp.fY", 100, -60, 60]
- - &ylas ["lfp.fY", 100, -200, 200] 
+ - &ylas ["lfp.fY", 100, -200, 200]
+ - &dgr ["gtgt.fDelta", 200, -0.06, 0.06]
+ - &dlas ["ltgt.fDelta", 200, -0.2, 0.2]  
 
 
 group:
@@ -36,6 +38,12 @@ group:
        x: *xgr
        y: *xlas
        cut: *ac
+
+     - name: d_gr_las_tc
+       title: delta correlation GR vs LAS with true coin
+       x: *dgr
+       y: *dlas
+       cut: *tc       
 
 
      - name: sx_tc

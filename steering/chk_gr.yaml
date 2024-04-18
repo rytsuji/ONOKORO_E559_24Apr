@@ -3,7 +3,7 @@
 # lastest update : 2024.04.13 by R.TSUJI
 
 Anchor:
-  - &gate_gr gate/gr/gate_gr_2012.yaml
+  - &gate_gr gate/gr/gate_gr_pph_kf0.yaml
   - &dt2dl_gr current
   - &dt2dl_las current
 

@@ -3,11 +3,11 @@
 # lastest update : 2024.04.13 by R.TSUJI
 
 Anchor:
-  - &gate_gr gate/gr/gate_gr_2020.yaml
-  - &gate_las gate/las/gate_las_2020.yaml
+  - &gate_gr gate/gr/gate_gr_pph_kf0.yaml
+  - &gate_las gate/las/gate_las_pph_kf0.yaml
   - &dt2dl_gr  2013 
-  - &dt2dl_las 2020
-  - &hist_phys hist/phys/run/phys_2020.hist.yaml
+  - &dt2dl_las 2036
+  - &hist_phys hist/phys/run/phys_ppt.hist.yaml
 
   - &input data/run@NUM@.bld
   - &histout output/phys/run@NUM@.hist.root

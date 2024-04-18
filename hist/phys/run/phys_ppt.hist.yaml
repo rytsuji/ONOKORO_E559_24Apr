@@ -3,8 +3,8 @@ include:
     replace:
       TC_MIN: 650
       TC_MAX: 720
-      TMIN: 580
-      TMAX: 780
+      TMIN: 365
+      TMAX: 1135
       EB: 226.0
 
       MP: 938.7
