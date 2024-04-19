@@ -4,7 +4,7 @@ anchor:
  
  - &sx ["@EB@+@MP@+@MX@-sqrt(pow(@MP@, 2.0)+pow(0.3*3.0*@BGR@*(1+gtgt.fDelta),2.0))-sqrt(pow(@MX@,2.0)+pow(0.3*1.75*@BLAS@*@ZLAS@*(1+ltgt.fDelta), 2.0) )", @SXBIN@, 0, 50]
  - &egr ["sqrt(pow(@MP@,2.0)+pow(0.3*3.0*@BGR@*(1+gtgt.fDelta),2.0))-@MP@",100,100,200]
- - &elas ["sqrt(pow(@MX@,2.0)+pow(0.3*1.75*@BGR@*(1+ltgt.fDelta),2.0))-@MX@",100,0,100] 
+ - &elas ["sqrt(pow(@MX@,2.0)+pow(0.3*1.75*@BLAS@*(1+ltgt.fDelta),2.0))-@MX@",100,0,100] 
  - &xgr ["gfp.fX", 200, -600, 600]
  - &xlas ["lfp.fX", 200, -800, 800]
  - &agr ["gfp.fA*1000", 100, -250, 100]
