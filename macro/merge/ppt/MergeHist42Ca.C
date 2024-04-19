@@ -1,6 +1,6 @@
 {
-  const int n_file=2; //number of input files
-  TString file_root[n_file]={"run2076.hist.root","run2084.hist.root"};
+  const int n_file=4; //number of input files
+  TString file_root[n_file]={"run2076.hist.root","run2084.hist.root","run2123.hist.root","run2124.hist.root"};
 
   double scale=-1.0/10.0; //scale of accidental coincidence
   

@@ -1,10 +1,10 @@
 include:
   - name: hist/phys/phys.hist.tmpl.yaml
     replace:
-      TC_MIN: 610
-      TC_MAX: 670
-      TMIN: 410
-      TMAX: 1160
+      TC_MIN: 600
+      TC_MAX: 660
+      TMIN: 380
+      TMAX: 1150
       EB: 226.0
 
       MP: 938.7
@@ -12,7 +12,7 @@ include:
 #      MX: 2808.92      #t      
 #      MX: 2808.39      #3He      
 #      MX: 3727.38      #alpha
-      BGR: 597.722   #BGR(mT)
-      BLAS: 1006.472 #BLAS(mT)
+      BGR: 573.813   #BGR(mT)
+      BLAS: 1157.464 #BLAS(mT)
       ZLAS: 1
       SXBIN: 250

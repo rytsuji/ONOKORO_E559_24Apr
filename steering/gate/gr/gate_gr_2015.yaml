@@ -6,7 +6,7 @@ Processor:
         Q_GR_MIN1: 100
         Q_GR_MAX1: 800      
         Q_GR_MIN2: 300
-        Q_GR_MAX2: 800
+        Q_GR_MAX2: 2000
         T_GR_MIN: 32
         T_GR_MAX: 53
         RF: rf2

@@ -1,10 +1,10 @@
 include:
   - name: hist/phys/phys.hist.tmpl.yaml
     replace:
-      TC_MIN: 630
-      TC_MAX: 680
-      TMIN: 550
-      TMAX: 750
+      TC_MIN: 620
+      TC_MAX: 690
+      TMIN: 400
+      TMAX: 1250
       EB: 226.0
 
       MP: 938.7
