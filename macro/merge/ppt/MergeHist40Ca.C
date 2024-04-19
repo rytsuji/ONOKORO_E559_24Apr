@@ -1,8 +1,8 @@
 {
-  const int n_file=3; //number of input files
-  TString file_root[n_file]={"InputFile1.root","InputFile2.root","InputFile3.root"};
+  const int n_file=2; //number of input files
+  TString file_root[n_file]={"run2078.root","run2085.root"};
 
-  double scale=-1.0/12.0; //scale of accidental coincidence
+  double scale=-1.0/10.0; //scale of accidental coincidence
   
   TFile *file[n_file];
   TDirectoryFile* dir[n_file];
@@ -32,5 +32,7 @@
 
   sx->Add(sx_tc,1.0);
   sx->Add(sx_ac,scale);
-  
+  gApplication->ProcessLine("zon");
+  gApplication->ProcessLine("ht sx");
+  gApplication->ProcessLine("gcom 40Ca(p,pt) Merged");  
 }
