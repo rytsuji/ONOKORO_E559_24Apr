@@ -6,7 +6,7 @@ anchor:
  - &ymin -60
  - &ymax 60
  - &abin 500
- - &amin -50
+ - &amin -100
  - &amax 100
  - &bbin 500
  - &bmin -30

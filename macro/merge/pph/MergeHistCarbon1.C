@@ -1,7 +1,7 @@
 {
   const int n_file=2; //number of input files
-  TString file_root[n_file]={"run2088.root","run2093.root"};
-
+  TString file_root[n_file]={"run2088.hist.root","run2093.hist.root"};
+ 
   double scale=-1.0/10.0; //scale of accidental coincidence
   
   TFile *file[n_file];
@@ -25,6 +25,7 @@
   TH1F *sx_ac=new TH1F("sx_ac", "accidental coin",nBin,xMin,xMax);
   TH1F *sx=new TH1F("sx", "sx",nBin,xMin,xMax);
   
+  
   for(int i=0;i<n_file;i++){
     sx_tc->Add(ht[i],1.0);
     sx_ac->Add(ha[i],1.0);   
@@ -32,6 +33,8 @@
 
   sx->Add(sx_tc,1.0);
   sx->Add(sx_ac,scale);
+  sx->Rebin(2);
+  
   gApplication->ProcessLine("zon");
   gApplication->ProcessLine("ht sx");
   gApplication->ProcessLine("gcom Carbon(p,p3He) Merged with 40-44Ca setup");

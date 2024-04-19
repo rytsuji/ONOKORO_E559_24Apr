@@ -3,7 +3,7 @@ anchor:
  - &dmin_gr -0.05
  - &dmax_gr 0.05
  - &abin_gr 500
- - &amin_gr -50
+ - &amin_gr -100
  - &amax_gr 100
  
  - &dbin_las 1000

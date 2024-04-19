@@ -4,9 +4,9 @@ Processor:
       name: tmpl/gate_gr_2layer.tmpl.yaml
       replace:
         Q_GR_MIN1: 100
-        Q_GR_MAX1: 800      
-        Q_GR_MIN2: 300
-        Q_GR_MAX2: 4000
-        T_GR_MIN: 35
-        T_GR_MAX: 60
+        Q_GR_MAX1: 400      
+        Q_GR_MIN2: 200
+        Q_GR_MAX2: 600
+        T_GR_MIN: 18
+        T_GR_MAX: 32
         RF: rf2

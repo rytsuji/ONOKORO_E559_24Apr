@@ -3,7 +3,7 @@
 # lastest update : 2024.04.13 by R.TSUJI
 
 Anchor:
-  - &gate_gr gate/gr/gate_gr_pph_kf0.yaml
+  - &gate_gr gate/gr/gate_gr_contami.yaml
   - &dt2dl_gr current
   - &dt2dl_las current
 
@@ -41,6 +41,7 @@ Processor:
       replace:
         DT2DL: *dt2dl_gr 
   - include: vdc/vdc_gr_track.yaml
+  - include: optics/optics_gr.yaml  
 
 #  - include: pla/pla_las.yaml
 #  - include:
@@ -82,6 +83,13 @@ Processor:
     parameter:
       Type: art::TTreeProjection
       FileName: hist/vdc/vdc_gr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_optics
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_gr.hist.yaml
       OutputFilename: *histout
 
 #  - name: hist_vdc_las

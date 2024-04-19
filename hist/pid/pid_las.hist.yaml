@@ -1,6 +1,6 @@
 anchor:
 
- - &tof ["tref_las.fTiming-tref_grtrig.fTiming", 2000, -1000, 1000]
+ - &tof ["tref_las.fTiming-tref_grtrig.fTiming", 600, 200, 1400]
 # - &rf1 ["tref_grtrig.fTiming-rf1.fTiming", 125, -200, -50]
 # - &rf2 ["tref_grtrig.fTiming-rf2.fTiming", 125, -200, -50]
 # - &rf3 ["tref_grtrig.fTiming-rf3.fTiming", 125, -200, -50]
@@ -20,7 +20,7 @@ anchor:
  - &tdiff ["pla_las_3.GetTDiff()",200,-50,50]
 
  - &pveto "@pla_las_4.GetEntriesFast()==0 && @pla_las_5.GetEntriesFast()==0 && @pla_las_6.GetEntriesFast()==0"
-
+ - &coin "trig_coin.fID=0"
 
 group:
  - name: pid_las
@@ -31,21 +31,22 @@ group:
        title: deltaE1 LAS vs TOF GR-LAS
        x: *tof
        y: *de1
-
+       cut: *coin
      - name: de2_tof_las
        title: deltaE2 LAS vs TOF GR-LAS
        x: *tof
        y: *de2
-
+       cut: *coin
      - name: tot_tof_las
        title: TOT LAS vs TOF GR-LAS
        x: *tof
        y: *tot
-
+       cut: *coin
      - name: totc_tof_las
        title: TOT LAS vs TOF GR-LAS with correction
        x: *tof
        y: *totc
+       cut: *coin       
 
      - name: de1_rf1_las
        title: dE1-RF1 LAS

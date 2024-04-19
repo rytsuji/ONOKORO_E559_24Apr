@@ -1,6 +1,6 @@
 {
   const int n_file=2; //number of input files
-  TString file_root[n_file]={"run2078.root","run2085.root"};
+  TString file_root[n_file]={"run2078.hist.root","run2085.hist.root"};
 
   double scale=-1.0/10.0; //scale of accidental coincidence
   
@@ -32,6 +32,7 @@
 
   sx->Add(sx_tc,1.0);
   sx->Add(sx_ac,scale);
+  sx->Rebin(2);
   gApplication->ProcessLine("zon");
   gApplication->ProcessLine("ht sx");
   gApplication->ProcessLine("gcom 40Ca(p,pt) Merged");  

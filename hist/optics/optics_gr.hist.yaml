@@ -1,0 +1,32 @@
+anchor:
+ - &dbin_gr 1000
+ - &dmin_gr -0.05
+ - &dmax_gr 0.05
+ - &abin_gr 500
+ - &amin_gr -100
+ - &amax_gr 100
+ 
+group:
+ - name: optics_gr
+   title: GR optics  hist
+   contents:   
+     - name: delta_gr
+       title: delta GR
+       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
+
+     - name: delta_a_gr
+       title: delta vs A GR
+       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
+       y: ["gfp.fA*1000", *abin_gr, *amin_gr, *amax_gr]
+
+
+       
+
+
+
+
+
+
+
+
+     
