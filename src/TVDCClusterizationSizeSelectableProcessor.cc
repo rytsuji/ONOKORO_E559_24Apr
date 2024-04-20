@@ -165,7 +165,8 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
   }
 
   for (auto it = timeClusters.begin(); it != timeClusters.end();) {
-     if (it->size() < 2 || it->size() > 6) {
+    //if (it->size() < 2 || it->size() > 6) {
+    if (it->size() < 2) { //2024/4/20 by RTsuji
         it = timeClusters.erase(it);
      } else {
         ++it;
