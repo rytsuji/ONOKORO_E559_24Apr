@@ -94,7 +94,8 @@ Processor:
       UseMultipleStartTiming: 1
       UseStartAsTimestamp: 1  # [Int_t] timestamp is start (if 1) or end (if 0)
       StartTimingDetID: 0  # [Int_t] detID of reference timing source (if -1 use any id)      
-      ValidTimeRange: [-3000, -1000, 0]  # [vector<Double_t>] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
+      ValidTimeRange: *timegate  # [vector<Double_t>] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
+#      ValidTimeRange: [-3000, -1000, 0]  # [vector<Double_t>] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
 
       
   - name: proc_vdc_las_plane

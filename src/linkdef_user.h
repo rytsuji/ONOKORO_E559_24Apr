@@ -18,6 +18,7 @@
 #pragma link off all classes;
 #pragma link off all functions;
 
+#pragma link C++ class art::TVDCClusterData+;
 #pragma link C++ class art::TVDCTrackingMergeProcessor+;
 #pragma link C++ class art::TVDCGeometryConverter+;
 #pragma link C++ class art::TVDCTrackingMergeProcessor+;

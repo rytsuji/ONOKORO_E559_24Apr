@@ -2,6 +2,7 @@ set(LIB_NAME e559)
 
 set(SOURCES
   # add your source files
+  TVDCClusterData.cc  
   TVDCTrackingMergeProcessor.cc
   TVDCGeometryConverter.cc
   TVDCClusterizationSizeSelectableProcessor.cc
@@ -13,6 +14,7 @@ set(SOURCES
 
 set(HEADERS
   # add your source files
+  TVDCClusterData.h
   TVDCTrackingMergeProcessor.h
   TVDCGeometryConverter.h
   TVDCClusterizationSizeSelectableProcessor.h  

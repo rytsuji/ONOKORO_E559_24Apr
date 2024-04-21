@@ -16,7 +16,7 @@
 #include "TMWDCPlaneInfo.h"
 #include "TTimingChargeData.h"
 #include "TMWDCHitData.h"
-#include "TVDCCluster.h"
+#include "TVDCClusterData.h"
 #include "TVDCTrackingResult.h"
 #include "TConverterBase.h"
 #include "TConverterUtil.h"
@@ -82,8 +82,8 @@ TVDCClusterizationSizeSelectableProcessor::~TVDCClusterizationSizeSelectableProc
 
 void TVDCClusterizationSizeSelectableProcessor::Init(TEventCollection *col)
 {
-  //fClusterOut = new TClonesArray(TVDCClusterMeanCharge::Class(),1);
-  fClusterOut = new TClonesArray(TVDCCluster::Class(),1);
+  fClusterOut = new TClonesArray(TVDCClusterData::Class(),1);
+  //fClusterOut = new TClonesArray(TVDCCluster::Class(),1);
   fClusterOut->SetName(fOutputName);
 
   col->Add(fOutputName,fClusterOut,fOutputIsTransparent);
@@ -166,7 +166,7 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
 
   for (auto it = timeClusters.begin(); it != timeClusters.end();) {
     //if (it->size() < 2 || it->size() > 6) {
-    if (it->size() < 2) { //2024/4/20 by RTsuji
+    if (it->size() < 2 ||  it->size() > 12) { //2024/4/20 by RTsuji
         it = timeClusters.erase(it);
      } else {
         ++it;
@@ -267,7 +267,7 @@ void TVDCClusterizationSizeSelectableProcessor::ProcessCluster(std::vector<std::
 {
    int nComb = 1;
    int nWrs  = wires.size();
-   double MeanCharge=0;
+   //double MeanCharge=0;
    //if (nWrs < 3) return;
    //if (nWrs < 2) return;
    if (nWrs < fClustSize) return;
@@ -313,7 +313,7 @@ void TVDCClusterizationSizeSelectableProcessor::ProcessCluster(std::vector<std::
             dl[iWrs] =  ud ? driftLength : -driftLength;
             ts[iWrs] = hit->GetTiming();
             id[iWrs] =  hit->GetID();
-	    MeanCharge += hit->GetCharge()/((double) nWrs+1);
+	    //MeanCharge += hit->GetCharge()/((double) nWrs+1);
          }
          double slope = 0;
          double offset = 0;
@@ -334,8 +334,8 @@ void TVDCClusterizationSizeSelectableProcessor::ProcessCluster(std::vector<std::
       }
       if (fVerboseLevel > 2) printf("slope = %f, offset = %f, chi2 = %f, pos = %f\n",bestSlope, bestOffset, bestChi2, - bestOffset / bestSlope);
    }
-   //TVDCClusterMeanCharge *output = (TVDCClusterMeanCharge*)(fClusterOut->ConstructedAt(fClusterOut->GetEntriesFast()));
-   TVDCCluster *output = (TVDCCluster*)(fClusterOut->ConstructedAt(fClusterOut->GetEntriesFast()));
+   TVDCClusterData *output = (TVDCClusterData*)(fClusterOut->ConstructedAt(fClusterOut->GetEntriesFast()));
+   //TVDCCluster *output = (TVDCCluster*)(fClusterOut->ConstructedAt(fClusterOut->GetEntriesFast()));
    output->Init2(nWrs);
    output->SetTimestamp(wires[0][0]->GetTimestamp());
    output->SetHitPos(-bestOffset / bestSlope);
@@ -344,6 +344,7 @@ void TVDCClusterizationSizeSelectableProcessor::ProcessCluster(std::vector<std::
    output->SetClustSize(nWrs);
    output->SetClustnum(nWrs);
    output->SetClustnum2(nWrs);
+   output->SetSSR(bestChi2);   
    //output->SetCharge(MeanCharge);
    for (int i = 0; i < bestID.size(); i++) {
      if (fVerboseLevel > 2) printf("bestID[%d] = %f, bestDL[%d] = %f\n",i,bestID.at(i),i,bestDL.at(i));

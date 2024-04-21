@@ -4,7 +4,7 @@
 
 Anchor:
   - &gate_gr gate/gr/gate_gr_contami.yaml
-  - &dt2dl_gr current
+  - &dt2dl_gr 1006
   - &dt2dl_las current
 
   - &input data/run@NUM@.bld

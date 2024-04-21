@@ -20,7 +20,7 @@ anchor:
  - &tdiff ["pla_las_3.GetTDiff()",200,-50,50]
 
  - &pveto "@pla_las_4.GetEntriesFast()==0 && @pla_las_5.GetEntriesFast()==0 && @pla_las_6.GetEntriesFast()==0"
- - &coin "trig_coin.fID=0"
+ - &coin "trig_coin.fID==0"
 
 group:
  - name: pid_las

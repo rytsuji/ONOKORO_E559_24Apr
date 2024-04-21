@@ -5,9 +5,9 @@ anchor:
  - &ybin 500
  - &ymin -200
  - &ymax 200
- - &abin 500
+ - &abin 600
  - &amin -300
- - &amax 200
+ - &amax 300
  - &bbin 500
  - &bmin -100
  - &bmax 100 
