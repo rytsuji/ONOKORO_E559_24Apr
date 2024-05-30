@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_las_tof
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: las_pid_tof
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_tof; abs( (tref_las.fTiming - tref_grtrig.fTiming)  - ( @T_LAS_MIN@ + @T_LAS_MAX@ )/2. ) < abs( @T_LAS_MAX@ -@T_LAS_MIN@)/2."
+
+
+  - name: stop_proc_las_tof
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_rof"
+

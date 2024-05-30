@@ -6,29 +6,54 @@ Processor:
       Type:     art::TAffineConverter
       FileName: prm/tref_ch2ns.dat
 
-  - name: proc_tref_map
+  - name: proc_tref_map_las
 #    type: art::TTimingChargeMappingProcessor
     type: art::TTimingChargeMultiHitMappingProcessor
     parameter:
       CatID:              100
       ChargeType:         0
       TimingTypeID:       0
-      OutputCollection:   tref_raw
+      OutputCollection:   tref_las_raw
       OutputTransparency: 0
 
-  - name: proc_tref_calib
+  - name: proc_tref_map_grfcet
+    type: art::TTimingChargeMultiHitMappingProcessor
+    parameter:
+      CatID:              101
+      ChargeType:         0
+      TimingTypeID:       0
+      OutputCollection:   tref_grfcet_raw
+      OutputTransparency: 0
+
+  - name: proc_tref_map_grtrig
+    type: art::TTimingChargeMultiHitMappingProcessor
+    parameter:
+      CatID:              102
+      ChargeType:         0
+      TimingTypeID:       0
+      OutputCollection:   tref_grtrig_raw
+      OutputTransparency: 0
+
+  - name: proc_tref_calib_las
     type: art::TTimingChargeCalibrationProcessor
     parameter:
       TimingConverterArray: prm_tref_ch2ns
-      InputCollection: tref_raw
-      OutputCollection: tref
-      
-  - name: proc_tref_separater
-    type: art::TSeparateOutputProcessor
+      InputCollection: tref_las_raw
+      OutputCollection: tref_las
+
+  - name: proc_tref_calib_grfcet
+    type: art::TTimingChargeCalibrationProcessor
     parameter:
-      InputCollection: tref
-      OutputCollections:
-        - tref_las
-        - tref_grfcet
-        - tref_grtrig
+      TimingConverterArray: prm_tref_ch2ns
+      InputCollection: tref_grfcet_raw
+      OutputCollection: tref_grfcet
+
+  - name: proc_tref_calib_grtrig
+    type: art::TTimingChargeCalibrationProcessor
+    parameter:
+      TimingConverterArray: prm_tref_ch2ns
+      InputCollection: tref_grtrig_raw
+      OutputCollection: tref_grtrig
+      
+
       

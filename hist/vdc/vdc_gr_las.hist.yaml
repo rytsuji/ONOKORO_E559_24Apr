@@ -1,0 +1,17 @@
+anchor:
+ - &xbin 1000
+ - &xmin -1000
+ - &xmax 1000
+
+group:
+ - name: vdc_gr_las
+   title: VDC GR LAS x correlation
+   contents:   
+     - name: x_gr_las
+       title: X GR vs x LAS
+       x: ["gfp.fX", *xbin, *xmin, *xmax]
+       y: ["lfp.fX", *xbin, *xmin, *xmax]
+
+
+
+     

@@ -8,27 +8,34 @@ Processor:
       name: pla_las_multi.tmpl.yaml
       replace:
         CATID: 22
-        TVALMIN1L: 0
-        TVALMAX1L: 0	
-        TVALMIN1R: 0
-        TVALMAX1R: 0
-        TVALMIN2L: 0
-        TVALMAX2L: 0	
-        TVALMIN2R: 0
-        TVALMAX2R: 0		
-        TVALMIN3L: 300
-        TVALMAX3L: 340
-        TVALMIN3R: 328
-        TVALMAX3R: 360
-        TVALMIN4L: 305
-        TVALMAX4L: 360
+#  pla3	
+        TVALMIN3: 310
+        TVALMAX3: 340	
+        TVALMIN3L: 200
+        TVALMAX3L: 400
+        TVALMIN3R: 200
+        TVALMAX3R: 400
+#  pla4	
+        TVALMIN4: 310
+        TVALMAX4: 380		
+        TVALMIN4L: 300
+        TVALMAX4L: 400
         TVALMIN4R: 300
-        TVALMAX4R: 350		
+        TVALMAX4R: 400
+#  pla5	
+        TVALMIN5: 300
+        TVALMAX5: 360			
         TVALMIN5L: 300
-        TVALMAX5L: 340
+        TVALMAX5L: 400
         TVALMIN5R: 320
         TVALMAX5R: 360
+#  pla6	
+        TVALMIN6: 300
+        TVALMAX6: 380				
         TVALMIN6L: 300
-        TVALMAX6L: 360
-        TVALMIN6R: 310
-        TVALMAX6R: 380
+        TVALMAX6L: 400
+        TVALMIN6R: 300
+        TVALMAX6R: 400
+
+  - include:
+      name: pla_las_simple.yaml

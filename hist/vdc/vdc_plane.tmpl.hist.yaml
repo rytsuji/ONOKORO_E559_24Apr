@@ -1,15 +1,20 @@
 anchor:
-  - &idp ["vdc_@GL@_@PLANE@.fID", @NID@, 0, @NID@]
+  - &id ["vdc_@GL@_@PLANE@.fID", @NID@, 0, @NID@]
   - &timing ["vdc_@GL@_@PLANE@.fTiming", 500, @TMIN@, @TMAX@]
   - &charge ["vdc_@GL@_@PLANE@.fCharge", 500, 0, @QMAX@]
+  - &dl ["vdc_@GL@_@PLANE@.fDriftLength", 500, -0.1, 10.1]    
+  - &clustnum ["vdc_@GL@_clust_@PLANE@.GetClustnum()", 20, 0, 20]
+  - &ssr ["vdc_@GL@_clust_@PLANE@.fSSR", 100, 0, 2]    
+  - &res ["vdc_@GL@_clust_@PLANE@.fResidual", 250, -2.5, 2.5]
 
+  
 group:
   - name: vdc_@GL@_@PLANE@
     title: VDC @GL@ @PLANE@
     contents:
       - name: vdc_@GL@_@PLANE@_id
         title: VDC @GL@  @PLANE@ ID
-        x: *idp
+        x: *id
       - name: vdc_@GL@_@PLANE@_t
         title: VDC @GL@  @PLANE@ Timing	
         x: *timing
@@ -18,16 +23,27 @@ group:
         x: *charge
       - name: vdc_@GL@_@PLANE@_idt
         title: VDC @GL@ @PLANE@ ID vs Timing
-        x: *idp
+        x: *id
         y: *timing
       - name: vdc_@GL@_@PLANE@_idq
         title: VDC @GL@ @PLANE@ ID vs Charge	
-        x: *idp
+        x: *id
         y: *charge
       - name: vdc_@GL@_tq
         title: VDC @GL@ @PLANE@ Timing vs Charge
         x: *timing
         y: *charge
-      
+      - name: vdc_@GL@_@PLANE@_dl
+        title: VDC @GL@  @PLANE@ Drift length
+        x: *dl	
+      - name: vdc_@GL@_@PLANE@_clustnum
+        title: VDC @GL@  @PLANE@ ClustNum
+        x: *clustnum
+      - name: vdc_@GL@_@PLANE@_ssr
+        title: VDC @GL@  @PLANE@ SSR
+        x: *ssr	
+      - name: vdc_@GL@_@PLANE@_residual
+        title: VDC @GL@  @PLANE@ Residual
+        x: *res
        
 

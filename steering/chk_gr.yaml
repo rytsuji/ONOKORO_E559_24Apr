@@ -3,8 +3,8 @@
 # lastest update : 2024.04.13 by R.TSUJI
 
 Anchor:
-  - &gate_gr gate/gr/gate_gr_contami.yaml
-  - &dt2dl_gr 1006
+  - &gate_gr gate/gr/gate_gr_2020.yaml
+  - &dt2dl_gr 1033
   - &dt2dl_las current
 
   - &input data/run@NUM@.bld

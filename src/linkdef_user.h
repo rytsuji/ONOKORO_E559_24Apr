@@ -25,8 +25,11 @@
 #pragma link C++ class art::TVDCClusterizationSizeSelectableProcessor+;
 #pragma link C++ class art::TTimingChargeMultiHitMappingProcessor+;
 #pragma link C++ class art::TTimingTrefValidator+;
+#pragma link C++ class art::TTimingTrefValidatorLR+;
 #pragma link C++ class art::TOpticsData+;
 #pragma link C++ class art::TOpticsCalibrationProcessor+;
+#pragma link C++ class art::TFocalPlaneConverter+;
+#pragma link C++ class art::TPIDCalibrationProcessor+;
 
 #endif // __CINT__
 

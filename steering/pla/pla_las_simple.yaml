@@ -1,0 +1,40 @@
+Processor:
+  - name: proc_pla_las_simple_prm_ch2MeV
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_las_simple_ch2MeV
+      Type:     art::TAffineConverter
+      FileName: prm/pla/pla_las_ch2MeV.dat
+
+  - name: proc_pla_las_simple_raw
+    type: art::TSimpleDataMappingProcessor
+    parameter:
+      CatID:              22
+      DataTypeID:         1
+      OutputCollection:   pla_las_simple_raw
+      OutputTransparency: 0
+
+  - name: proc_pla_las_simple_calib
+    type: art::TTimingChargeCalibrationProcessor
+    parameter:
+      InputCollection:      pla_las_simple_raw
+      OutputCollection:     pla_las_simple_cal
+      ChargeConverterArray: prm_las_simple_ch2MeV
+
+  - name: proc_pla_las_simple_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: pla_las_simple_cal
+      OutputCollections:
+        - pla_las_1l_simple
+        - pla_las_1r_simple
+        - pla_las_2l_simple
+        - pla_las_2r_simple
+        - pla_las_3l_simple
+        - pla_las_3r_simple
+        - pla_las_4l_simple
+        - pla_las_4r_simple
+        - pla_las_5l_simple
+        - pla_las_5r_simple
+        - pla_las_6l_simple
+        - pla_las_6r_simple	

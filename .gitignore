@@ -20,7 +20,5 @@ src/compile.log
 *.pdf
 *.ps
 data
-output_share
 build
 work
-output_tmp

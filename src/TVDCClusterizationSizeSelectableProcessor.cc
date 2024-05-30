@@ -112,7 +112,6 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
   // printf("entry=%d\n",(*fMWDCIn)->GetEntriesFast());
 
   int entry = (*fMWDCIn)->GetEntriesFast();
-  int entry2=0;
 
   if (!(*fMWDCIn)->GetEntriesFast()) return ;
 
@@ -166,7 +165,8 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
 
   for (auto it = timeClusters.begin(); it != timeClusters.end();) {
     //if (it->size() < 2 || it->size() > 6) {
-    if (it->size() < 2 ||  it->size() > 12) { //2024/4/20 by RTsuji
+    if (it->size() < 2 ||  it->size() > 15) { //2024/4/20 by RTsuji
+    //if (it->size() < 2) { 
         it = timeClusters.erase(it);
      } else {
         ++it;
@@ -335,7 +335,6 @@ void TVDCClusterizationSizeSelectableProcessor::ProcessCluster(std::vector<std::
       if (fVerboseLevel > 2) printf("slope = %f, offset = %f, chi2 = %f, pos = %f\n",bestSlope, bestOffset, bestChi2, - bestOffset / bestSlope);
    }
    TVDCClusterData *output = (TVDCClusterData*)(fClusterOut->ConstructedAt(fClusterOut->GetEntriesFast()));
-   //TVDCCluster *output = (TVDCCluster*)(fClusterOut->ConstructedAt(fClusterOut->GetEntriesFast()));
    output->Init2(nWrs);
    output->SetTimestamp(wires[0][0]->GetTimestamp());
    output->SetHitPos(-bestOffset / bestSlope);
@@ -344,13 +343,16 @@ void TVDCClusterizationSizeSelectableProcessor::ProcessCluster(std::vector<std::
    output->SetClustSize(nWrs);
    output->SetClustnum(nWrs);
    output->SetClustnum2(nWrs);
-   output->SetSSR(bestChi2);   
-   //output->SetCharge(MeanCharge);
+   output->SetSSR(bestChi2);
    for (int i = 0; i < bestID.size(); i++) {
      if (fVerboseLevel > 2) printf("bestID[%d] = %f, bestDL[%d] = %f\n",i,bestID.at(i),i,bestDL.at(i));
       output->SetHitID(i,bestID[i]);
       output->SetHitDL(i,bestDL[i]);
       output->SetHitTiming(i,bestT[i]);
+      if(i+2 < bestID.size()){     
+	Double_t residual = ( ((Double_t) (bestID[i+1]-bestID[i]))*bestDL[i+2] + ((Double_t) (bestID[i+2]-bestID[i+1]))*bestDL[i])/( (Double_t) (bestID[i+2]-bestID[i]) ) - bestDL[i+1];	
+	output->SetResidual(i,residual);
+      }
    }      
                        
 }

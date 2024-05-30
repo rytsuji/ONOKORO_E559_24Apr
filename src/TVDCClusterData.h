@@ -74,12 +74,18 @@ public:
 
 	virtual void SetHitLR(int idx, int lr){fHitLR[idx]=lr;}
 	virtual int GetHitLR(int idx){return fHitLR[idx];}
-
+  
 	virtual void SetHitPos(double pos){cluster_pos=pos;}
 	virtual double GetHitPos(){return cluster_pos;}
 
 	virtual void SetSSR(double ssr){fSSR=ssr;}
-	virtual double GetSSR(){return fSSR;}  
+	virtual double GetSSR(){return fSSR;}
+  
+	virtual void SetResidual(int idx, double res){fResidual[idx] = res;}
+	virtual int GetResidual(int idx){return fResidual[idx];}
+  
+  //virtual void SetResidual(double res){fResidual=res;}
+  //virtual double GetResidual(){return fResidual;}  
   
 	virtual void SetClustID(double id){Clust_ID=id;}
 	virtual double GetClustID(){return Clust_ID;}
@@ -115,11 +121,15 @@ protected:
 
 	Double_t cluster_pos;
 	Double_t cluster_angle;
-	Double_t fSSR;  
- std::vector<int> fHitID; // 
- std::vector<Double_t> fHitDL; // 
- std::vector<Double_t> fHitTiming; // 
- std::vector<Double_t> fHitLR; //
+	Double_t fSSR;
+  //Double_t fResidual;
+
+  
+  std::vector<int> fHitID; // 
+  std::vector<Double_t> fHitDL; // 
+  std::vector<Double_t> fHitTiming; // 
+  std::vector<Double_t> fHitLR; //
+  std::vector<Double_t> fResidual; //
 
 
    ClassDef(TVDCClusterData,1) // container for timing information with charge

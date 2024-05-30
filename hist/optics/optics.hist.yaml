@@ -35,6 +35,10 @@ group:
        x: ["ltgt.fDelta", *dbin_las, *dmin_las, *dmax_las]    
        y: ["lfp.fA*1000", *abin_las, *amin_las, *amax_las]
 
+     - name: delta_gr_las
+       title: delta GR vs LAS
+       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
+       y: ["ltgt.fDelta", *dbin_las, *dmin_las, *dmax_las]    
        
 
 

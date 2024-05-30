@@ -5,7 +5,6 @@
 #include <string>
 #include <fstream>
 //#include "TDataObject.h"
-
 #include <TClonesArray.h>
 #include <TClass.h>
 #include <TSimpleData.h>
@@ -109,7 +108,7 @@ void TOpticsCalibrationProcessor::Init(TEventCollection*){
 
    //A   
    std::ifstream finA(fMatrixFileNameA.Data());
-   if(!finDelta.is_open()) {
+   if(!finA.is_open()) {
      SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileNameA.Data()));
       return;
    }   

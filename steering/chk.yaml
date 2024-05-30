@@ -45,8 +45,10 @@ Processor:
       replace:
         DT2DL: current
   - include: vdc/vdc_las_track.yaml  		
-
   - include:  optics/optics.yaml
+
+#test
+  - include:  pid/pid_calib.yaml
 
   - name: hist_pla_gr_track
     type: art::TTreeProjectionProcessor

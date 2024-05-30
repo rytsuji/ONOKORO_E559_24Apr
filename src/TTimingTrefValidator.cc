@@ -89,11 +89,12 @@ void TTimingTrefValidator::Process()
        const TDataObject *const data = static_cast<TDataObject*>((*fInput1)->At(iHit));
        if (!timingData) continue;
        Double_t timing = timingData->GetTiming();
-       if (timing-tref < fValidTimeMin || fValidTimeMax < timing-tref) {
-         continue;
+       if (timing-tref > fValidTimeMin && fValidTimeMax > timing-tref) {
+         //continue;
+	 TObject *const outData = fOutput->ConstructedAt(fOutput->GetEntriesFast());
+	 data->Copy(*outData);
        }
-       TObject *const outData = fOutput->ConstructedAt(fOutput->GetEntriesFast());
-       data->Copy(*outData);
+
      }
    }
 }

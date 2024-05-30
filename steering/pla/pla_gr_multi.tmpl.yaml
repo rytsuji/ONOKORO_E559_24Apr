@@ -50,40 +50,30 @@ Processor:
         - pla_gr_2l_cal
         - pla_gr_2r_cal
 
-  - name: proc_pla_gr_1l_validator
-    type: art::TTimingTrefValidator
+  - name: proc_pla_gr_1_validator
+    type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_gr_1l_cal
-      InputCollection2: tref_grtrig
-      OutputCollection: pla_gr_1l
-      ValidTimeRange:     [@TVALMIN1L@,@TVALMAX1L@,0]
+      InputCollection2: pla_gr_1r_cal      
+      InputCollection3: tref_grtrig
+      OutputCollection1: pla_gr_1l
+      OutputCollection2: pla_gr_1r
+      ValidTimeRange:     [@TVALMIN1@,@TVALMAX1@,0]
+      ValidTimeRangeL:     [@TVALMIN1L@,@TVALMAX1L@,0]	
+      ValidTimeRangeR:     [@TVALMIN1L@,@TVALMAX1R@,0]
       OutputTransparency: 0
 
-  - name: proc_pla_gr_1r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_gr_1r_cal
-      InputCollection2: tref_grtrig
-      OutputCollection: pla_gr_1r
-      ValidTimeRange:     [@TVALMIN1R@,@TVALMAX1R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_gr_2l_validator
-    type: art::TTimingTrefValidator
+  - name: proc_pla_gr_2_validator
+    type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_gr_2l_cal
-      InputCollection2: tref_grtrig
-      OutputCollection: pla_gr_2l
-      ValidTimeRange:     [@TVALMIN2L@,@TVALMAX2L@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_gr_2r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_gr_2r_cal
-      InputCollection2: tref_grtrig
-      OutputCollection: pla_gr_2r
-      ValidTimeRange:     [@TVALMIN2R@,@TVALMAX2R@,0]
+      InputCollection2: pla_gr_2r_cal      
+      InputCollection3: tref_grtrig
+      OutputCollection1: pla_gr_2l
+      OutputCollection2: pla_gr_2r      
+      ValidTimeRange:     [@TVALMIN2@,@TVALMAX2@,0]
+      ValidTimeRangeL:     [@TVALMIN2L@,@TVALMAX2L@,0]	
+      ValidTimeRangeR:     [@TVALMIN2L@,@TVALMAX2R@,0]
       OutputTransparency: 0
 
   - name: proc_pla_gr_1

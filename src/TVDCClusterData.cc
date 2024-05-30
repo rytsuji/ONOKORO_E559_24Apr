@@ -24,7 +24,7 @@ Int_t TVDCClusterData::fSortOrder = TVDCClusterData::kDESC;
 
 // Default constructor
 TVDCClusterData::TVDCClusterData() 
-  : fTiming(kInvalidD), fCharge(kInvalidD),Clust_ID(kInvalidD),valid_cluster2(kInvalidD),valid_cluster(kInvalidD),fClust_Size(kInvalidD),fHitID(0),fHitDL(0),fHitTiming(0),fHitLR(0){
+  : fTiming(kInvalidD), fCharge(kInvalidD),Clust_ID(kInvalidD),valid_cluster2(kInvalidD),valid_cluster(kInvalidD),fClust_Size(kInvalidD),fHitID(0),fHitDL(0),fHitTiming(0),fHitLR(0),fResidual(0){
    TDataObject::SetID(kInvalidI);
 }
 
@@ -52,6 +52,7 @@ void TVDCClusterData::Init() {
 	 fHitDL.resize(20);
 	 fHitTiming.resize(20);
 	 fHitLR.resize(20);
+	 fResidual.resize(20);
   Clear();
 }
 void TVDCClusterData::Init2(int size) {
@@ -61,6 +62,7 @@ void TVDCClusterData::Init2(int size) {
 	 fHitDL.resize(size);
 	 fHitTiming.resize(size);
 	 fHitLR.resize(size);
+	 fResidual.resize(size-2);
   Clear();
 }
 // Assignment operator

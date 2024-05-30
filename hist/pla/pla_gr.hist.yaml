@@ -8,8 +8,8 @@ include:
     replace: 
       GRLAS: gr
       NUM: 1
-      TMIN: -3000
-      TMAX:  3000
+      TMIN: -200
+      TMAX: -100
       QMAX:  4000
       TDIFFMIN: -20
       TDIFFMAX:  30
@@ -19,8 +19,8 @@ include:
     replace: 
       GRLAS: gr
       NUM: 2
-      TMIN: -3000
-      TMAX: 3000
+      TMIN: -200
+      TMAX: -100
       QMAX:  4000
       TDIFFMIN: -20
       TDIFFMAX:  30

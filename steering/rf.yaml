@@ -9,7 +9,7 @@ Processor:
   - name: proc_rf_map
     type: art::TTimingChargeMappingProcessor
     parameter:
-      CatID:              102
+      CatID:              103
       ChargeType:         0
       TimingTypeID:       0
       OutputCollection:   rf_raw

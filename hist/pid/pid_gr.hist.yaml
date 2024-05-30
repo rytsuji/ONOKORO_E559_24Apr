@@ -1,7 +1,4 @@
 anchor:
-# - &rf1 ["tref_grtrig.fTiming-rf1.fTiming", 250, -200, -50]
-# - &rf2 ["tref_grtrig.fTiming-rf2.fTiming", 250, -200, -50]
-# - &rf3 ["tref_grtrig.fTiming-rf3.fTiming", 250, -200, -50]
 
  - &rf1 ["fmod(tref_grtrig.fTiming-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
  - &rf2 ["fmod(tref_grtrig.fTiming-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
@@ -75,11 +72,11 @@ group:
 
 
      - name: tdiff_de1_gr
-       title: TDiff-dE1 GR
+       title: TDiff-delataE1 GR
        x: *tdiff1
        y: *de1
      - name: tdiff_de2_gr
-       title: TDiff-dE2 GR
+       title: TDiff-deltaE2 GR
        x: *tdiff2
        y: *de2
 

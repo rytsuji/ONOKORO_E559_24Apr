@@ -1,0 +1,31 @@
+anchor:
+
+ - &rf1 ["fmod(pid_las.fTiming-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf2 ["fmod(pid_las.fTiming-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf3 ["fmod(pid_las.fTiming-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &xpos ["ldc.fX",1000,-1000,1000]
+
+ - &de1 ["pid_las.fCharge",1000,0,500]
+
+group:
+ - name: pid_las
+   title: PID of LAS
+   contents:
+
+     - name: de1_rf1_las
+       title: deltaE1-RF1 LAS
+       x: *rf1
+       y: *de1
+     - name: de1_rf2_las
+       title: deltaE1-RF2 LAS
+       x: *rf2
+       y: *de1
+     - name: de1_rf3_las
+       title: deltaE1-RF3 LAS
+       x: *rf3
+       y: *de1
+
+     - name: x_de1_las
+       title: x-dE1 LAS
+       x: *xpos
+       y: *de1

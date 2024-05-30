@@ -2,17 +2,26 @@
 # date : 2022.07.01 by Y.HIJIKATA
 # lastest update : 2022.07.01 by Y.HIJIKATA
 
+
 Processor:
   - include:
       name: pla_gr_multi.tmpl.yaml
-#      name: pla_gr.tmpl.yaml
       replace:
         CATID: 21
-        TVALMIN1L: -165
-        TVALMAX1L: -140
-        TVALMIN1R: -165
-        TVALMAX1R: -140
-        TVALMIN2L: -170
-        TVALMAX2L: -140
-        TVALMIN2R: -170
-        TVALMAX2R: -140		
+#       GR pla1
+        TVALMIN1: -172
+        TVALMAX1: -149
+        TVALMIN1L: -200
+        TVALMAX1L: -100
+        TVALMIN1R: -200
+        TVALMAX1R: -100
+#       GR pla2	
+        TVALMIN2: -165
+        TVALMAX2: -135
+        TVALMIN2L: -200
+        TVALMAX2L: -100
+        TVALMIN2R: -200
+        TVALMAX2R: -100
+
+  - include:
+      name: pla_gr_simple.yaml

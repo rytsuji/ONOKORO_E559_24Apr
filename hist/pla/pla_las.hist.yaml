@@ -8,8 +8,8 @@ include:
     replace: 
       GRLAS: las
       NUM: 3
-      TMIN: -3000
-      TMAX:  3000
+      TMIN: 100
+      TMAX: 500
       QMAX:  4000
       TDIFFMIN: -40
       TDIFFMAX:  0
@@ -19,8 +19,8 @@ include:
     replace: 
       GRLAS: las
       NUM: 4
-      TMIN: -3000
-      TMAX:  3000
+      TMIN: 100
+      TMAX: 500
       QMAX:  4000
       TDIFFMIN: -40
       TDIFFMAX:  0
@@ -30,8 +30,8 @@ include:
     replace: 
       GRLAS: las
       NUM: 5
-      TMIN: -3000
-      TMAX:  3000
+      TMIN: 100
+      TMAX: 500
       QMAX:  4000
       TDIFFMIN: -40
       TDIFFMAX:  0
@@ -41,8 +41,8 @@ include:
     replace: 
       GRLAS: las
       NUM: 6
-      TMIN: -3000
-      TMAX:  3000
+      TMIN: 100
+      TMAX: 500
       QMAX:  4000
       TDIFFMIN: -40
       TDIFFMAX:  0

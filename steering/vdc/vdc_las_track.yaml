@@ -133,12 +133,12 @@ Processor:
 
 #focal plane calibration
   - name: proc_geometry_converter_fp_las
-    type: art::TVDCGeometryConverter
+    type: art::TFocalPlaneConverter
     parameter:
       OffsetX: 0
-      OffsetZ: 229.352
-      VDCTiltedAngleY: 0.0
-      FPTiltedAngleY: 0.0
+      OffsetZ: 241.806
+#      OffsetZ: 229.352
+      MatrixFile: prm/mwdc/vdc_las/fp/fp_las.yaml
       InputCollection:
         - ldc
       OutputCollection: lfp

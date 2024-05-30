@@ -1,6 +1,6 @@
-# file : pla_las.tmpl.yaml 
-# date : 2023.06.20 by Y.HIJIKATA
-# lastest update : 2023.06.20 by Y.HIJIKATA
+# file : pla_gr.tmpl.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
 
 Processor:
 
@@ -45,7 +45,7 @@ Processor:
         - pla_las_1l_cal
         - pla_las_1r_cal
         - pla_las_2l_cal
-        - pla_las_2r_cal	
+        - pla_las_2r_cal
         - pla_las_3l_cal
         - pla_las_3r_cal
         - pla_las_4l_cal
@@ -53,131 +53,84 @@ Processor:
         - pla_las_5l_cal
         - pla_las_5r_cal
         - pla_las_6l_cal
-        - pla_las_6r_cal
+        - pla_las_6r_cal	
 
+#  - name: proc_pla_las_1_validator
+#    type: art::TTimingTrefValidatorLR
+#    parameter:
+#      InputCollection1: pla_las_1l_cal
+#      InputCollection2: pla_las_1r_cal      
+#      InputCollection3: tref_las
+#      OutputCollection1: pla_las_1l
+#      OutputCollection2: pla_las_1r
+#      ValidTimeRange:     [@TVALMIN1@,@TVALMAX1@,0]
+#      ValidTimeRangeL:     [@TVALMIN1L@,@TVALMAX1L@,0]	
+#      ValidTimeRangeR:     [@TVALMIN1L@,@TVALMAX1R@,0]
+#      OutputTransparency: 0
 
-  - name: proc_pla_las_1l_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_1l_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_1l
-      ValidTimeRange:     [@TVALMIN1L@,@TVALMAX1L@,0]
-      OutputTransparency: 0
+#  - name: proc_pla_las_2_validator
+#    type: art::TTimingTrefValidatorLR
+#    parameter:
+#      InputCollection1: pla_las_2l_cal
+#      InputCollection2: pla_las_2r_cal      
+#      InputCollection3: tref_las
+#      OutputCollection1: pla_las_2l
+#      OutputCollection2: pla_las_2r      
+#      ValidTimeRange:     [@TVALMIN2@,@TVALMAX2@,0]
+#      ValidTimeRangeL:     [@TVALMIN2L@,@TVALMAX2L@,0]	
+#      ValidTimeRangeR:     [@TVALMIN2L@,@TVALMAX2R@,0]
+#      OutputTransparency: 0
 
-  - name: proc_pla_las_1R_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_1r_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_1r
-      ValidTimeRange:     [@TVALMIN1R@,@TVALMAX1R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_2l_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_2l_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_2l
-      ValidTimeRange:     [@TVALMIN2L@,@TVALMAX2L@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_2r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_2r_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_2r
-      ValidTimeRange:     [@TVALMIN2R@,@TVALMAX2R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_3l_validator
-    type: art::TTimingTrefValidator
+  - name: proc_pla_las_3_validator
+    type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_las_3l_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_3l
-      ValidTimeRange:     [@TVALMIN3L@,@TVALMAX3L@,0]
+      InputCollection2: pla_las_3r_cal      
+      InputCollection3: tref_las
+      OutputCollection1: pla_las_3l
+      OutputCollection2: pla_las_3r      
+      ValidTimeRange:     [@TVALMIN3@,@TVALMAX3@,0]
+      ValidTimeRangeL:     [@TVALMIN3L@,@TVALMAX3L@,0]	
+      ValidTimeRangeR:     [@TVALMIN3L@,@TVALMAX3R@,0]
       OutputTransparency: 0
 
-  - name: proc_pla_las_3r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_3r_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_3r
-      ValidTimeRange:     [@TVALMIN3R@,@TVALMAX3R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_4l_validator
-    type: art::TTimingTrefValidator
+  - name: proc_pla_las_4_validator
+    type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_las_4l_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_4l
-      ValidTimeRange:     [@TVALMIN4L@,@TVALMAX4L@,0]
+      InputCollection2: pla_las_4r_cal      
+      InputCollection3: tref_las
+      OutputCollection1: pla_las_4l
+      OutputCollection2: pla_las_4r      
+      ValidTimeRange:     [@TVALMIN4@,@TVALMAX4@,0]
+      ValidTimeRangeL:     [@TVALMIN4L@,@TVALMAX4L@,0]	
+      ValidTimeRangeR:     [@TVALMIN4L@,@TVALMAX4R@,0]
       OutputTransparency: 0
 
-  - name: proc_pla_las_4r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_4r_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_4r
-      ValidTimeRange:     [@TVALMIN4R@,@TVALMAX4R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_5l_validator
-    type: art::TTimingTrefValidator
+  - name: proc_pla_las_5_validator
+    type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_las_5l_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_5l
-      ValidTimeRange:     [@TVALMIN5L@,@TVALMAX5L@,0]
+      InputCollection2: pla_las_5r_cal      
+      InputCollection3: tref_las
+      OutputCollection1: pla_las_5l
+      OutputCollection2: pla_las_5r      
+      ValidTimeRange:     [@TVALMIN5@,@TVALMAX5@,0]
+      ValidTimeRangeL:     [@TVALMIN5L@,@TVALMAX5L@,0]	
+      ValidTimeRangeR:     [@TVALMIN5L@,@TVALMAX5R@,0]
       OutputTransparency: 0
 
-  - name: proc_pla_las_5r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_5r_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_5r
-      ValidTimeRange:     [@TVALMIN5R@,@TVALMAX5R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_6l_validator
-    type: art::TTimingTrefValidator
+  - name: proc_pla_las_6_validator
+    type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_las_6l_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_6l
-      ValidTimeRange:     [@TVALMIN6L@,@TVALMAX6L@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_6r_validator
-    type: art::TTimingTrefValidator
-    parameter:
-      InputCollection1: pla_las_6r_cal
-      InputCollection2: tref_las
-      OutputCollection: pla_las_6r
-      ValidTimeRange:     [@TVALMIN6R@,@TVALMAX6R@,0]
-      OutputTransparency: 0
-
-  - name: proc_pla_las_1
-    type: art::TTwoSidedPlasticCalibrationProcessor
-    parameter:
-      InputCollection1:   pla_las_1l
-      InputCollection2:   pla_las_1r
-      OutputCollection:   pla_las_1
-      OutputTransparency: 0
-
-  - name: proc_pla_las_2
-    type: art::TTwoSidedPlasticCalibrationProcessor
-    parameter:
-      InputCollection1:   pla_las_2l
-      InputCollection2:   pla_las_2r
-      OutputCollection:   pla_las_2
+      InputCollection2: pla_las_6r_cal      
+      InputCollection3: tref_las
+      OutputCollection1: pla_las_6l
+      OutputCollection2: pla_las_6r      
+      ValidTimeRange:     [@TVALMIN6@,@TVALMAX6@,0]
+      ValidTimeRangeL:     [@TVALMIN6L@,@TVALMAX6L@,0]	
+      ValidTimeRangeR:     [@TVALMIN6L@,@TVALMAX6R@,0]
       OutputTransparency: 0
 
   - name: proc_pla_las_3
@@ -186,6 +139,7 @@ Processor:
       InputCollection1:   pla_las_3l
       InputCollection2:   pla_las_3r
       OutputCollection:   pla_las_3
+#      ValidTimeRange: [-10, 20, 0]  # [FloatVec_t] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
       OutputTransparency: 0
 
   - name: proc_pla_las_4
@@ -194,6 +148,7 @@ Processor:
       InputCollection1:   pla_las_4l
       InputCollection2:   pla_las_4r
       OutputCollection:   pla_las_4
+#      ValidTimeRange: [-100, 100, 0]  # [FloatVec_t] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
       OutputTransparency: 0
 
   - name: proc_pla_las_5
@@ -202,6 +157,7 @@ Processor:
       InputCollection1:   pla_las_5l
       InputCollection2:   pla_las_5r
       OutputCollection:   pla_las_5
+#      ValidTimeRange: [-100, 100, 0]  # [FloatVec_t] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
       OutputTransparency: 0
 
   - name: proc_pla_las_6
@@ -210,6 +166,6 @@ Processor:
       InputCollection1:   pla_las_6l
       InputCollection2:   pla_las_6r
       OutputCollection:   pla_las_6
+#      ValidTimeRange: [-100, 100, 0]  # [FloatVec_t] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
       OutputTransparency: 0
-
       

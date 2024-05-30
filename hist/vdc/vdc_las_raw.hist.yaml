@@ -1,0 +1,21 @@
+  include:
+  - name: hist/vdc/vdc_las_raw.tmpl.hist.yaml
+    replace:
+      VDCLAS: vdc_las_xu 
+      PLANE: XU
+
+  - name: hist/vdc/vdc_las_raw.tmpl.hist.yaml
+    replace:
+      VDCLAS: vdc_las_xv
+      PLANE: XV
+
+  - name: hist/vdc/vdc_las_raw.tmpl.hist.yaml
+    replace:
+      VDCLAS: vdc_las_uv
+      PLANE: UV
+
+  - name: hist/vdc/vdc_las_raw.tmpl.hist.yaml
+    replace:
+      VDCLAS: vdc_las
+      PLANE: Merged
+

@@ -1,0 +1,15 @@
+# file : pla_gr_vme.yaml 
+# date : 2022.07.01 by Y.HIJIKATA
+# lastest update : 2022.07.01 by Y.HIJIKATA
+
+Processor:
+  - include:
+      name: pla_gr_test.tmpl.yaml
+#      name: pla_gr.tmpl.yaml
+      replace:
+        CATID: 21
+        TVALMIN1: -155
+        TVALMAX1: -149
+        TVALMIN2: -170
+        TVALMAX2: -130
+

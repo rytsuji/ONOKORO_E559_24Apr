@@ -4,7 +4,7 @@
 
 Anchor:
 
-  - &gate_las gate/las/gate_las_pph_kf0.yaml
+  - &gate_las gate/las/gate_las_1033.yaml
   - &dt2dl_gr current  
   - &dt2dl_las current
 

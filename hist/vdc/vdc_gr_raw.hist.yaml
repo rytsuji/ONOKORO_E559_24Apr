@@ -1,0 +1,56 @@
+anchor:
+ - &xbin 1000
+ - &xmin -750
+ - &xmax 750
+ - &ybin 500
+ - &ymin -50
+ - &ymax 50
+ - &abin 500
+ - &amin -1200
+ - &amax -800
+ - &bbin 500
+ - &bmin -50
+ - &bmax 50 
+
+group:
+ - name: vdc_gr_raw
+   title: VDC GR raw track hist
+   contents:   
+     - name: x_gr
+       title: X  GR
+       x: ["vdc_gr.fX", *xbin, *xmin, *xmax]
+     - name: a_gr
+       title:  A GR
+       x: ["vdc_gr.fA*1000", *abin, *amin, *amax]
+     - name: y_gr
+       title: Y  GR
+       x: ["vdc_gr.fY", *ybin, *ymin, *ymax]
+     - name: b_gr
+       title:  B GR
+       x: ["vdc_gr.fB*1000", *bbin, *bmin, *bmax]       
+     - name: x_a_gr
+       title: X vs A GR
+       x: ["vdc_gr.fX", *xbin, *xmin, *xmax]              
+       y: ["vdc_gr.fA*1000", *abin, *amin, *amax]
+     - name: y_b_gr
+       title: Y vs B GR
+       x: ["vdc_gr.fY", *ybin, *ymin , *ymax]
+       y: ["vdc_gr.fB*1000",  *bbin, *bmin, *bmax]       
+     - name: x_y_gr
+       title: X vs Y GR
+       x: ["vdc_gr.fX", *xbin, *xmin, *xmax]
+       y: ["vdc_gr.fY", *ybin, *ymin , *ymax]
+     - name: y_a_gr
+       title: A vs Y GR
+       x: ["vdc_gr.fA*1000", *abin, *amin, *amax]       
+       y: ["vdc_gr.fY",  *ybin, *ymin, *ymax]       
+       
+
+
+
+
+
+
+
+
+     

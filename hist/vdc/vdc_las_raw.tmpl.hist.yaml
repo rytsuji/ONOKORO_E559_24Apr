@@ -1,0 +1,59 @@
+anchor:
+ - &xbin 1000
+ - &xmin -1000
+ - &xmax 1000
+ - &ybin 500
+ - &ymin -200
+ - &ymax 150
+ - &abin 500
+ - &amin 800
+ - &amax 3000
+ - &bbin 500
+ - &bmin -150
+ - &bmax 150 
+
+group:
+ - name: @VDCLAS@_rawtrack
+   title: VDC LAS hist Raw track @PLANE@
+   contents:
+     - name: x_las
+       title: X  LAS
+       x: ["@VDCLAS@.fX", *xbin, *xmin, *xmax]
+     - name: a_las
+       title:  A LAS
+       x: ["@VDCLAS@.fA*1000", *abin, *amin, *amax]
+     - name: y_las
+       title: Y  LAS
+       x: ["@VDCLAS@.fY", *ybin, *ymin, *ymax]
+     - name: b_las
+       title:  B LAS
+       x: ["@VDCLAS@.fB*1000", *bbin, *bmin, *bmax]       
+
+     - name: x_a_las
+       title: X vs A LAS
+       x: ["@VDCLAS@.fX", *xbin, *xmin, *xmax]              
+       y: ["@VDCLAS@.fA*1000", *abin, *amin, *amax]
+     - name: x_y_las
+       title: X vs Y LAS
+       x: ["@VDCLAS@.fX", *xbin, *xmin, *xmax]
+       y: ["@VDCLAS@.fY", *ybin, *ymin , *ymax]       
+     - name: y_a_las
+       title: Y vs A LAS
+       x: ["@VDCLAS@.fA*1000",  *abin, *amin, *amax]              
+       y: ["@VDCLAS@.fY", *ybin, *ymin , *ymax]
+     - name: y_b_las
+       title: Y vs B LAS
+       x: ["@VDCLAS@.fY", *ybin, *ymin , *ymax]
+       y: ["@VDCLAS@.fB*1000",  *bbin, *bmin, *bmax]       
+
+
+       
+
+
+
+
+
+
+
+
+     

@@ -1,6 +1,6 @@
 Processor:
 
-  - name: gate_array_init
+  - name: gate_array_init_las_tot
     type: art::TGateArrayInitializer
     parameter:
       OutputTransparency: 1
@@ -11,9 +11,7 @@ Processor:
       Definitions:
         - "gate_las_pid_tot; abs(Sum$(vdc_las_dt.fCharge)/vdc_las_dt@.GetEntriesFast()-(@CORRECTION@)-(@QMIN@+@QMAX@)/2.0)<(@QMAX@-@QMIN@)/2.0"
 
-
-
-  - name: stop_proc
+  - name: stop_proc_las_tot
     type: art::TGateStopProcessor
     parameter:
       GateName: "gate_las_pid_tot"

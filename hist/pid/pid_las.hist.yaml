@@ -1,9 +1,6 @@
 anchor:
 
  - &tof ["tref_las.fTiming-tref_grtrig.fTiming", 600, 200, 1400]
-# - &rf1 ["tref_grtrig.fTiming-rf1.fTiming", 125, -200, -50]
-# - &rf2 ["tref_grtrig.fTiming-rf2.fTiming", 125, -200, -50]
-# - &rf3 ["tref_grtrig.fTiming-rf3.fTiming", 125, -200, -50]
  
  - &rf1 ["fmod(tref_las.fTiming-rf1.fTiming+1420.6750,142.0675)", 300, 0, 142]
  - &rf2 ["fmod(tref_las.fTiming-rf2.fTiming+1420.6750,142.0675)", 300, 0, 142]
@@ -49,44 +46,44 @@ group:
        cut: *coin       
 
      - name: de1_rf1_las
-       title: dE1-RF1 LAS
+       title: deltaE1-RF1 LAS
        x: *rf1
        y: *de1
      - name: de1_rf2_las
-       title: dE1-RF2 LAS
+       title: deltaE1-RF2 LAS
        x: *rf2
        y: *de1
      - name: de1_rf3_las
-       title: dE1-RF3 LAS
+       title: deltaE1-RF3 LAS
        x: *rf3
        y: *de1
 
      - name: de1_rf1_las_pveto
-       title: dE1-RF1 LAS w/ plaVeto
+       title: deltaE1-RF1 LAS w/ 2nd-layer plastic veto
        x: *rf1
        y: *de1
        cut: *pveto
      - name: de1_rf2_las_pveto
-       title: dE1-RF2 LASw/ plaVeto
+       title: deltaE1-RF2 LAS w/ 2nd-layer plastic veto
        x: *rf2
        y: *de1
        cut: *pveto       
      - name: de1_rf3_las_pveto
-       title: dE1-RF3 LAS w/ plaVeto
+       title: deltaE1-RF3 LAS w/ 2nd-layer plastic veto
        x: *rf3
        y: *de1
        cut: *pveto
        
      - name: de2_rf1_las
-       title: dE2-RF1 LAS
+       title: deltaE2-RF1 LAS
        x: *rf1
        y: *de2
      - name: de2_rf2_las
-       title: dE2-RF2 LAS
+       title: deltaE2-RF2 LAS
        x: *rf2
        y: *de2
      - name: de2_rf3_las
-       title: dE2-RF3 LAS
+       title: deltaE2-RF3 LAS
        x: *rf3
        y: *de2
 
@@ -120,11 +117,11 @@ group:
        cut: *pveto       
 
      - name: x_de1_las
-       title: X-dE1 LAS
+       title: X-deltaE1 LAS
        x: *xpos
        y: *de1
      - name: x_de2_las
-       title: X-dE2 LAS
+       title: X-deltaE2 LAS
        x: *xpos
        y: *de2
      - name: x_tot_las
@@ -132,25 +129,25 @@ group:
        x: *xpos
        y: *tot
      - name: x_totc_las
-       title: X=TOT LAS with correction
+       title: X-TOT LAS with correction
        x: *xpos
        y: *totc       
 
      - name: tdiff_de1_las
-       title: TDiff-dE1 LAS
+       title: TDiff-deltaE1 LAS
        x: *tdiff
        y: *de1
      - name: tdiff_de2_las
-       title: TDiff-dE2 LAS
+       title: TDiff-deltaE2 LAS
        x: *tdiff
        y: *de2  
 
      - name: de1_de2_las
-       title: dE1-dE2 LAS
+       title: deltaE1-deltaE2 LAS
        x: *de1
        y: *de2
      - name: tot_de1_las     
-       title: TOT-dE1 LAS
+       title: TOT-deltaE1 LAS
        x: *tot
        y: *de1
 

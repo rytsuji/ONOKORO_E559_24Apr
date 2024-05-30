@@ -8,8 +8,11 @@ set(SOURCES
   TVDCClusterizationSizeSelectableProcessor.cc
   TTimingChargeMultiHitMappingProcessor.cc
   TTimingTrefValidator.cc
+  TTimingTrefValidatorLR.cc
   TOpticsData.cc
   TOpticsCalibrationProcessor.cc
+  TFocalPlaneConverter.cc
+  TPIDCalibrationProcessor.cc
   )
 
 set(HEADERS
@@ -20,8 +23,11 @@ set(HEADERS
   TVDCClusterizationSizeSelectableProcessor.h  
   TTimingChargeMultiHitMappingProcessor.h
   TTimingTrefValidator.h
+  TTimingTrefValidatorLR.h
   TOpticsData.h
   TOpticsCalibrationProcessor.h
+  TFocalPlaneConverter.h
+  TPIDCalibrationProcessor.h
   )
 
 add_library(${LIB_NAME} SHARED ${SOURCES})

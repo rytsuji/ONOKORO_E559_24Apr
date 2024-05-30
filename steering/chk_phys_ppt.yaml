@@ -5,13 +5,13 @@
 Anchor:
   - &gate_gr gate/gr/gate_gr_ppt_kf0.yaml
   - &gate_las gate/las/gate_las_ppt_kf0.yaml
-  - &dt2dl_gr  2013 
-  - &dt2dl_las 2020
+  - &dt2dl_gr  2078 
+  - &dt2dl_las 2078
   - &hist_phys hist/phys/run/phys_ppt.hist.yaml
 
   - &input data/run@NUM@.bld
-  - &histout output/phys/run@NUM@.hist.root
-  - &output output/phys/run@NUM@.root
+  - &histout output/phy_ppts/run@NUM@.hist.root
+  - &output output/phys_ppt/run@NUM@.root
 
 Processor:
   - name: timer

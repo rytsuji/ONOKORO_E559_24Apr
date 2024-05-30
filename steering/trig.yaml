@@ -9,7 +9,7 @@ Processor:
   - name: proc_trig_map
     type: art::TTimingChargeMappingProcessor
     parameter:
-      CatID:              101
+      CatID:              110
       ChargeType:         0
       TimingTypeID:       0
       OutputCollection:   trig_raw
