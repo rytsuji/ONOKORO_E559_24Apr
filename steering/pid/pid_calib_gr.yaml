@@ -1,0 +1,12 @@
+Processor:
+
+  - name: proc_pla_gr_calib
+    type: art::TPIDCalibrationProcessor
+    parameter:
+      InputCollectionTiming: pla_gr_1
+      InputCollectionCharge: pla_gr_1
+      InputCollectionTrack: gfp
+      OutputCollection: pid_gr
+      MatrixFileCharge: prm/pid/pla_gr/pla_gr1_calib_@SETUP@.yaml
+      MatrixFileTiming: prm/pid/tof/tof_gr_calib.yaml
+      SetupFile: prm/spectrometer/gr/@SETUP@.yaml

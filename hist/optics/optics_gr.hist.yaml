@@ -1,32 +1,52 @@
 anchor:
- - &dbin_gr 1000
- - &dmin_gr -0.05
- - &dmax_gr 0.05
- - &abin_gr 500
- - &amin_gr -100
- - &amax_gr 100
+ - &dbin_gtgt 1000
+ - &dmin_gtgt -0.05
+ - &dmax_gtgt 0.05
+
+ - &abin_gtgt 1000
+ - &amin_gtgt -30
+ - &amax_gtgt 30
+
+ - &bbin_gtgt 1000
+ - &bmin_gtgt -150
+ - &bmax_gtgt 150
+
+ - &abin_gfp 1000
+ - &amin_gfp -100
+ - &amax_gfp 100
  
 group:
  - name: optics_gr
-   title: GR optics  hist
+   title: GR optics hist
    contents:   
      - name: delta_gr
-       title: delta GR
-       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
+       title: GR delta 
+       x: ["gtgt.fDelta", *dbin_gtgt, *dmin_gtgt, *dmax_gtgt]
 
-     - name: delta_a_gr
-       title: delta vs A GR
-       x: ["gtgt.fDelta", *dbin_gr, *dmin_gr, *dmax_gr]
-       y: ["gfp.fA*1000", *abin_gr, *amin_gr, *amax_gr]
+     - name: a_gtgt
+       title: GR Atgt
+       x: ["gtgt.fA*1000", *abin_gtgt, *amin_gtgt, *amax_gtgt]
 
+     - name: b_gtgt
+       title: GR Btgt
+       x: ["gtgt.fB*1000", *bbin_gtgt, *bmin_gtgt, *bmax_gtgt]
 
+     - name: delta_a_gtgt
+       title: GR delta vs Atgt
+       x: ["gtgt.fDelta", *dbin_gtgt, *dmin_gtgt, *dmax_gtgt]       
+       y: ["gtgt.fA*1000", *abin_gtgt, *amin_gtgt, *amax_gtgt]
+
+     - name: delta_b_gtgt
+       title: GR delta vs Btgt
+       x: ["gtgt.fDelta", *dbin_gtgt, *dmin_gtgt, *dmax_gtgt]       
+       y: ["gtgt.fB*1000", *bbin_gtgt, *bmin_gtgt, *bmax_gtgt]
+
+     - name: a_b_gtgt
+       title: GR Atgt vs Btgt
+       x: ["gtgt.fA*1000", *abin_gtgt, *amin_gtgt, *amax_gtgt]
+       y: ["gtgt.fB*1000", *bbin_gtgt, *bmin_gtgt, *bmax_gtgt]
        
-
-
-
-
-
-
-
-
-     
+     - name: delta_a_gfp
+       title: GR delta vs Afp
+       x: ["gtgt.fDelta", *dbin_gtgt, *dmin_gtgt, *dmax_gtgt]
+       y: ["gfp.fA*1000", *abin_gfp, *amin_gfp, *amax_gfp]

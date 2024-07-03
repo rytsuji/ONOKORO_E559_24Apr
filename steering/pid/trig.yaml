@@ -1,0 +1,11 @@
+#for copy trig data
+Processor:
+
+  - name: proc_trig_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: trig
+      OutputCollections:
+        - trig_gr
+        - trig_las
+        - trig_coin

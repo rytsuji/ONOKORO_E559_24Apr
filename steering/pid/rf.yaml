@@ -1,0 +1,10 @@
+Processor:
+      
+  - name: proc_rf_separater
+    type: art::TSeparateOutputProcessor
+    parameter:
+      InputCollection: rf
+      OutputCollections:
+        - rf1
+        - rf2
+        - rf3

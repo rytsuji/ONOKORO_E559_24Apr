@@ -1,0 +1,173 @@
+# file : rawdata.yaml 
+# date : 2024.4.13 by R.TSUJI
+# lastest update : 2024.04.13 by R.TSUJI
+
+Anchor:
+  - &input data/run@NUM@.bld
+  - &histout output/chk/run@NUM@.hist.root
+  - &output output/chk/run@NUM@.root
+  - &dt2dl_gr @SETUP@
+  - &dt2dl_las @SETUP@
+  
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - name: es_rcnp
+    type: art::TRCNPEventStore_ts
+    parameter:
+      OutputTransparency: 1
+      InputFiles:
+         - *input
+
+  - name: mapper
+    type: art::TMappingProcessor
+    parameter:
+      OutputTransparency: 1
+      MapConfig: mapper_tamidaq.conf
+
+  - include: tref.yaml
+  - include: trig.yaml
+  - include: rf.yaml
+  - include: tref_chk.yaml
+
+  - include: pla/pla_gr.yaml
+  - include:
+      name: vdc/vdc_gr_rawtrack.yaml  	
+      replace:
+        DT2DL: *dt2dl_gr
+
+  - include: pla/pla_las.yaml
+  - include:
+      name: vdc/vdc_las_rawtrack.yaml
+      replace:
+        DT2DL: *dt2dl_las
+#geometry & fp conversion
+  - include:  vdc/vdc_gr_calib.yaml
+  - include:  vdc/vdc_las_calib.yaml
+
+#optics calibration
+  - include:  optics/optics.yaml
+
+#tof and charge calibration
+  - include:
+      name: pid/pid_calib.yaml
+      replace:
+        SETUP: @SETUP@
+
+  - include:  pid/tof.yaml
+
+#energy calculation from spectrometer setup
+  - include:
+      name: energy_calib/energy_calib.yaml
+      replace:
+        SETUP: @SETUP@
+
+
+  - name: hist_pla_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pla/pla_gr.hist.yaml	
+      OutputFilename: *histout
+      
+  - name: hist_pla_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pla/pla_las.hist.yaml	
+      OutputFilename: *histout
+
+  - name: hist_vdc_gr_plane
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_plane.hist.yaml
+      OutputFilename: *histout
+  - name: hist_vdc_las_plane
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las_plane.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_gr_rawtrack
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_raw.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_las_rawtrack
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las_raw.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_pid_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_gr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_pid_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_las_track
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las.hist.yaml
+
+  - name: hist_vdc_gr_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_las.hist.yaml
+      
+  - name: hist_optics_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics_corr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_corr.hist.yaml                                                                                                                              
+      OutputFilename: *histout
+
+  - name: hist_pid_gr_calib
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_gr_calib.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_pid_las_calib
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_las_calib.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_phys
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/phys/phys_@SETUP@.hist.yaml
+      OutputFilename: *histout
+
+  - name: outputtree
+    type: art::TOutputTreeProcessor
+    parameter:
+      FileName: *output
+      

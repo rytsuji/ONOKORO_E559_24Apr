@@ -1,0 +1,39 @@
+Anchor:
+  - &input output/raw/run@NUM@.root
+  - &histout output/hist_gr_eff/run@NUM@.hist.root
+  - &gate_gr gate/gr/gate_gr_@SETUP@_raw.yaml
+  
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - name: es_ttree
+    type: art::TTreeEventStore
+    parameter:
+      MaxEventNum: 0
+      OutputTransparency: 0
+      TreeName: tree
+      FileName: *input
+
+  - include: *gate_gr
+
+  - name: hist_pid_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_gr.hist.yaml 
+      OutputFilename: *histout
+
+  - name: hist_vdc_gr_track
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_raw.hist.yaml
+      OutputFilename: *histout
+      
+  - name: hist_vdc_eff_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/vdc_gr_eff.hist.yaml
+      OutputFilename: *histout

@@ -113,6 +113,7 @@ Processor:
       InputCollection: vdc_las_x1
       OutputCollection: vdc_las_clust_x1
       ClustSize: 3
+      SearchTimeWidth: 250
       OutputTransparency: 0
   - name: proc_vdc_las_cluster_x2
     type: art::TVDCClusterizationSizeSelectableProcessor
@@ -120,6 +121,7 @@ Processor:
       InputCollection: vdc_las_x2
       OutputCollection: vdc_las_clust_x2
       ClustSize: 3
+      SearchTimeWidth: 250      
       OutputTransparency: 0
   - name: proc_vdc_las_cluster_u1
     type: art::TVDCClusterizationSizeSelectableProcessor
@@ -127,12 +129,14 @@ Processor:
       InputCollection: vdc_las_u1
       OutputCollection: vdc_las_clust_u1
       ClustSize: 3
+      SearchTimeWidth: 250
       OutputTransparency: 0
   - name: proc_vdc_las_cluster_u2
     type: art::TVDCClusterizationSizeSelectableProcessor
     parameter:
       InputCollection: vdc_las_u2
       OutputCollection: vdc_las_clust_u2
+      SearchTimeWidth: 250      
       ClustSize: 3
       OutputTransparency: 0
   - name: proc_vdc_las_cluster_v1
@@ -148,6 +152,7 @@ Processor:
       InputCollection: vdc_las_v2
       OutputCollection: vdc_las_clust_v2
       ClustSize: 3
+      #SearchTimeWidth: 250
       OutputTransparency: 0
 
 # tracking
@@ -191,5 +196,5 @@ Processor:
       InputCollection:
         - vdc_las_xu
         - vdc_las_xv
-        - vdc_las_uv
+#        - vdc_las_uv
       OutputCollection: vdc_las

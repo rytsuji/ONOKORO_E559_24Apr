@@ -1,0 +1,52 @@
+anchor:
+
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOFf())", 1000, -1000, 500]
+ - &rf1 ["fmod(pid_las.fTiming-plas.GetTOFDiff()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf2 ["fmod(pid_las.fTiming-plas.GetTOFDiff()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf3 ["fmod(pid_las.fTiming-plas.GetTOFDiff()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+
+ - &xpos ["lfp.fX",1000,-1000,1000]
+ - &de1 ["pid_las.fCharge",1000,0,500]
+
+group:
+ - name: pid_las_calib
+   title: PID of LAS 
+   contents:
+
+     - name: de1_rf1_las
+       title: deltaE1-RF1 LAS
+       x: *rf1
+       y: *de1
+     - name: de1_rf2_las
+       title: deltaE1-RF2 LAS
+       x: *rf2
+       y: *de1
+     - name: de1_rf3_las
+       title: deltaE1-RF3 LAS
+       x: *rf3
+       y: *de1
+
+     - name: x_de1_las
+       title: x-dE1 LAS
+       x: *xpos
+       y: *de1
+       
+     - name: de1_tof_las
+       title: deltaE1-TOF LAS
+       x: *tof
+       y: *de1
+
+     - name: de1_las
+       title: deltaE1 LAS
+       x: *de1
+
+     - name: rf1_las
+       title: RF1 LAS
+       x: *rf1       
+     - name: rf2_las
+       title: RF2 LAS
+       x: *rf2       
+     - name: rf3_las
+       title: RF3 LAS
+       x: *rf3
+

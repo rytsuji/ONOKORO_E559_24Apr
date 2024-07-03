@@ -6,6 +6,7 @@ anchor:
   - &clustnum ["vdc_@GL@_clust_@PLANE@.GetClustnum()", 20, 0, 20]
   - &ssr ["vdc_@GL@_clust_@PLANE@.fSSR", 100, 0, 2]    
   - &res ["vdc_@GL@_clust_@PLANE@.fResidual", 250, -2.5, 2.5]
+  - &gef ["vdc_@GL@_clust_@PLANE@@.GetEntriesFast()", 20, 0, 20]  
 
   
 group:
@@ -39,6 +40,9 @@ group:
       - name: vdc_@GL@_@PLANE@_clustnum
         title: VDC @GL@  @PLANE@ ClustNum
         x: *clustnum
+      - name: vdc_@GL@_@PLANE@_gef
+        title: VDC @GL@  @PLANE@ GEF
+        x: *gef	
       - name: vdc_@GL@_@PLANE@_ssr
         title: VDC @GL@  @PLANE@ SSR
         x: *ssr	

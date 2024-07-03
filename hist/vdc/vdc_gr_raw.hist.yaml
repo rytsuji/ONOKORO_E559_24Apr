@@ -43,9 +43,11 @@ group:
      - name: y_a_gr
        title: A vs Y GR
        x: ["vdc_gr.fA*1000", *abin, *amin, *amax]       
-       y: ["vdc_gr.fY",  *ybin, *ymin, *ymax]       
-       
-
+       y: ["vdc_gr.fY",  *ybin, *ymin, *ymax]              
+     - name: x_tdiff_gr
+       title: X vs plastic TDiff  GR
+       x: ["vdc_gr.fX", *xbin, *xmin, *xmax]
+       y: ["pla_gr_1.GetTDiff()", 200, -15 , 15]
 
 
 

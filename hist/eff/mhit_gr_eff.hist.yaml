@@ -1,0 +1,18 @@
+group:
+ - name: mhif_gr_eff
+   title: MultHit efficiency of GR plastic1 (Mean of hist = eff)
+   contents:   
+     - name: mhit_gr_grtrig
+       title: GR MultHit efficiency w/ gr trig
+       x: ["pla_gr_1@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "trig_gr.fID==0"
+     - name: mhit_gr_cointrig
+       title: GR MultHit efficiency w/ coin trig
+       x: ["pla_gr_1@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "trig_coin.fID==0"       
+
+       
+
+
+
+     

@@ -33,15 +33,12 @@ TTimingTrefValidatorLR::TTimingTrefValidatorLR()
    RegisterOutputCollection("OutputCollection2","Output collection2",fOutputName2,TString("validated"));
 
    const FloatVec_t range(3,0.);
-   //const FloatVec_t range[3]={0.0,-1000,1000};
    
    RegisterProcessorParameter("ValidTimeRange","[min,max,offset] => Tmin = offset + min etc. ignored if min == max",
                               fValidTimeRange,range);
 
-   RegisterProcessorParameter("ValidTimeRangeL","[min,max,offset] => Tmin = offset + min etc. ignored if min == max",
-                              fValidTimeRangeL,range);
-   RegisterProcessorParameter("ValidTimeRangeR","[min,max,offset] => Tmin = offset + min etc. ignored if min == max",
-                              fValidTimeRangeR,range);
+   RegisterProcessorParameter("ValidTDiffRange","[min,max,offset] => Tmin = offset + min etc. ignored if min == max",
+                              fValidTDiffRange,range);
 
 }
 
@@ -75,21 +72,13 @@ void TTimingTrefValidatorLR::Init(TEventCollection *col)
    fValidTimeMin = fValidTimeRange[2] + fValidTimeRange[0];
    fValidTimeMax = fValidTimeRange[2] + fValidTimeRange[1];
 
-   //L
-   if (fValidTimeRangeL[0] > fValidTimeRangeL[1]) {
-      SetStateError("Time range L : min > max");
+   //TDiffRange
+   if (fValidTDiffRange[0] > fValidTDiffRange[1]) {
+      SetStateError("TDiff range : min > max");
       return;
    }
-   fValidTimeMinL = fValidTimeRangeL[2] + fValidTimeRangeL[0];
-   fValidTimeMaxL = fValidTimeRangeL[2] + fValidTimeRangeL[1];
-
-   //R
-   if (fValidTimeRangeR[0] > fValidTimeRangeR[1]) {
-     SetStateError("Time range R : min > max");
-     return;
-   }
-   fValidTimeMinR = fValidTimeRangeR[2] + fValidTimeRangeR[0];
-   fValidTimeMaxR = fValidTimeRangeR[2] + fValidTimeRangeR[1];
+   fValidTDiffMin = fValidTDiffRange[2] + fValidTDiffRange[0];
+   fValidTDiffMax = fValidTDiffRange[2] + fValidTDiffRange[1];
    
    const TClass* inClass = (*fInput1)->GetClass();
 
@@ -109,36 +98,56 @@ void TTimingTrefValidatorLR::Process()
    fOutput1->Clear("C");
    fOutput2->Clear("C");
 
+   int latestHit1=0;
+   int latestHit2=0;
    
 
    if((*fInput3)->GetEntriesFast()>0){
      const ITiming *const trefData = dynamic_cast<const ITiming*>((*fInput3)->At(0));
      
      Double_t tref = trefData->GetTiming();
-   
+     
      Int_t nHits1 = (*fInput1)->GetEntriesFast();
      Int_t nHits2 = (*fInput2)->GetEntriesFast();
      for (Int_t iHit1 = 0; iHit1 != nHits1; ++iHit1) {
        for (Int_t iHit2 = 0; iHit2 != nHits2; ++iHit2) {
+	 
 	 const ITiming *const timingData1 = dynamic_cast<const ITiming*>((*fInput1)->At(iHit1));
-	 const TDataObject *const data1 = static_cast<TDataObject*>((*fInput1)->At(iHit1));
-
 	 const ITiming *const timingData2 = dynamic_cast<const ITiming*>((*fInput2)->At(iHit2));
-	 const TDataObject *const data2 = static_cast<TDataObject*>((*fInput2)->At(iHit2));
-
+	 	 
 	 if (!timingData1 && !timingData2) continue;
 	 Double_t timing1 = timingData1->GetTiming();
 	 Double_t timing2 = timingData2->GetTiming();
-	 if ( (0.5*(timing1+timing2)-tref < fValidTimeMin || fValidTimeMax < 0.5*(timing1+timing2)-tref ) || ( timing1-tref < fValidTimeMinL || fValidTimeMaxL < timing1-tref ) || ( timing2-tref < fValidTimeMinR || fValidTimeMaxR < timing2-tref ) ) {
+	 if ( (0.5*(timing1+timing2)-tref < fValidTimeMin || fValidTimeMax < 0.5*(timing1+timing2)-tref ) ||  timing1-timing2 < fValidTDiffMin || fValidTDiffMax < timing1-timing2  ) {
+	   if(0.5*(timing1+timing2)-tref < fValidTimeMin){
+	     latestHit1=iHit1;
+	     latestHit2=iHit2;
+	   }
 	   continue;
-	 }	 
-	 TDataObject *const outData1 = fOutput1->ConstructedAt(fOutput1->GetEntriesFast());
-	 TDataObject *const outData2 = fOutput2->ConstructedAt(fOutput2->GetEntriesFast());
+	 }
+	 const TDataObject *const data1 = static_cast<TDataObject*>((*fInput1)->At(iHit1));
+	 const TDataObject *const data2 = static_cast<TDataObject*>((*fInput2)->At(iHit2));
+	 TObject *const outData1 = fOutput1->ConstructedAt(fOutput1->GetEntriesFast());
+	 TObject *const outData2 = fOutput2->ConstructedAt(fOutput2->GetEntriesFast());
 	 data1->Copy(*outData1);
-	 data2->Copy(*outData2);	 
+	 data2->Copy(*outData2);	 	 
        }
      }
+     /*
+     if(fOutput1->GetEntriesFast()==0 && fOutput2->GetEntriesFast()==0 && nHits1>0 && nHits2>0){
+       
+       const TDataObject *const data1 = static_cast<TDataObject*>((*fInput1)->At(latestHit1));   
+       const TDataObject *const data2 = static_cast<TDataObject*>((*fInput2)->At(latestHit2));
 
+       //const TDataObject *const data1 = static_cast<TDataObject*>((*fInput1)->At(0));   
+       //const TDataObject *const data2 = static_cast<TDataObject*>((*fInput2)->At(0));
+       
+       TObject *const outData1 = fOutput1->ConstructedAt(fOutput1->GetEntriesFast());
+       TObject *const outData2 = fOutput2->ConstructedAt(fOutput2->GetEntriesFast());
+       data1->Copy(*outData1);
+       data2->Copy(*outData2);	 
+       
+       }*/
    }
 }
    

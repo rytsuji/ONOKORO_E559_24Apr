@@ -1,0 +1,45 @@
+#ifndef TSPECTROMETERPROCESSOR_H
+#define TSPECTROMETERPROCESSOR_H
+
+
+#include "TProcessor.h"
+#include "TEventCollection.h"
+#include "TOpticsData.h"
+#include "TParticleData.h"
+#include <vector>
+
+namespace art {
+  class TSpectrometerProcessor;
+}
+
+class TClonesArray;
+
+class art::TSpectrometerProcessor : public TProcessor {
+public:
+  TSpectrometerProcessor();
+  virtual ~TSpectrometerProcessor();
+  
+  virtual void Init(TEventCollection *col);
+  virtual void Process();
+
+protected:  
+  TString fNameInput;
+  TString fNameOutput;
+
+  TClonesArray **fInput;//!                                                                                                                                 
+  TClonesArray *fOutput;//!                                                                                                                                  
+  Int_t fVerbose;
+
+  Parameter<Double_t> fMass;
+  Parameter<Int_t> fAtomicNumber;
+  Parameter<Int_t> fMassNumber;
+  Parameter<Double_t> fRho;
+  Parameter<Double_t> fMagneticField;
+  Parameter<Double_t> fAngle;
+  
+private:
+  
+  ClassDef(TSpectrometerProcessor,1) 
+};
+
+#endif

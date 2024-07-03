@@ -1,3 +1,4 @@
+
 # file : pla_gr.tmpl.yaml 
 # date : 2022.07.01 by Y.HIJIKATA
 # lastest update : 2022.07.01 by Y.HIJIKATA
@@ -85,13 +86,12 @@ Processor:
     type: art::TTimingTrefValidatorLR
     parameter:
       InputCollection1: pla_las_3l_cal
-      InputCollection2: pla_las_3r_cal      
+      InputCollection2: pla_las_3r_cal
       InputCollection3: tref_las
       OutputCollection1: pla_las_3l
       OutputCollection2: pla_las_3r      
       ValidTimeRange:     [@TVALMIN3@,@TVALMAX3@,0]
-      ValidTimeRangeL:     [@TVALMIN3L@,@TVALMAX3L@,0]	
-      ValidTimeRangeR:     [@TVALMIN3L@,@TVALMAX3R@,0]
+      ValidTDiffRange:    [@TDIFFMIN3@,@TDIFFMAX3@,0] # L-R      
       OutputTransparency: 0
 
   - name: proc_pla_las_4_validator
@@ -103,8 +103,7 @@ Processor:
       OutputCollection1: pla_las_4l
       OutputCollection2: pla_las_4r      
       ValidTimeRange:     [@TVALMIN4@,@TVALMAX4@,0]
-      ValidTimeRangeL:     [@TVALMIN4L@,@TVALMAX4L@,0]	
-      ValidTimeRangeR:     [@TVALMIN4L@,@TVALMAX4R@,0]
+      ValidTDiffRange:    [@TDIFFMIN4@,@TDIFFMAX4@,0] # L-R      
       OutputTransparency: 0
 
   - name: proc_pla_las_5_validator
@@ -116,8 +115,7 @@ Processor:
       OutputCollection1: pla_las_5l
       OutputCollection2: pla_las_5r      
       ValidTimeRange:     [@TVALMIN5@,@TVALMAX5@,0]
-      ValidTimeRangeL:     [@TVALMIN5L@,@TVALMAX5L@,0]	
-      ValidTimeRangeR:     [@TVALMIN5L@,@TVALMAX5R@,0]
+      ValidTDiffRange:    [@TDIFFMIN5@,@TDIFFMAX5@,0] # L-R
       OutputTransparency: 0
 
   - name: proc_pla_las_6_validator
@@ -129,8 +127,7 @@ Processor:
       OutputCollection1: pla_las_6l
       OutputCollection2: pla_las_6r      
       ValidTimeRange:     [@TVALMIN6@,@TVALMAX6@,0]
-      ValidTimeRangeL:     [@TVALMIN6L@,@TVALMAX6L@,0]	
-      ValidTimeRangeR:     [@TVALMIN6L@,@TVALMAX6R@,0]
+      ValidTDiffRange:    [@TDIFFMIN6@,@TDIFFMAX6@,0] # L-R
       OutputTransparency: 0
 
   - name: proc_pla_las_3
@@ -139,7 +136,7 @@ Processor:
       InputCollection1:   pla_las_3l
       InputCollection2:   pla_las_3r
       OutputCollection:   pla_las_3
-#      ValidTimeRange: [-10, 20, 0]  # [FloatVec_t] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
+      #ValidTimeRange: [-100, 100, 0]  # [FloatVec_t] [min,max,offset] => Tmin = offset + min etc. ignored if min == max
       OutputTransparency: 0
 
   - name: proc_pla_las_4

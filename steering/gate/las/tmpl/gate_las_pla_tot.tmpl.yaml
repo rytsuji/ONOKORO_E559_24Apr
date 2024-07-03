@@ -1,0 +1,18 @@
+Processor:
+
+  - name: gate_array_init_las_pla_tot
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: las_pid_pla_tot
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_pid_pla_tot;  pla_las_3.fCharge>@P0@+(@P1@*Sum$(vdc_las_dt.fCharge)/vdc_las_dt@.GetEntriesFast())"
+
+  - name: stop_proc_las_pla_tot
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_pid_pla_tot"
+

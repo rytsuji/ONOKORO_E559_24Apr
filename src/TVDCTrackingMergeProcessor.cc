@@ -56,6 +56,7 @@ void TVDCTrackingMergeProcessor::Process(){
 	const TMWDCTrackingResult *const trIn = static_cast<TMWDCTrackingResult*>((*aTrack)->At(iData));
 	TMWDCTrackingResult *trOut = (TMWDCTrackingResult*)fTrackOut->ConstructedAt(fTrackOut->GetEntriesFast());
 	trOut->SetTrack(trIn->GetX(),trIn->GetY(),trIn->GetZ(),trIn->GetA(),trIn->GetB());
+	//trIn->Copy(*trOut);
 	trOut->SetTrackingID(TMWDCTrackingResult::kGood);
       }      
       break;

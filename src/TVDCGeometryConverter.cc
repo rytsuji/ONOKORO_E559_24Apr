@@ -2,15 +2,10 @@
 #include "TMWDCTrackingResult.h"
 #include "TMWDCParameter.h"
 #include "TMWDCPlaneInfo.h"
-//"TVDCCluster.h"
-
-//#include "TStopwatch.h"
 #include "TClonesArray.h"
 #include "TMath.h"
-//#include "TMatrixD.h"
 #include "TVector3.h"
 
-//#include <numeric>
 
 using art::TVDCGeometryConverter;
 ClassImp(art::TVDCGeometryConverter)
@@ -69,6 +64,7 @@ void TVDCGeometryConverter::Process(){
 	double ConvY=HitPos.Y()+fOffsetY+(HitPos.X()*sin(fVDCTiltedAngleRad)+fOffsetZ)*Vec.Y()/Vec.Z();;
 	double ConvZ=0;
 	Vec.RotateY((fFPTiltedAngleY)*TMath::DegToRad());
+	//trIn->Copy(*trOut);
 	trOut->SetTrack(ConvX,ConvY,ConvZ,Vec.X()/Vec.Z(),Vec.Y()/Vec.Z());
 	trOut->SetTrackingID(TMWDCTrackingResult::kGood);
       }

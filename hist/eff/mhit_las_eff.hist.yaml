@@ -1,0 +1,18 @@
+group:
+ - name: mhif_las_eff
+   title: MultHit efficiency of LAS plastic3 (Mean of hist = eff)
+   contents:   
+     - name: mhit_las_lastrig
+       title: LAS MultHit efficiency w/ las trig
+       x: ["pla_las_3@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "trig_las.fID==0"
+     - name: mhit_las_cointrig
+       title: LAS MultHit efficiency w/ coin trig
+       x: ["pla_las_3@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "trig_coin.fID==0"       
+
+       
+
+
+
+     

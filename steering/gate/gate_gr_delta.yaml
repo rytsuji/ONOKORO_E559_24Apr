@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_gr_delta
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_gr_delta
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gr_delta; abs(gtgt.fDelta)<0.02"
+
+
+  - name: stop_proc_gr_delta
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr_delta"
+

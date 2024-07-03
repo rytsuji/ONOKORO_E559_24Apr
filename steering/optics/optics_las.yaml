@@ -1,0 +1,15 @@
+Processor:
+
+#LAS optics calibration
+  - name: proc_opt_calib_las
+    type: art::TOpticsCalibrationProcessor
+    parameter:
+      MatrixFileDelta: prm/optics/las/las_delta.yaml
+      MatrixFileA: prm/optics/las/las_a.yaml
+      MatrixFileB: prm/optics/las/las_b.yaml
+      InputCollection:
+        - lfp
+      OutputCollection: ltgt
+      OutputTransparency: 0
+
+      

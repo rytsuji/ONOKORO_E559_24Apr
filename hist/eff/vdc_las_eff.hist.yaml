@@ -1,0 +1,41 @@
+group:
+ - name: vdc_las_eff
+   title: vdc las efficiency (Mean of hist = eff)
+   contents:   
+     - name: eff_las_x1
+       title: LAS x1 cluster hit efficiency
+       x: ["vdc_las_clust_x1@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "vdc_las_clust_x2@.GetEntriesFast()>0 && vdc_las_uv.fX>-650 && vdc_las_uv.fX<550"
+#       cut: "vdc_las_clust_x2@.GetEntriesFast()>0 && vdc_las_uv@.GetEntriesFast()>0"
+     - name: eff_las_x2
+       title: LAS x2 cluster hit efficiency
+       x: ["vdc_las_clust_x2@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "vdc_las_clust_x1@.GetEntriesFast()>0 && vdc_las_uv.fX>-650 && vdc_las_uv.fX<550"       
+#       cut: "vdc_las_clust_x1@.GetEntriesFast()>0 && vdc_las_uv@.GetEntriesFast()>0"
+       
+     - name: eff_las_u1
+       title: LAS u1 cluster hit efficiency
+       x: ["vdc_las_clust_u1@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "vdc_las_clust_u2@.GetEntriesFast()>0 && vdc_las_xv.fX>-650 && vdc_las_xv.fX<550"       
+#       cut: "vdc_las_clust_u2@.GetEntriesFast()>0 && vdc_las_xv@.GetEntriesFast()>0"
+     - name: eff_las_u2
+       title: LAS u2 cluster hit efficiency
+       x: ["vdc_las_clust_u2@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "vdc_las_clust_u1@.GetEntriesFast()>0 && vdc_las_xv.fX>-650 && vdc_las_xv.fX<550"       
+#       cut: "vdc_las_clust_u1@.GetEntriesFast()>0 && vdc_las_xv@.GetEntriesFast()>0"
+       
+     - name: eff_las_v1
+       title: LAS v1 cluster hit efficiency
+       x: ["vdc_las_clust_v1@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "vdc_las_clust_v2@.GetEntriesFast()>0 && vdc_las_xu.fX>-650 && vdc_las_xu.fX<550"       
+#       cut: "vdc_las_clust_v2@.GetEntriesFast()>0 && vdc_las_xu@.GetEntriesFast()>0"
+     - name: eff_las_v2
+       title: LAS v2 cluster hit efficiency
+       x: ["vdc_las_clust_v2@.GetEntriesFast()>0",2,-0.5,1.5]
+       cut: "vdc_las_clust_v1@.GetEntriesFast()>0 && vdc_las_xu.fX>-650 && vdc_las_xu.fX<550"                     
+#       cut: "vdc_las_clust_v1@.GetEntriesFast()>0 && vdc_las_xu@.GetEntriesFast()>0"              
+       
+
+
+
+     

@@ -1,0 +1,57 @@
+anchor:
+ - &dbin_ltgt 1000
+ - &dmin_ltgt -0.2
+ - &dmax_ltgt 0.2
+
+ - &abin_ltgt 1000
+ - &amin_ltgt -1000
+ - &amax_ltgt 1000
+
+ - &bbin_ltgt 1000
+ - &bmin_ltgt -1000
+ - &bmax_ltgt 1000
+
+ - &abin_lfp 1000
+ - &amin_lfp -300
+ - &amax_lfp 200
+
+
+ 
+group:
+ - name: optics_las
+   title: LAS optics hist
+   contents:   
+     - name: delta_las
+       title: LAS delta 
+       x: ["ltgt.fDelta", *dbin_ltgt, *dmin_ltgt, *dmax_ltgt]
+
+     - name: a_ltgt
+       title: LAS Atgt
+       x: ["ltgt.fA*1000", *abin_ltgt, *amin_ltgt, *amax_ltgt]
+
+     - name: b_ltgt
+       title: LAS btgt
+       x: ["ltgt.fB*1000", *bbin_ltgt, *bmin_ltgt, *bmax_ltgt]
+
+     - name: delta_a_ltgt
+       title: LAS delta vs Atgt
+       x: ["ltgt.fDelta", *dbin_ltgt, *dmin_ltgt, *dmax_ltgt]       
+       y: ["ltgt.fA*1000", *abin_ltgt, *amin_ltgt, *amax_ltgt]
+
+     - name: delta_b_ltgt
+       title: LAS delta vs Btgt
+       x: ["ltgt.fDelta", *dbin_ltgt, *dmin_ltgt, *dmax_ltgt]       
+       y: ["ltgt.fB*1000", *bbin_ltgt, *bmin_ltgt, *bmax_ltgt]
+
+     - name: a_b_ltgt
+       title: LAS Atgt vs Btgt
+       x: ["ltgt.fA*1000", *abin_ltgt, *amin_ltgt, *amax_ltgt]
+       y: ["ltgt.fB*1000", *bbin_ltgt, *bmin_ltgt, *bmax_ltgt]
+       
+     - name: delta_a_lfp
+       title: LAS delta vs Afp
+       x: ["ltgt.fDelta", *dbin_ltgt, *dmin_ltgt, *dmax_ltgt]
+       y: ["lfp.fA*1000", *abin_lfp, *amin_lfp, *amax_lfp]
+
+ 
+     

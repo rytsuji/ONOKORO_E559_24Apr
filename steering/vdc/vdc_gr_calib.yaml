@@ -18,7 +18,7 @@ Processor:
     type: art::TFocalPlaneConverter
     parameter:
       OffsetX: 0.0
-      OffsetX: 0.0
+      OffsetY: -4.12
       OffsetZ: -88.962700
       MatrixFile: prm/mwdc/vdc_gr/fp/fp_gr.yaml
       InputCollection:

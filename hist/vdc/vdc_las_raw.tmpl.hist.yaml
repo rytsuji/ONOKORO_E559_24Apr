@@ -13,7 +13,7 @@ anchor:
  - &bmax 150 
 
 group:
- - name: @VDCLAS@_rawtrack
+ - name: @VDCLAS@_raw
    title: VDC LAS hist Raw track @PLANE@
    contents:
      - name: x_las
@@ -28,7 +28,6 @@ group:
      - name: b_las
        title:  B LAS
        x: ["@VDCLAS@.fB*1000", *bbin, *bmin, *bmax]       
-
      - name: x_a_las
        title: X vs A LAS
        x: ["@VDCLAS@.fX", *xbin, *xmin, *xmax]              
@@ -45,11 +44,10 @@ group:
        title: Y vs B LAS
        x: ["@VDCLAS@.fY", *ybin, *ymin , *ymax]
        y: ["@VDCLAS@.fB*1000",  *bbin, *bmin, *bmax]       
-
-
-       
-
-
+     - name: x_tdiff_las
+       title: X vs plastic TDiff  LAS
+       x: ["vdc_las.fX", *xbin, *xmin, *xmax]
+       y: ["pla_las_3.GetTDiff()", 200, -45 , 5]
 
 
 

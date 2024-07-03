@@ -1,4 +1,4 @@
-#include "TOpticsCalibrationProcessor.h"
+#include "TSpectrometerProcessor.h"
 
 #include "constant.h"
 #include <iostream>
@@ -6,161 +6,80 @@
 #include <fstream>
 #include <TClonesArray.h>
 #include <TClass.h>
-#include <TSimpleData.h>
+#include <TOpticsData.h>
+#include <TParticleData.h>
 #include <yaml-cpp/yaml.h>
 
+using art::TSpectrometerProcessor;
 
-using art::TOpticsCalibrationProcessor;
 
+ClassImp(TSpectrometerProcessor)
 
-ClassImp(TOpticsCalibrationProcessor)
-
-TOpticsCalibrationProcessor::TOpticsCalibrationProcessor()
+TSpectrometerProcessor::TSpectrometerProcessor()
 : fOutput(NULL)
 {
 
-
-
-
+  RegisterProcessorParameter("Setting","path to the setting file",
+			     fInputFileName,TString("path/to/file"));
+  
   RegisterInputCollection("InputCollection",
 			  "input collection",
-			  fNameInput, "oprics",
+			  fNameInput, "OpticsData",
 			  &fInput, TClonesArray::Class_Name(),
 			  art::TOpticsData::Class_Name());  
 
   RegisterOutputCollection("OutputCollection","output collection",
-                            fNameOutput,"optics",
-			   &fOutput, TClonesArray::Class_Name(),);
+                            fNameOutput,"TParticleData",
+			   &fOutput, TClonesArray::Class_Name(),
+			   art::TParticleData::Class_Name());  
 
 }
 
 
-TOpticsCalibrationProcessor::~TOpticsCalibrationProcessor()
+TSpectrometerProcessor::~TSpectrometerProcessor()
 {
   delete fOutput;
 }
 
 namespace {
-   const Int_t kDimension = 4;
-   const char kXYAB[kDimension] = {'X', 'Y', 'A', 'B'};
-   enum EOrder { kX=0, kY, kA, kB};
-   const Int_t kShift = 4;
-   const Int_t kMask  = 0x7;
-   const Int_t kMaxDegree = 7;
-
-   Int_t KeyToInt(const std::string& key)
-   {
-      TString key_(key);
-      key_.ToUpper();
-
-      Int_t ret = 0;
-
-      for (Int_t i = 0; i != kDimension; ++i) {
-	 const Int_t degree = key_.CountChar(kXYAB[i]);
-	 if (degree > kMaxDegree) {
-	    printf("Maximum Degree is %d for each matrix element.\n",kMaxDegree);
-	    return 0;
-	 }
-	 ret += degree << (i * kShift);
-      }
-
-      return ret;
-   }
 }
 
 
-void TOpticsCalibrationProcessor::Init(TEventCollection*){
-  std::ifstream finDelta(fMatrixFileNameDelta.Data());
+void TSpectrometerProcessor::Init(TEventCollection*){
 
-  //Delta
-  if(!finDelta.is_open()) {
-      SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileNameDelta.Data()));
+  std::ifstream fin(fInputFileName.Data());
+  if(!fin.is_open()) {
+      SetStateError(TString::Format("Cannot open configuration file: %s",fInputFileName.Data()));
       return;
    }
+  try {
 
-   try {
-     YAML::Node matrix;
-     matrix = YAML::Load(finDelta);
-     for(auto element : matrix) {
-       std::string key = element.first.as<std::string>();
-       Float_t value = element.second.as<Float_t>();       
-       Int_t term = KeyToInt(key);
-       
-       
-       if (term) {
-	 fTermsDelta.push_back(term);
-	 fCoefficientsDelta.push_back(value);
-       }
-     }
-   } catch (YAML::Exception& e) {
-     SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
-				   e.what()));
-     return;
+    YAML::Node node  = YAML::Load(fin);
+    
+    fAngle = node["angle"].as<Double_t>();
+    fMagneticField = node["magfield"].as<Double_t>();
+
+    fMass = node["mass"].as<Double_t>();
+    fAtomicNumber = node["atomicnum"].as<Int_t>();
+    fMassNumber = node["massnum"].as<Int_t>();
+
+    fRho = node["rho"].as<Double_t>();
+    fLength = node["length"].as<Double_t>();
+    fTOFcentral =(fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho),2.0));  
+  }catch (YAML::Exception& e) {
+    SetStateError(TString::Format("Error Occurred while loading file\n%s\n",
+				  e.what()));
+    return;
    }
 
-
-   //A   
-   std::ifstream finA(fMatrixFileNameA.Data());
-   if(!finA.is_open()) {
-     SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileNameA.Data()));
-      return;
-   }   
-   try {
-     YAML::Node matrix;
-     matrix = YAML::Load(finA);
-     for(auto element : matrix) {
-       std::string key = element.first.as<std::string>();
-       Float_t value = element.second.as<Float_t>();       
-       Int_t term = KeyToInt(key);
-       
-       if (term) {
-	 fTermsA.push_back(term);
-	 fCoefficientsA.push_back(value);
-       }
-      }
-   } catch (YAML::Exception& e) {
-     SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
-				   e.what()));
-     return;
-   }
-
-
-   
-   //B
-   std::ifstream finB(fMatrixFileNameB.Data());   
-   if(!finB.is_open()) {
-     SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileNameB.Data()));
-     return;
-   }
-   try {
-
-     YAML::Node matrix;
-     matrix = YAML::Load(finB);
-     for(auto element : matrix) {
-       std::string key = element.first.as<std::string>();
-       Float_t value = element.second.as<Float_t>();       
-       Int_t term = KeyToInt(key);
-       
-	
-	if (term) {
-	  fTermsB.push_back(term);
-	  fCoefficientsB.push_back(value);
-	}
-      }
-   } catch (YAML::Exception& e) {
-     SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
-				   e.what()));
-     return;
-   }
-
-   
-   
+  
+  return;
+  
 }
 
-void TOpticsCalibrationProcessor::Process(){
+void TSpectrometerProcessor::Process(){
 
   fOutput->Clear("C");
-  //(*fInput)->Sort();
   Bool_t kProcessed = kFALSE;
   const Int_t nData = (*fInput)->GetEntriesFast();
 
@@ -168,71 +87,32 @@ void TOpticsCalibrationProcessor::Process(){
   
   
   if (nData < 1) {
-    //if (fVerbose) std::cout << "Multiplicity is" << nData << ", cannot process" << std::endl;
     kProcessed = kFALSE;    
   }
   else {
-    kProcessed = kTRUE;
-    Double_t Delta=0;
-    Double_t A=0;
-    Double_t B=0;
-    
+    kProcessed = kTRUE;    
     for (Int_t iData = 0; iData != nData; ++iData) {
       
-      //TOpticsData *const outData = fOutData->ConstructedAt(iData);
-      TOpticsData *outData = NULL;
-      outData = static_cast<TOpticsData*>(fOutput->ConstructedAt(iData));
-      const TMWDCTrackingResult *const inData = static_cast<TMWDCTrackingResult*>((*fInput)->At(iData));
-      const TTrack *const track= dynamic_cast<const TTrack*> (inData->GetTrack());
+      TParticleData *outData = NULL;
+      outData = static_cast<TParticleData*>(fOutput->ConstructedAt(iData));
 
-      Double_t xyab[kDimension];
+      TOpticsData *const inData = static_cast<TOpticsData*>((*fInput)->At(iData));
       
-      xyab[0] = track->GetX();
-      xyab[1] = track->GetY();
-      xyab[2] = (track->GetA());
-      xyab[3] = (track->GetB());
-      
-      
-      Double_t Delta = 0 ;
-      Double_t A = 0;
-      Double_t B = 0;
-      
-      
-      for (Int_t i = 0, n = fTermsDelta.size(); i != n; ++i) {
-	Double_t elem = 1.;
-	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTermsDelta[i] >> (j * kShift) & kMask);
-	  elem *= TMath::Power(xyab[j],power);
-	}
-	Delta += elem * fCoefficientsDelta[i];
-      }
+      double Delta = inData->GetDelta();
+      double A = inData->GetA();
+      double B = inData->GetB();
 
-      for (Int_t i = 0, n = fTermsA.size(); i != n; ++i) {
-	Double_t elem = 1.;
-	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTermsA[i] >> (j * kShift) & kMask);
-	  elem *= TMath::Power(xyab[j],power);
-	}
-	A += elem * fCoefficientsA[i];
-      }
-      
-      
-      for (Int_t i = 0, n = fTermsB.size(); i != n; ++i) {
-	Double_t elem = 1.;
-	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTermsB[i] >> (j * kShift) & kMask);
-	  elem *= TMath::Power(xyab[j],power);
-	}
-	B += elem * fCoefficientsB[i];
-      }
-      
-      
-      
-      
-      outData->SetDelta(Delta);
-      outData->SetA(A);
-      outData->SetB(B);
-      outData->SetProcessed(kProcessed);
+      double TKE = sqrt(fMass*fMass + pow(0.3*((double) fAtomicNumber)*fMagneticField*fRho*(1+Delta),2.0))-fMass;
+      double theta_lab = TMath::RadToDeg()*atan( sqrt( pow( tan( atan(A)+fAngle*TMath::DegToRad() ),2.0) + pow(B,2.0)) );
+      double phi_lab = TMath::RadToDeg()*atan(B);
+      double TOF = (fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
+      outData->SetTKE(TKE);
+      outData->SetMass(fMass);
+      outData->SetTheta(theta_lab);
+      outData->SetPhi(phi_lab);
+      outData->SetTOF(TOF,fTOFcentral);
+
+
     }
   }
   

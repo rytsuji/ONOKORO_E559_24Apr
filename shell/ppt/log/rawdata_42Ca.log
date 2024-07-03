@@ -1,0 +1,2349 @@
+2024年 6月 7日 金曜日 21:37:43 JST
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2076,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 101571984 itrEnd = 132971808
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+evt:1600000
+evt:1700000
+evt:1800000
+evt:1900000
+evt:2000000
+evt:2100000
+evt:2200000
+evt:2300000
+evt:2400000
+evt:2500000
+evt:2600000
+evt:2700000
+evt:2800000
+evt:2900000
+evt:3000000
+evt:3100000
+evt:3200000
+evt:3300000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2084,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 51829264 itrEnd = 138105232
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+evt:1600000
+evt:1700000
+evt:1800000
+evt:1900000
+evt:2000000
+evt:2100000
+evt:2200000
+evt:2300000
+evt:2400000
+evt:2500000
+evt:2600000
+evt:2700000
+evt:2800000
+evt:2900000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2123,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 89706384 itrEnd = 119517824
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+evt:1600000
+evt:1700000
+evt:1800000
+evt:1900000
+evt:2000000
+evt:2100000
+evt:2200000
+evt:2300000
+evt:2400000
+evt:2500000
+evt:2600000
+evt:2700000
+evt:2800000
+evt:2900000
+evt:3000000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2124,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 119662032 itrEnd = 134096384
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+evt:1600000
+evt:1700000
+evt:1800000
+evt:1900000
+evt:2000000
+evt:2100000
+evt:2200000
+evt:2300000
+evt:2400000
+evt:2500000
+evt:2600000
+evt:2700000
+evt:2800000
+evt:2900000
+evt:3000000
+evt:3100000
+evt:3200000
+evt:3300000
+evt:3400000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2166,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 119482240 itrEnd = 118057264
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+evt:1600000
+evt:1700000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2167,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 103797008 itrEnd = 118486432
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2168,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 112441888 itrEnd = 97273808
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing shell/rawdata.C(2169,"ppt")...
+timer
+es_rcnp
+mapper
+steering tref.yaml steering tref.yaml
+proc_tref_v1190_0
+proc_tref_v1190_1
+proc_tref_v1190_2
+proc_tref_v1190_3
+proc_tref_v1190_4
+proc_tref_v1190_5
+proc_tref_v1190_6
+proc_tref_v1190_7
+proc_tref_v1190_8
+proc_tref_v1190_9
+proc_tref_v1190_11
+proc_tref_v1190_12
+proc_tref_v1190_13
+proc_tref_v1190_14
+proc_tref_v1190_15
+proc_tref_v1190_16
+proc_tref_v1190_17
+proc_tref_v1190_20
+proc_tref_v1190_21
+proc_tref_v1190_22
+proc_tref_v1190_23
+proc_tref_v1190_30
+steering trig.yaml steering trig.yaml
+proc_trig_prm_ch2ns
+proc_trig_map
+proc_trig_calib
+proc_trig_separater
+steering rf.yaml steering rf.yaml
+proc_rf_prm_ch2ns
+proc_rf_map
+proc_rf_calib
+proc_rf_separater
+steering tref_chk.yaml steering tref_chk.yaml
+proc_tref_prm_ch2ns
+proc_tref_map_las
+proc_tref_map_grfcet
+proc_tref_map_grtrig
+proc_tref_calib_las
+proc_tref_calib_grfcet
+proc_tref_calib_grtrig
+steering pla/pla_gr.yaml steering/pla pla_gr.yaml
+loading pla_gr_multi.tmpl.yaml
+steering/pla pla_gr_multi.tmpl.yaml steering/pla pla_gr_multi.tmpl.yaml
+proc_pla_gr_prm_ch2ns
+proc_pla_gr_prm_ch2MeV
+proc_pla_gr_raw
+proc_pla_gr_calib
+proc_pla_gr_separater
+proc_pla_gr_1_validator
+proc_pla_gr_2_validator
+proc_pla_gr_1
+proc_pla_gr_2
+loading vdc/vdc_gr_rawtrack.yaml
+steering vdc/vdc_gr_rawtrack.yaml steering/vdc vdc_gr_rawtrack.yaml
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_geo
+proc_vdc_gr_prm_x1
+proc_vdc_gr_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_gr_prm_u2
+proc_vdc_gr_str_prm_ch2ns
+proc_vdc_gr_raw
+proc_vdc_gr_calib
+proc_vdc_gr_subdirs
+proc_vdc_gr_plane
+proc_vdc_gr_cluster_x1
+proc_vdc_gr_cluster_x2
+proc_vdc_gr_cluster_u1
+proc_vdc_gr_cluster_u2
+proc_tracking_gr
+steering pla/pla_las.yaml steering/pla pla_las.yaml
+loading pla_las_multi.tmpl.yaml
+steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
+proc_pla_las_prm_ch2ns
+proc_pla_las_prm_ch2MeV
+proc_pla_las_raw
+proc_pla_las_calib
+proc_pla_las_separater
+proc_pla_las_3_validator
+proc_pla_las_4_validator
+proc_pla_las_5_validator
+proc_pla_las_6_validator
+proc_pla_las_3
+proc_pla_las_4
+proc_pla_las_5
+proc_pla_las_6
+loading vdc/vdc_las_rawtrack.yaml
+steering vdc/vdc_las_rawtrack.yaml steering/vdc vdc_las_rawtrack.yaml
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_geo
+proc_vdc_las_prm_x1
+proc_vdc_las_prm_x2
+proc_vdc_ge_prm_u1
+proc_vdc_las_prm_u2
+proc_vdc_ge_prm_v1
+proc_vdc_las_prm_v2
+proc_vdc_las_str_prm_ch2ns
+proc_vdc_las_raw
+proc_vdc_las_calib
+proc_vdc_las_subdirs
+proc_vdc_las_plane
+proc_vdc_las_cluster_x1
+proc_vdc_las_cluster_x2
+proc_vdc_las_cluster_u1
+proc_vdc_las_cluster_u2
+proc_vdc_las_cluster_v1
+proc_vdc_las_cluster_v2
+proc_tracking_las_xu
+proc_tracking_las_xv
+proc_tracking_las_uv
+proc_tracking_merge_las
+hist_pla_gr
+hist_pla_las
+hist_vdc_gr_plane
+hist_vdc_las_plane
+hist_vdc_gr_rawtrack
+hist_vdc_las_rawtrack
+hist_pid_gr
+hist_pid_las
+outputtree
+itrBegin = 110242848 itrEnd = 111547456
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 8, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 9, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 12
+  Old: cat = 12, det = 6, type = 0
+  New: cat = 12, det = 10, type = 0
+Abort
+Map already exists
+Segment 200, geo = 1, ch = 14
+  Old: cat = 12, det = 7, type = 0
+  New: cat = 12, det = 11, type = 0
+Abort
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'segdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'catdata'
+'pla_gr_1l_cal'
+'pla_gr_1r_cal'
+'tref_grtrig'
+'pla_gr_2l_cal'
+'pla_gr_2r_cal'
+'tref_grtrig'
+'pla_gr_1l'
+'pla_gr_1r'
+'pla_gr_2l'
+'pla_gr_2r'
+TMWDCParameter name='vdc_gr'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+TMWDCParameter name='vdc_gr_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_gr/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1297
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1290
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U1	nPoints = 1289
+OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1298
+'catdata'
+'vdc_gr_cal'
+'pla_gr_1'
+'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
+'catdata'
+'pla_las_3l_cal'
+'pla_las_3r_cal'
+'tref_las'
+'pla_las_4l_cal'
+'pla_las_4r_cal'
+'tref_las'
+'pla_las_5l_cal'
+'pla_las_5r_cal'
+'tref_las'
+'pla_las_6l_cal'
+'pla_las_6r_cal'
+'tref_las'
+'pla_las_3l'
+'pla_las_3r'
+'pla_las_4l'
+'pla_las_4r'
+'pla_las_5l'
+'pla_las_5r'
+'pla_las_6l'
+'pla_las_6r'
+TMWDCParameter name='vdc_las'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+TMWDCParameter name='vdc_las_clust'
+ position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ plane_config: prm/vdc_las/plane.yaml
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1434
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1432
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U1	nPoints = 1436
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_U2	nPoints = 1414
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V1	nPoints = 1413
+OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1325
+'catdata'
+'vdc_las_cal'
+'pla_las_3'
+'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
+include
+include
+include
+include
+include
+faulse1
+block faulse2
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+evt:0
+evt:100000
+evt:200000
+evt:300000
+evt:400000
+evt:500000
+evt:600000
+evt:700000
+evt:800000
+evt:900000
+evt:1000000
+evt:1100000
+evt:1200000
+evt:1300000
+evt:1400000
+evt:1500000
+hdear = 500, sofar 1 event, goto next block
+fHeader=0
+faild to read block

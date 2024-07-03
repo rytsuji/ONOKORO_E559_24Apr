@@ -7,16 +7,18 @@ Processor:
       InputCollectionCharge: pla_gr_1
       InputCollectionTrack: gfp
       OutputCollection: pid_gr
-      MatrixFileCharge: prm/pid/pla_gr1_calib.yaml
-      MatrixFileTiming: prm/pid/tof_gr_calib.yaml
+      MatrixFileCharge: prm/pid/pla_gr/pla_gr1_calib_@SETUP@.yaml
+      MatrixFileTiming: prm/pid/tof/tof_gr_calib.yaml
+      SetupFile: prm/spectrometer/gr/@SETUP@.yaml
 
   - name: proc_pla_las_calib
     type: art::TPIDCalibrationProcessor
     parameter:
       InputCollectionTiming: pla_las_3
       InputCollectionCharge: vdc_las_dt
-      InputCollectionTrack: vdc_las
+      InputCollectionTrack: lfp
       OutputCollection: pid_las
-      MatrixFileCharge: prm/pid/tot_las_calib.yaml
-      MatrixFileTiming: prm/pid/tof_las_calib.yaml
+      MatrixFileCharge: prm/pid/tot_las/tot_las_calib_@SETUP@.yaml
+      MatrixFileTiming: prm/pid/tof/tof_las_calib.yaml
+      SetupFile: prm/spectrometer/las/@SETUP@.yaml      
       ChargeTypeID: 0

@@ -1,0 +1,120 @@
+Anchor:
+  - &input output/raw/run@NUM@.root
+  - &output output/calib/run@NUM@.root
+  - &histout output/calib/hist/run@NUM@.hist.root
+  
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - name: es_ttree
+    type: art::TTreeEventStore
+    parameter:
+      MaxEventNum: 0
+      OutputTransparency: 0
+      TreeName: tree
+      FileName: *input
+      
+#geometry & fp conversion      
+  - include:  vdc/vdc_gr_calib.yaml
+  - include:  vdc/vdc_las_calib.yaml
+
+#optics calibration
+  - include:  optics/optics.yaml
+
+#tof and charge calibration
+  - include:
+      name: pid/pid_calib.yaml
+      replace:
+        SETUP: @SETUP@
+
+  - include:  pid/tof.yaml
+  - include:  pid/trig.yaml    
+  - include:  pid/rf.yaml
+
+
+#energy calculation from spectrometer setup	
+  - include:
+      name: energy_calib/energy_calib.yaml
+      replace:
+        SETUP: @SETUP@
+
+  - name: outputtree
+    type: art::TOutputTreeProcessor
+    parameter:
+      FileName: *output
+
+  - name: hist_pid_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_gr_calib.hist.yaml 
+      OutputFilename: *histout
+
+  - name: hist_pid_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_las_calib.hist.yaml 
+      OutputFilename: *histout
+
+  - name: hist_vdc_gr_track
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr.hist.yaml
+      OutputFilename: *histout
+      
+  - name: hist_vdc_las_track
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las.hist.yaml
+
+  - name: hist_vdc_gr_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_las.hist.yaml
+      
+  - name: hist_optics_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_gr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics_corr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_corr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_mhit_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/mhit_gr_eff.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_mhit_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/mhit_las_eff.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_trig
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/trig.hist.yaml
+      OutputFilename: *histout

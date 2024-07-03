@@ -15,5 +15,5 @@ Processor:
   - name: stop_proc_las_tof
     type: art::TGateStopProcessor
     parameter:
-      GateName: "gate_las_rof"
+      GateName: "gate_las_tof"
 

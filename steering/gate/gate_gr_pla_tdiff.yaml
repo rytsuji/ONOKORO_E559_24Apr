@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_gr_pla_tdiff
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_gr_pla_tdiff
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gr_pla_tdiff; abs(pla_gr_1.GetTDiff())<15"
+
+
+  - name: stop_proc_gr_pla_tdiff
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr_pla_tdiff"
+

@@ -1,0 +1,62 @@
+anchor:
+ - &sx ["226.2-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+# - &sx ["226.175-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+ - &tof_raw ["tof.fTiming",  1000, -1000, 1000]
+ - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &ac "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)"
+
+ 
+group:
+ - name: phys
+   title: phys
+   contents:
+
+     - name: tof
+       title: TOF GR-LAS
+       x: *tof
+
+     - name: tof_tc 
+       title: TOF GR-LAS with True coin
+       x: *tof
+       cut: *tc
+       
+     - name: tof_ac
+       title: TOF GR-LAS with Acc coin
+       x: *tof
+       cut: *ac
+
+     - name: tof_raw
+       title: TOF raw  GR-LAS
+       x: *tof_raw
+
+     - name: tke_las_gr
+       title: Energy LAS-GR with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *tc
+
+     - name: tke_las_gr_ac 
+       title: Energy LAS-GR with Acc coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *ac
+
+     - name: sx
+       title: Sx with True coin
+       x: *sx
+       cut: *tc
+
+     - name: sx_ac
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac
+
+     - name: sx_nogate
+       title: Sx without gate
+       x: *sx
+
+     - name: tke_las_gr_nogate
+       title: Energy LAS-GR without gate 
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]

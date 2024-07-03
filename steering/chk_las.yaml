@@ -3,10 +3,12 @@
 # lastest update : 2024.04.13 by R.TSUJI
 
 Anchor:
-
+#  - &gate_las gate/las/gate_las_2036.yaml
   - &gate_las gate/las/gate_las_1033.yaml
-  - &dt2dl_gr current  
-  - &dt2dl_las current
+#  - &gate_las gate/las/gate_las_2020.yaml
+#  - &gate_las gate/las/gate_las_ppt_kf0.yaml
+#  - &gate_las gate/las/gate_las_ppt_chkeff.yaml
+  - &dt2dl_las 1033
 
   - &input data/run@NUM@.bld
   - &histout output/las/run@NUM@.hist.root
@@ -37,40 +39,22 @@ Processor:
 
 
   - include: pla/pla_gr.yaml
-#  - include:
-#      name: vdc/vdc_gr.yaml
-#      replace:
-#        DT2DL: &dt2dl_gr
 
   - include: pla/pla_las.yaml
   - include:
-      name: vdc/vdc_las.yaml
+      name: vdc/vdc_las_rawtrack.yaml
       replace:
         DT2DL: *dt2dl_las
   - include: *gate_las  
-  - include: vdc/vdc_las_track.yaml
-#  - include: *gate_las
-
-#  - name: hist_pla_gr
-#    type: art::TTreeProjectionProcessor
-#    parameter:
-#      Type: art::TTreeProjection
-#      FileName: hist/pla/pla_gr.hist.yaml	
-#      OutputFilename: *histout
-
+  - include: vdc/vdc_las_calib.yaml
+  - include: optics/optics_las.yaml
+  
   - name: hist_pla_las
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
       FileName: hist/pla/pla_las.hist.yaml	
       OutputFilename: *histout
-
-#  - name: hist_vdc_gr_plane
-#    type: art::TTreeProjectionProcessor
-#    parameter:
-#      Type: art::TTreeProjection
-#      FileName: hist/vdc/vdc_gr_plane.hist.yaml
-#      OutputFilename: *histout
 
   - name: hist_vdc_las_plane
     type: art::TTreeProjectionProcessor
@@ -79,26 +63,11 @@ Processor:
       FileName: hist/vdc/vdc_las_plane.hist.yaml
       OutputFilename: *histout
 
-
-#  - name: hist_vdc_gr
-#    type: art::TTreeProjectionProcessor
-#    parameter:
-#      Type: art::TTreeProjection
-#      FileName: hist/vdc/vdc_gr.hist.yaml
-#      OutputFilename: *histout
-
   - name: hist_vdc_las
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
       FileName: hist/vdc/vdc_las.hist.yaml
-      OutputFilename: *histout
-
-  - name: hist_pid_gr
-    type: art::TTreeProjectionProcessor
-    parameter:
-      Type: art::TTreeProjection
-      FileName: hist/pid/pid_gr.hist.yaml
       OutputFilename: *histout
 
   - name: hist_pid_las
@@ -108,8 +77,14 @@ Processor:
       FileName: hist/pid/pid_las.hist.yaml
       OutputFilename: *histout
 
+  - name: hist_optics
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout
+
   - name: outputtree
     type: art::TOutputTreeProcessor
     parameter:
-      FileName: *output
-      
+      FileName: *output      

@@ -6,8 +6,8 @@ Anchor:
   - &input data/run@NUM@.bld
   - &histout output/raw/hist/run@NUM@.hist.root
   - &output output/raw/run@NUM@.root
-  - &dt2dl_gr 2020  #ppt
-  - &dt2dl_las 2020 #ppt
+  - &dt2dl_gr @SETUP@
+  - &dt2dl_las @SETUP@
   
 Processor:
   - name: timer
@@ -49,6 +49,7 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/pla/pla_gr.hist.yaml	
       OutputFilename: *histout
+      
   - name: hist_pla_las
     type: art::TTreeProjectionProcessor
     parameter:
@@ -68,7 +69,6 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/vdc/vdc_las_plane.hist.yaml
       OutputFilename: *histout
-
 
   - name: hist_vdc_gr_rawtrack
     type: art::TTreeProjectionProcessor
@@ -96,13 +96,6 @@ Processor:
     parameter:
       Type: art::TTreeProjection
       FileName: hist/pid/pid_las.hist.yaml
-      OutputFilename: *histout
-
-  - name: hist_tc
-    type: art::TTreeProjectionProcessor
-    parameter:
-      Type: art::TTreeProjection
-      FileName: hist/phys/tc.hist.yaml
       OutputFilename: *histout
 
   - name: outputtree

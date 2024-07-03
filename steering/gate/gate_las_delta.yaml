@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_las_delta
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_las_delta
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_delta; -0.11<ltgt.fDelta && ltgt.fDelta<0.165"
+
+
+  - name: stop_proc_las_delta
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_delta"
+

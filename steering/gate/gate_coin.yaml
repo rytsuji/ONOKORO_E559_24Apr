@@ -1,5 +1,5 @@
 Processor:
-  - name: gate_array_init
+  - name: gate_array_init_coin
     type: art::TGateArrayInitializer
     parameter:
       OutputTransparency: 1
@@ -10,7 +10,7 @@ Processor:
       Definitions:
         - "gate_coin; trig_coin.fID==0"
 
-  - name: stop_proc
+  - name: stop_proc_coin
     type: art::TGateStopProcessor
     parameter:
       GateName: "gate_coin"

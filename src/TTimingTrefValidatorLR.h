@@ -47,14 +47,10 @@ private:
   FloatVec_t fValidTimeRange;
   Float_t fValidTimeMin;
   Float_t fValidTimeMax;
-
-  FloatVec_t fValidTimeRangeL;
-  Float_t fValidTimeMinL;
-  Float_t fValidTimeMaxL;
   
-  FloatVec_t fValidTimeRangeR;
-  Float_t fValidTimeMinR;
-  Float_t fValidTimeMaxR;
+  FloatVec_t fValidTDiffRange;
+  Float_t fValidTDiffMin;
+  Float_t fValidTDiffMax;
    
   
   ClassDef( TTimingTrefValidatorLR,1) // validate time in certain window

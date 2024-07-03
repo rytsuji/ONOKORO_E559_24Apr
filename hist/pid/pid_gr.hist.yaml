@@ -9,9 +9,6 @@ anchor:
  - &de1 ["pla_gr_1.fCharge", 1000, 0, 4000]  
  - &de2 ["pla_gr_2.fCharge", 1000, 0, 4000]  
  - &xpos ["vdc_gr.fX",600,-600,600]
- - &tdiff1 ["pla_gr_1.GetTDiff()",200,-20,30]
- - &tdiff2 ["pla_gr_2.GetTDiff()",200,-20,30]  
-
 
 group:
  - name: pid_gr
@@ -69,17 +66,6 @@ group:
        title: x-TOT GR
        x: *xpos
        y: *tot     
-
-
-     - name: tdiff_de1_gr
-       title: TDiff-delataE1 GR
-       x: *tdiff1
-       y: *de1
-     - name: tdiff_de2_gr
-       title: TDiff-deltaE2 GR
-       x: *tdiff2
-       y: *de2
-
 
      - name: de1_de2_gr
        title: deltaE1-deltaE2 GR

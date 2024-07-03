@@ -1,0 +1,108 @@
+Processor:
+  - name: proc_tof_prm_calib
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_tof_calib
+      Type:     art::TAffineConverter
+      FileName: prm/tof_calib.dat
+
+  - name: proc_tof_subtraction
+    type: art::TTimingSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [-3000, 1000, 0]
+      InputCollection: pid_gr      
+      StartTimingCollection: pid_las
+      OutputCollection: tof_raw
+      
+  - name: proc_tof_calib
+    type: art::TDataCalibrationProcessor
+    parameter:
+      DataClass: ITiming
+      InputIsDigital: 0
+      DetectorIDOrigin: -100000000
+      ConverterArray: prm_tof_calib
+      InputCollection: tof_raw
+      OutputCollection: tof
+      OutputTransparency:   0
+
+  - name: proc_gr_rf1_subtraction
+    type: art::TRFSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [-380, -190, 0]
+      Period: 71.033750      
+      InputCollection: pid_gr
+      StartTimingCollection: rf1
+      OutputCollection: gr_rf1
+
+  - name: proc_gr_rf2_subtraction
+    type: art::TRFSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [-380, -190, 0]
+      Period: 71.033750
+      InputCollection: pid_gr
+      StartTimingCollection: rf2
+      OutputCollection: gr_rf2
+
+  - name: proc_gr_rf3_subtraction
+    type: art::TRFSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [-380, -190, 0]
+      Period: 71.033750      
+      InputCollection: pid_gr
+      StartTimingCollection: rf3
+      OutputCollection: gr_rf3
+
+  - name: proc_las_rf1_subtraction
+    type: art::TRFSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [200, 2000, 0]
+      Period: 71.033750      
+      InputCollection: pid_las
+      StartTimingCollection: rf1
+      OutputCollection: las_rf1
+
+  - name: proc_las_rf2_subtraction
+    type: art::TRFSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [200, 2000, 0]
+      Period: 71.033750      
+      InputCollection: pid_las
+      StartTimingCollection: rf2
+      OutputCollection: las_rf2
+
+  - name: proc_las_rf3_subtraction
+    type: art::TRFSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [200, 2000, 0]
+      Period: 71.033750      
+      InputCollection: pid_las
+      StartTimingCollection: rf3
+      OutputCollection: las_rf3

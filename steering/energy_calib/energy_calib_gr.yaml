@@ -1,0 +1,11 @@
+Processor:
+
+#GR
+  - name: proc_ecalib_gr
+    type: art::TSpectrometerProcessor
+    parameter:
+      Setting: prm/spectrometer/gr/@SETUP@.yaml
+      InputCollection: 
+        - gtgt
+      OutputCollection: pgr
+      OutputTransparency: 0

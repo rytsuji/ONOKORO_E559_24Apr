@@ -13,6 +13,9 @@ set(SOURCES
   TOpticsCalibrationProcessor.cc
   TFocalPlaneConverter.cc
   TPIDCalibrationProcessor.cc
+  TSpectrometerProcessor.cc
+  TParticleData.cc
+  TRFSubtractionProcessor.cc
   )
 
 set(HEADERS
@@ -28,6 +31,9 @@ set(HEADERS
   TOpticsCalibrationProcessor.h
   TFocalPlaneConverter.h
   TPIDCalibrationProcessor.h
+  TSpectrometerProcessor.h
+  TParticleData.h
+  TRFSubtractionProcessor.h
   )
 
 add_library(${LIB_NAME} SHARED ${SOURCES})

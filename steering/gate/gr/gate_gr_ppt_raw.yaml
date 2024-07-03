@@ -1,0 +1,11 @@
+#C/Mylar/Ca(p,ph)@Kf=0 with run2070
+Processor:
+  - include:
+      name: tmpl/gate_gr.tmpl.yaml
+      replace:
+        PLANUM: 1      
+        Q_GR_MIN: 210
+        Q_GR_MAX: 445
+        T_GR_MIN: 35
+        T_GR_MAX: 52
+        RF: rf2

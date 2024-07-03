@@ -6,6 +6,7 @@
 #include "TDataObject.h"
 #include "ITiming.h"
 #include "ICharge.h"
+#include <TOpticsData.h>
 #include "TTimingChargeData.h"
 #include <TClonesArray.h>
 #include <TClass.h>
@@ -22,7 +23,8 @@ TPIDCalibrationProcessor::TPIDCalibrationProcessor()
 : fOutput(NULL)
 {
 
-
+  RegisterProcessorParameter("SetupFile","path to the matrix file Setup",
+			      fSetupFileName,TString("path/to/file_Setup"));
   RegisterProcessorParameter("MatrixFileCharge","path to the matrix file Charge",
 			      fMatrixFileNameCharge,TString("path/to/file_Charge"));
   RegisterProcessorParameter("MatrixFileTiming","path to the matrix file Timing",
@@ -37,8 +39,13 @@ TPIDCalibrationProcessor::TPIDCalibrationProcessor()
   RegisterInputCollection("InputCollectionCharge", "array of objects inheriting from art::ITiming and/or art::ICharge",
 			  fChargeInputName, TString("input_charge"), &fChargeInput,
 			  TClonesArray::Class_Name(),ICharge::Class_Name());
-  
-  
+  /*
+  RegisterInputCollection("InputCollectionOptics",
+                          "input collection Optics",
+                          fOpticsInputName, "OpticsData",
+                          &fOpticsInput, TClonesArray::Class_Name(),
+                          art::TOpticsData::Class_Name());
+  */
   RegisterInputCollection("InputCollectionTrack",
 			  "input collection tracking",
 			  fTrackInputName, "mwdc_track",
@@ -91,7 +98,32 @@ namespace {
 
 void TPIDCalibrationProcessor::Init(TEventCollection* col){
 
-       
+  //TOF
+  std::ifstream finSetup(fSetupFileName.Data());
+  if(!finSetup.is_open()) {
+      SetStateError(TString::Format("Cannot open configuration file: %s",fSetupFileName.Data()));
+      return;
+   }
+  try {
+    YAML::Node node  = YAML::Load(finSetup);
+    fAngle = node["angle"].as<Double_t>();
+    fMagneticField = node["magfield"].as<Double_t>();
+
+    fMass = node["mass"].as<Double_t>();
+    fAtomicNumber = node["atomicnum"].as<Int_t>();
+    fMassNumber = node["massnum"].as<Int_t>();
+
+    fRho = node["rho"].as<Double_t>();
+    fLength = node["length"].as<Double_t>();
+
+    fTOF =(fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho),2.0));
+    std::cout << "TOF : " << fTOF << " (ns)" << std::endl;
+  }catch (YAML::Exception& e) {
+    SetStateError(TString::Format("Error Occurred while loading file\n%s\n",
+                                  e.what()));
+    return;
+  }
+  
   //Charge
   std::ifstream finCharge(fMatrixFileNameCharge.Data());
   if(!finCharge.is_open()) {
@@ -152,7 +184,9 @@ void TPIDCalibrationProcessor::Process(){
   fOutput->Clear("C");
   Bool_t kProcessed = kFALSE;
   
-  if ((*fTrackInput)->GetEntriesFast() < 1 || (*fTimingInput)->GetEntriesFast()<1 || (*fChargeInput)->GetEntriesFast()<1) {
+  //if ((*fTrackInput)->GetEntriesFast() < 1 || (*fTimingInput)->GetEntriesFast()<1 || (*fChargeInput)->GetEntriesFast()<1 || (*fOpticsInput)->GetEntriesFast() < 1) {
+
+  if ((*fTrackInput)->GetEntriesFast() < 1 || (*fTimingInput)->GetEntriesFast()<1 || (*fChargeInput)->GetEntriesFast()<1 ) {
     kProcessed = kFALSE;    
   }
   else {
@@ -187,21 +221,22 @@ void TPIDCalibrationProcessor::Process(){
       
     }
 
-    const TMWDCTrackingResult *const inTrackData = static_cast<TMWDCTrackingResult*>((*fTrackInput)->At(0));
-    const TTrack *const track= dynamic_cast<const TTrack*> (inTrackData->GetTrack());
-
-    TObject *const outData = fOutput->ConstructedAt(0);
-    
+    TObject *const outData = fOutput->ConstructedAt(0);    
     Double_t outTiming=timing;
     Double_t outCharge=charge;
-
+    
+    const TMWDCTrackingResult *const inTrackData = static_cast<TMWDCTrackingResult*>((*fTrackInput)->At(0));
+    const TTrack *const track= dynamic_cast<const TTrack*> (inTrackData->GetTrack());
       
     Double_t xyab[kDimension];      
     xyab[0] = track->GetX();
     xyab[1] = track->GetY();
     xyab[2] = (track->GetA());
     xyab[3] = (track->GetB());
-    
+    /*
+    TOpticsData *const inData = static_cast<TOpticsData*>((*fOpticsInput)->At(0));
+    double Delta = inData->GetDelta();
+    */
     for (Int_t i = 0, n = fTermsCharge.size(); i != n; ++i) {
       Double_t elem = 1.;
       for (Int_t j = 0; j != kDimension; ++j) {
@@ -217,9 +252,12 @@ void TPIDCalibrationProcessor::Process(){
 	const Int_t power = (fTermsTiming[i] >> (j * kShift) & kMask);
 	elem *= TMath::Power(xyab[j],power);
       }
-      outTiming += elem * fCoefficientsTiming[i];
+      outTiming += elem * fCoefficientsTiming[i] * fTOF;
     }
-    
+    /*
+    Double_t dTOF =fTOF-(fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
+    outTiming += dTOF;
+    */    
     ITiming *const outDataT = dynamic_cast<ITiming*>(outData);
     outDataT->SetTiming(outTiming);
     ICharge *const outDataQ = dynamic_cast<ICharge*>(outData);

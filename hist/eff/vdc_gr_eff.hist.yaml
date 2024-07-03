@@ -1,0 +1,29 @@
+anchor:
+
+ - &all_hit ["vdc_gr_clust_x1@.GetEntriesFast()>0 && vdc_gr_clust_x2@.GetEntriesFast()>0 && vdc_gr_clust_u1@.GetEntriesFast()>0 && vdc_gr_clust_u2@.GetEntriesFast()>0", 2,-0.5,1.5]
+
+group:
+ - name: vdc_gr_eff
+   title: vdc gr efficiency (Mean of hist = eff)
+   contents:   
+     - name: eff_gr_x1
+       title: GR x1 cluster hit efficiency
+       x: *all_hit
+       cut: "vdc_gr_clust_x2@.GetEntriesFast()>0 && vdc_gr_clust_u1@.GetEntriesFast()>0 && vdc_gr_clust_u2@.GetEntriesFast()>0 && abs(pla_gr_1.GetTDiff())<10"
+     - name: eff_gr_x2
+       title: GR x2 cluster hit efficiency
+       x: *all_hit
+       cut: "vdc_gr_clust_x1@.GetEntriesFast()>0 && vdc_gr_clust_u1@.GetEntriesFast()>0 && vdc_gr_clust_u2@.GetEntriesFast()>0 && abs(pla_gr_1.GetTDiff())<10"
+     - name: eff_gr_u1
+       title: GR u1 cluster hit efficiency
+       x: *all_hit
+       cut: "vdc_gr_clust_x1@.GetEntriesFast()>0 && vdc_gr_clust_x2@.GetEntriesFast()>0 && vdc_gr_clust_u2@.GetEntriesFast()>0 && abs(pla_gr_1.GetTDiff())<10"
+     - name: eff_gr_u2
+       title: GR u2 cluster hit efficiency
+       x: *all_hit
+       cut: "vdc_gr_clust_x1@.GetEntriesFast()>0 && vdc_gr_clust_x2@.GetEntriesFast()>0 && vdc_gr_clust_u1@.GetEntriesFast()>0 && abs(pla_gr_1.GetTDiff())<10"              
+       
+
+
+
+     

@@ -1,41 +1,33 @@
-# file : pla_gr_vme.yaml 
-# date : 2022.07.01 by Y.HIJIKATA
-# lastest update : 2022.07.01 by Y.HIJIKATA
+#LAS plastic
 
 Processor:
   - include:
-#      name: pla_las.tmpl.yaml  
       name: pla_las_multi.tmpl.yaml
       replace:
         CATID: 22
 #  pla3	
-        TVALMIN3: 310
-        TVALMAX3: 340	
-        TVALMIN3L: 200
-        TVALMAX3L: 400
-        TVALMIN3R: 200
-        TVALMAX3R: 400
+        TVALMIN3: 315
+        TVALMAX3: 335	
+        TDIFFMIN3: -75
+        TDIFFMAX3: 40
 #  pla4	
         TVALMIN4: 310
-        TVALMAX4: 380		
-        TVALMIN4L: 300
-        TVALMAX4L: 400
-        TVALMIN4R: 300
-        TVALMAX4R: 400
+        TVALMAX4: 380
+        TDIFFMIN4: -150
+        TDIFFMAX4: 100	
 #  pla5	
         TVALMIN5: 300
-        TVALMAX5: 360			
-        TVALMIN5L: 300
-        TVALMAX5L: 400
-        TVALMIN5R: 320
-        TVALMAX5R: 360
+        TVALMAX5: 360
+        TDIFFMIN5: -120
+        TDIFFMAX5: 60	
 #  pla6	
         TVALMIN6: 300
-        TVALMAX6: 380				
-        TVALMIN6L: 300
-        TVALMAX6L: 400
-        TVALMIN6R: 300
-        TVALMAX6R: 400
+        TVALMAX6: 380
+        TDIFFMIN6: -120
+        TDIFFMAX6: 80	
 
-  - include:
-      name: pla_las_simple.yaml
+#  - include:
+#      name: pla_las_simple.yaml
+
+
+

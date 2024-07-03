@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-//#include "TDataObject.h"
 
 #include <TClonesArray.h>
 #include <TClass.h>
@@ -153,8 +152,8 @@ void TFocalPlaneConverter::Process(){
 	}
 	x += elem * fCoefficients[i];
       }
-
-
+      
+      //trIn->Copy(*trOut);
       trOut->SetTrack(x,y,0.0,a,b);
       trOut->SetTrackingID(TMWDCTrackingResult::kGood);            
     }

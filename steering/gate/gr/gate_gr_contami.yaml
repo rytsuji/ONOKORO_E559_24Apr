@@ -1,12 +1,9 @@
-#Pb(p,p) @27.78deg (The gate valve was closed during run1005.)
 Processor:
   - include:
-      name: tmpl/gate_gr_2layer.tmpl.yaml
+      name: tmpl/gate_gr_calib.tmpl.yaml
       replace:
-        Q_GR_MIN1: 100
-        Q_GR_MAX1: 400      
-        Q_GR_MIN2: 200
-        Q_GR_MAX2: 600
-        T_GR_MIN: 18
-        T_GR_MAX: 32
-        RF: rf2
+        Q_GR_MIN: 50
+        Q_GR_MAX: 4000      
+        T_GR_MIN: 38
+        T_GR_MAX: 45
+        RF: rf1

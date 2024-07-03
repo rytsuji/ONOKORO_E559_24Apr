@@ -6,8 +6,6 @@ Anchor:
   - &input data/run@NUM@.bld
   - &histout output/chk/run@NUM@.hist.root
   - &output output/chk/run@NUM@.root
-#  - &histout output_share/chk/run@NUM@.hist.root
-#  - &output output_share/chk/run@NUM@.root  
 Processor:
   - name: timer
     type: art::TTimerProcessor
@@ -34,21 +32,18 @@ Processor:
 
   - include: pla/pla_gr.yaml
   - include:
-      name: vdc/vdc_gr.yaml
+      name: vdc/vdc_gr_rawtrack.yaml
       replace:
         DT2DL: current
-  - include: vdc/vdc_gr_track.yaml  	
+  - include:  vdc/vdc_gr_calib.yaml
 
   - include: pla/pla_las.yaml
   - include:
-      name: vdc/vdc_las.yaml
+      name: vdc/vdc_las_rawtrack.yaml
       replace:
         DT2DL: current
-  - include: vdc/vdc_las_track.yaml  		
+  - include: vdc/vdc_las_calib.yaml  		
   - include:  optics/optics.yaml
-
-#test
-  - include:  pid/pid_calib.yaml
 
   - name: hist_pla_gr_track
     type: art::TTreeProjectionProcessor
@@ -107,22 +102,40 @@ Processor:
       FileName: hist/pid/pid_las.hist.yaml
       OutputFilename: *histout
 
-  - name: hist_tc
-    type: art::TTreeProjectionProcessor
-    parameter:
-      Type: art::TTreeProjection
-      FileName: hist/phys/tc.hist.yaml
-      OutputFilename: *histout
-
   - name: hist_optics
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
       FileName: hist/optics/optics.hist.yaml
       OutputFilename: *histout
+            
+  - name: hist_eff_mhit_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/mhit_gr_eff.hist.yaml
+      OutputFilename: *histout
+  - name: hist_mhit_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/mhit_las_eff.hist.yaml
+      OutputFilename: *histout
+      
+  - name: hist_vdceff_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/vdc_gr_eff.hist.yaml
+      OutputFilename: *histout
+  - name: hist_vdceff_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/vdc_las_eff.hist.yaml
+      OutputFilename: *histout
 
   - name: outputtree
     type: art::TOutputTreeProcessor
     parameter:
       FileName: *output
-      

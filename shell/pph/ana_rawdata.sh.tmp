@@ -1,0 +1,13 @@
+#!/bin/bash
+export LOG=shell/pph/log
+
+echo `date` > $LOG/40Ca.log
+echo `date` > $LOG/42Ca.log
+echo `date` > $LOG/mylar.log
+
+source shell/rawdata.sh pph runlist/pph/40Ca.txt >> $LOG/40Ca.log &
+source shell/rawdata.sh pph runlist/pph/42Ca.txt >> $LOG/42Ca.log &
+source shell/rawdata.sh pph runlist/pph/mylar.txt >> $LOG/mylar.log &
+
+wait
+echo "rawdata.yaml for pph : All tasks are completed. "

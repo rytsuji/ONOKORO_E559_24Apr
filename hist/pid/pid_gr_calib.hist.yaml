@@ -1,0 +1,62 @@
+anchor:
+
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())", 1000,-1000, 500]
+ 
+ - &rf1 ["fmod(pid_gr.fTiming-pgr.GetTOFDiff()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf2 ["fmod(pid_gr.fTiming-pgr.GetTOFDiff()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf3 ["fmod(pid_gr.fTiming-pgr.GetTOFDiff()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+
+ - &de1 ["pid_gr.fCharge",1000,0,4000]
+ 
+ - &xpos ["gfp.fX",1000,-1000,1000]
+# - &vdc_gate "abs(gfp.fX)<600 && abs(gfp.fA*1000)<100"
+# - &vdc_gate "abs(gtgt.fDelta)<0.02 && abs(gtgt.fA*1000)<15"	 
+
+group:
+ - name: pid_gr_calib
+   title: PID of GR
+   contents:
+
+     - name: de1_rf1_gr
+       title: deltaE1-RF1 GR
+       x: *rf1
+       y: *de1
+#       cut: *vdc_gate
+     - name: de1_rf2_gr
+       title: deltaE1-RF2 GR
+       x: *rf2
+       y: *de1
+#       cut: *vdc_gate       
+     - name: de1_rf3_gr
+       title: deltaE1-RF3 GR
+       x: *rf3
+       y: *de1
+#       cut: *vdc_gate
+       
+     - name: x_de1_gr
+       title: x-dE1 GR
+       x: *xpos
+       y: *de1
+
+     - name: de1_tof_gr
+       title: deltaE1-TOF GR
+       x: *tof
+       y: *de1
+#       cut: *vdc_gate
+       
+     - name: de1_gr
+       title: deltaE1 GR
+       x: *de1
+#       cut: *vdc_gate       
+     - name: rf1_gr
+       title: RF1 GR
+       x: *rf1
+#       cut: *vdc_gate       
+     - name: rf2_gr
+       title: RF2 GR
+       x: *rf2
+#       cut: *vdc_gate       
+     - name: rf3_gr
+       title: RF3 GR
+       x: *rf3
+#       cut: *vdc_gate       

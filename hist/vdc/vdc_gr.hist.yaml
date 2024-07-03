@@ -6,8 +6,8 @@ anchor:
  - &ymin -60
  - &ymax 60
  - &abin 500
- - &amin -100
- - &amax 100
+ - &amin -200
+ - &amax 200
  - &bbin 500
  - &bmin -30
  - &bmax 30 
@@ -49,7 +49,10 @@ group:
        x: ["gfp.fA*1000", *abin, *amin, *amax]       
        y: ["gfp.fY",  *ybin, *ymin, *ymax]       
        
-
+     - name: x_tdiff_gr
+       title: X vs pla TDiff  GR
+       x: ["gfp.fX", *xbin, *xmin, *xmax]
+       y: ["pla_gr_1.GetTDiff()", 200, -15 , 15]
 
 
 

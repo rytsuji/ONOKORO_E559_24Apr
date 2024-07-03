@@ -173,5 +173,6 @@
    }
 
    //LoadMacro
-   gROOT->LoadMacro("macro/shift.C")
+   //gROOT->LoadMacro("macro/shift.C")
+   gROOT->LoadMacro("runinfo/ScaData.C")     
 }

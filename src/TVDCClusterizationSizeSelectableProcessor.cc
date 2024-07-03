@@ -49,6 +49,7 @@ ClassImp(art::TVDCClusterizationSizeSelectableProcessor);
   RegisterProcessorParameter("ClustSize","cluster size",fClustSize,3);
   Register(fSearchTimeWidth("SearchTimeWidth","width of search time window for pre-clustering by timestamp",200));
 
+
   
     //
     //  RegisterOutputCollection("OutputCollection","output",
@@ -166,7 +167,6 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
   for (auto it = timeClusters.begin(); it != timeClusters.end();) {
     //if (it->size() < 2 || it->size() > 6) {
     if (it->size() < 2 ||  it->size() > 15) { //2024/4/20 by RTsuji
-    //if (it->size() < 2) { 
         it = timeClusters.erase(it);
      } else {
         ++it;
@@ -194,7 +194,8 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
            // accept the existing wire id for a multi hit
            mhits.push_back(aHit);
            last = aHit;
-	   //	} else if (last->GetID() + 1 == aHit->GetID()) {
+	   //} else if (last->GetID() + 1 == aHit->GetID()) {
+	   //} else if (last->GetID() + 1 == aHit->GetID() || last->GetID() + 2 == aHit->GetID()) {
 	} else if (last->GetID() + 1 == aHit->GetID() || last->GetID() + 2 == aHit->GetID()) {	   
            wires.push_back(mhits);
            mhits.clear();

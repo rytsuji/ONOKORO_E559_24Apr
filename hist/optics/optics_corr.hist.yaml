@@ -1,0 +1,53 @@
+anchor:
+ - &dbin_gtgt 1000
+ - &dmin_gtgt -0.05
+ - &dmax_gtgt 0.05
+
+ - &abin_gtgt 1000
+ - &amin_gtgt -30
+ - &amax_gtgt 30
+
+ - &bbin_gtgt 1000
+ - &bmin_gtgt -150
+ - &bmax_gtgt 150
+ 
+ - &dbin_ltgt 1000
+ - &dmin_ltgt -0.2
+ - &dmax_ltgt 0.2
+
+ - &abin_ltgt 1000
+ - &amin_ltgt -1000
+ - &amax_ltgt 1000
+
+ - &bbin_ltgt 1000
+ - &bmin_ltgt -1000
+ - &bmax_ltgt 1000
+ 
+group:
+ - name: optics_corr
+   title: GR vs LAS optics hist
+   contents:
+   
+     - name: delta_gr_las
+       title: delta GR vs LAS
+       x: ["gtgt.fDelta", *dbin_gtgt, *dmin_gtgt, *dmax_gtgt]
+       y: ["ltgt.fDelta", *dbin_ltgt, *dmin_ltgt, *dmax_ltgt]
+
+     - name: a_gr_las
+       title: A tgt  GR vs LAS
+       x: ["gtgt.fA*1000", *abin_gtgt, *amin_gtgt, *amax_gtgt]
+       y: ["ltgt.fA*1000", *abin_ltgt, *amin_ltgt, *amax_ltgt]
+
+     - name: b_gr_las
+       title: B tgt GR vs LAS
+       x: ["gtgt.fB*1000", *bbin_gtgt, *bmin_gtgt, *bmax_gtgt]
+       y: ["ltgt.fB*1000", *bbin_ltgt, *bmin_ltgt, *bmax_ltgt]    
+       
+
+
+
+
+
+
+
+     

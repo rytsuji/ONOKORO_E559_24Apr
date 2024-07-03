@@ -1,0 +1,56 @@
+anchor:
+ - &tc "tof.fTiming>-10 && tof.fTiming<50"
+# - &tc "tof.fTiming>2 && tof.fTiming<45"
+# - &ac "(tof.fTiming>-150 && tof.fTiming<-10) || (tof.fTiming>50 && tof.fTiming<200)"
+ - &ac "(tof.fTiming>-580 && tof.fTiming<-10) || (tof.fTiming>50 && tof.fTiming<340)"
+# - &ac "( abs(tof.fTiming+295)<285 && fmod(tof.fTiming+1420.6750,71.033750)>2 && fmod(tof.fTiming+1420.6750,71.033750)<45) || (abs(tof.fTiming-195)<145  && fmod(tof.fTiming+1420.6750,71.033750)>2 && fmod(tof.fTiming+1420.6750,71.033750)<45)" 
+ 
+group:
+ - name: phys
+   title: phys
+   contents:
+
+     - name: tof
+       title: TOF GR-LAS
+       x: ["tof.fTiming",  2000, -1000, 1000]
+
+     - name: tof_tc 
+       title: TOF GR-LAS with True coin
+       x: ["tof.fTiming",  2000, -1000, 1000]
+       cut: *tc
+       
+     - name: tof_ac
+       title: TOF GR-LAS with Acc coin
+       x: ["tof.fTiming",  2000, -1000, 1000]
+       cut: *ac
+
+     - name: tke_las_gr
+       title: Energy LAS-GR with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *tc
+
+     - name: tke_las_gr_ac 
+       title: Energy LAS-GR with Acc coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *ac
+
+     - name: sx
+       title: Sx with True coin
+       x: ["226.0-pgr.fTKE-plas.fTKE", 250, 0, 50]
+       cut: *tc
+
+     - name: sx_ac
+       title: Sx with Acc coin
+       x: ["226.0-pgr.fTKE-plas.fTKE", 250, 0, 50]
+       cut: *ac
+
+     - name: sx_nogate
+       title: Sx without gate
+       x: ["226.0-pgr.fTKE-plas.fTKE", 500, -50, 50]
+
+     - name: tke_las_gr_nogate
+       title: Energy LAS-GR without gate 
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]

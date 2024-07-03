@@ -27,6 +27,7 @@ protected:
   TString fTrackInputName;
   TString fTimingInputName;
   TString fChargeInputName;
+  //TString fOpticsInputName;
   TString fOutputName;
   
 
@@ -34,6 +35,7 @@ protected:
   TClonesArray **fTrackInput;//!
   TClonesArray **fTimingInput;//!
   TClonesArray **fChargeInput;//!
+  //TClonesArray **fOpticsInput;//!
   TClonesArray *fOutput;//!                                                                                                                                
   Int_t fVerbose;
 
@@ -46,6 +48,15 @@ protected:
   IntVec_t   fTermsTiming;
   FloatVec_t fCoefficientsTiming;
 
+  TString    fSetupFileName;
+  Double_t fMass;
+  Int_t fAtomicNumber;
+  Int_t fMassNumber;
+  Double_t fRho;
+  Double_t fMagneticField;
+  Double_t fAngle;
+  Double_t fLength;
+  Double_t fTOF;
 
   Int_t  fChargeType;
   

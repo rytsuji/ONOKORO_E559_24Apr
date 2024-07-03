@@ -1,0 +1,19 @@
+group:
+ - name: trig
+   title: Trigger ID hist
+   contents:   
+     - name: trig_coin
+       title: GR-LAS coin trig
+       x: ["trig_coin@.GetEntriesFast()>0",2,-0.5,1.5]
+     - name: trig_gr
+       title: GR trig
+       x: ["trig_gr@.GetEntriesFast()>0",2,-0.5,1.5]
+     - name: trig_las
+       title: LAS tig
+       x: ["trig_las@.GetEntriesFast()>0",2,-0.5,1.5]       
+
+       
+
+
+
+     

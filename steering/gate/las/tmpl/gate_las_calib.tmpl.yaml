@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_las_pid
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: las_pid
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_pid; abs( fmod(pid_las.fTiming -plas.GetTOFDiff()- @RF@.fTiming + 1420.6750, 71.033750)  - ( @T_LAS_MIN@ + @T_LAS_MAX@ )/2. ) < abs( @T_LAS_MAX@ -@T_LAS_MIN@)/2. && pid_las.fCharge> @Q_LAS_MIN@ && pid_las.fCharge < @Q_LAS_MAX@"
+
+
+  - name: stop_proc_las_pid
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_pid"
+

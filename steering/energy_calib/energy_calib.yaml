@@ -1,0 +1,21 @@
+Processor:
+
+#GR
+  - name: proc_ecalib_gr
+    type: art::TSpectrometerProcessor
+    parameter:
+      Setting: prm/spectrometer/gr/@SETUP@.yaml
+      InputCollection: 
+        - gtgt
+      OutputCollection: pgr
+      OutputTransparency: 0
+
+#LAS
+  - name: proc_ecalib_las
+    type: art::TSpectrometerProcessor
+    parameter:
+      Setting: prm/spectrometer/las/@SETUP@.yaml      
+      InputCollection: 
+        - ltgt
+      OutputCollection: plas
+      OutputTransparency: 0

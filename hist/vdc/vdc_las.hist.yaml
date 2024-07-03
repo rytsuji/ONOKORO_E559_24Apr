@@ -1,7 +1,7 @@
 anchor:
  - &xbin 1000
- - &xmin -1000
- - &xmax 1000
+ - &xmin -800
+ - &xmax 1200
  - &ybin 500
  - &ymin -200
  - &ymax 200
@@ -50,6 +50,10 @@ group:
        x: ["lfp.fY", *ybin, *ymin , *ymax]
        y: ["lfp.fB*1000",  *bbin, *bmin, *bmax]       
 
+     - name: x_tdiff_las
+       title: X vs Y LAS
+       x: ["lfp.fX", *xbin, *xmin, *xmax]
+       y: ["pla_las_3.GetTDiff()", 200, -45 , 5]       
 
        
 
