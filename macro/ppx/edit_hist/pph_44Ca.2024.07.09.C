@@ -65,7 +65,7 @@
 
   /*
   TF1 *f_44Ca = new TF1("f_44Ca","([0]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[1])/[8],2))+([2]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[3])/[8],2))+([4]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[5])/[8],2))+([6]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[7])/[8],2))",-1000,1000);
- 
+
   
   f_44Ca->SetParLimits(0,0.0,1.0);
   f_44Ca->SetParLimits(2,0.0,1.0);
@@ -82,22 +82,17 @@
   sx_tave->Fit("f_44Ca","E","",23.0,27.0);
   */
 
-  //TF1 *f_44Ca = new TF1("f_44Ca","([0]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[1])/[6],2))+([2]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[3])/[6],2))+([4]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[5])/[6],2))",-1000,1000);
-
-  TF1 *f_44Ca = new TF1("f_44Ca","([0]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[1])/[8],2))+([2]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[3])/[8],2))+([4]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[5])/[8],2))+([6]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[7])/[8],2))",-1000,1000);
+  TF1 *f_44Ca = new TF1("f_44Ca","([0]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[1])/[6],2))+([2]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[3])/[6],2))+([4]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[5])/[6],2))",-1000,1000);
 
   f_44Ca->SetParLimits(0,0.0,1.0);                                                      
-  f_44Ca->SetParLimits(2,0.0,1.0);                                                      
-  f_44Ca->SetParLimits(4,0.0,1.0);                                                        
-  f_44Ca->SetParLimits(6,0.0,1.0); 
+  f_44Ca->SetParLimits(2,0.0,1.0);                                                        
+  f_44Ca->SetParLimits(4,0.0,1.0); 
 
-  f_44Ca->SetParameters(0.03,24.0,
-			1.31492e-01,2.50175e+01,
-			2.22895e-02,2.70577e+01,
-			1.60754e-01,2.61575e+01,
-			3.28856e-01);
+  f_44Ca->SetParameters(0.1,Sh+E2,
+			0.05,Sh+E3-0.5,
+			0.05,Sh+E3,		   			
+			0.5);
  
-  //sx_tave->Fit("f_44Ca","E","",24.5,27.5);
-  sx_tave->Fit("f_44Ca","E","",23.5,27.5);
+  sx_tave->Fit("f_44Ca","E","",24.5,27.5);
 }
 

@@ -13,8 +13,8 @@ anchor:
  - &bmax 30 
 
 group:
- - name: vdc_gr
-   title: VDC GR hist
+ - name: gfp
+   title: GFP hist
    contents:   
      - name: x_gr
        title: X  GR

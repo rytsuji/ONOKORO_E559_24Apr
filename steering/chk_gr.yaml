@@ -5,9 +5,9 @@
 Anchor:
 #  - &gate_gr gate/gr/gate_gr_2020.yaml
 #  - &gate_gr gate/gr/gate_gr_2036.yaml
-#  - &gate_gr gate/gr/gate_gr_1033.yaml
+  - &gate_gr gate/gr/gate_gr_1033.yaml
 #  - &gate_gr gate/gr/gate_gr_ppt_chkeff.yaml
-  - &gate_gr gate/gr/gate_gr_contami.yaml
+#  - &gate_gr gate/gr/gate_gr_contami.yaml
   - &dt2dl_gr 1033
 
 
@@ -87,7 +87,21 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/vdc/vdc_gr_plane.hist.yaml
       OutputFilename: *histout
-      
+
+  - name: hist_vdc_gr_rawtrack
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_raw.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_gdc
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/gdc.hist.yaml
+      OutputFilename: *histout
+
   - name: hist_vdc_gr_track
     type: art::TTreeProjectionProcessor
     parameter:

@@ -63,7 +63,21 @@ Processor:
       FileName: hist/vdc/vdc_las_plane.hist.yaml
       OutputFilename: *histout
 
-  - name: hist_vdc_las
+  - name: hist_vdc_las_rawtrack
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las_raw.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_ldc
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/ldc.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_lfp
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection

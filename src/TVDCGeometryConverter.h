@@ -28,9 +28,9 @@ protected:
   Parameter<Double_t> fOffsetY; // unit of mm
   Parameter<Double_t> fOffsetZ; // unit of mm
   Parameter<Double_t> fFPTiltedAngleY; // unit of deg
+  Parameter<Double_t> fVDCTiltedAngleX; // unit of deg  
   Parameter<Double_t> fVDCTiltedAngleY; // unit of deg
-  //Parameter<Double_t> fVDCTiltedAngleX; // unit of deg
-  //Parameter<Double_t> fVDCTiltedAngleZ; // unit of deg
+  Parameter<Double_t> fVDCTiltedAngleZ; // unit of deg    
   ClassDef(TVDCGeometryConverter,0) // vdc tracking processor
 };
 

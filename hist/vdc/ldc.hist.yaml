@@ -1,0 +1,67 @@
+anchor:
+ - &xbin 1000
+ - &xmin -800
+ - &xmax 1200
+ - &ybin 500
+ - &ymin -200
+ - &ymax 200
+ - &abin 600
+ - &amin -300
+ - &amax 300
+ - &bbin 500
+ - &bmin -100
+ - &bmax 100 
+
+group:
+ - name: ldc
+   title: LDC hist
+   contents:
+     - name: x_las
+       title: X  LAS
+       x: ["ldc.fX", *xbin, *xmin, *xmax]
+#     - name: x_las_acut
+#       title: X  LAS
+#       cut: abs(ldc.fA*1000)<1
+#       x: ["ldc.fX", *xbin, *xmin, *xmax]
+     - name: a_las
+       title:  A LAS
+       x: ["ldc.fA*1000", *abin, *amin, *amax]
+     - name: y_las
+       title: Y  LAS
+       x: ["ldc.fY", *ybin, *ymin, *ymax]
+     - name: b_las
+       title:  B LAS
+       x: ["ldc.fB*1000", *bbin, *bmin, *bmax]       
+
+     - name: x_a_las
+       title: X vs A LAS
+       x: ["ldc.fX", *xbin, *xmin, *xmax]              
+       y: ["ldc.fA*1000", *abin, *amin, *amax]
+     - name: x_y_las
+       title: X vs Y LAS
+       x: ["ldc.fX", *xbin, *xmin, *xmax]
+       y: ["ldc.fY", *ybin, *ymin , *ymax]       
+     - name: y_a_las
+       title: Y vs A LAS
+       x: ["ldc.fA*1000",  *abin, *amin, *amax]              
+       y: ["ldc.fY", *ybin, *ymin , *ymax]
+     - name: y_b_las
+       title: Y vs B LAS
+       x: ["ldc.fY", *ybin, *ymin , *ymax]
+       y: ["ldc.fB*1000",  *bbin, *bmin, *bmax]       
+
+     - name: x_tdiff_las
+       title: X vs Y LAS
+       x: ["ldc.fX", *xbin, *xmin, *xmax]
+       y: ["pla_las_3.GetTDiff()", 200, -45 , 5]       
+
+       
+
+
+
+
+
+
+
+
+     

@@ -1,33 +1,29 @@
 - x1:
     z: 0
-    nWire: 192 # 192 * 65 = 1152
+    nWire: 192 # 192 * 6 = 1152
     cellSize: 6
     angle : 180
     center: 95.5 # 573./6. 
 
+
 - u1:
     z: 20
-    nWire: 208 # 208 * 65 = 1248.
+    nWire: 208 # 208 * 6 = 1248.
     cellSize: 4
-#    angle : 48.19
     angle: 131.81
-#    center: 100.48333
     center: 100.5 # ~ x = 95.5 => online value
-#    center: 103.8167
+
 
 - x2:
     z: 250
     nWire: 192
     cellSize: 6
     angle: 180
-#    center: 53.8333
-    center: 53.93 # (573.6 - 250.) /6. online value
+    center: 53.93 # (573.6 - 250.) /6. online value    
 
 - u2:
     z: 270
     nWire: 208
     cellSize: 4
     angle: 131.81
-#    angle : 48.19
-#    center: 58.78333
     center: 58.83 # 104 - (250) / 6. online value

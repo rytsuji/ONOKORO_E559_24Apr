@@ -4,29 +4,13 @@ Processor:
   - name: proc_geometry_converter
     type: art::TVDCGeometryConverter
     parameter:
-#      OffsetX: -51.0
-      OffsetX: -74.0 # 51+23 (mm)
-      OffsetY: -5.0      
-#      OffsetZ: 53.5
-      OffsetZ: 85.5 #53.5+32 (mm)
-      VDCTiltedAngleY: -0.1
-      FPTiltedAngleY: 0.0
-      InputCollection:
-        - vdc_gr
-      OutputCollection: gdc
-      OutputTransparency: 0
-
-  - name: proc_geometry_converter
-    type: art::TVDCGeometryConverter
-    parameter:
       OffsetX: 0.0
       OffsetY: 0.0      
       OffsetZ: 0.0
-      VDCTiltedAngleY: 0.0
       FPTiltedAngleY: 44.548
       InputCollection:
-        - gdc
-      OutputCollection: gdc_fp
+        - vdc_gr
+      OutputCollection: gdc
       OutputTransparency: 0
 
 #focal plane calibration
@@ -38,6 +22,6 @@ Processor:
       OffsetZ: -88.962700
       MatrixFile: prm/mwdc/vdc_gr/fp/fp_gr.yaml
       InputCollection:
-        - gdc_fp
+        - gdc
       OutputCollection: gfp
       OutputTransparency: 0

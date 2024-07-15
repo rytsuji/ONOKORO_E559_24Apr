@@ -104,7 +104,7 @@ void TSpectrometerProcessor::Process(){
 
       double TKE = sqrt(fMass*fMass + pow(0.3*((double) fAtomicNumber)*fMagneticField*fRho*(1+Delta),2.0))-fMass;
       double theta_lab = TMath::RadToDeg()*atan( sqrt( pow( tan( atan(A)+fAngle*TMath::DegToRad() ),2.0) + pow(B,2.0)) );
-      double phi_lab = TMath::RadToDeg()*atan(B);
+      double phi_lab = TMath::RadToDeg()*atan(B/tan( atan(A)+fAngle));
       double TOF = (fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
       outData->SetTKE(TKE);
       outData->SetMass(fMass);
