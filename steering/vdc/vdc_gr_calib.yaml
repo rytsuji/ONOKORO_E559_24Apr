@@ -4,12 +4,11 @@ Processor:
   - name: proc_geometry_converter
     type: art::TVDCGeometryConverter
     parameter:
-#      OffsetX: -51.0
-      OffsetX: -74.0 # 51+23 (mm)
-      OffsetY: -5.0      
-#      OffsetZ: 53.5
-      OffsetZ: 85.5 #53.5+32 (mm)
-      VDCTiltedAngleY: -0.1
+      OffsetX: -51.0 # 51 (mm)      
+      OffsetY: -5.0
+      OffsetZ: 53.5      
+      VDCTiltedAngleY: -0.10
+      VDCTiltedAngleZ: -0.07      
       FPTiltedAngleY: 0.0
       InputCollection:
         - vdc_gr
