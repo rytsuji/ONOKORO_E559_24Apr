@@ -1,4 +1,4 @@
-position: [0, 0, 0]
+position: [0, 0, 22]
 angle: 0.
 turned: 0
 plane_config: prm/vdc_las/plane.yaml
