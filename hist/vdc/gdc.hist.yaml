@@ -5,12 +5,12 @@ anchor:
  - &ybin 500
  - &ymin -60
  - &ymax 60
-# - &abin 500
-# - &amin -200
-# - &amax 200
  - &abin 500
- - &amin -1200
- - &amax -800
+ - &amin -200
+ - &amax 200
+# - &abin 500
+# - &amin -1200
+# - &amax -800
  - &bbin 500
  - &bmin -30
  - &bmax 30 

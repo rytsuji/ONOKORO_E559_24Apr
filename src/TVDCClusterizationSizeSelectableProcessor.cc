@@ -239,10 +239,15 @@ void TVDCClusterizationSizeSelectableProcessor::Process()
   }
 #endif
 
+  /*
   for (int iCls = 0, nCls = clusters.size(); iCls < nCls; ++iCls) {
      ProcessCluster(clusters[iCls]);
   }
-
+  */
+  //reject multi cluster 2024.07.24
+  if (clusters.size()==1) {
+     ProcessCluster(clusters[0]);
+  }
   
   if(debug)printf("2\n");
 }

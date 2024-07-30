@@ -4,6 +4,8 @@ Processor:
   - name: proc_opt_calib_gr
     type: art::TOpticsCalibrationProcessor
     parameter:
+      OffsetA: 0.00199876
+      OffsetB: 0.00418283
       MatrixFileDelta: prm/optics/gr/gr_delta.yaml
       MatrixFileA: prm/optics/gr/gr_a.yaml
       MatrixFileB: prm/optics/gr/gr_b.yaml

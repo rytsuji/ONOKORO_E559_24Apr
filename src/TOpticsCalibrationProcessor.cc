@@ -27,7 +27,9 @@ TOpticsCalibrationProcessor::TOpticsCalibrationProcessor()
 			      fMatrixFileNameA,TString("path/to/file_A"));
   RegisterProcessorParameter("MatrixFileB","path to the matrix file B",
 			      fMatrixFileNameB,TString("path/to/file_B"));  
-
+  Register(fOffsetDelta("OffsetDelta","offset of Delta",0));
+  Register(fOffsetA("OffsetA","offset of Delta",0));
+  Register(fOffsetB("OffsetB","offset of Delta",0));  
 
   RegisterInputCollection("InputCollection",
                            "input collection",
@@ -200,16 +202,18 @@ void TOpticsCalibrationProcessor::Process(){
       xyab[3] = (track->GetB());
       
       
-      Double_t Delta = 0 ;
-      Double_t A = 0;
-      Double_t B = 0;
+      Double_t Delta = fOffsetDelta ;
+      Double_t A = fOffsetA;
+      Double_t B = fOffsetB;
       
       
       for (Int_t i = 0, n = fTermsDelta.size(); i != n; ++i) {
 	Double_t elem = 1.;
 	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTermsDelta[i] >> (j * kShift) & kMask);
-	  elem *= TMath::Power(xyab[j],power);
+	  if(fTermsDelta[i]>0){
+	    const Int_t power = (fTermsDelta[i] >> (j * kShift) & kMask);
+	    elem *= TMath::Power(xyab[j],power);
+	  }
 	}
 	Delta += elem * fCoefficientsDelta[i];
       }
@@ -217,8 +221,10 @@ void TOpticsCalibrationProcessor::Process(){
       for (Int_t i = 0, n = fTermsA.size(); i != n; ++i) {
 	Double_t elem = 1.;
 	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTermsA[i] >> (j * kShift) & kMask);
-	  elem *= TMath::Power(xyab[j],power);
+	  if(fTermsA[i]>0){
+	    const Int_t power = (fTermsA[i] >> (j * kShift) & kMask);
+	    elem *= TMath::Power(xyab[j],power);
+	  }
 	}
 	A += elem * fCoefficientsA[i];
       }
@@ -227,8 +233,10 @@ void TOpticsCalibrationProcessor::Process(){
       for (Int_t i = 0, n = fTermsB.size(); i != n; ++i) {
 	Double_t elem = 1.;
 	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTermsB[i] >> (j * kShift) & kMask);
-	  elem *= TMath::Power(xyab[j],power);
+	  if(fTermsB[i]>0){
+	    const Int_t power = (fTermsB[i] >> (j * kShift) & kMask);
+	    elem *= TMath::Power(xyab[j],power);
+	  }
 	}
 	B += elem * fCoefficientsB[i];
       }

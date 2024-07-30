@@ -45,6 +45,19 @@ group:
        title: GR Atgt vs Btgt
        x: ["gtgt.fA*1000", *abin_gtgt, *amin_gtgt, *amax_gtgt]
        y: ["gtgt.fB*1000", *bbin_gtgt, *bmin_gtgt, *bmax_gtgt]
+
+     - name: a_gtgt_norm
+       title: GR Atgt Normalized
+       x: ["gtgt.fA/0.0086580087", 500, -5, 5]
+
+     - name: b_gtgt_norm
+       title: GR Btgt Normalized
+       x: ["gtgt.fB/0.020779", 500, -5, 5]
+
+     - name: a_b_gtgt_norm
+       title: GR Atgt vs Btgt Normalized
+       x: ["gtgt.fA/0.0086580087", 1000, -5, 5]
+       y: ["gtgt.fB/0.020779", 1000, -5, 5]
        
      - name: delta_a_gfp
        title: GR delta vs Afp

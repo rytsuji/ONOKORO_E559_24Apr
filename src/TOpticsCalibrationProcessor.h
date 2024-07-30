@@ -45,6 +45,10 @@ protected:
   FloatVec_t fCoefficientsB;
   
 
+  Parameter<Double_t> fOffsetDelta;
+  Parameter<Double_t> fOffsetA;
+  Parameter<Double_t> fOffsetB;
+  
   
 private:
   
