@@ -1,0 +1,38 @@
+
+
+*******************************************************************************
+Mon Jul 22 15:39:34 2024
+
+
+FIT:    data read from "merge.dat" u 1:2
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2           
+   0 7.2537365586e+10   0.00e+00  6.96e+04    1.000000e+00   1.000000e+00   1.000000e+00
+   8 1.8313089426e+04  -8.69e-03  6.96e-04   -6.354838e+01   1.289831e+00   1.860188e-03
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 18313.1
+rel. change during last iteration : -8.69491e-08
+
+degrees of freedom    (FIT_NDF)                        : 2
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 95.6898
+variance of residuals (reduced chisquare) = WSSR/ndf   : 9156.54
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -63.5484         +/- 66.76        (105.1%)
+p1              = 1.28983          +/- 0.1409       (10.93%)
+p2              = 0.00186019       +/- 0.0005536    (29.76%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     
+p0              1.000 
+p1             -0.050  1.000 
+p2             -0.767  0.054  1.000 

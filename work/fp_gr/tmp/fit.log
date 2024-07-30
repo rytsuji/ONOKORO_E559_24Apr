@@ -1,0 +1,262 @@
+
+
+*******************************************************************************
+Wed Jul 24 02:05:44 2024
+
+
+FIT:    data read from "itr.dat" u 1:2
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x+p3*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3           
+   0 1.2860465455e+16   0.00e+00  2.54e+07    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  11 7.0956262197e+02  -9.96e-07  2.54e-04   -7.167131e+00  -6.537316e-04  -3.971425e-05  -2.039869e-08
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 709.563
+rel. change during last iteration : -9.95774e-12
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.6376
+variance of residuals (reduced chisquare) = WSSR/ndf   : 709.563
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -7.16713         +/- 18.59        (259.3%)
+p1              = -0.000653732     +/- 0.118        (1.804e+04%)
+p2              = -3.97143e-05     +/- 0.0001547    (389.6%)
+p3              = -2.03987e-08     +/- 7.084e-07    (3473%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     
+p0              1.000 
+p1             -0.011  1.000 
+p2             -0.765 -0.061  1.000 
+p3             -0.006 -0.943  0.084  1.000 
+
+
+*******************************************************************************
+Wed Jul 24 02:06:23 2024
+
+
+FIT:    data read from "itr.dat" u 1:2
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x+p3*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3           
+   0 7.0956262197e+02   0.00e+00  4.34e+00   -7.167131e+00  -6.537316e-04  -3.971425e-05  -2.039869e-08
+   1 7.0956262197e+02   0.00e+00  4.34e-01   -7.167131e+00  -6.537316e-04  -3.971425e-05  -2.039869e-08
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 709.563
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 26.6376
+variance of residuals (reduced chisquare) = WSSR/ndf   : 709.563
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -7.16713         +/- 18.59        (259.3%)
+p1              = -0.000653732     +/- 0.118        (1.804e+04%)
+p2              = -3.97143e-05     +/- 0.0001547    (389.6%)
+p3              = -2.03987e-08     +/- 7.084e-07    (3473%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     
+p0              1.000 
+p1             -0.011  1.000 
+p2             -0.765 -0.061  1.000 
+p3             -0.006 -0.943  0.084  1.000 
+
+
+*******************************************************************************
+Wed Jul 24 02:07:27 2024
+
+
+FIT:    data read from "itr.dat" u 1:3
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x+p3*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3           
+   0 1.3169031062e+07   0.00e+00  4.34e+00   -7.167131e+00  -6.537316e-04  -3.971425e-05  -2.039869e-08
+   5 2.3039449357e+05  -6.15e-03  4.34e-05   -1.265043e+02   7.875557e+00  -6.084280e-03  -6.893715e-05
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 230394
+rel. change during last iteration : -6.15127e-08
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 479.994
+variance of residuals (reduced chisquare) = WSSR/ndf   : 230394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -126.504         +/- 334.9        (264.7%)
+p1              = 7.87556          +/- 2.125        (26.99%)
+p2              = -0.00608428      +/- 0.002788     (45.82%)
+p3              = -6.89372e-05     +/- 1.276e-05    (18.52%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     
+p0              1.000 
+p1             -0.011  1.000 
+p2             -0.765 -0.061  1.000 
+p3             -0.006 -0.943  0.084  1.000 
+
+
+*******************************************************************************
+Wed Jul 24 02:09:10 2024
+
+
+FIT:    data read from "itr.dat" u 1:4
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Wed Jul 24 02:09:17 2024
+
+
+FIT:    data read from "itr.dat" u 1:4
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x+p3*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3           
+   0 1.2856810893e+16   0.00e+00  2.54e+07    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  11 2.8439310218e+07  -7.25e-06  2.54e-04    4.413119e+03  -5.677125e+01   2.106146e-01   4.957985e-04
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 2.84393e+07
+rel. change during last iteration : -7.25103e-11
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5332.85
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.84393e+07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 4413.12          +/- 3721         (84.32%)
+p1              = -56.7712         +/- 23.61        (41.6%)
+p2              = 0.210615         +/- 0.03098      (14.71%)
+p3              = 0.000495799      +/- 0.0001418    (28.6%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     
+p0              1.000 
+p1             -0.011  1.000 
+p2             -0.765 -0.061  1.000 
+p3             -0.006 -0.943  0.084  1.000 
+
+
+*******************************************************************************
+Wed Jul 24 02:10:31 2024
+
+
+FIT:    data read from "itr.dat" u 1:3
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x+p3*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3           
+   0 4.7634128399e+09   0.00e+00  2.00e+04    4.413119e+03  -5.677125e+01   2.106146e-01   4.957985e-04
+   4 2.3039449357e+05  -1.07e-01  2.00e+00   -1.265043e+02   7.875557e+00  -6.084280e-03  -6.893715e-05
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 230394
+rel. change during last iteration : -1.07238e-06
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 479.994
+variance of residuals (reduced chisquare) = WSSR/ndf   : 230394
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -126.504         +/- 334.9        (264.7%)
+p1              = 7.87556          +/- 2.125        (26.99%)
+p2              = -0.00608428      +/- 0.002788     (45.82%)
+p3              = -6.89372e-05     +/- 1.276e-05    (18.52%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     
+p0              1.000 
+p1             -0.011  1.000 
+p2             -0.765 -0.061  1.000 
+p3             -0.006 -0.943  0.084  1.000 
+
+
+*******************************************************************************
+Wed Jul 24 02:10:48 2024
+
+
+FIT:    data read from "itr.dat" u 1:6
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Wed Jul 24 02:10:51 2024
+
+
+FIT:    data read from "itr.dat" u 1:5
+        format = x:z
+        #datapoints = 5
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=p0+p1*x+p2*x*x+p3*x*x*x
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3           
+   0 2.9895147782e+11   0.00e+00  2.15e+03   -1.265043e+02   7.875557e+00  -6.084280e-03  -6.893715e-05
+   5 2.7281443746e+10  -5.20e-08  2.15e-02   -7.001961e+04  -2.126155e+03   5.411180e-01   1.058147e-02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2.72814e+10
+rel. change during last iteration : -5.19879e-13
+
+degrees of freedom    (FIT_NDF)                        : 1
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 165171
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.72814e+10
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -70019.6         +/- 1.152e+05    (164.6%)
+p1              = -2126.15         +/- 731.4        (34.4%)
+p2              = 0.541118         +/- 0.9594       (177.3%)
+p3              = 0.0105815        +/- 0.004392     (41.51%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     
+p0              1.000 
+p1             -0.011  1.000 
+p2             -0.765 -0.061  1.000 
+p3             -0.006 -0.943  0.084  1.000 
