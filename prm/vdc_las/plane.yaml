@@ -3,35 +3,42 @@
     nWire:    272
     cellSize: &cell 6
     angle:    0
-    center:   129 # dX=+18.342000 from original value(tamii ana)
+#    center:   129
+    center:   138
+
 
 - u1:
     z:        20
     nWire:    256
     cellSize: *cell
     angle:    -31
-    center:   120.58629 # 117.966+18.342000/7
+#    center:   120.58629 # 117.966+18.342000/7
+    center:   129.58629 # 117.966+27.342000/7
 - v1:
     z:        40
     nWire:    256
     cellSize: *cell
     angle:    31   
     center:   119.94329 # 117.323+18.342000/7
+    center:   128.94329 # 117.323+27.342000/7    
 - x2:
     z:        164
     nWire:    272
     cellSize: *cell
     angle:    0
-    center:   87.405000 # 84.348+18.342000/6   
+#    center:   87.405000 # 84.348+18.342000/6
+    center:   96.405000 # 84.348+27.342000/6   
 - u2:
     z:        184
     nWire:    256
     cellSize: *cell
     angle:    -31
-    center:   84.957386 # 82.3371+18.342000/7
+#    center:   84.957386 # 82.3371+18.342000/7
+    center:   93.957386 # 82.3371+27.342000/7
 - v2:
     z:        204
     nWire:    256
     cellSize: *cell
     angle:    31
-    center:   84.314586 # 81.6943+18.342000/7
+#    center:   84.314586 # 81.6943+18.342000/7
+    center:   93.314586 # 81.6943+27.342000/7
