@@ -1,0 +1,12 @@
+#CH2(p,p) 
+Processor:
+  - include:
+      name: tmpl/gate_gr_2layer.tmpl.yaml
+      replace:
+        Q_GR_MIN1: 100
+        Q_GR_MAX1: 4200      
+        Q_GR_MIN2: 200
+        Q_GR_MAX2: 4200
+        T_GR_MIN: 25
+        T_GR_MAX: 55
+        RF: rf2

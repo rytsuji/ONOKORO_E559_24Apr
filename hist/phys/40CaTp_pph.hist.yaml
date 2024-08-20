@@ -1,0 +1,24 @@
+anchor:
+# - &sx ["226.2-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+# - &sx ["226.175-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+# - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+# - &tof_raw ["tof.fTiming",  1000, -1000, 1000]
+# - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+# - &ac "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)"
+ - &l0tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20 && abs(0.96192800*(226.0-pgr.fTKE-plas.fTKE)+0.640425-20.3)<0.5"
+ - &l0ac "((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)) && abs(0.96192800*(226.0-pgr.fTKE-plas.fTKE)+0.640425-20.5)<0.5" 
+ 
+group:
+ - name: 40CaTp
+   title: 40CaTp
+   contents:
+
+     - name: TpL0_tc
+       title: Tp L=0_tc
+       x: ["pgr.fTKE",  500, 100, 200]
+       cut: *l0tc
+
+     - name: TpL0_ac
+       title: Tp L=0_ac
+       x: ["pgr.fTKE",  500, 100, 200]
+       cut: *l0ac       

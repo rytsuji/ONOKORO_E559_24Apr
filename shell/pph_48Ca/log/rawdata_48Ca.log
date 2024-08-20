@@ -1,4 +1,4 @@
-2024年 6月 8日 土曜日 12:30:21 JST
+2024年 8月 19日 月曜日 12:33:15 JST
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -86,6 +86,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -127,6 +131,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -136,7 +146,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 120643168 itrEnd = 119518528
+itrBegin = 136561408 itrEnd = 135712592
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -196,10 +206,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -209,6 +219,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -235,10 +249,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -250,6 +264,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -391,6 +411,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -432,6 +456,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -441,7 +471,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 19099904 itrEnd = 118923232
+itrBegin = 93884832 itrEnd = 114462016
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -501,10 +531,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -514,6 +544,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -540,10 +574,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -555,6 +589,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -696,6 +736,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -737,6 +781,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -746,7 +796,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 99154064 itrEnd = 135372224
+itrBegin = 121667936 itrEnd = 121740992
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -806,10 +856,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -819,6 +869,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -845,10 +899,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -860,6 +914,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -1005,6 +1065,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -1046,6 +1110,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -1055,7 +1125,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 139559776 itrEnd = 140490864
+itrBegin = 108254528 itrEnd = 108236192
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -1115,10 +1185,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -1128,6 +1198,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -1154,10 +1228,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -1169,6 +1243,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -1313,6 +1393,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -1354,6 +1438,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -1363,7 +1453,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 106495744 itrEnd = 120168672
+itrBegin = 130988864 itrEnd = 131726864
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -1423,10 +1513,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -1436,6 +1526,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -1462,10 +1556,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -1477,6 +1571,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -1606,6 +1706,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -1647,6 +1751,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -1656,7 +1766,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 112294528 itrEnd = 81718944
+itrBegin = 111282672 itrEnd = 123193520
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -1716,10 +1826,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -1729,6 +1839,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -1755,10 +1869,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -1770,6 +1884,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -1885,6 +2005,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -1926,6 +2050,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -1935,7 +2065,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 132028416 itrEnd = 132058720
+itrBegin = 123264272 itrEnd = 123482480
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -1995,10 +2125,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -2008,6 +2138,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -2034,10 +2168,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -2049,6 +2183,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -2174,6 +2314,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -2215,6 +2359,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -2224,7 +2374,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 113662560 itrEnd = 98724592
+itrBegin = 136439552 itrEnd = 136443616
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -2284,10 +2434,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -2297,6 +2447,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -2323,10 +2477,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -2338,6 +2492,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -2461,6 +2621,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -2502,6 +2666,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -2511,7 +2681,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 110719248 itrEnd = 110627952
+itrBegin = 104636416 itrEnd = 121510688
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -2571,10 +2741,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -2584,6 +2754,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -2610,10 +2784,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -2625,6 +2799,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -2749,6 +2929,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -2790,6 +2974,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -2799,7 +2989,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 37727360 itrEnd = 126594464
+itrBegin = 113245952 itrEnd = 122310080
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -2859,10 +3049,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -2872,6 +3062,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -2898,10 +3092,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -2913,6 +3107,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'
@@ -3057,6 +3257,10 @@ proc_vdc_gr_cluster_x2
 proc_vdc_gr_cluster_u1
 proc_vdc_gr_cluster_u2
 proc_tracking_gr
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
 steering pla/pla_las.yaml steering/pla pla_las.yaml
 loading pla_las_multi.tmpl.yaml
 steering/pla pla_las_multi.tmpl.yaml steering/pla pla_las_multi.tmpl.yaml
@@ -3098,6 +3302,12 @@ proc_tracking_las_xu
 proc_tracking_las_xv
 proc_tracking_las_uv
 proc_tracking_merge_las
+proc_vdc_calib_x1
+proc_vdc_calib_x2
+proc_vdc_calib_u1
+proc_vdc_calib_u2
+proc_vdc_calib_v1
+proc_vdc_calib_v2
 hist_pla_gr
 hist_pla_las
 hist_vdc_gr_plane
@@ -3107,7 +3317,7 @@ hist_vdc_las_rawtrack
 hist_pid_gr
 hist_pid_las
 outputtree
-itrBegin = 134597056 itrEnd = 133291616
+itrBegin = 110714448 itrEnd = 113041232
 Map already exists
 Segment 200, geo = 1, ch = 12
   Old: cat = 12, det = 6, type = 0
@@ -3167,10 +3377,10 @@ Abort
 'pla_gr_2l'
 'pla_gr_2r'
 TMWDCParameter name='vdc_gr'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 TMWDCParameter name='vdc_gr_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (-20.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_gr/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X1	nPoints = 1296
 OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_X2	nPoints = 1291
@@ -3180,6 +3390,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'vdc_gr_cal'
 'pla_gr_1'
 'vdc_gr_dt'
+'vdc_gr_x1'
+'vdc_gr_x2'
+'vdc_gr_u1'
+'vdc_gr_u2'
 'vdc_gr_x1'
 'vdc_gr_x2'
 'vdc_gr_u1'
@@ -3206,10 +3420,10 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_GR_U2	nPoints = 1297
 'pla_las_6l'
 'pla_las_6r'
 TMWDCParameter name='vdc_las'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 TMWDCParameter name='vdc_las_clust'
- position = (0.0, 0.0, 0.0), angle = 0.00 deg, turned = 0
+ position = (0.0, 0.0, 32.0), angle = 0.00 deg, turned = 0
  plane_config: prm/vdc_las/plane.yaml
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X1	nPoints = 1441
 OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_X2	nPoints = 1445
@@ -3221,6 +3435,12 @@ OBJ: art::TMonotoneTableConverter	VDC_PRM_LAS_V2	nPoints = 1437
 'vdc_las_cal'
 'pla_las_3'
 'vdc_las_dt'
+'vdc_las_x1'
+'vdc_las_x2'
+'vdc_las_u1'
+'vdc_las_u2'
+'vdc_las_v1'
+'vdc_las_v2'
 'vdc_las_x1'
 'vdc_las_x2'
 'vdc_las_u1'

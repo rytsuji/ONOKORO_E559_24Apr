@@ -6,9 +6,12 @@ Anchor:
 #  - &gate_gr gate/gr/gate_gr_2020.yaml
 #  - &gate_gr gate/gr/gate_gr_2036.yaml
   - &gate_gr gate/gr/gate_gr_1033.yaml
+#  - &gate_gr gate/gr/gate_gr_1044.yaml
 #  - &gate_gr gate/gr/gate_gr_ppt_chkeff.yaml
 #  - &gate_gr gate/gr/gate_gr_contami.yaml
   - &dt2dl_gr 1033
+#  - &dt2dl_gr 2020
+#  - &dt2dl_gr 1044
 
 
   - &input data/run@NUM@.bld
@@ -47,10 +50,10 @@ Processor:
   - include: optics/optics_gr.yaml  
 
 #tof and charge calibration
-  - include:
-      name: pid/pid_calib_gr.yaml
-      replace:
-        SETUP: contami
+#  - include:
+#      name: pid/pid_calib_gr.yaml
+#      replace:
+#        SETUP: contami
 
 #energy calculation from spectrometer setup
   - include:

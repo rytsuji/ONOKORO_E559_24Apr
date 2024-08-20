@@ -145,6 +145,7 @@ Processor:
       InputCollection: vdc_las_v1
       OutputCollection: vdc_las_clust_v1
       ClustSize: 3
+      SearchTimeWidth: 250      
       OutputTransparency: 0
   - name: proc_vdc_las_cluster_v2
     type: art::TVDCClusterizationSizeSelectableProcessor
@@ -152,7 +153,7 @@ Processor:
       InputCollection: vdc_las_v2
       OutputCollection: vdc_las_clust_v2
       ClustSize: 3
-      #SearchTimeWidth: 250
+      SearchTimeWidth: 250
       OutputTransparency: 0
 
 # tracking
@@ -198,3 +199,42 @@ Processor:
         - vdc_las_xv
 #        - vdc_las_uv
       OutputCollection: vdc_las
+
+# calibration processor
+  - name: proc_vdc_calib_x1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_x1
+      TimingGate: *timegate
+#      ChargeGate: *chargegate      
+  - name: proc_vdc_calib_x2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_x2
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_u1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_u1
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_u2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_u2
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_v1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_v1
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_v2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_v2
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+     

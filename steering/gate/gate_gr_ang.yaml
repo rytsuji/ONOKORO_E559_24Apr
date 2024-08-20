@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_gr_ang
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_gr_ang
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gr_ang; abs(gtgt.fA*1000)<15 && abs(gtgt.fB*1000)<40"
+
+
+  - name: stop_proc_gr_ang
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr_ang"
+

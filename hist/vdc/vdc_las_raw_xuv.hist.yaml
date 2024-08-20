@@ -1,0 +1,64 @@
+anchor:
+ - &xbin 500
+ - &xmin -100
+ - &xmax 100
+ - &ybin 500
+ - &ymin -100
+ - &ymax 100
+ - &abin 500
+ - &amin -100
+ - &amax 100
+ - &bbin 500
+ - &bmin -100
+ - &bmax 100 
+
+group:
+ - name: vdc_las_raw_xuv
+   title: VDC LAS XUV hist
+   contents:
+     - name: dx_xu_xv
+       title: dX XU XV      
+       x: ["vdc_las_xu.fX-vdc_las_xv.fX", *xbin, *xmin, *xmax]
+     - name: dx_xu_uv
+       title: dX XU UV           
+       x: ["vdc_las_xu.fX-vdc_las_uv.fX", *xbin, *xmin, *xmax]
+     - name: dx_xv_uv
+       title: dX XV UV           
+       x: ["vdc_las_xv.fX-vdc_las_uv.fX", *xbin, *xmin, *xmax]
+
+     - name: da_xu_xv
+       title: dA XU XV           
+       x: ["(vdc_las_xu.fA-vdc_las_xv.fA)*1000", *abin, *amin, *amax]
+     - name: da_xu_uv
+       title: dA XU UV           
+       x: ["(vdc_las_xu.fA-vdc_las_uv.fA)*1000", *abin, *amin, *amax]
+     - name: da_xv_uv
+       title: dA XV UV                
+       x: ["(vdc_las_xv.fA-vdc_las_uv.fA)*1000", *abin, *amin, *amax]
+
+     - name: dy_xu_xv
+       title: dY XU XV                
+       x: ["vdc_las_xu.fY-vdc_las_xv.fY", *ybin, *ymin, *ymax]
+     - name: dy_xu_uv
+       title: dY XU UV                
+       x: ["vdc_las_xu.fY-vdc_las_uv.fY", *ybin, *ymin, *ymax]
+     - name: dy_xv_uv
+       title: dY XV UV                
+       x: ["vdc_las_xv.fY-vdc_las_uv.fY", *ybin, *ymin, *ymax]       
+
+     - name: db_xu_xv
+       title: dB XU XV                
+       x: ["(vdc_las_xu.fB-vdc_las_xv.fB)*1000", *bbin, *bmin, *bmax]
+     - name: db_xu_uv
+       title: dB XU UV                
+       x: ["(vdc_las_xu.fB-vdc_las_uv.fB)*1000", *bbin, *bmin, *bmax]
+     - name: db_xv_uv
+       title: dB XV UV                
+       x: ["(vdc_las_xv.fB-vdc_las_uv.fB)*1000", *bbin, *bmin, *bmax]       
+
+
+
+
+
+
+     

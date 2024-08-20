@@ -64,8 +64,7 @@ void TSpectrometerProcessor::Init(TEventCollection*){
     fMassNumber = node["massnum"].as<Int_t>();
 
     fRho = node["rho"].as<Double_t>();
-    fLength = node["length"].as<Double_t>();
-    fTOFcentral =(fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho),2.0));  
+
   }catch (YAML::Exception& e) {
     SetStateError(TString::Format("Error Occurred while loading file\n%s\n",
 				  e.what()));
@@ -101,16 +100,17 @@ void TSpectrometerProcessor::Process(){
       double Delta = inData->GetDelta();
       double A = inData->GetA();
       double B = inData->GetB();
+      double Z = inData->GetZ();      
 
       double TKE = sqrt(fMass*fMass + pow(0.3*((double) fAtomicNumber)*fMagneticField*fRho*(1+Delta),2.0))-fMass;
       double theta_lab = TMath::RadToDeg()*atan( sqrt( pow( tan( atan(A)+fAngle*TMath::DegToRad() ),2.0) + pow(B,2.0)) );
       double phi_lab = TMath::RadToDeg()*atan(B/tan( atan(A)+fAngle));
-      double TOF = (fLength/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
+      double TOF = (Z/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
       outData->SetTKE(TKE);
       outData->SetMass(fMass);
       outData->SetTheta(theta_lab);
       outData->SetPhi(phi_lab);
-      outData->SetTOF(TOF,fTOFcentral);
+      outData->SetTOF(TOF);
 
 
     }

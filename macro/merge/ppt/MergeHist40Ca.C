@@ -2,13 +2,13 @@
   const int n_file=4; //number of input files
   TString file_root[n_file]={"run2078.hist.root","run2085.hist.root","run2125.hist.root","run2126.hist.root"};
 
-  double scale=1.0/12.0; //scale of accidental coincidence
+  double scale=1.0/8.0; //scale of accidental coincidence
   
   TFile *file[n_file];
   TDirectoryFile* dir[n_file];
   TH1F* ht[n_file];
   TH1F* ha[n_file];
-  TString dir_root="output/phys/";
+  TString dir_root="output/hist_phys/";
   
   
   for(int i=0;i<n_file;i++){  
@@ -43,9 +43,8 @@
   sx0->Add(sx,1.0);
   sx0->Sumw2(0);
   
-
   //sx->Rebin(2);
-  sx->GetXaxis()->ZoomOut(0.6,0.5);
+   //sx->GetXaxis()->ZoomOut(0.6,0.5);
   //sx->SetLineColor(2);
   //sx->SetMarkerColor(2);
 
@@ -55,8 +54,8 @@
 
 
   //sx0->Rebin(2);
-  sx0->Draw("same");
-  sx_tc->Sumw2(0);
-  sx_ac->Sumw2(0);
-  sx_ac->SetLineColor(2);
+  //sx0->Draw("same");
+  //sx_tc->Sumw2(0);
+  //sx_ac->Sumw2(0);
+  //sx_ac->SetLineColor(2);
 }

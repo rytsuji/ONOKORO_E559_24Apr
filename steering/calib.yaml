@@ -20,7 +20,8 @@ Processor:
   - include:  vdc/vdc_las_calib.yaml
 
 #optics calibration
-  - include:  optics/optics.yaml
+  - include:  optics/optics_gr.yaml
+  - include:  optics/optics_las.yaml  
 
 #tof and charge calibration
   - include:

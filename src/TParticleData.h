@@ -36,13 +36,10 @@ public:
 
   Double_t GetEnergy(){ return fTKE*fMass;}
 
-  void SetTOF(Double_t tof, Double_t tof_central){
+  void SetTOF(Double_t tof){
     fTOF = tof;
-    fTOFcentral = tof_central;
   }
   Double_t GetTOF(){ return fTOF; }
-  Double_t GetTOFDiff(){ return fTOF-fTOFcentral; }
-
   
   Bool_t IsProcessed() const { return kProcessed; }
   void SetProcessed(Bool_t val) { kProcessed = val; }
@@ -53,7 +50,6 @@ public:
   Double_t fPhi;
   Double_t fTKE;
   Double_t fTOF;
-  Double_t fTOFcentral;
   Bool_t kProcessed;
 
  private:

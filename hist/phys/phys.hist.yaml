@@ -1,0 +1,46 @@
+anchor:
+ - &sx ["226.464-pgr.fTKE-plas.fTKE", 250, 0, 50]
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+ - &tc "abs(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &ac "abs(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<320 && abs(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>20" 
+ 
+group:
+ - name: phys
+   title: phys
+   contents:
+
+     - name: tof
+       title: TOF GR-LAS
+       x: *tof
+
+     - name: sx_tc
+       title: Sx tc
+       x: *sx
+       cut: *tc
+
+     - name: sx_ac
+       title: Sx ac
+       x: *sx
+       cut: *ac
+
+     - name: tke_las_gr
+       title: Energy LAS-GR with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *tc
+
+     - name: tke_gr_sx
+       title: Energy GR vs Sx
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: *sx
+       cut: *tc
+       
+     - name: tke_las_sx
+       title: Energy LAS vs Sx
+       x: ["plas.fTKE", 500,   0, 100]       
+       y: *sx       
+       cut: *tc
+       
+     - name: sx_nogate
+       title: Sx without gate
+       x: *sx

@@ -29,7 +29,8 @@
 #pragma link C++ class art::TOpticsData+;
 #pragma link C++ class art::TOpticsCalibrationProcessor+;
 #pragma link C++ class art::TFocalPlaneConverter+;
-#pragma link C++ class art::TPIDCalibrationProcessor+;
+//#pragma link C++ class art::TPIDCalibrationProcessor+;
+#pragma link C++ class art::TChargeCalibrationProcessor+;
 #pragma link C++ class art::TSpectrometerProcessor+;
 #pragma link C++ class art::TParticleData+;
 #pragma link C++ class art::TRFSubtractionProcessor+;

@@ -36,14 +36,15 @@ Processor:
       replace:
         DT2DL: current
   - include:  vdc/vdc_gr_calib.yaml
-
+  - include:  optics/optics_gr.yaml
+  
   - include: pla/pla_las.yaml
   - include:
       name: vdc/vdc_las_rawtrack.yaml
       replace:
         DT2DL: current
   - include: vdc/vdc_las_calib.yaml  		
-  - include:  optics/optics.yaml
+  - include:  optics/optics_las.yaml
 
   - name: hist_pla_gr_track
     type: art::TTreeProjectionProcessor
@@ -106,7 +107,7 @@ Processor:
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
-      FileName: hist/optics/optics.hist.yaml
+      FileName: hist/optics/optics_corr.hist.yaml
       OutputFilename: *histout
             
   - name: hist_eff_mhit_gr
@@ -133,6 +134,13 @@ Processor:
     parameter:
       Type: art::TTreeProjection
       FileName: hist/eff/vdc_las_eff.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_gr_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_las.hist.yaml
       OutputFilename: *histout
 
   - name: outputtree

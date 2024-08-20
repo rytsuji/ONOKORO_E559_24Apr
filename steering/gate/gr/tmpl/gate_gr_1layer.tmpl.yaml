@@ -1,0 +1,16 @@
+Processor:
+  - name: gate_array_init
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: gr_charge
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gr; abs(pla_gr_1.fCharge-0.5*(@Q_GR_MIN@+@Q_GR_MAX@))<0.5*abs(@Q_GR_MAX@ - @Q_GR_MIN@)&&  abs(fmod(tref_grtrig.fTiming-@RF@.fTiming+1420.6750,71.033750)-0.5*( @T_GR_MIN@ + @T_GR_MAX@ ))<0.5*abs( @T_GR_MAX@ - @T_GR_MIN@ )"
+
+  - name: stop_proc
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr"

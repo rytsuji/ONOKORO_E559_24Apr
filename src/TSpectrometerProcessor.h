@@ -37,8 +37,6 @@ protected:
   Double_t fRho;
   Double_t fMagneticField;
   Double_t fAngle;
-  Double_t fLength;
-  Double_t fTOFcentral;
   
 private:
   

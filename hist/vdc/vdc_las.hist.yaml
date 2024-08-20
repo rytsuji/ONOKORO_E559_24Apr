@@ -1,11 +1,11 @@
 anchor:
- - &xbin 1000
+ - &xbin 2000
  - &xmin -800
  - &xmax 1200
  - &ybin 500
  - &ymin -200
  - &ymax 200
- - &abin 600
+ - &abin 1200
  - &amin -300
  - &amax 300
  - &bbin 500
@@ -13,8 +13,8 @@ anchor:
  - &bmax 100 
 
 group:
- - name: vdc_las
-   title: VDC LAS hist
+ - name: lfp
+   title: LFP hist
    contents:
      - name: x_las
        title: X  LAS

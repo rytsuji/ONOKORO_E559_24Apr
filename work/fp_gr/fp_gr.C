@@ -71,7 +71,7 @@ int fp_gr(){
   min->SetFCN(chi2);
   int migrad_stats = min->Migrad();
   
-  TString oname="work/fp_gr/dat/fit_result.dat"; 
+  TString oname="work/fp_gr/result/fit_result1.dat"; 
   ofstream ofile((std::string) oname);  
   double par[nPrm]; //x0,x1,...,x4,a,xa,xxa,aa,xaa,xxaaa,...,xxaaaaa
   double par_err[nPrm];
@@ -122,7 +122,7 @@ int fp_gr(){
   int migrad_stats_itr = min_itr->Migrad();
   migrad_stats_itr = min_itr->Migrad();  
 
-  TString oname_itr="work/fp_gr/dat/fit_result_itr.dat"; 
+  TString oname_itr="work/fp_gr/result/fit_result2.dat"; 
   ofstream ofile_itr((std::string) oname_itr);  
   double par_itr[nPrm]; //x0,x1,...,x4,a,xa,xxa,aa,xaa,xxaaa,...,xxaaaaa
   double par_err_itr[nPrm];
@@ -134,7 +134,7 @@ int fp_gr(){
   }
   ofile_itr.close();
 
-  TString oname_matrix="work/fp_gr/dat/matrix.yaml"; 
+  TString oname_matrix="work/fp_gr/result/fp_gr.yaml"; 
   ofstream ofile_matrix((std::string) oname_matrix);  
   for(int nA=0; nA < OrderA; nA++){
     for(int nX=0; nX < OrderX+1; nX++){

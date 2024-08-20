@@ -21,6 +21,8 @@ public:
   Double_t GetA(){ return fA; }
   void SetB(Double_t val){ fB = val; }
   Double_t GetB(){ return fB; }
+  void SetZ(Double_t val){ fZ = val; }
+  Double_t GetZ(){ return fZ; }
   
   Bool_t IsProcessed() const { return kProcessed; }
   void SetProcessed(Bool_t val) { kProcessed = val; }
@@ -29,6 +31,7 @@ public:
   Double_t fDelta;
   Double_t fA;
   Double_t fB;
+  Double_t fZ;  
   Bool_t kProcessed;
   
  private:

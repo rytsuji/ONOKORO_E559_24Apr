@@ -4,13 +4,14 @@ set tmargin 1
 set bmargin 5
 
 set xlabel 'x_{lfp}  (mm)' font "Arial,15"
-set ylabel '(t|a_{lfp})' font "Arial,15"
-f(x)=p0
-fit f(x) "tof_las.dat" u 1:2 via p0
-plot "tof_las.dat" u 1:2
-set label 1 at graph 0.2,0.3 sprintf("{p0 = %e }", p0)
+set ylabel '(z|a_{lfp})' font "Arial,15"
+f(x)=p0+p1*x+p2*x*x#+p3*x*x*x
+fit f(x) "fit/merge.dat" u 1:($3*0.17754523) via p0,p1,p2#,p3
+plot "fit/merge.dat" u 1:($3*0.17754523)
+#set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e \n p1 = %e \n p2 = %e \n p2 = %e }", p0,p1,p2,p3)
+set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e \n p1 = %e \n p2 = %e }", p0,p1,p2)
 replot f(x)
 
 set terminal 'png'
-set output "/home/tsuji/work/art_analysis/e559_24apr/figs/gnuplot/gr_las_a.png"
+set output "/home/tsuji/work/art_analysis/e559_24apr/figs/gnuplot/las_tof_a.png"
 replot

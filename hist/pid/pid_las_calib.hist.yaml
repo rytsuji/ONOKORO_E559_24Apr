@@ -1,12 +1,16 @@
 anchor:
 
- - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOFf())", 1000, -1000, 500]
- - &rf1 ["fmod(pid_las.fTiming-plas.GetTOFDiff()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
- - &rf2 ["fmod(pid_las.fTiming-plas.GetTOFDiff()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
- - &rf3 ["fmod(pid_las.fTiming-plas.GetTOFDiff()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())", 1000, -1000, 500]
+ - &rf1 ["fmod(pid_las.fTiming-plas.GetTOF()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf2 ["fmod(pid_las.fTiming-plas.GetTOF()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf3 ["fmod(pid_las.fTiming-plas.GetTOF()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
 
- - &xpos ["lfp.fX",1000,-1000,1000]
  - &de1 ["pid_las.fCharge",1000,0,500]
+
+ - &x ["lfp.fX",1000,-1000,1000]
+ - &a ["lfp.fA*1000",1000,-500,500] 
+ - &vdc ["vdc_las.fX",1000,-1000,1000] 
+
 
 group:
  - name: pid_las_calib
@@ -28,7 +32,7 @@ group:
 
      - name: x_de1_las
        title: x-dE1 LAS
-       x: *xpos
+       x: *vdc
        y: *de1
        
      - name: de1_tof_las
@@ -50,3 +54,30 @@ group:
        title: RF3 LAS
        x: *rf3
 
+
+     - name: x_rf1_las
+       title: x-rf1 LAS
+       x: *x       
+       y: *rf1
+     - name: a_rf1_las
+       title: a-rf1 LAS
+       x: *a   
+       y: *rf1
+
+     - name: x_rf2_las
+       title: x-rf2 LAS
+       x: *x       
+       y: *rf2
+     - name: a_rf2_las
+       title: a-rf2 LAS
+       x: *a   
+       y: *rf2
+
+     - name: x_rf3_las
+       title: x-rf3 LAS
+       x: *x       
+       y: *rf3
+     - name: a_rf3_las
+       title: a-rf3 LAS
+       x: *a   
+       y: *rf3

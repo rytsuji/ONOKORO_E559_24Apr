@@ -6,6 +6,19 @@ anchor:
  - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
  - &ac "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)"
 
+ - &tc_tp- "abs(gtgt.fDelta+0.4/3)<0.2/3 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &tc_tp0 "abs(gtgt.fDelta+0.0)<0.2/3 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &tc_tp+ "abs(gtgt.fDelta-0.4/3)<0.2/3 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+
+ - &ac_tp- "abs(gtgt.fDelta+0.4/3)<0.2/3 && ((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320))"
+ - &ac_tp0 "abs(gtgt.fDelta+0.0)<0.2/3 && ((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320))"
+ - &ac_tp+ "abs(gtgt.fDelta-0.4/3)<0.2/3 && ((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320))"
+
+
+
+
+
+
  
 group:
  - name: phys
@@ -60,3 +73,37 @@ group:
        title: Energy LAS-GR without gate 
        x: ["pgr.fTKE",  500, 100, 200]
        y: ["plas.fTKE", 500,   0, 100]
+
+
+     - name: sx_tp-
+       title: Sx with True coin
+       x: *sx
+       cut: *tc_tp-
+
+     - name: sx_ac_tp-
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac_tp-
+
+     - name: sx_tp0
+       title: Sx with True coin
+       x: *sx
+       cut: *tc_tp0
+
+     - name: sx_ac_tp0
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac_tp0
+
+     - name: sx_tp+
+       title: Sx with True coin
+       x: *sx
+       cut: *tc_tp+
+
+     - name: sx_ac_tp+
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac_tp+
+
+
+

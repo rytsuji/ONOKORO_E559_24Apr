@@ -7,4 +7,4 @@ atomicnum: 1
 massnum: 1
   #### GR ####
 rho: 3.0 #(m)
-length: 20.0 #(m)
+#length: 20.0 #(m)

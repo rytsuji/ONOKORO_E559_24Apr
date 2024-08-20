@@ -144,8 +144,6 @@ Processor:
       OutputCollection: lfp
       OutputTransparency: 0
 
-
-
 # calibration processor
 
   - name: proc_vdc_calib_x1

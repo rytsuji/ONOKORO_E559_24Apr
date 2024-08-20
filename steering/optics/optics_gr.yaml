@@ -4,11 +4,12 @@ Processor:
   - name: proc_opt_calib_gr
     type: art::TOpticsCalibrationProcessor
     parameter:
-      OffsetA: 0.00199876
-      OffsetB: 0.00418283
+#      OffsetA: 0.00199876
+#      OffsetB:  0.0026275083 #0.00435911-0.0017316017(Sieve slit has -1 mm offset in y direction)
       MatrixFileDelta: prm/optics/gr/gr_delta.yaml
       MatrixFileA: prm/optics/gr/gr_a.yaml
       MatrixFileB: prm/optics/gr/gr_b.yaml
+      MatrixFileZ: prm/optics/gr/gr_z.yaml      
       InputCollection:
         - gfp
       OutputCollection: gtgt

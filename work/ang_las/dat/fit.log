@@ -1,0 +1,2989 @@
+
+
+*******************************************************************************
+Mon Jul 29 00:39:00 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*y+p4*y+p5*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5           
+   0 2.9301883393e+11   0.00e+00  4.94e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  11 3.6149957988e-05  -2.90e-01  4.94e-07    3.608515e-03   3.577917e-06   6.539278e-09  -1.448409e-04  -7.480766e-02   2.526163e+00
+
+After 11 iterations the fit converged.
+final sum of squares of residuals : 3.615e-05
+rel. change during last iteration : -2.89556e-06
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0016069
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.58214e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00360852       +/- 0.0006906    (19.14%)
+p1              = 3.57792e-06      +/- 1.29e-06     (36.05%)
+p2              = 6.53928e-09      +/- 4.692e-09    (71.75%)
+p3              = -0.000144841     +/- 0.0001348    (93.09%)
+p4              = -0.0748077       +/- 0.06187      (82.7%)
+p5              = 2.52616          +/- 5.918        (234.3%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     
+p0              1.000 
+p1             -0.048  1.000 
+p2             -0.636  0.070  1.000 
+p3              0.001 -0.407 -0.000  1.000 
+p4              0.233  0.002  0.000 -0.004  1.000 
+p5             -0.520 -0.000 -0.000 -0.000 -0.745  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:41:04 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7           
+   0 1.2904851486e+09   0.00e+00  2.80e+03    3.608515e-03   3.577917e-06   6.539278e-09  -1.448409e-04  -7.480766e-02   2.526163e+00   1.000000e+00   1.000000e+00
+  10 2.9953086647e-05  -1.68e-02  2.80e-07    3.408054e-03  -6.131759e-07   9.232092e-09   2.708423e-11  -1.540113e-04  -4.796528e-07  -2.990891e-02   2.526175e+00
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 2.99531e-05
+rel. change during last iteration : -1.67911e-07
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0015799
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.49609e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00340805       +/- 0.0007062    (20.72%)
+p1              = -6.13176e-07     +/- 3.515e-06    (573.3%)
+p2              = 9.23209e-09      +/- 5.094e-09    (55.18%)
+p3              = 2.70842e-11      +/- 2.101e-11    (77.56%)
+p4              = -0.000154011     +/- 0.000133     (86.33%)
+p5              = -4.79653e-07     +/- 5.295e-07    (110.4%)
+p6              = -0.0299089       +/- 0.07847      (262.4%)
+p7              = 2.52618          +/- 5.818        (230.3%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     
+p0              1.000 
+p1              0.007  1.000 
+p2             -0.668 -0.090  1.000 
+p3             -0.028 -0.933  0.125  1.000 
+p4              0.022 -0.147 -0.031 -0.000  1.000 
+p5              0.273 -0.011 -0.405  0.000  0.076  1.000 
+p6              0.001  0.008  0.256 -0.000 -0.051 -0.632  1.000 
+p7             -0.500 -0.000 -0.000  0.000 -0.000  0.000 -0.578  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:41:30 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.9952959160e-05   0.00e+00  1.31e-03    3.408054e-03  -6.131759e-07   9.232092e-09   2.708423e-11  -1.540113e-04  -4.796528e-07  -2.990891e-02   2.526175e+00   1.000000e+00
+   1 2.9952897289e-05  -2.07e-01  1.31e-04    3.407694e-03  -6.131738e-07   9.233548e-09   2.708431e-11  -1.540175e-04  -4.801016e-07  -2.995052e-02   2.521840e+00   1.000046e+00
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.99529e-05
+rel. change during last iteration : -2.06559e-06
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00165015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.72299e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00340769       +/- 0.0008883    (26.07%)
+p1              = -6.13174e-07     +/- 3.672e-06    (598.8%)
+p2              = 9.23355e-09      +/- 5.32e-09     (57.62%)
+p3              = 2.70843e-11      +/- 2.194e-11    (81.01%)
+p4              = -0.000154018     +/- 0.0001389    (90.16%)
+p5              = -4.80102e-07     +/- 5.531e-07    (115.2%)
+p6              = -0.0299505       +/- 0.123        (410.8%)
+p7              = 2.52184          +/- 14.89        (590.3%)
+p8              = 1.00005          +/- 1163         (1.163e+05%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031 -0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000 -0.000 -0.000 -0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000  0.000  0.000  0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:41:31 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.9952897289e-05   0.00e+00  1.31e-03    3.407694e-03  -6.131738e-07   9.233548e-09   2.708431e-11  -1.540175e-04  -4.801016e-07  -2.995052e-02   2.521840e+00   1.000046e+00
+   1 2.9952891287e-05  -2.00e-02  1.31e-04    3.407941e-03  -6.131724e-07   9.233649e-09   2.708437e-11  -1.540186e-04  -4.800486e-07  -2.996792e-02   2.519517e+00   1.000097e+00
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.99529e-05
+rel. change during last iteration : -2.00406e-07
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00165015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.72299e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00340794       +/- 0.0008883    (26.07%)
+p1              = -6.13172e-07     +/- 3.672e-06    (598.8%)
+p2              = 9.23365e-09      +/- 5.32e-09     (57.62%)
+p3              = 2.70844e-11      +/- 2.194e-11    (81.01%)
+p4              = -0.000154019     +/- 0.0001389    (90.16%)
+p5              = -4.80049e-07     +/- 5.531e-07    (115.2%)
+p6              = -0.0299679       +/- 0.123        (410.6%)
+p7              = 2.51952          +/- 14.89        (590.8%)
+p8              = 1.0001           +/- 1163         (1.162e+05%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031  0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000  0.000 -0.000 -0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000 -0.000  0.000  0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:41:31 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.9952891287e-05   0.00e+00  1.31e-03    3.407941e-03  -6.131724e-07   9.233649e-09   2.708437e-11  -1.540186e-04  -4.800486e-07  -2.996792e-02   2.519517e+00   1.000097e+00
+   1 2.9952889140e-05  -7.16e-03  1.31e-04    3.408105e-03  -6.131718e-07   9.233286e-09   2.708436e-11  -1.540175e-04  -4.799373e-07  -2.997718e-02   2.518044e+00   1.000151e+00
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.99529e-05
+rel. change during last iteration : -7.16485e-08
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00165015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.72299e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.0034081        +/- 0.0008883    (26.07%)
+p1              = -6.13172e-07     +/- 3.672e-06    (598.8%)
+p2              = 9.23329e-09      +/- 5.32e-09     (57.62%)
+p3              = 2.70844e-11      +/- 2.194e-11    (81.01%)
+p4              = -0.000154018     +/- 0.0001389    (90.16%)
+p5              = -4.79937e-07     +/- 5.531e-07    (115.2%)
+p6              = -0.0299772       +/- 0.123        (410.4%)
+p7              = 2.51804          +/- 14.89        (591.2%)
+p8              = 1.00015          +/- 1163         (1.162e+05%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031 -0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170  0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000  0.000  0.000 -0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000 -0.000 -0.000  0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:42:03 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 1.3979748461e-04   0.00e+00  1.31e-03    3.408105e-03  -6.131718e-07   9.233286e-09   2.708436e-11  -1.540175e-04  -4.799373e-07  -2.997718e-02   2.518044e+00   1.000151e+00
+   6 2.2185051428e-07  -3.36e-01  1.31e-09    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 2.21851e-07
+rel. change during last iteration : -3.35814e-06
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000142015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01682e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00157891       +/- 7.645e-05    (4.842%)
+p1              = 1.40413e-06      +/- 3.16e-07     (22.5%)
+p2              = 7.85689e-10      +/- 4.579e-10    (58.28%)
+p3              = 2.50192e-13      +/- 1.888e-12    (754.8%)
+p4              = -7.56267e-05     +/- 1.195e-05    (15.8%)
+p5              = -7.55718e-08     +/- 4.76e-08     (62.99%)
+p6              = -0.0660329       +/- 0.01059      (16.04%)
+p7              = 5.07046          +/- 1.281        (25.27%)
+p8              = -156.678         +/- 100.1        (63.86%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031 -0.000  1.000 
+p5              0.227 -0.011 -0.405  0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000 -0.000 -0.000  0.000  0.000  0.524  1.000 
+p8              0.557 -0.000 -0.000  0.000 -0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:42:05 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.2185051428e-07   0.00e+00  6.37e-04    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+   1 2.2185051428e-07  -6.56e-10  6.37e-05    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.21851e-07
+rel. change during last iteration : -6.56225e-15
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000142015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01682e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00157891       +/- 7.645e-05    (4.842%)
+p1              = 1.40413e-06      +/- 3.16e-07     (22.5%)
+p2              = 7.85689e-10      +/- 4.579e-10    (58.28%)
+p3              = 2.50192e-13      +/- 1.888e-12    (754.8%)
+p4              = -7.56267e-05     +/- 1.195e-05    (15.8%)
+p5              = -7.55718e-08     +/- 4.76e-08     (62.99%)
+p6              = -0.0660329       +/- 0.01059      (16.04%)
+p7              = 5.07046          +/- 1.281        (25.27%)
+p8              = -156.678         +/- 100.1        (63.86%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031  0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170  0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000  0.000 -0.000 -0.000  0.000  0.524  1.000 
+p8              0.557  0.000 -0.000 -0.000  0.000 -0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:42:05 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.2185051428e-07   0.00e+00  6.37e-04    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+   1 2.2185051428e-07  -1.79e-10  6.37e-05    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.21851e-07
+rel. change during last iteration : -1.7897e-15
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000142015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01682e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00157891       +/- 7.645e-05    (4.842%)
+p1              = 1.40413e-06      +/- 3.16e-07     (22.5%)
+p2              = 7.85689e-10      +/- 4.579e-10    (58.28%)
+p3              = 2.50192e-13      +/- 1.888e-12    (754.8%)
+p4              = -7.56267e-05     +/- 1.195e-05    (15.8%)
+p5              = -7.55718e-08     +/- 4.76e-08     (62.99%)
+p6              = -0.0660329       +/- 0.01059      (16.04%)
+p7              = 5.07046          +/- 1.281        (25.27%)
+p8              = -156.678         +/- 100.1        (63.86%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031  0.000  1.000 
+p5              0.227 -0.011 -0.405  0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678 -0.000  0.000 -0.000  0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000 -0.000  0.000 -0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:42:06 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.2185051428e-07   0.00e+00  6.37e-04    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+   1 2.2185051428e-07  -3.82e-10  6.37e-05    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.21851e-07
+rel. change during last iteration : -3.81803e-15
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000142015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01682e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00157891       +/- 7.645e-05    (4.842%)
+p1              = 1.40413e-06      +/- 3.16e-07     (22.5%)
+p2              = 7.85689e-10      +/- 4.579e-10    (58.28%)
+p3              = 2.50192e-13      +/- 1.888e-12    (754.8%)
+p4              = -7.56267e-05     +/- 1.195e-05    (15.8%)
+p5              = -7.55718e-08     +/- 4.76e-08     (62.99%)
+p6              = -0.0660329       +/- 0.01059      (16.04%)
+p7              = 5.07046          +/- 1.281        (25.27%)
+p8              = -156.678         +/- 100.1        (63.86%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031 -0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170  0.000 -0.034 -0.421  1.000 
+p7             -0.678 -0.000  0.000  0.000 -0.000  0.000  0.524  1.000 
+p8              0.557  0.000 -0.000 -0.000  0.000 -0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:42:07 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 2.2185051428e-07   0.00e+00  6.37e-04    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+   1 2.2185051428e-07  -2.74e-10  6.37e-05    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.21851e-07
+rel. change during last iteration : -2.74421e-15
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000142015
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.01682e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = 0.00157891       +/- 7.645e-05    (4.842%)
+p1              = 1.40413e-06      +/- 3.16e-07     (22.5%)
+p2              = 7.85689e-10      +/- 4.579e-10    (58.28%)
+p3              = 2.50192e-13      +/- 1.888e-12    (754.8%)
+p4              = -7.56267e-05     +/- 1.195e-05    (15.8%)
+p5              = -7.55718e-08     +/- 4.76e-08     (62.99%)
+p6              = -0.0660329       +/- 0.01059      (16.04%)
+p7              = 5.07046          +/- 1.281        (25.27%)
+p8              = -156.678         +/- 100.1        (63.86%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031  0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678 -0.000 -0.000  0.000 -0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000  0.000  0.000  0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:43:26 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 6.6273027368e-05   0.00e+00  6.37e-04    1.578906e-03   1.404135e-06   7.856887e-10   2.501919e-13  -7.562667e-05  -7.557178e-08  -6.603288e-02   5.070461e+00  -1.566781e+02
+   6 1.9517738755e-13  -2.59e-10  6.37e-10   -1.155586e-08   1.627518e-10   7.088072e-13   1.156054e-15  -2.650748e-08  -2.298239e-11  -5.612557e-06   7.545908e-04  -2.340092e-02
+
+After 6 iterations the fit converged.
+final sum of squares of residuals : 1.95177e-13
+rel. change during last iteration : -2.58673e-15
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.33204e-07
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.77434e-14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -1.15559e-08     +/- 7.171e-08    (620.5%)
+p1              = 1.62752e-10      +/- 2.964e-10    (182.1%)
+p2              = 7.08807e-13      +/- 4.295e-13    (60.59%)
+p3              = 1.15605e-15      +/- 1.771e-15    (153.2%)
+p4              = -2.65075e-08     +/- 1.121e-08    (42.29%)
+p5              = -2.29824e-11     +/- 4.465e-11    (194.3%)
+p6              = -5.61256e-06     +/- 9.932e-06    (177%)
+p7              = 0.000754591      +/- 0.001202     (159.2%)
+p8              = -0.0234009       +/- 0.09385      (401%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031 -0.000  1.000 
+p5              0.227 -0.011 -0.405 -0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000 -0.000 -0.000  0.000  0.000  0.524  1.000 
+p8              0.557 -0.000  0.000  0.000 -0.000 -0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:43:27 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 1.9517738755e-13   0.00e+00  6.19e-08   -1.155586e-08   1.627518e-10   7.088072e-13   1.156054e-15  -2.650748e-08  -2.298239e-11  -5.612557e-06   7.545908e-04  -2.340092e-02
+   1 1.9517738755e-13  -2.59e-11  6.19e-09   -1.155586e-08   1.627518e-10   7.088072e-13   1.156054e-15  -2.650748e-08  -2.298239e-11  -5.612557e-06   7.545908e-04  -2.340092e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.95177e-13
+rel. change during last iteration : -2.58673e-16
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.33204e-07
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.77434e-14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -1.15559e-08     +/- 7.171e-08    (620.5%)
+p1              = 1.62752e-10      +/- 2.964e-10    (182.1%)
+p2              = 7.08807e-13      +/- 4.295e-13    (60.59%)
+p3              = 1.15605e-15      +/- 1.771e-15    (153.2%)
+p4              = -2.65075e-08     +/- 1.121e-08    (42.29%)
+p5              = -2.29824e-11     +/- 4.465e-11    (194.3%)
+p6              = -5.61256e-06     +/- 9.932e-06    (177%)
+p7              = 0.000754591      +/- 0.001202     (159.2%)
+p8              = -0.0234009       +/- 0.09385      (401%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031  0.000  1.000 
+p5              0.227 -0.011 -0.405  0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000  0.000 -0.000 -0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000 -0.000  0.000  0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:43:28 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p0+p1*x+p2*x*x+p3*x*x*x+p4*x*y+p5*x*x*y+p6*y+p7*y*y+p8*y*y*y
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p0            p1            p2            p3            p4            p5            p6            p7            p8           
+   0 1.9517738755e-13   0.00e+00  6.19e-08   -1.155586e-08   1.627518e-10   7.088072e-13   1.156054e-15  -2.650748e-08  -2.298239e-11  -5.612557e-06   7.545908e-04  -2.340092e-02
+   1 1.9517738755e-13   0.00e+00  6.19e-07   -1.155586e-08   1.627518e-10   7.088072e-13   1.156054e-15  -2.650748e-08  -2.298239e-11  -5.612557e-06   7.545908e-04  -2.340092e-02
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.95177e-13
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.33204e-07
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.77434e-14
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p0              = -1.15559e-08     +/- 7.171e-08    (620.5%)
+p1              = 1.62752e-10      +/- 2.964e-10    (182.1%)
+p2              = 7.08807e-13      +/- 4.295e-13    (60.59%)
+p3              = 1.15605e-15      +/- 1.771e-15    (153.2%)
+p4              = -2.65075e-08     +/- 1.121e-08    (42.29%)
+p5              = -2.29824e-11     +/- 4.465e-11    (194.3%)
+p6              = -5.61256e-06     +/- 9.932e-06    (177%)
+p7              = 0.000754591      +/- 0.001202     (159.2%)
+p8              = -0.0234009       +/- 0.09385      (401%)
+
+correlation matrix of the fit parameters:
+                p0     p1     p2     p3     p4     p5     p6     p7     p8     
+p0              1.000 
+p1              0.005  1.000 
+p2             -0.555 -0.090  1.000 
+p3             -0.023 -0.933  0.125  1.000 
+p4              0.018 -0.147 -0.031 -0.000  1.000 
+p5              0.227 -0.011 -0.405  0.000  0.076  1.000 
+p6             -0.415  0.005  0.170 -0.000 -0.034 -0.421  1.000 
+p7             -0.678  0.000  0.000 -0.000  0.000 -0.000  0.524  1.000 
+p8              0.557 -0.000 -0.000  0.000 -0.000  0.000 -0.746 -0.913  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:49:03 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*a)+(p11*x*a)+(p12*(x**2)*a)+(p20*(a**2))+(p21*(a**2)*x)+(p30*(a**3))
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Mon Jul 29 00:49:40 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30          
+   0 5.1711366861e+16   0.00e+00  1.61e+07    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  16 2.8857417889e-05  -8.37e-04  1.61e-09    3.430742e-03  -1.376592e-06   9.232092e-09   2.708423e-11  -3.367258e-02  -2.519829e-04  -4.796528e-07   1.918872e+00   1.257305e-02   4.997251e+01
+
+After 16 iterations the fit converged.
+final sum of squares of residuals : 2.88574e-05
+rel. change during last iteration : -8.36868e-09
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00169875
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.88574e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00343074       +/- 0.0009145    (26.66%)
+p01             = -1.37659e-06     +/- 3.979e-06    (289%)
+p02             = 9.23209e-09      +/- 5.477e-09    (59.33%)
+p03             = 2.70842e-11      +/- 2.259e-11    (83.4%)
+p10             = -0.0336726       +/- 0.1267       (376.2%)
+p11             = -0.000251983     +/- 0.0002141    (84.96%)
+p12             = -4.79653e-07     +/- 5.694e-07    (118.7%)
+p20             = 1.91887          +/- 15.32        (798.6%)
+p21             = 0.012573         +/- 0.02045      (162.7%)
+p30             = 49.9725          +/- 1197         (2395%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    
+p00             1.000 
+p01             0.004  1.000 
+p02            -0.555 -0.085  1.000 
+p03            -0.023 -0.886  0.125  1.000 
+p10            -0.415  0.004  0.170  0.000  1.000 
+p11             0.010  0.139 -0.021 -0.000 -0.025  1.000 
+p12             0.227 -0.011 -0.405 -0.000 -0.421  0.051  1.000 
+p20            -0.678  0.001 -0.000  0.000  0.524  0.002  0.000  1.000 
+p21             0.003 -0.312 -0.000  0.000  0.002 -0.744 -0.000 -0.002  1.000 
+p30             0.557  0.000  0.000 -0.000 -0.746 -0.000 -0.000 -0.913  0.000  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:51:45 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13          
+   0 5.2119113088e+16   0.00e+00  1.47e+07    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  16 2.8196821556e-05  -5.56e-04  1.47e-09    3.428603e-03  -2.473835e-06   9.335058e-09   3.046848e-11  -3.304854e-02  -1.093095e-05  -5.060806e-07   1.890034e+00   2.819406e-02   5.243978e+01  -8.686227e-10  -1.336467e+00
+
+After 16 iterations the fit converged.
+final sum of squares of residuals : 2.81968e-05
+rel. change during last iteration : -5.55628e-09
+
+degrees of freedom    (FIT_NDF)                        : 8
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00187739
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.5246e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.0034286        +/- 0.001011     (29.48%)
+p01             = -2.47384e-06     +/- 5.075e-06    (205.2%)
+p02             = 9.33506e-09      +/- 6.063e-09    (64.94%)
+p03             = 3.04685e-11      +/- 2.735e-11    (89.75%)
+p10             = -0.0330485       +/- 0.14         (423.6%)
+p11             = -1.0931e-05      +/- 0.0006103    (5583%)
+p12             = -5.06081e-07     +/- 6.353e-07    (125.5%)
+p20             = 1.89003          +/- 16.94        (896.1%)
+p21             = 0.0281941        +/- 0.05536      (196.4%)
+p30             = 52.4398          +/- 1323         (2522%)
+p31             = -8.68623e-10     +/- 2.865e-09    (329.9%)
+p13             = -1.33647         +/- 4.324        (323.5%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    
+p00             1.000 
+p01             0.006  1.000 
+p02            -0.554 -0.093  1.000 
+p03            -0.026 -0.841  0.137  1.000 
+p10            -0.415 -0.001  0.171  0.008  1.000 
+p11            -0.002 -0.408  0.033  0.299  0.002  1.000 
+p12             0.226  0.038 -0.408 -0.056 -0.419 -0.081  1.000 
+p20            -0.678  0.003  0.000  0.000  0.524 -0.002 -0.000  1.000 
+p21             0.004 -0.442  0.000 -0.000 -0.003  0.393 -0.000 -0.006  1.000 
+p30             0.557 -0.002 -0.000 -0.000 -0.746  0.003  0.000 -0.913  0.006  1.000 
+p31             0.010  0.343 -0.056 -0.408 -0.019 -0.733  0.137  0.000  0.000  0.000  1.000 
+p13            -0.003  0.363 -0.000 -0.000  0.005 -0.559  0.000  0.006 -0.913 -0.006 -0.000  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:52:37 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(x**4)+p04*(a**4)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Mon Jul 29 00:52:51 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04          
+   0 9.4784830186e+21   0.00e+00  5.82e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 2.9222161144e-06  -9.46e-06  5.82e-10    1.643411e-03  -2.401883e-06   9.006984e-08   2.271705e-11  -3.304681e-02  -1.093095e-05  -5.060806e-07   1.889922e+00   2.819406e-02   5.241124e+01  -8.686227e-10  -1.336467e+00   1.832848e+00  -3.945677e-13
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 2.92222e-06
+rel. change during last iteration : -9.46126e-11
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00069788
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.87036e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00164341       +/- 0.0004881    (29.7%)
+p01             = -2.40188e-06     +/- 1.887e-06    (78.57%)
+p02             = 9.00698e-08      +/- 1.148e-08    (12.74%)
+p03             = 2.27171e-11      +/- 1.027e-11    (45.22%)
+p10             = -0.0330468       +/- 1.151e+06    (3.484e+09%)
+p11             = -1.0931e-05      +/- 0.0002269    (2076%)
+p12             = -5.06081e-07     +/- 3.035e-07    (59.97%)
+p20             = 1.88992          +/- 7.387e+07    (3.909e+09%)
+p21             = 0.0281941        +/- 0.02059      (73.02%)
+p30             = 52.4112          +/- 1.896e+10    (3.617e+10%)
+p31             = -8.68623e-10     +/- 1.066e-09    (122.7%)
+p13             = -1.33647         +/- 1.608        (120.3%)
+p40             = 1.83285          +/- 1.217e+12    (6.638e+13%)
+p04             = -3.94568e-13     +/- 5.811e-14    (14.73%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    
+p00             1.000 
+p01             0.011  1.000 
+p02            -0.546 -0.011  1.000 
+p03            -0.004 -0.835 -0.084  1.000 
+p10             0.387  0.024  0.087 -0.099  1.000 
+p11             0.006 -0.407  0.008  0.294  0.019  1.000 
+p12            -0.108  0.014 -0.117  0.019 -0.628 -0.075  1.000 
+p20            -0.387 -0.024 -0.087  0.099 -1.000 -0.019  0.628  1.000 
+p21             0.012 -0.441  0.002 -0.002  0.024  0.393 -0.015 -0.024  1.000 
+p30            -0.387 -0.024 -0.087  0.099 -1.000 -0.019  0.628  1.000 -0.024  1.000 
+p31            -0.007  0.342 -0.014 -0.400 -0.038 -0.733  0.130  0.038 -0.001  0.038  1.000 
+p13            -0.008  0.362 -0.001  0.001 -0.014 -0.559  0.009  0.014 -0.913  0.014  0.001  1.000 
+p40             0.387  0.024  0.087 -0.099  1.000  0.019 -0.628 -1.000  0.024 -1.000 -0.038 -0.014  1.000 
+p04             0.349 -0.013 -0.950  0.132 -0.334 -0.006  0.210  0.334 -0.008  0.334  0.013  0.005 -0.334  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:53:37 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 9.4784830280e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 2.5271533122e-06  -8.41e-06  5.62e-10    1.815213e-03  -2.436973e-06   8.823448e-08   2.271705e-11  -1.099897e-02  -1.543417e-05  -7.416173e-07  -9.395597e-01   2.877197e-02   5.241180e+01  -8.686227e-10  -1.336467e+00   1.797285e+00  -3.945677e-13   3.022728e-05
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 2.52715e-06
+rel. change during last iteration : -8.4087e-11
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000710936
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.05431e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00181521       +/- 0.0005538    (30.51%)
+p01             = -2.43697e-06     +/- 1.923e-06    (78.9%)
+p02             = 8.82345e-08      +/- 1.208e-08    (13.69%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.9%)
+p10             = -0.010999        +/- 5.966e+05    (5.424e+09%)
+p11             = -1.54342e-05     +/- 0.0002312    (1498%)
+p12             = -7.41617e-07     +/- 3.762e-07    (50.73%)
+p20             = -0.93956         +/- 3.828e+07    (4.075e+09%)
+p21             = 0.028772         +/- 0.02098      (72.94%)
+p30             = 52.4118          +/- 9.826e+09    (1.875e+10%)
+p31             = -8.68623e-10     +/- 1.085e-09    (125%)
+p13             = -1.33647         +/- 1.638        (122.6%)
+p40             = 1.79729          +/- 6.305e+11    (3.508e+13%)
+p04             = -3.94568e-13     +/- 5.58e-14     (14.14%)
+p22             = 3.02273e-05      +/- 3.468e-05    (114.7%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.002  1.000 
+p02            -0.653 -0.013  1.000 
+p03             0.007 -0.836 -0.063  1.000 
+p10             0.437  0.018 -0.204 -0.053  1.000 
+p11            -0.007 -0.407  0.009  0.297  0.004  1.000 
+p12            -0.017  0.044  0.011 -0.051  0.300 -0.035  1.000 
+p20            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 
+p21             0.027 -0.441 -0.011 -0.002  0.030  0.392 -0.013 -0.030  1.000 
+p30            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 -0.030  1.000 
+p31             0.018  0.343 -0.016 -0.407  0.025 -0.732  0.095 -0.025  0.001 -0.025  1.000 
+p13            -0.015  0.362  0.006  0.002 -0.029 -0.559 -0.009  0.029 -0.913  0.029 -0.001  1.000 
+p40             0.437  0.018 -0.204 -0.053  1.000  0.004  0.300 -1.000  0.030 -1.000  0.025 -0.029  1.000 
+p04             0.449 -0.006 -0.942  0.106 -0.015 -0.000 -0.005  0.015 -0.000  0.015 -0.000  0.000 -0.015  1.000 
+p22             0.419 -0.017 -0.204 -0.009  0.168 -0.021 -0.648 -0.168  0.036 -0.168  0.004 -0.005  0.168 -0.003  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:55:02 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 9.4784830280e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 1.0849719334e-08  -1.83e-02  5.62e-10    1.628827e-03   9.693472e-07  -1.176761e-09   4.323698e-13  -6.503805e-02  -9.352150e-05  -8.587161e-08   4.931410e+00   8.445340e-03  -1.561359e+02  -3.732405e-13  -2.814788e-01  -1.448413e+00   9.199311e-15   1.320358e-06
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 1.08497e-08
+rel. change during last iteration : -1.82898e-07
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.65827e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.16994e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00162883       +/- 3.399e-05    (2.087%)
+p01             = 9.69347e-07      +/- 1.284e-07    (13.25%)
+p02             = -1.17676e-09     +/- 7.822e-10    (66.47%)
+p03             = 4.3237e-13       +/- 7.035e-13    (162.7%)
+p10             = -0.065038        +/- 6.789e+05    (1.044e+09%)
+p11             = -9.35215e-05     +/- 1.8e-05      (19.25%)
+p12             = -8.58716e-08     +/- 4.397e-08    (51.2%)
+p20             = 4.93141          +/- 4.356e+07    (8.833e+08%)
+p21             = 0.00844534       +/- 0.001375     (16.29%)
+p30             = -156.136         +/- 1.118e+10    (7.161e+09%)
+p31             = -3.7324e-13      +/- 8.361e-11    (2.24e+04%)
+p13             = -0.281479        +/- 0.1288       (45.77%)
+p40             = -1.44841         +/- 7.174e+11    (4.953e+13%)
+p04             = 9.19931e-15      +/- 3.656e-15    (39.74%)
+p22             = 1.32036e-06      +/- 3.542e-06    (268.3%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.049  1.000 
+p02            -0.647 -0.035  1.000 
+p03            -0.037 -0.843 -0.039  1.000 
+p10             0.280  0.194 -0.134 -0.244  1.000 
+p11             0.143 -0.232 -0.064  0.111  0.540  1.000 
+p12            -0.325 -0.142  0.155  0.187 -0.845 -0.474  1.000 
+p20            -0.280 -0.194  0.134  0.244 -1.000 -0.540  0.845  1.000 
+p21             0.025 -0.426 -0.011 -0.009  0.038  0.350 -0.045 -0.038  1.000 
+p30            -0.280 -0.194  0.134  0.244 -1.000 -0.540  0.845  1.000 -0.038  1.000 
+p31             0.154  0.388 -0.080 -0.463  0.526 -0.240 -0.403 -0.526  0.020 -0.526  1.000 
+p13            -0.157  0.189  0.074  0.135 -0.554 -0.691  0.468  0.554 -0.780  0.554 -0.291  1.000 
+p40             0.280  0.194 -0.134 -0.244  1.000  0.540 -0.845 -1.000  0.038 -1.000  0.526 -0.554  1.000 
+p04             0.487 -0.005 -0.956  0.102  0.000  0.000 -0.000 -0.000  0.000 -0.000  0.000 -0.000  0.000  1.000 
+p22             0.454  0.137 -0.214 -0.189  0.775  0.407 -0.906 -0.775  0.049 -0.775  0.408 -0.429  0.775  0.000  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:55:46 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 9.4784830280e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 3.0496869571e-14  -2.77e-01  5.62e-10    2.439815e-08  -2.828095e-10   1.245182e-12   1.659026e-15   3.427782e-06  -5.215631e-09  -1.128001e-10  -3.392593e-04   7.226787e-06  -3.815761e-02  -1.581748e-13  -3.112687e-04   9.837611e-01  -5.766927e-18   1.090903e-08
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 3.04969e-14
+rel. change during last iteration : -2.77442e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.80985e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.09937e-15
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 2.43981e-08      +/- 5.628e-08    (230.7%)
+p01             = -2.8281e-10      +/- 2.127e-10    (75.21%)
+p02             = 1.24518e-12      +/- 1.3e-12      (104.4%)
+p03             = 1.65903e-15      +/- 1.16e-15     (69.95%)
+p10             = 3.42778e-06      +/- 6.111e+06    (1.783e+14%)
+p11             = -5.21563e-09     +/- 4.301e-08    (824.7%)
+p12             = -1.128e-10       +/- 5.271e-11    (46.73%)
+p20             = -0.000339259     +/- 3.921e+08    (1.156e+14%)
+p21             = 7.22679e-06      +/- 2.345e-06    (32.44%)
+p30             = -0.0381576       +/- 1.006e+11    (2.638e+14%)
+p31             = -1.58175e-13     +/- 3.355e-13    (212.1%)
+p13             = -0.000311269     +/- 0.0001939    (62.29%)
+p40             = 0.983761         +/- 6.458e+12    (6.565e+14%)
+p04             = -5.76693e-18     +/- 6.16e-18     (106.8%)
+p22             = 1.0909e-08       +/- 3.993e-09    (36.6%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.022  1.000 
+p02            -0.631 -0.014  1.000 
+p03            -0.007 -0.839 -0.068  1.000 
+p10            -0.235 -0.120  0.038  0.168  1.000 
+p11            -0.195 -0.335  0.036  0.309  0.807  1.000 
+p12             0.030  0.110  0.033 -0.139 -0.664 -0.552  1.000 
+p20             0.235  0.120 -0.038 -0.168 -1.000 -0.807  0.664  1.000 
+p21            -0.029 -0.453  0.002  0.031  0.185  0.376 -0.139 -0.185  1.000 
+p30             0.235  0.120 -0.038 -0.168 -1.000 -0.807  0.664  1.000 -0.185  1.000 
+p31             0.222  0.233 -0.039 -0.299 -0.935 -0.908  0.645  0.935 -0.172  0.935  1.000 
+p13             0.085  0.379 -0.014 -0.063 -0.373 -0.608  0.248  0.373 -0.901  0.373  0.349  1.000 
+p40            -0.235 -0.120  0.038  0.168  1.000  0.807 -0.664 -1.000  0.185 -1.000 -0.935 -0.373  1.000 
+p04             0.467 -0.017 -0.956  0.120  0.100  0.081 -0.066 -0.100  0.018 -0.100 -0.093 -0.037  0.100  1.000 
+p22             0.277 -0.060 -0.152  0.057  0.340  0.262 -0.748 -0.340  0.091 -0.340 -0.317 -0.127  0.340  0.034  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 00:56:25 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 9.4784830280e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 2.5271533122e-06  -8.41e-06  5.62e-10    1.815213e-03  -2.436973e-06   8.823448e-08   2.271705e-11  -1.099897e-02  -1.543417e-05  -7.416173e-07  -9.395597e-01   2.877197e-02   5.241180e+01  -8.686227e-10  -1.336467e+00   1.797285e+00  -3.945677e-13   3.022728e-05
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 2.52715e-06
+rel. change during last iteration : -8.4087e-11
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000710936
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.05431e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00181521       +/- 0.0005538    (30.51%)
+p01             = -2.43697e-06     +/- 1.923e-06    (78.9%)
+p02             = 8.82345e-08      +/- 1.208e-08    (13.69%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.9%)
+p10             = -0.010999        +/- 5.966e+05    (5.424e+09%)
+p11             = -1.54342e-05     +/- 0.0002312    (1498%)
+p12             = -7.41617e-07     +/- 3.762e-07    (50.73%)
+p20             = -0.93956         +/- 3.828e+07    (4.075e+09%)
+p21             = 0.028772         +/- 0.02098      (72.94%)
+p30             = 52.4118          +/- 9.826e+09    (1.875e+10%)
+p31             = -8.68623e-10     +/- 1.085e-09    (125%)
+p13             = -1.33647         +/- 1.638        (122.6%)
+p40             = 1.79729          +/- 6.305e+11    (3.508e+13%)
+p04             = -3.94568e-13     +/- 5.58e-14     (14.14%)
+p22             = 3.02273e-05      +/- 3.468e-05    (114.7%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.002  1.000 
+p02            -0.653 -0.013  1.000 
+p03             0.007 -0.836 -0.063  1.000 
+p10             0.437  0.018 -0.204 -0.053  1.000 
+p11            -0.007 -0.407  0.009  0.297  0.004  1.000 
+p12            -0.017  0.044  0.011 -0.051  0.300 -0.035  1.000 
+p20            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 
+p21             0.027 -0.441 -0.011 -0.002  0.030  0.392 -0.013 -0.030  1.000 
+p30            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 -0.030  1.000 
+p31             0.018  0.343 -0.016 -0.407  0.025 -0.732  0.095 -0.025  0.001 -0.025  1.000 
+p13            -0.015  0.362  0.006  0.002 -0.029 -0.559 -0.009  0.029 -0.913  0.029 -0.001  1.000 
+p40             0.437  0.018 -0.204 -0.053  1.000  0.004  0.300 -1.000  0.030 -1.000  0.025 -0.029  1.000 
+p04             0.449 -0.006 -0.942  0.106 -0.015 -0.000 -0.005  0.015 -0.000  0.015 -0.000  0.000 -0.015  1.000 
+p22             0.419 -0.017 -0.204 -0.009  0.168 -0.021 -0.648 -0.168  0.036 -0.168  0.004 -0.005  0.168 -0.003  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:03:10 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x*2)+p12*y*(x*2)+p22*(y**2)*(x*2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4783791226e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  17 2.2731132174e-12  -2.76e-03  5.62e-04    5.004445e-07  -8.916087e-05  -1.144160e-02  -4.284378e-08   9.987121e-01   4.000000e-01   4.000001e-01   4.000006e-01  -3.300580e-04  -2.000000e-01  -2.000001e-01  -1.999967e-01   1.722827e-15  -1.409694e-13   2.740237e-18
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 2.27311e-12
+rel. change during last iteration : -2.75587e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.74257e-07
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.54623e-13
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 5.00444e-07      +/- 0.0252       (5.036e+06%)
+p10             = -8.91609e-05     +/- 5.372e-05    (60.25%)
+p20             = -0.0114416       +/- 0.01054      (92.16%)
+p30             = -4.28438e-08     +/- 0.0252       (5.882e+07%)
+p40             = 0.998712         +/- 45.99        (4605%)
+p01             = 0.4              +/- 2.448e+05    (6.121e+07%)
+p11             = 0.4              +/- 2.929e+04    (7.322e+06%)
+p21             = 0.400001         +/- 1.916e+04    (4.79e+06%)
+p31             = -0.000330058     +/- 0.003135     (949.8%)
+p02             = -0.2             +/- 1.224e+05    (6.121e+07%)
+p12             = -0.2             +/- 1.464e+04    (7.322e+06%)
+p22             = -0.199997        +/- 9580         (4.79e+06%)
+p03             = 1.72283e-15      +/- 2.212e-14    (1284%)
+p13             = -1.40969e-13     +/- 1.38e-12     (979.2%)
+p04             = 2.74024e-18      +/- 3.866e-16    (1.411e+04%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.477  1.000 
+p20            -0.649  0.369  1.000 
+p30            -1.000  0.477  0.649  1.000 
+p40             0.670 -0.637 -0.940 -0.670  1.000 
+p01            -0.971  0.485  0.617  0.971 -0.645  1.000 
+p11             0.435 -0.851 -0.317 -0.435  0.552 -0.451  1.000 
+p21             0.345 -0.347 -0.084 -0.345  0.161 -0.415  0.404  1.000 
+p31             0.399 -0.492 -0.167 -0.399  0.286 -0.454  0.571  0.829  1.000 
+p02             0.971 -0.485 -0.617 -0.971  0.645 -1.000  0.451  0.415  0.454  1.000 
+p12            -0.435  0.851  0.317  0.435 -0.552  0.451 -1.000 -0.404 -0.571 -0.451  1.000 
+p22            -0.345  0.347  0.084  0.345 -0.161  0.415 -0.404 -1.000 -0.829 -0.415  0.404  1.000 
+p03            -0.785  0.495  0.451  0.785 -0.514  0.796 -0.512 -0.672 -0.643 -0.796  0.512  0.672  1.000 
+p13             0.299 -0.408 -0.137 -0.299  0.249 -0.339  0.509  0.610  0.579  0.339 -0.509 -0.610 -0.616  1.000 
+p04            -0.996  0.484  0.640  0.996 -0.663  0.988 -0.445 -0.383 -0.429 -0.988  0.445  0.383  0.800 -0.321  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:03:43 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x*2)+p12*y*(x*2)+p22*(y**2)*(x*2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4783791226e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  16 3.4278471215e-05  -8.50e-01  5.62e-07   -4.377323e-01  -7.576418e-02   2.491025e+00   4.416860e-01   1.052533e+00   3.959130e-01   3.997431e-01   4.040390e-01  -1.335447e+00  -1.979575e-01  -1.998968e-01  -1.879285e-01   2.790148e-11  -5.553575e-10   2.195069e-14
+
+After 16 iterations the fit converged.
+final sum of squares of residuals : 3.42785e-05
+rel. change during last iteration : -8.50221e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00261834
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.85569e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.437732        +/- 2.545e+07    (5.814e+09%)
+p10             = -0.0757642       +/- 0.1308       (172.6%)
+p20             = 2.49102          +/- 35.47        (1424%)
+p30             = 0.441686         +/- 2.545e+07    (5.762e+09%)
+p40             = 1.05253          +/- 1.426e+05    (1.355e+07%)
+p01             = 0.395913         +/- 3.338e+08    (8.431e+10%)
+p11             = 0.399743         +/- 4.762e+07    (1.191e+10%)
+p21             = 0.404039         +/- 1.394e+08    (3.449e+10%)
+p31             = -1.33545         +/- 6.871        (514.5%)
+p02             = -0.197958        +/- 1.669e+08    (8.431e+10%)
+p12             = -0.199897        +/- 2.381e+07    (1.191e+10%)
+p22             = -0.187928        +/- 6.968e+07    (3.708e+10%)
+p03             = 2.79015e-11      +/- 1.636e-10    (586.4%)
+p13             = -5.55357e-10     +/- 4.39e-09     (790.4%)
+p04             = 2.19507e-14      +/- 4.877e-13    (2222%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.261  1.000 
+p20             0.000  0.159  1.000 
+p30            -1.000  0.261 -0.000  1.000 
+p40             0.031 -0.391 -0.955 -0.031  1.000 
+p01             0.456 -0.122  0.134 -0.456 -0.110  1.000 
+p11             0.148  0.473  0.217 -0.148 -0.332  0.082  1.000 
+p21            -0.777  0.159 -0.315  0.777  0.285 -0.524 -0.215  1.000 
+p31            -0.369  0.020 -0.154  0.369  0.153 -0.234 -0.210  0.466  1.000 
+p02            -0.456  0.122 -0.134  0.456  0.110 -1.000 -0.082  0.524  0.234  1.000 
+p12            -0.148 -0.473 -0.217  0.148  0.332 -0.082 -1.000  0.215  0.210  0.082  1.000 
+p22             0.777 -0.159  0.315 -0.777 -0.285  0.524  0.215 -1.000 -0.466 -0.524 -0.215  1.000 
+p03             0.503 -0.091  0.174 -0.503 -0.158  0.963  0.182 -0.596 -0.278 -0.963 -0.182  0.596  1.000 
+p13            -0.244 -0.041 -0.153  0.244  0.177 -0.170 -0.340  0.333  0.186  0.170  0.340 -0.333 -0.303  1.000 
+p04            -0.354  0.109 -0.084  0.354  0.063 -0.985 -0.039  0.384  0.167  0.985  0.039 -0.384 -0.928  0.121  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:04:58 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x*2)+p12*y*(x*2)+p22*(y**2)*(x*2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4783791226e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  16 3.4278471215e-05  -8.50e-01  5.62e-07   -4.377323e-01  -7.576418e-02   2.491025e+00   4.416860e-01   1.052533e+00   3.959130e-01   3.997431e-01   4.040390e-01  -1.335447e+00  -1.979575e-01  -1.998968e-01  -1.879285e-01   2.790148e-11  -5.553575e-10   2.195069e-14
+
+After 16 iterations the fit converged.
+final sum of squares of residuals : 3.42785e-05
+rel. change during last iteration : -8.50221e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00261834
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.85569e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.437732        +/- 2.545e+07    (5.814e+09%)
+p10             = -0.0757642       +/- 0.1308       (172.6%)
+p20             = 2.49102          +/- 35.47        (1424%)
+p30             = 0.441686         +/- 2.545e+07    (5.762e+09%)
+p40             = 1.05253          +/- 1.426e+05    (1.355e+07%)
+p01             = 0.395913         +/- 3.338e+08    (8.431e+10%)
+p11             = 0.399743         +/- 4.762e+07    (1.191e+10%)
+p21             = 0.404039         +/- 1.394e+08    (3.449e+10%)
+p31             = -1.33545         +/- 6.871        (514.5%)
+p02             = -0.197958        +/- 1.669e+08    (8.431e+10%)
+p12             = -0.199897        +/- 2.381e+07    (1.191e+10%)
+p22             = -0.187928        +/- 6.968e+07    (3.708e+10%)
+p03             = 2.79015e-11      +/- 1.636e-10    (586.4%)
+p13             = -5.55357e-10     +/- 4.39e-09     (790.4%)
+p04             = 2.19507e-14      +/- 4.877e-13    (2222%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.261  1.000 
+p20             0.000  0.159  1.000 
+p30            -1.000  0.261 -0.000  1.000 
+p40             0.031 -0.391 -0.955 -0.031  1.000 
+p01             0.456 -0.122  0.134 -0.456 -0.110  1.000 
+p11             0.148  0.473  0.217 -0.148 -0.332  0.082  1.000 
+p21            -0.777  0.159 -0.315  0.777  0.285 -0.524 -0.215  1.000 
+p31            -0.369  0.020 -0.154  0.369  0.153 -0.234 -0.210  0.466  1.000 
+p02            -0.456  0.122 -0.134  0.456  0.110 -1.000 -0.082  0.524  0.234  1.000 
+p12            -0.148 -0.473 -0.217  0.148  0.332 -0.082 -1.000  0.215  0.210  0.082  1.000 
+p22             0.777 -0.159  0.315 -0.777 -0.285  0.524  0.215 -1.000 -0.466 -0.524 -0.215  1.000 
+p03             0.503 -0.091  0.174 -0.503 -0.158  0.963  0.182 -0.596 -0.278 -0.963 -0.182  0.596  1.000 
+p13            -0.244 -0.041 -0.153  0.244  0.177 -0.170 -0.340  0.333  0.186  0.170  0.340 -0.333 -0.303  1.000 
+p04            -0.354  0.109 -0.084  0.354  0.063 -0.985 -0.039  0.384  0.167  0.985  0.039 -0.384 -0.928  0.121  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:04:59 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x*2)+p12*y*(x*2)+p22*(y**2)*(x*2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 3.4278471215e-05   0.00e+00  4.42e+01   -4.377323e-01  -7.576418e-02   2.491025e+00   4.416860e-01   1.052533e+00   3.959130e-01   3.997431e-01   4.040390e-01  -1.335447e+00  -1.979575e-01  -1.998968e-01  -1.879285e-01   2.790148e-11  -5.553575e-10   2.195069e-14
+   1 3.4278471215e-05   0.00e+00  4.42e+03   -4.377323e-01  -7.576418e-02   2.491025e+00   4.416860e-01   1.052533e+00   3.959130e-01   3.997431e-01   4.040390e-01  -1.335447e+00  -1.979575e-01  -1.998968e-01  -1.879285e-01   2.790148e-11  -5.553575e-10   2.195069e-14
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.42785e-05
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00261834
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.85569e-06
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.437732        +/- 2.544e+07    (5.812e+09%)
+p10             = -0.0757642       +/- 0.1306       (172.4%)
+p20             = 2.49102          +/- 35.44        (1423%)
+p30             = 0.441686         +/- 2.544e+07    (5.76e+09%)
+p40             = 1.05253          +/- 1.426e+05    (1.354e+07%)
+p01             = 0.395913         +/- 3.389e+08    (8.56e+10%)
+p11             = 0.399743         +/- 4.772e+07    (1.194e+10%)
+p21             = 0.404039         +/- 1.389e+08    (3.438e+10%)
+p31             = -1.33545         +/- 6.892        (516.1%)
+p02             = -0.197958        +/- 1.695e+08    (8.56e+10%)
+p12             = -0.199897        +/- 2.386e+07    (1.194e+10%)
+p22             = -0.187928        +/- 6.946e+07    (3.696e+10%)
+p03             = 2.79015e-11      +/- 1.657e-10    (593.8%)
+p13             = -5.55357e-10     +/- 4.399e-09    (792%)
+p04             = 2.19507e-14      +/- 4.977e-13    (2267%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.256  1.000 
+p20            -0.004  0.162  1.000 
+p30            -1.000  0.256  0.004  1.000 
+p40             0.033 -0.394 -0.955 -0.033  1.000 
+p01             0.455 -0.110  0.126 -0.455 -0.107  1.000 
+p11             0.158  0.472  0.219 -0.158 -0.333  0.104  1.000 
+p21            -0.776  0.153 -0.311  0.776  0.284 -0.519 -0.226  1.000 
+p31            -0.374  0.019 -0.153  0.374  0.154 -0.246 -0.215  0.471  1.000 
+p02            -0.455  0.110 -0.126  0.455  0.107 -1.000 -0.104  0.519  0.246  1.000 
+p12            -0.158 -0.472 -0.219  0.158  0.333 -0.104 -1.000  0.226  0.215  0.104  1.000 
+p22             0.776 -0.153  0.311 -0.776 -0.284  0.519  0.226 -1.000 -0.471 -0.519 -0.226  1.000 
+p03             0.503 -0.080  0.165 -0.503 -0.156  0.964  0.201 -0.591 -0.289 -0.964 -0.201  0.591  1.000 
+p13            -0.249 -0.042 -0.153  0.249  0.177 -0.182 -0.344  0.338  0.190  0.182  0.344 -0.338 -0.312  1.000 
+p04            -0.355  0.097 -0.077  0.355  0.061 -0.986 -0.061  0.382  0.181  0.986  0.061 -0.382 -0.930  0.133  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:05:52 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 9.4784830280e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 2.5271533122e-06  -8.41e-06  5.62e-10    1.815213e-03  -2.436973e-06   8.823448e-08   2.271705e-11  -1.099897e-02  -1.543417e-05  -7.416173e-07  -9.395597e-01   2.877197e-02   5.241180e+01  -8.686227e-10  -1.336467e+00   1.797285e+00  -3.945677e-13   3.022728e-05
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 2.52715e-06
+rel. change during last iteration : -8.4087e-11
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000710936
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.05431e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00181521       +/- 0.0005538    (30.51%)
+p01             = -2.43697e-06     +/- 1.923e-06    (78.9%)
+p02             = 8.82345e-08      +/- 1.208e-08    (13.69%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.9%)
+p10             = -0.010999        +/- 5.966e+05    (5.424e+09%)
+p11             = -1.54342e-05     +/- 0.0002312    (1498%)
+p12             = -7.41617e-07     +/- 3.762e-07    (50.73%)
+p20             = -0.93956         +/- 3.828e+07    (4.075e+09%)
+p21             = 0.028772         +/- 0.02098      (72.94%)
+p30             = 52.4118          +/- 9.826e+09    (1.875e+10%)
+p31             = -8.68623e-10     +/- 1.085e-09    (125%)
+p13             = -1.33647         +/- 1.638        (122.6%)
+p40             = 1.79729          +/- 6.305e+11    (3.508e+13%)
+p04             = -3.94568e-13     +/- 5.58e-14     (14.14%)
+p22             = 3.02273e-05      +/- 3.468e-05    (114.7%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.002  1.000 
+p02            -0.653 -0.013  1.000 
+p03             0.007 -0.836 -0.063  1.000 
+p10             0.437  0.018 -0.204 -0.053  1.000 
+p11            -0.007 -0.407  0.009  0.297  0.004  1.000 
+p12            -0.017  0.044  0.011 -0.051  0.300 -0.035  1.000 
+p20            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 
+p21             0.027 -0.441 -0.011 -0.002  0.030  0.392 -0.013 -0.030  1.000 
+p30            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 -0.030  1.000 
+p31             0.018  0.343 -0.016 -0.407  0.025 -0.732  0.095 -0.025  0.001 -0.025  1.000 
+p13            -0.015  0.362  0.006  0.002 -0.029 -0.559 -0.009  0.029 -0.913  0.029 -0.001  1.000 
+p40             0.437  0.018 -0.204 -0.053  1.000  0.004  0.300 -1.000  0.030 -1.000  0.025 -0.029  1.000 
+p04             0.449 -0.006 -0.942  0.106 -0.015 -0.000 -0.005  0.015 -0.000  0.015 -0.000  0.000 -0.015  1.000 
+p22             0.419 -0.017 -0.204 -0.009  0.168 -0.021 -0.648 -0.168  0.036 -0.168  0.004 -0.005  0.168 -0.003  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:07:15 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 9.4784830280e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  19 2.5271533122e-06  -8.41e-06  5.62e-10    1.815213e-03  -2.436973e-06   8.823448e-08   2.271705e-11  -1.099897e-02  -1.543417e-05  -7.416173e-07  -9.395597e-01   2.877197e-02   5.241180e+01  -8.686227e-10  -1.336467e+00   1.797285e+00  -3.945677e-13   3.022728e-05
+
+After 19 iterations the fit converged.
+final sum of squares of residuals : 2.52715e-06
+rel. change during last iteration : -8.4087e-11
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000710936
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.05431e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00181521       +/- 0.0005538    (30.51%)
+p01             = -2.43697e-06     +/- 1.923e-06    (78.9%)
+p02             = 8.82345e-08      +/- 1.208e-08    (13.69%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.9%)
+p10             = -0.010999        +/- 5.966e+05    (5.424e+09%)
+p11             = -1.54342e-05     +/- 0.0002312    (1498%)
+p12             = -7.41617e-07     +/- 3.762e-07    (50.73%)
+p20             = -0.93956         +/- 3.828e+07    (4.075e+09%)
+p21             = 0.028772         +/- 0.02098      (72.94%)
+p30             = 52.4118          +/- 9.826e+09    (1.875e+10%)
+p31             = -8.68623e-10     +/- 1.085e-09    (125%)
+p13             = -1.33647         +/- 1.638        (122.6%)
+p40             = 1.79729          +/- 6.305e+11    (3.508e+13%)
+p04             = -3.94568e-13     +/- 5.58e-14     (14.14%)
+p22             = 3.02273e-05      +/- 3.468e-05    (114.7%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.002  1.000 
+p02            -0.653 -0.013  1.000 
+p03             0.007 -0.836 -0.063  1.000 
+p10             0.437  0.018 -0.204 -0.053  1.000 
+p11            -0.007 -0.407  0.009  0.297  0.004  1.000 
+p12            -0.017  0.044  0.011 -0.051  0.300 -0.035  1.000 
+p20            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 
+p21             0.027 -0.441 -0.011 -0.002  0.030  0.392 -0.013 -0.030  1.000 
+p30            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 -0.030  1.000 
+p31             0.018  0.343 -0.016 -0.407  0.025 -0.732  0.095 -0.025  0.001 -0.025  1.000 
+p13            -0.015  0.362  0.006  0.002 -0.029 -0.559 -0.009  0.029 -0.913  0.029 -0.001  1.000 
+p40             0.437  0.018 -0.204 -0.053  1.000  0.004  0.300 -1.000  0.030 -1.000  0.025 -0.029  1.000 
+p04             0.449 -0.006 -0.942  0.106 -0.015 -0.000 -0.005  0.015 -0.000  0.015 -0.000  0.000 -0.015  1.000 
+p22             0.419 -0.017 -0.204 -0.009  0.168 -0.021 -0.648 -0.168  0.036 -0.168  0.004 -0.005  0.168 -0.003  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:07:17 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+(p01*x)+(p02*(x**2))+(p03*(x**3))+(p10*y)+(p11*x*y)+(p12*(x**2)*y)+(p20*(y**2))+(p21*(y**2)*x)+(p30*(y**3))+p13*(x*(y**3))+p31*((x**3)*y)+p40*(y**4)+p04*(x**4)+p22*(x**2)*(y**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p01           p02           p03           p10           p11           p12           p20           p21           p30           p31           p13           p40           p04           p22          
+   0 2.5271533122e-06   0.00e+00  3.62e-03    1.815213e-03  -2.436973e-06   8.823448e-08   2.271705e-11  -1.099897e-02  -1.543417e-05  -7.416173e-07  -9.395597e-01   2.877197e-02   5.241180e+01  -8.686227e-10  -1.336467e+00   1.797285e+00  -3.945677e-13   3.022728e-05
+   1 2.5271533122e-06   0.00e+00  3.62e-02    1.815213e-03  -2.436973e-06   8.823448e-08   2.271705e-11  -1.099897e-02  -1.543417e-05  -7.416173e-07  -9.395597e-01   2.877197e-02   5.241180e+01  -8.686227e-10  -1.336467e+00   1.797285e+00  -3.945677e-13   3.022728e-05
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.52715e-06
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000710936
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.05431e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00181521       +/- 0.0005538    (30.51%)
+p01             = -2.43697e-06     +/- 1.923e-06    (78.9%)
+p02             = 8.82345e-08      +/- 1.208e-08    (13.69%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.9%)
+p10             = -0.010999        +/- 5.966e+05    (5.424e+09%)
+p11             = -1.54342e-05     +/- 0.0002312    (1498%)
+p12             = -7.41617e-07     +/- 3.762e-07    (50.73%)
+p20             = -0.93956         +/- 3.828e+07    (4.075e+09%)
+p21             = 0.028772         +/- 0.02098      (72.94%)
+p30             = 52.4118          +/- 9.826e+09    (1.875e+10%)
+p31             = -8.68623e-10     +/- 1.085e-09    (125%)
+p13             = -1.33647         +/- 1.638        (122.6%)
+p40             = 1.79729          +/- 6.305e+11    (3.508e+13%)
+p04             = -3.94568e-13     +/- 5.58e-14     (14.14%)
+p22             = 3.02273e-05      +/- 3.468e-05    (114.7%)
+
+correlation matrix of the fit parameters:
+                p00    p01    p02    p03    p10    p11    p12    p20    p21    p30    p31    p13    p40    p04    p22    
+p00             1.000 
+p01             0.002  1.000 
+p02            -0.653 -0.013  1.000 
+p03             0.007 -0.836 -0.063  1.000 
+p10             0.437  0.018 -0.204 -0.053  1.000 
+p11            -0.007 -0.407  0.009  0.297  0.004  1.000 
+p12            -0.017  0.044  0.011 -0.051  0.300 -0.035  1.000 
+p20            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 
+p21             0.027 -0.441 -0.011 -0.002  0.030  0.392 -0.013 -0.030  1.000 
+p30            -0.437 -0.018  0.204  0.053 -1.000 -0.004 -0.300  1.000 -0.030  1.000 
+p31             0.018  0.343 -0.016 -0.407  0.025 -0.732  0.095 -0.025  0.001 -0.025  1.000 
+p13            -0.015  0.362  0.006  0.002 -0.029 -0.559 -0.009  0.029 -0.913  0.029 -0.001  1.000 
+p40             0.437  0.018 -0.204 -0.053  1.000  0.004  0.300 -1.000  0.030 -1.000  0.025 -0.029  1.000 
+p04             0.449 -0.006 -0.942  0.106 -0.015 -0.000 -0.005  0.015 -0.000  0.015 -0.000  0.000 -0.015  1.000 
+p22             0.419 -0.017 -0.204 -0.009  0.168 -0.021 -0.648 -0.168  0.036 -0.168  0.004 -0.005  0.168 -0.003  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:08:44 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  17 2.5324642059e-06  -6.50e-01  5.62e-08    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149854e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 2.53246e-06
+rel. change during last iteration : -6.49612e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000711683
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.06493e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.000740076      +/- 3.598e+08    (4.861e+13%)
+p10             = -0.00694207      +/- 0.0443       (638.2%)
+p20             = -0.339701        +/- 9.7          (2856%)
+p30             = 0.00105327       +/- 3.598e+08    (3.416e+13%)
+p40             = 6.14985          +/- 3.809e+04    (6.193e+05%)
+p01             = -2.43654e-06     +/- 1.941e-06    (79.65%)
+p11             = -1.55141e-05     +/- 0.0002666    (1719%)
+p21             = 0.0287601        +/- 0.0237       (82.41%)
+p31             = -1.33545         +/- 1.935        (144.9%)
+p02             = 8.82345e-08      +/- 1.265e-08    (14.33%)
+p12             = -7.41617e-07     +/- 6.603e-07    (89.03%)
+p22             = 3.02273e-05      +/- 3.785e-05    (125.2%)
+p03             = 2.27171e-11      +/- 1.136e-11    (50.01%)
+p13             = -8.68623e-10     +/- 1.405e-09    (161.8%)
+p04             = -3.94568e-13     +/- 5.837e-14    (14.79%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.053  1.000 
+p20             0.411 -0.167  1.000 
+p30            -1.000  0.053 -0.411  1.000 
+p40            -0.535 -0.146 -0.900  0.535  1.000 
+p01            -0.130 -0.008 -0.044  0.130  0.068  1.000 
+p11             0.497 -0.033  0.209 -0.497 -0.263 -0.415  1.000 
+p21             0.464 -0.009  0.177 -0.464 -0.244 -0.448  0.532  1.000 
+p31            -0.531  0.029 -0.214  0.531  0.280  0.374 -0.675 -0.931  1.000 
+p02            -0.351 -0.037 -0.090  0.351  0.188  0.037 -0.166 -0.167  0.187  1.000 
+p12             0.839 -0.456  0.478 -0.839 -0.449 -0.087  0.399  0.378 -0.446 -0.255  1.000 
+p22            -0.427  0.532 -0.474  0.427  0.229  0.037 -0.229 -0.173  0.227  0.002 -0.724  1.000 
+p03             0.397 -0.013  0.163 -0.397 -0.213 -0.813  0.434  0.184 -0.211 -0.204  0.315 -0.170  1.000 
+p13            -0.634  0.016 -0.261  0.634  0.340  0.345 -0.807 -0.294  0.337  0.215 -0.494  0.271 -0.540  1.000 
+p04             0.291 -0.016  0.119 -0.291 -0.155 -0.043  0.144  0.135 -0.154 -0.967  0.244 -0.124  0.208 -0.184  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:09:25 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 2.5324642059e-06   0.00e+00  3.60e-03    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149854e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+   1 2.5324642059e-06  -5.99e-07  3.60e-04    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149859e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.53246e-06
+rel. change during last iteration : -5.98534e-12
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000711683
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.06493e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.000740076      +/- 3.244e+08    (4.384e+13%)
+p10             = -0.00694207      +/- 0.0443       (638.1%)
+p20             = -0.339701        +/- 8.847        (2604%)
+p30             = 0.00105327       +/- 3.244e+08    (3.08e+13%)
+p40             = 6.14986          +/- 3.287e+04    (5.346e+05%)
+p01             = -2.43654e-06     +/- 1.972e-06    (80.92%)
+p11             = -1.55141e-05     +/- 0.0002641    (1702%)
+p21             = 0.0287601        +/- 0.02112      (73.45%)
+p31             = -1.33545         +/- 1.722        (128.9%)
+p02             = 8.82345e-08      +/- 1.195e-08    (13.55%)
+p12             = -7.41617e-07     +/- 4.001e-07    (53.95%)
+p22             = 3.02273e-05      +/- 4.616e-05    (152.7%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.91%)
+p13             = -8.68623e-10     +/- 1.362e-09    (156.8%)
+p04             = -3.94568e-13     +/- 5.587e-14    (14.16%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.051  1.000 
+p20             0.031 -0.157  1.000 
+p30            -1.000 -0.051 -0.031  1.000 
+p40            -0.205 -0.212 -0.871  0.205  1.000 
+p01            -0.217 -0.026  0.003  0.217  0.043  1.000 
+p11            -0.482 -0.031 -0.010  0.482  0.102 -0.243  1.000 
+p21            -0.109  0.012 -0.020  0.109  0.028 -0.405  0.394  1.000 
+p31             0.306  0.017  0.015 -0.306 -0.068  0.271 -0.614 -0.897  1.000 
+p02            -0.137 -0.066  0.059  0.137  0.028  0.021  0.075  0.010 -0.042  1.000 
+p12            -0.440 -0.701  0.228  0.440  0.090  0.131  0.182  0.027 -0.135  0.129  1.000 
+p22             0.671  0.452 -0.248 -0.671 -0.138 -0.161 -0.338 -0.050  0.205 -0.221 -0.789  1.000 
+p03             0.032  0.011  0.001 -0.032 -0.007 -0.823  0.245 -0.004  0.010 -0.079 -0.048  0.022  1.000 
+p13             0.603  0.013  0.019 -0.603 -0.124  0.136 -0.803 -0.066  0.185 -0.091 -0.199  0.405 -0.304  1.000 
+p04             0.019  0.001  0.001 -0.019 -0.004 -0.009 -0.009 -0.002  0.006 -0.959 -0.008  0.013  0.106  0.011  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:10:25 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  17 2.5324642059e-06  -6.50e-01  5.62e-08    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149854e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 2.53246e-06
+rel. change during last iteration : -6.49612e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000711683
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.06493e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.000740076      +/- 3.598e+08    (4.861e+13%)
+p10             = -0.00694207      +/- 0.0443       (638.2%)
+p20             = -0.339701        +/- 9.7          (2856%)
+p30             = 0.00105327       +/- 3.598e+08    (3.416e+13%)
+p40             = 6.14985          +/- 3.809e+04    (6.193e+05%)
+p01             = -2.43654e-06     +/- 1.941e-06    (79.65%)
+p11             = -1.55141e-05     +/- 0.0002666    (1719%)
+p21             = 0.0287601        +/- 0.0237       (82.41%)
+p31             = -1.33545         +/- 1.935        (144.9%)
+p02             = 8.82345e-08      +/- 1.265e-08    (14.33%)
+p12             = -7.41617e-07     +/- 6.603e-07    (89.03%)
+p22             = 3.02273e-05      +/- 3.785e-05    (125.2%)
+p03             = 2.27171e-11      +/- 1.136e-11    (50.01%)
+p13             = -8.68623e-10     +/- 1.405e-09    (161.8%)
+p04             = -3.94568e-13     +/- 5.837e-14    (14.79%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.053  1.000 
+p20             0.411 -0.167  1.000 
+p30            -1.000  0.053 -0.411  1.000 
+p40            -0.535 -0.146 -0.900  0.535  1.000 
+p01            -0.130 -0.008 -0.044  0.130  0.068  1.000 
+p11             0.497 -0.033  0.209 -0.497 -0.263 -0.415  1.000 
+p21             0.464 -0.009  0.177 -0.464 -0.244 -0.448  0.532  1.000 
+p31            -0.531  0.029 -0.214  0.531  0.280  0.374 -0.675 -0.931  1.000 
+p02            -0.351 -0.037 -0.090  0.351  0.188  0.037 -0.166 -0.167  0.187  1.000 
+p12             0.839 -0.456  0.478 -0.839 -0.449 -0.087  0.399  0.378 -0.446 -0.255  1.000 
+p22            -0.427  0.532 -0.474  0.427  0.229  0.037 -0.229 -0.173  0.227  0.002 -0.724  1.000 
+p03             0.397 -0.013  0.163 -0.397 -0.213 -0.813  0.434  0.184 -0.211 -0.204  0.315 -0.170  1.000 
+p13            -0.634  0.016 -0.261  0.634  0.340  0.345 -0.807 -0.294  0.337  0.215 -0.494  0.271 -0.540  1.000 
+p04             0.291 -0.016  0.119 -0.291 -0.155 -0.043  0.144  0.135 -0.154 -0.967  0.244 -0.124  0.208 -0.184  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:10:26 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 2.5324642059e-06   0.00e+00  3.60e-03    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149854e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+   1 2.5324642059e-06  -5.99e-07  3.60e-04    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149859e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 2.53246e-06
+rel. change during last iteration : -5.98534e-12
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000711683
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.06493e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.000740076      +/- 3.244e+08    (4.384e+13%)
+p10             = -0.00694207      +/- 0.0443       (638.1%)
+p20             = -0.339701        +/- 8.847        (2604%)
+p30             = 0.00105327       +/- 3.244e+08    (3.08e+13%)
+p40             = 6.14986          +/- 3.287e+04    (5.346e+05%)
+p01             = -2.43654e-06     +/- 1.972e-06    (80.92%)
+p11             = -1.55141e-05     +/- 0.0002641    (1702%)
+p21             = 0.0287601        +/- 0.02112      (73.45%)
+p31             = -1.33545         +/- 1.722        (128.9%)
+p02             = 8.82345e-08      +/- 1.195e-08    (13.55%)
+p12             = -7.41617e-07     +/- 4.001e-07    (53.95%)
+p22             = 3.02273e-05      +/- 4.616e-05    (152.7%)
+p03             = 2.27171e-11      +/- 1.043e-11    (45.91%)
+p13             = -8.68623e-10     +/- 1.362e-09    (156.8%)
+p04             = -3.94568e-13     +/- 5.587e-14    (14.16%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.051  1.000 
+p20             0.031 -0.157  1.000 
+p30            -1.000 -0.051 -0.031  1.000 
+p40            -0.205 -0.212 -0.871  0.205  1.000 
+p01            -0.217 -0.026  0.003  0.217  0.043  1.000 
+p11            -0.482 -0.031 -0.010  0.482  0.102 -0.243  1.000 
+p21            -0.109  0.012 -0.020  0.109  0.028 -0.405  0.394  1.000 
+p31             0.306  0.017  0.015 -0.306 -0.068  0.271 -0.614 -0.897  1.000 
+p02            -0.137 -0.066  0.059  0.137  0.028  0.021  0.075  0.010 -0.042  1.000 
+p12            -0.440 -0.701  0.228  0.440  0.090  0.131  0.182  0.027 -0.135  0.129  1.000 
+p22             0.671  0.452 -0.248 -0.671 -0.138 -0.161 -0.338 -0.050  0.205 -0.221 -0.789  1.000 
+p03             0.032  0.011  0.001 -0.032 -0.007 -0.823  0.245 -0.004  0.010 -0.079 -0.048  0.022  1.000 
+p13             0.603  0.013  0.019 -0.603 -0.124  0.136 -0.803 -0.066  0.185 -0.091 -0.199  0.405 -0.304  1.000 
+p04             0.019  0.001  0.001 -0.019 -0.004 -0.009 -0.009 -0.002  0.006 -0.959 -0.008  0.013  0.106  0.011  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:14:37 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  21 1.0849719334e-08  -5.27e-04  5.62e-12   -1.386826e-01  -7.457911e-02   5.543629e+00   1.403115e-01  -1.008435e+04   9.693472e-07  -9.352150e-05   8.445340e-03  -2.814788e-01  -1.176761e-09  -8.587161e-08   1.320358e-06   4.323698e-13  -3.732405e-13   9.199311e-15
+
+After 21 iterations the fit converged.
+final sum of squares of residuals : 1.08497e-08
+rel. change during last iteration : -5.26792e-09
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.65827e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.16994e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.138683        +/- 1.138e+10    (8.209e+12%)
+p10             = -0.0745791       +/- 0.003092     (4.146%)
+p20             = 5.54363          +/- 0.667        (12.03%)
+p30             = 0.140311         +/- 1.138e+10    (8.113e+12%)
+p40             = -10084.3         +/- 2358         (23.38%)
+p01             = 9.69347e-07      +/- 1.537e-07    (15.85%)
+p11             = -9.35215e-05     +/- 1.754e-05    (18.75%)
+p21             = 0.00844534       +/- 0.001614     (19.11%)
+p31             = -0.281479        +/- 0.1251       (44.45%)
+p02             = -1.17676e-09     +/- 8.265e-10    (70.23%)
+p12             = -8.58716e-08     +/- 2.364e-08    (27.53%)
+p22             = 1.32036e-06      +/- 2.292e-06    (173.6%)
+p03             = 4.3237e-13       +/- 7.019e-13    (162.3%)
+p13             = -3.7324e-13      +/- 7.291e-11    (1.954e+04%)
+p04             = 9.19931e-15      +/- 4.175e-15    (45.38%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.351  1.000 
+p20            -0.497 -0.303  1.000 
+p30            -1.000 -0.351  0.497  1.000 
+p40             0.450 -0.015 -0.908 -0.450  1.000 
+p01             0.573  0.190 -0.278 -0.573  0.256  1.000 
+p11            -0.504 -0.183  0.255  0.504 -0.224 -0.577  1.000 
+p21            -0.525 -0.170  0.248  0.525 -0.232 -0.609  0.552  1.000 
+p31             0.515  0.182 -0.252 -0.515  0.227  0.550 -0.673 -0.936  1.000 
+p02            -0.347 -0.174  0.224  0.347 -0.156 -0.206  0.183  0.178 -0.179  1.000 
+p12            -0.100 -0.740  0.282  0.100 -0.045 -0.024  0.018  0.033 -0.051  0.107  1.000 
+p22            -0.211  0.443 -0.202  0.211 -0.095 -0.137  0.088  0.137 -0.109 -0.088 -0.701  1.000 
+p03            -0.234 -0.074  0.117  0.234 -0.105 -0.801  0.368  0.123 -0.121  0.013 -0.013  0.049  1.000 
+p13             0.222  0.057 -0.110 -0.222  0.100  0.401 -0.729 -0.116  0.114 -0.087  0.067 -0.047 -0.437  1.000 
+p04             0.483  0.169 -0.240 -0.483  0.217  0.273 -0.243 -0.253  0.248 -0.960 -0.048 -0.102 -0.024  0.107  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:14:39 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 1.0849719334e-08   0.00e+00  5.09e-02   -1.386826e-01  -7.457911e-02   5.543629e+00   1.403115e-01  -1.008435e+04   9.693472e-07  -9.352150e-05   8.445340e-03  -2.814788e-01  -1.176761e-09  -8.587161e-08   1.320358e-06   4.323698e-13  -3.732405e-13   9.199311e-15
+   1 1.0849719334e-08  -1.37e-10  5.09e-03   -1.386826e-01  -7.457911e-02   5.543629e+00   1.403115e-01  -1.008435e+04   9.693472e-07  -9.352150e-05   8.445340e-03  -2.814788e-01  -1.176761e-09  -8.587161e-08   1.320358e-06   4.323698e-13  -3.732405e-13   9.199311e-15
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.08497e-08
+rel. change during last iteration : -1.37232e-15
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.65827e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.16994e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.138683        +/- 1.333e+10    (9.61e+12%)
+p10             = -0.0745791       +/- 0.003236     (4.34%)
+p20             = 5.54363          +/- 0.6303       (11.37%)
+p30             = 0.140311         +/- 1.333e+10    (9.499e+12%)
+p40             = -10084.3         +/- 2200         (21.82%)
+p01             = 9.69347e-07      +/- 1.479e-07    (15.26%)
+p11             = -9.35215e-05     +/- 1.767e-05    (18.9%)
+p21             = 0.00844534       +/- 0.001482     (17.55%)
+p31             = -0.281479        +/- 0.1152       (40.93%)
+p02             = -1.17676e-09     +/- 8.28e-10     (70.36%)
+p12             = -8.58716e-08     +/- 2.478e-08    (28.86%)
+p22             = 1.32036e-06      +/- 2.241e-06    (169.7%)
+p03             = 4.3237e-13       +/- 6.919e-13    (160%)
+p13             = -3.7324e-13      +/- 7.943e-11    (2.128e+04%)
+p04             = 9.19931e-15      +/- 4.021e-15    (43.71%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.447  1.000 
+p20            -0.396 -0.307  1.000 
+p30            -1.000 -0.447  0.396  1.000 
+p40             0.289 -0.048 -0.891 -0.289  1.000 
+p01             0.524  0.223 -0.200 -0.524  0.150  1.000 
+p11            -0.515 -0.236  0.208  0.515 -0.146 -0.567  1.000 
+p21            -0.374 -0.152  0.134  0.374 -0.103 -0.545  0.504  1.000 
+p31             0.364  0.164 -0.140 -0.364  0.100  0.479 -0.634 -0.924  1.000 
+p02            -0.352 -0.207  0.194  0.352 -0.102 -0.192  0.189  0.127 -0.128  1.000 
+p12            -0.315 -0.783  0.359  0.315 -0.091 -0.132  0.131  0.097 -0.115  0.179  1.000 
+p22             0.024  0.515 -0.342 -0.024  0.007 -0.005 -0.031  0.020  0.009 -0.173 -0.712  1.000 
+p03            -0.166 -0.066  0.066  0.166 -0.048 -0.789  0.337  0.062 -0.060 -0.011  0.017 -0.004  1.000 
+p13             0.446  0.181 -0.177 -0.446  0.129  0.495 -0.792 -0.167  0.162 -0.166 -0.062  0.010 -0.432  1.000 
+p04             0.417  0.186 -0.165 -0.417  0.121  0.214 -0.215 -0.156  0.152 -0.968 -0.131  0.010  0.025  0.186  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:14:54 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 1.0849719334e-08   0.00e+00  5.09e-02   -1.386826e-01  -7.457911e-02   5.543629e+00   1.403115e-01  -1.008435e+04   9.693472e-07  -9.352150e-05   8.445340e-03  -2.814788e-01  -1.176761e-09  -8.587161e-08   1.320358e-06   4.323698e-13  -3.732405e-13   9.199311e-15
+   1 1.0849719334e-08   0.00e+00  5.09e-02   -1.386826e-01  -7.457911e-02   5.543629e+00   1.403115e-01  -1.008435e+04   9.693472e-07  -9.352150e-05   8.445340e-03  -2.814788e-01  -1.176761e-09  -8.587161e-08   1.320358e-06   4.323698e-13  -3.732405e-13   9.199311e-15
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 1.08497e-08
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.65827e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.16994e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.138683        +/- 1.418e+10    (1.022e+13%)
+p10             = -0.0745791       +/- 0.003248     (4.355%)
+p20             = 5.54363          +/- 0.639        (11.53%)
+p30             = 0.140311         +/- 1.418e+10    (1.01e+13%)
+p40             = -10084.3         +/- 2205         (21.87%)
+p01             = 9.69347e-07      +/- 1.815e-07    (18.72%)
+p11             = -9.35215e-05     +/- 1.865e-05    (19.94%)
+p21             = 0.00844534       +/- 0.001536     (18.19%)
+p31             = -0.281479        +/- 0.1198       (42.56%)
+p02             = -1.17676e-09     +/- 8.089e-10    (68.74%)
+p12             = -8.58716e-08     +/- 2.484e-08    (28.92%)
+p22             = 1.32036e-06      +/- 2.249e-06    (170.3%)
+p03             = 4.3237e-13       +/- 7.421e-13    (171.6%)
+p13             = -3.7324e-13      +/- 8.18e-11     (2.192e+04%)
+p04             = 9.19931e-15      +/- 3.907e-15    (42.47%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.453  1.000 
+p20            -0.424 -0.320  1.000 
+p30            -1.000 -0.453  0.424  1.000 
+p40             0.296 -0.042 -0.890 -0.296  1.000 
+p01             0.720  0.317 -0.299 -0.720  0.212  1.000 
+p11            -0.583 -0.270  0.251  0.583 -0.170 -0.650  1.000 
+p21            -0.446 -0.188  0.176  0.446 -0.128 -0.596  0.545  1.000 
+p31             0.445  0.202 -0.184 -0.445  0.127  0.546 -0.666 -0.930  1.000 
+p02            -0.286 -0.180  0.176  0.286 -0.085 -0.212  0.175  0.123 -0.127  1.000 
+p12            -0.321 -0.784  0.367  0.321 -0.095 -0.204  0.158  0.124 -0.143  0.162  1.000 
+p22             0.089  0.541 -0.365 -0.089  0.026  0.050 -0.070 -0.012  0.040 -0.193 -0.729  1.000 
+p03            -0.393 -0.170  0.167  0.393 -0.117 -0.817  0.452  0.176 -0.175  0.046  0.094 -0.035  1.000 
+p13             0.495  0.206 -0.210 -0.495  0.147  0.563 -0.806 -0.221  0.220 -0.151 -0.083  0.044 -0.519  1.000 
+p04             0.353  0.160 -0.149 -0.353  0.105  0.250 -0.206 -0.157  0.157 -0.966 -0.113  0.031 -0.048  0.174  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:16:56 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  21 1.0849719334e-08  -5.27e-04  5.62e-12   -1.386826e-01  -7.457911e-02   5.543629e+00   1.403115e-01  -1.008435e+04   9.693472e-07  -9.352150e-05   8.445340e-03  -2.814788e-01  -1.176761e-09  -8.587161e-08   1.320358e-06   4.323698e-13  -3.732405e-13   9.199311e-15
+
+After 21 iterations the fit converged.
+final sum of squares of residuals : 1.08497e-08
+rel. change during last iteration : -5.26792e-09
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 4.65827e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.16994e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.138683        +/- 1.138e+10    (8.209e+12%)
+p10             = -0.0745791       +/- 0.003092     (4.146%)
+p20             = 5.54363          +/- 0.667        (12.03%)
+p30             = 0.140311         +/- 1.138e+10    (8.113e+12%)
+p40             = -10084.3         +/- 2358         (23.38%)
+p01             = 9.69347e-07      +/- 1.537e-07    (15.85%)
+p11             = -9.35215e-05     +/- 1.754e-05    (18.75%)
+p21             = 0.00844534       +/- 0.001614     (19.11%)
+p31             = -0.281479        +/- 0.1251       (44.45%)
+p02             = -1.17676e-09     +/- 8.265e-10    (70.23%)
+p12             = -8.58716e-08     +/- 2.364e-08    (27.53%)
+p22             = 1.32036e-06      +/- 2.292e-06    (173.6%)
+p03             = 4.3237e-13       +/- 7.019e-13    (162.3%)
+p13             = -3.7324e-13      +/- 7.291e-11    (1.954e+04%)
+p04             = 9.19931e-15      +/- 4.175e-15    (45.38%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.351  1.000 
+p20            -0.497 -0.303  1.000 
+p30            -1.000 -0.351  0.497  1.000 
+p40             0.450 -0.015 -0.908 -0.450  1.000 
+p01             0.573  0.190 -0.278 -0.573  0.256  1.000 
+p11            -0.504 -0.183  0.255  0.504 -0.224 -0.577  1.000 
+p21            -0.525 -0.170  0.248  0.525 -0.232 -0.609  0.552  1.000 
+p31             0.515  0.182 -0.252 -0.515  0.227  0.550 -0.673 -0.936  1.000 
+p02            -0.347 -0.174  0.224  0.347 -0.156 -0.206  0.183  0.178 -0.179  1.000 
+p12            -0.100 -0.740  0.282  0.100 -0.045 -0.024  0.018  0.033 -0.051  0.107  1.000 
+p22            -0.211  0.443 -0.202  0.211 -0.095 -0.137  0.088  0.137 -0.109 -0.088 -0.701  1.000 
+p03            -0.234 -0.074  0.117  0.234 -0.105 -0.801  0.368  0.123 -0.121  0.013 -0.013  0.049  1.000 
+p13             0.222  0.057 -0.110 -0.222  0.100  0.401 -0.729 -0.116  0.114 -0.087  0.067 -0.047 -0.437  1.000 
+p04             0.483  0.169 -0.240 -0.483  0.217  0.273 -0.243 -0.253  0.248 -0.960 -0.048 -0.102 -0.024  0.107  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:22:07 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Mon Jul 29 01:22:20 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p02*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p01           p11           p02          
+   0 2.9301884452e+11   0.00e+00  4.94e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  12 3.2249749386e-07  -7.64e-06  4.94e-08    1.673419e-03  -8.547417e-02   3.239163e+00   1.437551e-06  -7.418182e-05   4.836414e-10
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 3.22497e-07
+rel. change during last iteration : -7.63513e-11
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000151775
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.30355e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00167342       +/- 6.523e-05    (3.898%)
+p10             = -0.0854742       +/- 0.005843     (6.836%)
+p20             = 3.23916          +/- 0.5589       (17.26%)
+p01             = 1.43755e-06      +/- 1.218e-07    (8.475%)
+p11             = -7.41818e-05     +/- 1.274e-05    (17.17%)
+p02             = 4.83641e-10      +/- 4.432e-10    (91.64%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p01    p11    p02    
+p00             1.000 
+p10             0.233  1.000 
+p20            -0.520 -0.745  1.000 
+p01            -0.048  0.002  0.000  1.000 
+p11             0.001 -0.004  0.000 -0.407  1.000 
+p02            -0.636  0.000  0.000  0.070  0.000  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:22:35 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p02*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p01           p11           p02          
+   0 3.2249749386e-07   0.00e+00  8.05e-04    1.673419e-03  -8.547417e-02   3.239163e+00   1.437551e-06  -7.418182e-05   4.836414e-10
+   1 3.2249749386e-07  -3.28e-11  8.05e-04    1.673419e-03  -8.547417e-02   3.239163e+00   1.437551e-06  -7.418182e-05   4.836414e-10
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.22497e-07
+rel. change during last iteration : -3.2831e-16
+
+degrees of freedom    (FIT_NDF)                        : 14
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000151775
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.30355e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00167342       +/- 6.523e-05    (3.898%)
+p10             = -0.0854742       +/- 0.005843     (6.836%)
+p20             = 3.23916          +/- 0.5589       (17.26%)
+p01             = 1.43755e-06      +/- 1.218e-07    (8.475%)
+p11             = -7.41818e-05     +/- 1.274e-05    (17.17%)
+p02             = 4.83641e-10      +/- 4.432e-10    (91.64%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p01    p11    p02    
+p00             1.000 
+p10             0.233  1.000 
+p20            -0.520 -0.745  1.000 
+p01            -0.048  0.002 -0.000  1.000 
+p11             0.001 -0.004 -0.000 -0.407  1.000 
+p02            -0.636  0.000  0.000  0.070  0.000  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:24:03 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p21           p01           p11           p02           p12          
+   0 2.9532901215e+11   0.00e+00  4.28e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  12 9.0088439360e-08  -7.50e-06  4.28e-08    1.646433e-03  -7.832633e-02   3.229692e+00   5.130092e-03   1.131688e-06  -1.156013e-04   7.780766e-10  -7.557178e-08
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 9.00884e-08
+rel. change during last iteration : -7.49881e-11
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.66451e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.50737e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00164643       +/- 3.872e-05    (2.351%)
+p10             = -0.0783263       +/- 0.004303     (5.494%)
+p20             = 3.22969          +/- 0.3191       (9.88%)
+p21             = 0.00513009       +/- 0.001043     (20.33%)
+p01             = 1.13169e-06      +/- 9.409e-08    (8.315%)
+p11             = -0.000115601     +/- 1.092e-05    (9.446%)
+p02             = 7.78077e-10      +/- 2.772e-10    (35.62%)
+p12             = -7.55718e-08     +/- 2.904e-08    (38.43%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p21    p01    p11    p02    p12    
+p00             1.000 
+p10             0.001  1.000 
+p20            -0.500 -0.578  1.000 
+p21             0.003  0.003 -0.006  1.000 
+p01            -0.042  0.013  0.004 -0.673  1.000 
+p11             0.013 -0.037  0.004 -0.744  0.299  1.000 
+p02            -0.670  0.258 -0.000 -0.000  0.056 -0.021  1.000 
+p12             0.274 -0.632  0.000  0.000 -0.023  0.051 -0.408  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:24:19 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p21           p01           p11           p02           p12          
+   0 9.0088439360e-08   0.00e+00  6.83e-04    1.646433e-03  -7.832633e-02   3.229692e+00   5.130092e-03   1.131688e-06  -1.156013e-04   7.780766e-10  -7.557178e-08
+   1 9.0088439360e-08  -1.91e-10  6.83e-03    1.646433e-03  -7.832633e-02   3.229692e+00   5.130092e-03   1.131688e-06  -1.156013e-04   7.780766e-10  -7.557178e-08
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 9.00884e-08
+rel. change during last iteration : -1.90983e-15
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.66451e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.50737e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00164643       +/- 3.872e-05    (2.351%)
+p10             = -0.0783263       +/- 0.004303     (5.494%)
+p20             = 3.22969          +/- 0.3191       (9.88%)
+p21             = 0.00513009       +/- 0.001043     (20.33%)
+p01             = 1.13169e-06      +/- 9.409e-08    (8.315%)
+p11             = -0.000115601     +/- 1.092e-05    (9.446%)
+p02             = 7.78077e-10      +/- 2.772e-10    (35.62%)
+p12             = -7.55718e-08     +/- 2.904e-08    (38.43%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p21    p01    p11    p02    p12    
+p00             1.000 
+p10             0.001  1.000 
+p20            -0.500 -0.578  1.000 
+p21             0.003  0.003 -0.006  1.000 
+p01            -0.042  0.013  0.004 -0.673  1.000 
+p11             0.013 -0.037  0.004 -0.744  0.299  1.000 
+p02            -0.670  0.258 -0.000 -0.000  0.056 -0.021  1.000 
+p12             0.274 -0.632  0.000  0.000 -0.023  0.051 -0.408  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:25:09 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30*(y**3)*p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)+p03*(x**3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p21           p01           p11           p02           p12           p03          
+   0 5.1710780769e+16   0.00e+00  1.61e+07    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+ 126 3.0741981079e-07  -9.54e-01  1.61e-04    1.646487e-03  -7.828866e-02   3.203543e+00  -4.643771e-03   6.883269e-03  -4.643771e-03  -1.237704e-04   9.139403e-10  -7.390509e-08   5.746185e-12
+
+After 126 iterations the fit converged.
+final sum of squares of residuals : 3.0742e-07
+rel. change during last iteration : -9.53945e-06
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000175334
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.0742e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00164649       +/- 8.628e-05    (5.24%)
+p10             = -0.0782887       +/- 0.01         (12.78%)
+p20             = 3.20354          +/- 0.6635       (20.71%)
+p30             = -0.00464377      +/- 7.755e+16    (1.67e+21%)
+p21             = 0.00688327       +/- 0.004902     (71.22%)
+p01             = -0.00464377      +/- 7.755e+16    (1.67e+21%)
+p11             = -0.00012377      +/- 3.786e-05    (30.59%)
+p02             = 9.1394e-10       +/- 5.763e-10    (63.06%)
+p12             = -7.39051e-08     +/- 8.49e-08     (114.9%)
+p03             = 5.74619e-12      +/- 1.56e-12     (27.16%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p21    p01    p11    p02    p12    p03    
+p00             1.000 
+p10             0.206  1.000 
+p20            -0.539 -0.603  1.000 
+p30            -0.418 -0.492  0.231  1.000 
+p21             0.156  0.183 -0.086 -0.365  1.000 
+p01             0.418  0.492 -0.231 -1.000  0.365  1.000 
+p11             0.055  0.039 -0.023 -0.114  0.541  0.114  1.000 
+p02            -0.682  0.116  0.049  0.209 -0.115 -0.209 -0.055  1.000 
+p12            -0.130 -0.736  0.167  0.722 -0.267 -0.722 -0.064 -0.124  1.000 
+p03            -0.245 -0.244  0.120  0.509 -0.791 -0.509 -0.364  0.196  0.359  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:25:10 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30*(y**3)*p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)+p03*(x**3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p21           p01           p11           p02           p12           p03          
+   0 3.0741981079e-07   0.00e+00  6.12e-04    1.646487e-03  -7.828866e-02   3.203543e+00  -4.643771e-03   6.883269e-03  -4.643771e-03  -1.237704e-04   9.139403e-10  -7.390509e-08   5.746185e-12
+   3 3.0738017963e-07  -2.97e-01  6.12e-07    1.645096e-03  -7.846723e-02   3.226456e+00  -4.270417e-03   6.882899e-03  -4.270417e-03  -1.237668e-04   9.139428e-10  -7.390491e-08   5.746316e-12
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 3.0738e-07
+rel. change during last iteration : -2.96774e-06
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000175323
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.0738e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.0016451        +/- 7.85e-05     (4.772%)
+p10             = -0.0784672       +/- 0.008868     (11.3%)
+p20             = 3.22646          +/- 0.6457       (20.01%)
+p30             = -0.00427042      +/- 7.378e+16    (1.728e+21%)
+p21             = 0.0068829        +/- 0.004712     (68.45%)
+p01             = -0.00427042      +/- 7.378e+16    (1.728e+21%)
+p11             = -0.000123767     +/- 3.803e-05    (30.73%)
+p02             = 9.13943e-10      +/- 5.662e-10    (61.95%)
+p12             = -7.39049e-08     +/- 6.145e-08    (83.15%)
+p03             = 5.74632e-12      +/- 1.41e-12     (24.54%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p21    p01    p11    p02    p12    p03    
+p00             1.000 
+p10             0.011  1.000 
+p20            -0.500 -0.568  1.000 
+p30            -0.056 -0.189  0.001  1.000 
+p21             0.018  0.051 -0.002 -0.249  1.000 
+p01             0.056  0.189 -0.001 -1.000  0.249  1.000 
+p11             0.017  0.009  0.003 -0.149  0.554  0.149  1.000 
+p02            -0.671  0.233  0.000  0.097 -0.065 -0.097 -0.046  1.000 
+p12             0.245 -0.648  0.000  0.293 -0.078 -0.293 -0.018 -0.359  1.000 
+p03            -0.057 -0.050  0.003  0.303 -0.773 -0.303 -0.382  0.131  0.076  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:25:39 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30*(y**3)*p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)+p03*(x**3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p21           p01           p11           p02           p12           p03          
+   0 3.0738017963e-07   0.00e+00  6.12e-04    1.645096e-03  -7.846723e-02   3.226456e+00  -4.270417e-03   6.882899e-03  -4.270417e-03  -1.237668e-04   9.139428e-10  -7.390491e-08   5.746316e-12
+   1 3.0738017956e-07  -2.22e-05  6.12e-05    1.645096e-03  -7.846723e-02   3.226456e+00  -4.270389e-03   6.882898e-03  -4.270389e-03  -1.237668e-04   9.139428e-10  -7.390491e-08   5.746316e-12
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.0738e-07
+rel. change during last iteration : -2.2173e-10
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000175323
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.0738e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.0016451        +/- 8.032e-05    (4.883%)
+p10             = -0.0784672       +/- 0.01245      (15.87%)
+p20             = 3.22646          +/- 0.6457       (20.01%)
+p30             = -0.00427039      +/- 3.259e+17    (7.633e+21%)
+p21             = 0.0068829        +/- 0.004578     (66.52%)
+p01             = -0.00427039      +/- 3.259e+17    (7.633e+21%)
+p11             = -0.000123767     +/- 4.097e-05    (33.1%)
+p02             = 9.13943e-10      +/- 5.926e-10    (64.84%)
+p12             = -7.39049e-08     +/- 1.121e-07    (151.6%)
+p03             = 5.74632e-12      +/- 1.355e-12    (23.58%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p21    p01    p11    p02    p12    p03    
+p00             1.000 
+p10             0.159  1.000 
+p20            -0.488 -0.406  1.000 
+p30             0.221  0.715 -0.012  1.000 
+p21            -0.014 -0.055 -0.001 -0.081  1.000 
+p01            -0.221 -0.715  0.012 -1.000  0.081  1.000 
+p11            -0.080 -0.297  0.007 -0.397  0.526  0.397  1.000 
+p02            -0.690 -0.051  0.004 -0.310 -0.015  0.310  0.095  1.000 
+p12            -0.048 -0.841  0.010 -0.851  0.066  0.851  0.351  0.061  1.000 
+p03            -0.012  0.099  0.001  0.130 -0.757 -0.130 -0.377  0.060 -0.118  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:25:40 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30*(y**3)*p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)+p03*(x**3)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p21           p01           p11           p02           p12           p03          
+   0 3.0738017956e-07   0.00e+00  6.12e-04    1.645096e-03  -7.846723e-02   3.226456e+00  -4.270389e-03   6.882898e-03  -4.270389e-03  -1.237668e-04   9.139428e-10  -7.390491e-08   5.746316e-12
+   1 3.0738017949e-07  -2.21e-05  6.12e-05    1.645096e-03  -7.846723e-02   3.226456e+00  -4.270360e-03   6.882897e-03  -4.270360e-03  -1.237668e-04   9.139428e-10  -7.390491e-08   5.746316e-12
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.0738e-07
+rel. change during last iteration : -2.21337e-10
+
+degrees of freedom    (FIT_NDF)                        : 10
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000175323
+variance of residuals (reduced chisquare) = WSSR/ndf   : 3.0738e-08
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.0016451        +/- 7.907e-05    (4.807%)
+p10             = -0.0784672       +/- 0.01255      (15.99%)
+p20             = 3.22646          +/- 0.6457       (20.01%)
+p30             = -0.00427036      +/- 1.481e+17    (3.468e+21%)
+p21             = 0.0068829        +/- 0.004564     (66.3%)
+p01             = -0.00427036      +/- 1.481e+17    (3.468e+21%)
+p11             = -0.000123767     +/- 3.917e-05    (31.65%)
+p02             = 9.13943e-10      +/- 5.74e-10     (62.81%)
+p12             = -7.39049e-08     +/- 1.134e-07    (153.5%)
+p03             = 5.74632e-12      +/- 1.345e-12    (23.41%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p21    p01    p11    p02    p12    p03    
+p00             1.000 
+p10             0.097  1.000 
+p20            -0.497 -0.410  1.000 
+p30             0.133  0.722 -0.010  1.000 
+p21             0.002 -0.005 -0.002 -0.011  1.000 
+p01            -0.133 -0.722  0.010 -1.000  0.011  1.000 
+p11            -0.029 -0.216  0.006 -0.280  0.522  0.280  1.000 
+p02            -0.677  0.038  0.002 -0.190 -0.039  0.190  0.023  1.000 
+p12             0.026 -0.844  0.009 -0.855  0.007  0.855  0.253 -0.044  1.000 
+p03            -0.035  0.042  0.002  0.050 -0.755 -0.050 -0.357  0.095 -0.050  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:28:17 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p21           p01           p11           p02           p12          
+   0 2.9532901215e+11   0.00e+00  4.28e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  12 9.0088439360e-08  -7.50e-06  4.28e-08    1.646433e-03  -7.832633e-02   3.229692e+00   5.130092e-03   1.131688e-06  -1.156013e-04   7.780766e-10  -7.557178e-08
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 9.00884e-08
+rel. change during last iteration : -7.49881e-11
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.66451e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.50737e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00164643       +/- 3.872e-05    (2.351%)
+p10             = -0.0783263       +/- 0.004303     (5.494%)
+p20             = 3.22969          +/- 0.3191       (9.88%)
+p21             = 0.00513009       +/- 0.001043     (20.33%)
+p01             = 1.13169e-06      +/- 9.409e-08    (8.315%)
+p11             = -0.000115601     +/- 1.092e-05    (9.446%)
+p02             = 7.78077e-10      +/- 2.772e-10    (35.62%)
+p12             = -7.55718e-08     +/- 2.904e-08    (38.43%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p21    p01    p11    p02    p12    
+p00             1.000 
+p10             0.001  1.000 
+p20            -0.500 -0.578  1.000 
+p21             0.003  0.003 -0.006  1.000 
+p01            -0.042  0.013  0.004 -0.673  1.000 
+p11             0.013 -0.037  0.004 -0.744  0.299  1.000 
+p02            -0.670  0.258 -0.000 -0.000  0.056 -0.021  1.000 
+p12             0.274 -0.632  0.000  0.000 -0.023  0.051 -0.408  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:30:13 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  21 3.0496869571e-14  -8.18e-03  5.62e-12   -7.973874e-03  -5.960763e-05   3.705517e-03   7.973899e-03  -6.563142e+01  -2.828095e-10  -5.215631e-09   7.226787e-06  -3.112687e-04   1.245182e-12  -1.128001e-10   1.090903e-08   1.659026e-15  -1.581748e-13  -5.766927e-18
+
+After 21 iterations the fit converged.
+final sum of squares of residuals : 3.04969e-14
+rel. change during last iteration : -8.18043e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.80985e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.09937e-15
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.00797387      +/- 6.888e+07    (8.638e+11%)
+p10             = -5.96076e-05     +/- 4.863e-06    (8.159%)
+p20             = 0.00370552       +/- 0.001041     (28.1%)
+p30             = 0.0079739        +/- 6.888e+07    (8.638e+11%)
+p40             = -65.6314         +/- 3.804        (5.796%)
+p01             = -2.8281e-10      +/- 3.016e-10    (106.6%)
+p11             = -5.21563e-09     +/- 2.907e-08    (557.3%)
+p21             = 7.22679e-06      +/- 2.318e-06    (32.08%)
+p31             = -0.000311269     +/- 0.0001813    (58.25%)
+p02             = 1.24518e-12      +/- 1.491e-12    (119.8%)
+p12             = -1.128e-10       +/- 3.949e-11    (35.01%)
+p22             = 1.0909e-08       +/- 3.789e-09    (34.73%)
+p03             = 1.65903e-15      +/- 1.444e-15    (87.07%)
+p13             = -1.58175e-13     +/- 1.235e-13    (78.06%)
+p04             = -5.76693e-18     +/- 6.997e-18    (121.3%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.060  1.000 
+p20             0.362 -0.170  1.000 
+p30            -1.000  0.060 -0.362  1.000 
+p40            -0.372 -0.169 -0.899  0.372  1.000 
+p01             0.714 -0.053  0.265 -0.714 -0.267  1.000 
+p11            -0.487  0.023 -0.172  0.487  0.184 -0.596  1.000 
+p21             0.110  0.011  0.024 -0.110 -0.036 -0.229  0.287  1.000 
+p31             0.125 -0.006  0.050 -0.125 -0.052  0.342 -0.546 -0.886  1.000 
+p02             0.491 -0.081  0.229 -0.491 -0.183  0.345 -0.231  0.049  0.062  1.000 
+p12             0.055 -0.757  0.270 -0.055 -0.021  0.068 -0.060 -0.017  0.007  0.094  1.000 
+p22            -0.132  0.566 -0.383  0.132  0.049 -0.109  0.045  0.016 -0.017 -0.217 -0.742  1.000 
+p03            -0.611  0.044 -0.221  0.611  0.227 -0.900  0.503 -0.067 -0.077 -0.351 -0.063  0.081  1.000 
+p13             0.261 -0.038  0.094 -0.261 -0.097  0.418 -0.745  0.029  0.033  0.119  0.103 -0.035 -0.470  1.000 
+p04            -0.482  0.029 -0.175  0.482  0.179 -0.347  0.235 -0.053 -0.060 -0.973 -0.027  0.064  0.367 -0.126  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:30:25 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 3.0496869571e-14   0.00e+00  2.91e-03   -7.973874e-03  -5.960763e-05   3.705517e-03   7.973899e-03  -6.563142e+01  -2.828095e-10  -5.215631e-09   7.226787e-06  -3.112687e-04   1.245182e-12  -1.128001e-10   1.090903e-08   1.659026e-15  -1.581748e-13  -5.766927e-18
+   1 3.0496869571e-14  -2.07e-11  2.91e-04   -7.973874e-03  -5.960763e-05   3.705517e-03   7.973899e-03  -6.563142e+01  -2.828095e-10  -5.215631e-09   7.226787e-06  -3.112687e-04   1.245182e-12  -1.128001e-10   1.090903e-08   1.659026e-15  -1.581748e-13  -5.766927e-18
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 3.04969e-14
+rel. change during last iteration : -2.06936e-16
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.80985e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.09937e-15
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.00797387      +/- 8.967e+07    (1.124e+12%)
+p10             = -5.96076e-05     +/- 4.87e-06     (8.17%)
+p20             = 0.00370552       +/- 0.001076     (29.05%)
+p30             = 0.0079739        +/- 8.967e+07    (1.124e+12%)
+p40             = -65.6314         +/- 4.037        (6.151%)
+p01             = -2.8281e-10      +/- 2.558e-10    (90.46%)
+p11             = -5.21563e-09     +/- 3.432e-08    (658%)
+p21             = 7.22679e-06      +/- 2.307e-06    (31.92%)
+p31             = -0.000311269     +/- 0.0001856    (59.64%)
+p02             = 1.24518e-12      +/- 1.718e-12    (138%)
+p12             = -1.128e-10       +/- 3.95e-11     (35.02%)
+p22             = 1.0909e-08       +/- 3.756e-09    (34.43%)
+p03             = 1.65903e-15      +/- 1.417e-15    (85.42%)
+p13             = -1.58175e-13     +/- 1.354e-13    (85.58%)
+p04             = -5.76693e-18     +/- 8.266e-18    (143.3%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.079  1.000 
+p20             0.433 -0.108  1.000 
+p30            -1.000 -0.079 -0.433  1.000 
+p40            -0.485 -0.219 -0.907  0.485  1.000 
+p01             0.564  0.033  0.252 -0.564 -0.275  1.000 
+p11            -0.673 -0.059 -0.288  0.673  0.328 -0.628  1.000 
+p21             0.048  0.021  0.005 -0.048 -0.018 -0.337  0.258  1.000 
+p31             0.247  0.021  0.112 -0.247 -0.125  0.430 -0.567 -0.871  1.000 
+p02             0.654  0.007  0.327 -0.654 -0.317  0.364 -0.434  0.027  0.162  1.000 
+p12            -0.059 -0.757  0.217  0.059  0.028  0.000  0.011 -0.026 -0.014  0.020  1.000 
+p22            -0.002  0.562 -0.327  0.002  0.001 -0.018 -0.015  0.031 -0.000 -0.134 -0.741  1.000 
+p03            -0.590 -0.039 -0.256  0.590  0.286 -0.891  0.575 -0.028 -0.146 -0.432  0.005  0.001  1.000 
+p13             0.474  0.017  0.205 -0.474 -0.230  0.517 -0.796  0.023  0.117  0.303  0.053 -0.001 -0.568  1.000 
+p04            -0.671 -0.053 -0.290  0.671  0.325 -0.382  0.451 -0.032 -0.166 -0.980  0.039  0.001  0.459 -0.318  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:34:01 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p01           p11           p21           p02           p12          
+   0 2.9532901215e+11   0.00e+00  4.28e+04    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  12 9.0088439360e-08  -7.50e-06  4.28e-08    1.646433e-03  -7.832633e-02   3.229692e+00   1.131688e-06  -1.156013e-04   5.130092e-03   7.780766e-10  -7.557178e-08
+
+After 12 iterations the fit converged.
+final sum of squares of residuals : 9.00884e-08
+rel. change during last iteration : -7.49852e-11
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.66451e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.50737e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00164643       +/- 3.872e-05    (2.351%)
+p10             = -0.0783263       +/- 0.004303     (5.494%)
+p20             = 3.22969          +/- 0.3191       (9.88%)
+p01             = 1.13169e-06      +/- 9.409e-08    (8.315%)
+p11             = -0.000115601     +/- 1.092e-05    (9.446%)
+p21             = 0.00513009       +/- 0.001043     (20.33%)
+p02             = 7.78077e-10      +/- 2.772e-10    (35.62%)
+p12             = -7.55718e-08     +/- 2.904e-08    (38.43%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p01    p11    p21    p02    p12    
+p00             1.000 
+p10             0.001  1.000 
+p20            -0.500 -0.578  1.000 
+p01            -0.042  0.013  0.004  1.000 
+p11             0.013 -0.037  0.004  0.299  1.000 
+p21             0.003  0.003 -0.006 -0.673 -0.744  1.000 
+p02            -0.670  0.258  0.000  0.056 -0.021  0.000  1.000 
+p12             0.274 -0.632  0.000 -0.023  0.051  0.000 -0.408  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:35:00 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  17 2.5324642059e-06  -6.50e-01  5.62e-08    7.400762e-04  -6.942066e-03  -3.397010e-01   1.053274e-03   6.149854e+00  -2.436542e-06  -1.551413e-05   2.876013e-02  -1.335454e+00   8.823448e-08  -7.416173e-07   3.022728e-05   2.271705e-11  -8.686227e-10  -3.945677e-13
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 2.53246e-06
+rel. change during last iteration : -6.49612e-06
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000711683
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.06493e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.000740076      +/- 3.598e+08    (4.861e+13%)
+p10             = -0.00694207      +/- 0.0443       (638.2%)
+p20             = -0.339701        +/- 9.7          (2856%)
+p30             = 0.00105327       +/- 3.598e+08    (3.416e+13%)
+p40             = 6.14985          +/- 3.809e+04    (6.193e+05%)
+p01             = -2.43654e-06     +/- 1.941e-06    (79.65%)
+p11             = -1.55141e-05     +/- 0.0002666    (1719%)
+p21             = 0.0287601        +/- 0.0237       (82.41%)
+p31             = -1.33545         +/- 1.935        (144.9%)
+p02             = 8.82345e-08      +/- 1.265e-08    (14.33%)
+p12             = -7.41617e-07     +/- 6.603e-07    (89.03%)
+p22             = 3.02273e-05      +/- 3.785e-05    (125.2%)
+p03             = 2.27171e-11      +/- 1.136e-11    (50.01%)
+p13             = -8.68623e-10     +/- 1.405e-09    (161.8%)
+p04             = -3.94568e-13     +/- 5.837e-14    (14.79%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.053  1.000 
+p20             0.411 -0.167  1.000 
+p30            -1.000  0.053 -0.411  1.000 
+p40            -0.535 -0.146 -0.900  0.535  1.000 
+p01            -0.130 -0.008 -0.044  0.130  0.068  1.000 
+p11             0.497 -0.033  0.209 -0.497 -0.263 -0.415  1.000 
+p21             0.464 -0.009  0.177 -0.464 -0.244 -0.448  0.532  1.000 
+p31            -0.531  0.029 -0.214  0.531  0.280  0.374 -0.675 -0.931  1.000 
+p02            -0.351 -0.037 -0.090  0.351  0.188  0.037 -0.166 -0.167  0.187  1.000 
+p12             0.839 -0.456  0.478 -0.839 -0.449 -0.087  0.399  0.378 -0.446 -0.255  1.000 
+p22            -0.427  0.532 -0.474  0.427  0.229  0.037 -0.229 -0.173  0.227  0.002 -0.724  1.000 
+p03             0.397 -0.013  0.163 -0.397 -0.213 -0.813  0.434  0.184 -0.211 -0.204  0.315 -0.170  1.000 
+p13            -0.634  0.016 -0.261  0.634  0.340  0.345 -0.807 -0.294  0.337  0.215 -0.494  0.271 -0.540  1.000 
+p04             0.291 -0.016  0.119 -0.291 -0.155 -0.043  0.144  0.135 -0.154 -0.967  0.244 -0.124  0.208 -0.184  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:36:42 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:5
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  21 3.0496869571e-14  -8.18e-03  5.62e-12   -7.973874e-03  -5.960763e-05   3.705517e-03   7.973899e-03  -6.563142e+01  -2.828095e-10  -5.215631e-09   7.226787e-06  -3.112687e-04   1.245182e-12  -1.128001e-10   1.090903e-08   1.659026e-15  -1.581748e-13  -5.766927e-18
+
+After 21 iterations the fit converged.
+final sum of squares of residuals : 3.04969e-14
+rel. change during last iteration : -8.18043e-08
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 7.80985e-08
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.09937e-15
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = -0.00797387      +/- 6.888e+07    (8.638e+11%)
+p10             = -5.96076e-05     +/- 4.863e-06    (8.159%)
+p20             = 0.00370552       +/- 0.001041     (28.1%)
+p30             = 0.0079739        +/- 6.888e+07    (8.638e+11%)
+p40             = -65.6314         +/- 3.804        (5.796%)
+p01             = -2.8281e-10      +/- 3.016e-10    (106.6%)
+p11             = -5.21563e-09     +/- 2.907e-08    (557.3%)
+p21             = 7.22679e-06      +/- 2.318e-06    (32.08%)
+p31             = -0.000311269     +/- 0.0001813    (58.25%)
+p02             = 1.24518e-12      +/- 1.491e-12    (119.8%)
+p12             = -1.128e-10       +/- 3.949e-11    (35.01%)
+p22             = 1.0909e-08       +/- 3.789e-09    (34.73%)
+p03             = 1.65903e-15      +/- 1.444e-15    (87.07%)
+p13             = -1.58175e-13     +/- 1.235e-13    (78.06%)
+p04             = -5.76693e-18     +/- 6.997e-18    (121.3%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10            -0.060  1.000 
+p20             0.362 -0.170  1.000 
+p30            -1.000  0.060 -0.362  1.000 
+p40            -0.372 -0.169 -0.899  0.372  1.000 
+p01             0.714 -0.053  0.265 -0.714 -0.267  1.000 
+p11            -0.487  0.023 -0.172  0.487  0.184 -0.596  1.000 
+p21             0.110  0.011  0.024 -0.110 -0.036 -0.229  0.287  1.000 
+p31             0.125 -0.006  0.050 -0.125 -0.052  0.342 -0.546 -0.886  1.000 
+p02             0.491 -0.081  0.229 -0.491 -0.183  0.345 -0.231  0.049  0.062  1.000 
+p12             0.055 -0.757  0.270 -0.055 -0.021  0.068 -0.060 -0.017  0.007  0.094  1.000 
+p22            -0.132  0.566 -0.383  0.132  0.049 -0.109  0.045  0.016 -0.017 -0.217 -0.742  1.000 
+p03            -0.611  0.044 -0.221  0.611  0.227 -0.900  0.503 -0.067 -0.077 -0.351 -0.063  0.081  1.000 
+p13             0.261 -0.038  0.094 -0.261 -0.097  0.418 -0.745  0.029  0.033  0.119  0.103 -0.035 -0.470  1.000 
+p04            -0.482  0.029 -0.175  0.482  0.179 -0.347  0.235 -0.053 -0.060 -0.973 -0.027  0.064  0.367 -0.126  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:47:04 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  17 2.5770870770e-06  -5.12e-02  5.62e-08    2.090597e-03  -9.559564e-03   2.731750e-01  -3.291198e-04   2.457659e+00  -2.253021e-06  -3.487641e-05   2.542000e-02  -1.115598e+00   8.682966e-08  -7.314982e-07   2.626617e-05   2.228509e-11  -8.040592e-10  -3.870400e-13
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 2.57709e-06
+rel. change during last iteration : -5.11535e-07
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000717926
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.15417e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.0020906        +/- 9.739e+07    (4.658e+12%)
+p10             = -0.00955956      +/- 0.04571      (478.2%)
+p20             = 0.273175         +/- 8.92         (3265%)
+p30             = -0.00032912      +/- 9.739e+07    (2.959e+13%)
+p40             = 2.45766          +/- 3.28e+04     (1.335e+06%)
+p01             = -2.25302e-06     +/- 1.97e-06     (87.44%)
+p11             = -3.48764e-05     +/- 0.0002782    (797.8%)
+p21             = 0.02542          +/- 0.02277      (89.56%)
+p31             = -1.1156          +/- 2.439        (218.6%)
+p02             = 8.68297e-08      +/- 1.198e-08    (13.8%)
+p12             = -7.31498e-07     +/- 3.856e-07    (52.72%)
+p22             = 2.62662e-05      +/- 3.992e-05    (152%)
+p03             = 2.22851e-11      +/- 1.121e-11    (50.31%)
+p13             = -8.04059e-10     +/- 1.242e-09    (154.4%)
+p04             = -3.8704e-13      +/- 5.651e-14    (14.6%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.216  1.000 
+p20             0.006 -0.154  1.000 
+p30            -1.000 -0.216 -0.006  1.000 
+p40            -0.144 -0.231 -0.875  0.144  1.000 
+p01            -0.170 -0.051  0.009  0.170  0.022  1.000 
+p11            -0.544 -0.124  0.001  0.544  0.081 -0.244  1.000 
+p21            -0.366 -0.063 -0.018  0.366  0.058 -0.343  0.505  1.000 
+p31             0.735  0.160  0.008 -0.735 -0.110  0.117 -0.718 -0.845  1.000 
+p02             0.078 -0.041  0.064 -0.078 -0.011 -0.022 -0.034 -0.034  0.057  1.000 
+p12            -0.341 -0.768  0.251  0.341  0.049  0.096  0.156  0.105 -0.251  0.046  1.000 
+p22             0.502  0.585 -0.310 -0.502 -0.072 -0.103 -0.289 -0.159  0.369 -0.112 -0.775  1.000 
+p03             0.347  0.084  0.002 -0.347 -0.050 -0.832  0.045 -0.127  0.255 -0.043 -0.151  0.174  1.000 
+p13            -0.470 -0.122 -0.003  0.470  0.068  0.378 -0.287  0.172 -0.346 -0.046  0.237 -0.236 -0.499  1.000 
+p04            -0.077 -0.017 -0.000  0.077  0.011  0.008  0.042  0.028 -0.057 -0.965  0.026 -0.039  0.072  0.036  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:47:14 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p01           p11           p21           p02           p12          
+   0 2.2051541457e-03   0.00e+00  3.83e-03    2.090597e-03  -9.559564e-03   2.731750e-01  -2.253021e-06  -3.487641e-05   2.542000e-02   8.682966e-08  -7.314982e-07
+   5 9.3504073123e-08  -2.74e-01  3.83e-08    1.669838e-03  -7.880745e-02   3.119354e+00   1.149831e-06  -1.222862e-04   5.589576e-03   7.986839e-10  -6.478141e-08
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 9.35041e-08
+rel. change during last iteration : -2.73847e-06
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.82723e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.79201e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00166984       +/- 3.944e-05    (2.362%)
+p10             = -0.0788075       +/- 0.004384     (5.563%)
+p20             = 3.11935          +/- 0.3251       (10.42%)
+p01             = 1.14983e-06      +/- 9.586e-08    (8.337%)
+p11             = -0.000122286     +/- 1.112e-05    (9.097%)
+p21             = 0.00558958       +/- 0.001063     (19.01%)
+p02             = 7.98684e-10      +/- 2.824e-10    (35.35%)
+p12             = -6.47814e-08     +/- 2.959e-08    (45.67%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p01    p11    p21    p02    p12    
+p00             1.000 
+p10             0.001  1.000 
+p20            -0.500 -0.578  1.000 
+p01            -0.042  0.013  0.004  1.000 
+p11             0.013 -0.037  0.004  0.299  1.000 
+p21             0.003  0.003 -0.006 -0.673 -0.744  1.000 
+p02            -0.670  0.258 -0.000  0.056 -0.021 -0.000  1.000 
+p12             0.274 -0.632  0.000 -0.023  0.051 -0.000 -0.408  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:47:25 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:4
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p01*x+p11*x*y+p21*x*(y**2)+p02*(x**2)+p12*y*(x**2)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p01           p11           p21           p02           p12          
+   0 9.3504073123e-08   0.00e+00  6.92e-04    1.669838e-03  -7.880745e-02   3.119354e+00   1.149831e-06  -1.222862e-04   5.589576e-03   7.986839e-10  -6.478141e-08
+   1 9.3504073123e-08  -6.37e-10  6.92e-05    1.669838e-03  -7.880745e-02   3.119354e+00   1.149831e-06  -1.222862e-04   5.589576e-03   7.986839e-10  -6.478141e-08
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 9.35041e-08
+rel. change during last iteration : -6.36946e-15
+
+degrees of freedom    (FIT_NDF)                        : 12
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 8.82723e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 7.79201e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.00166984       +/- 3.944e-05    (2.362%)
+p10             = -0.0788075       +/- 0.004384     (5.563%)
+p20             = 3.11935          +/- 0.3251       (10.42%)
+p01             = 1.14983e-06      +/- 9.586e-08    (8.337%)
+p11             = -0.000122286     +/- 1.112e-05    (9.097%)
+p21             = 0.00558958       +/- 0.001063     (19.01%)
+p02             = 7.98684e-10      +/- 2.824e-10    (35.35%)
+p12             = -6.47814e-08     +/- 2.959e-08    (45.67%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p01    p11    p21    p02    p12    
+p00             1.000 
+p10             0.001  1.000 
+p20            -0.500 -0.578  1.000 
+p01            -0.042  0.013  0.004  1.000 
+p11             0.013 -0.037  0.004  0.299  1.000 
+p21             0.003  0.003 -0.006 -0.673 -0.744  1.000 
+p02            -0.670  0.258  0.000  0.056 -0.021  0.000  1.000 
+p12             0.274 -0.632 -0.000 -0.023  0.051 -0.000 -0.408  1.000 
+
+
+*******************************************************************************
+Mon Jul 29 01:49:04 2024
+
+
+FIT:    data read from "b_gr.dat" u 1:2:3
+        format = x:y:z
+        #datapoints = 20
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x,y)
+	f(x,y)=p00+p10*y+p20*(y**2)+p30+(y**3)+p40*(y**4)+p01*x+p11*x*y+p21*x*(y**2)+p31*x*(y**3)+p02*(x**2)+p12*y*(x**2)+p22*(y**2)*(x**2)+p03*(x**3)+p13*y*(x**3)+p04*(x**4)
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   p00           p10           p20           p30           p40           p01           p11           p21           p31           p02           p12           p22           p03           p13           p04          
+   0 9.4784830286e+21   0.00e+00  5.62e+09    1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00   1.000000e+00
+  17 2.5770870770e-06  -5.12e-02  5.62e-08    2.090597e-03  -9.559564e-03   2.731750e-01  -3.291198e-04   2.457659e+00  -2.253021e-06  -3.487641e-05   2.542000e-02  -1.115598e+00   8.682966e-08  -7.314982e-07   2.626617e-05   2.228509e-11  -8.040592e-10  -3.870400e-13
+
+After 17 iterations the fit converged.
+final sum of squares of residuals : 2.57709e-06
+rel. change during last iteration : -5.11535e-07
+
+degrees of freedom    (FIT_NDF)                        : 5
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000717926
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.15417e-07
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+p00             = 0.0020906        +/- 9.739e+07    (4.658e+12%)
+p10             = -0.00955956      +/- 0.04571      (478.2%)
+p20             = 0.273175         +/- 8.92         (3265%)
+p30             = -0.00032912      +/- 9.739e+07    (2.959e+13%)
+p40             = 2.45766          +/- 3.28e+04     (1.335e+06%)
+p01             = -2.25302e-06     +/- 1.97e-06     (87.44%)
+p11             = -3.48764e-05     +/- 0.0002782    (797.8%)
+p21             = 0.02542          +/- 0.02277      (89.56%)
+p31             = -1.1156          +/- 2.439        (218.6%)
+p02             = 8.68297e-08      +/- 1.198e-08    (13.8%)
+p12             = -7.31498e-07     +/- 3.856e-07    (52.72%)
+p22             = 2.62662e-05      +/- 3.992e-05    (152%)
+p03             = 2.22851e-11      +/- 1.121e-11    (50.31%)
+p13             = -8.04059e-10     +/- 1.242e-09    (154.4%)
+p04             = -3.8704e-13      +/- 5.651e-14    (14.6%)
+
+correlation matrix of the fit parameters:
+                p00    p10    p20    p30    p40    p01    p11    p21    p31    p02    p12    p22    p03    p13    p04    
+p00             1.000 
+p10             0.216  1.000 
+p20             0.006 -0.154  1.000 
+p30            -1.000 -0.216 -0.006  1.000 
+p40            -0.144 -0.231 -0.875  0.144  1.000 
+p01            -0.170 -0.051  0.009  0.170  0.022  1.000 
+p11            -0.544 -0.124  0.001  0.544  0.081 -0.244  1.000 
+p21            -0.366 -0.063 -0.018  0.366  0.058 -0.343  0.505  1.000 
+p31             0.735  0.160  0.008 -0.735 -0.110  0.117 -0.718 -0.845  1.000 
+p02             0.078 -0.041  0.064 -0.078 -0.011 -0.022 -0.034 -0.034  0.057  1.000 
+p12            -0.341 -0.768  0.251  0.341  0.049  0.096  0.156  0.105 -0.251  0.046  1.000 
+p22             0.502  0.585 -0.310 -0.502 -0.072 -0.103 -0.289 -0.159  0.369 -0.112 -0.775  1.000 
+p03             0.347  0.084  0.002 -0.347 -0.050 -0.832  0.045 -0.127  0.255 -0.043 -0.151  0.174  1.000 
+p13            -0.470 -0.122 -0.003  0.470  0.068  0.378 -0.287  0.172 -0.346 -0.046  0.237 -0.236 -0.499  1.000 
+p04            -0.077 -0.017 -0.000  0.077  0.011  0.008  0.042  0.028 -0.057 -0.965  0.026 -0.039  0.072  0.036  1.000 

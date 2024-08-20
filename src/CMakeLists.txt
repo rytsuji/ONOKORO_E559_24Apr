@@ -12,7 +12,8 @@ set(SOURCES
   TOpticsData.cc
   TOpticsCalibrationProcessor.cc
   TFocalPlaneConverter.cc
-  TPIDCalibrationProcessor.cc
+  #TPIDCalibrationProcessor.cc
+  TChargeCalibrationProcessor.cc
   TSpectrometerProcessor.cc
   TParticleData.cc
   TRFSubtractionProcessor.cc
@@ -30,7 +31,8 @@ set(HEADERS
   TOpticsData.h
   TOpticsCalibrationProcessor.h
   TFocalPlaneConverter.h
-  TPIDCalibrationProcessor.h
+  #TPIDCalibrationProcessor.h
+  TChargeCalibrationProcessor.h
   TSpectrometerProcessor.h
   TParticleData.h
   TRFSubtractionProcessor.h

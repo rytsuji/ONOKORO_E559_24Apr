@@ -52,12 +52,12 @@ group:
 
      - name: b_gtgt_norm
        title: GR Btgt Normalized
-       x: ["gtgt.fB/0.020779", 500, -5, 5]
+       x: ["(gtgt.fB+0.0017316017)/0.020779", 500, -5, 5]
 
      - name: a_b_gtgt_norm
        title: GR Atgt vs Btgt Normalized
        x: ["gtgt.fA/0.0086580087", 1000, -5, 5]
-       y: ["gtgt.fB/0.020779", 1000, -5, 5]
+       y: ["(gtgt.fB+0.0017316017)/0.020779", 1000, -5, 5]
        
      - name: delta_a_gfp
        title: GR delta vs Afp

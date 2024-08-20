@@ -1,0 +1,10 @@
+  ###setting###
+angle: 51.65 #deg
+magfield: 527.782 #(mT)
+  #### particle ###
+mass: 2808.39 #(MeV)
+atomicnum: 2 
+massnum: 3
+  #### LAS ####
+rho: 1.75 #(m)
+#length: 6.2 #(m)

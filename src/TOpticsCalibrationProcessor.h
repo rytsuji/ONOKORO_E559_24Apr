@@ -43,12 +43,13 @@ protected:
   TString    fMatrixFileNameB;
   IntVec_t   fTermsB;
   FloatVec_t fCoefficientsB;
-  
+  Float_t fYBtgt;  
+  Float_t fYBXtgt; //Btgt=Yfp(fYBtgt+fYBXtgt*x)+h.o.
 
-  Parameter<Double_t> fOffsetDelta;
-  Parameter<Double_t> fOffsetA;
-  Parameter<Double_t> fOffsetB;
-  
+
+  TString    fMatrixFileNameZ;
+  IntVec_t   fTermsZ;
+  FloatVec_t fCoefficientsZ;
   
 private:
   

@@ -1,20 +1,21 @@
 {
-  const int n_file=8; //number of input files
-  TString file_root[n_file]={"run2086.hist.root","run2095.hist.root","run2127.hist.root","run2129.hist.root","run2132.hist.root","run2134.hist.root","run2128.hist.root","run2133.hist.root"};
+ const int n_file=9; //number of input files
+ TString file_root[n_file]={"run2086.hist.root","run2095.hist.root","run2127.hist.root","run2129.hist.root","run2132.hist.root","run2133.hist.root","run2134.hist.root","run2189.hist.root","run2190.hist.root"};
 
-  double scale=-1.0/10.0; //scale of accidental coincidence
+
+  double scale=1.0/8.0; //scale of accidental coincidence
   
   TFile *file[n_file];
   TDirectoryFile* dir[n_file];
   TH1F* ht[n_file];
   TH1F* ha[n_file];
-  TString dir_root="output/phys/";
+  TString dir_root="output/hist_phys/";
   
   
   for(int i=0;i<n_file;i++){  
     file[i] = TFile::Open(dir_root+file_root[i]);
     dir[i] = (TDirectoryFile*)file[i]->Get("phys");
-    ht[i] = (TH1F*)dir[i]->Get("sx_tc");
+    ht[i] = (TH1F*)dir[i]->Get("sx");
     ha[i] = (TH1F*)dir[i]->Get("sx_ac");
   }
   
@@ -30,10 +31,32 @@
     sx_ac->Add(ha[i],1.0);   
   }
 
-  sx->Add(sx_tc,1.0);
-  sx->Add(sx_ac,scale);
+  sx_ac->Sumw2();
+  sx_tc->Sumw2();
+  sx_ac->Scale(scale);
+
+  sx->Sumw2();
+  sx->Add(sx_tc,1.0);  
+  sx->Add(sx_ac,-1.0);
+  
+  
+  TH1F *sx0=new TH1F("sx0", "sx0",nBin,xMin,xMax);
+  sx0->Add(sx,1.0);
+  sx0->Sumw2(0);
+  
   //sx->Rebin(2);
+   //sx->GetXaxis()->ZoomOut(0.6,0.5);
+  //sx->SetLineColor(2);
+  //sx->SetMarkerColor(2);
+
   gApplication->ProcessLine("zon");
-  gApplication->ProcessLine("ht sx");
-  gApplication->ProcessLine("gcom 40Ca(p,p3He) Merged");  
+  gApplication->ProcessLine("ht sx E1");
+  gApplication->ProcessLine("gcom 40Ca(p,ph) Merged");  
+
+
+  //sx0->Rebin(2);
+  //sx0->Draw("same");
+  //sx_tc->Sumw2(0);
+  //sx_ac->Sumw2(0);
+  //sx_ac->SetLineColor(2);
 }

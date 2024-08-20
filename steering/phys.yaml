@@ -1,5 +1,5 @@
 Anchor:
-  - &input output/calib/run@NUM@.root
+  - &input output/backup/calib/run@NUM@.root
   - &histout output/hist_phys/run@NUM@.hist.root
   - &gate_gr gate/gr/gate_gr_ppt.yaml
   - &gate_las gate/las/gate_las_ppt.yaml
@@ -20,6 +20,7 @@ Processor:
   - include: *gate_las
   - include: *gate_gr
   - include: gate/gate_gr_delta.yaml
+#  - include: gate/gate_gr_ang.yaml  
 
   - name: hist_pid_gr
     type: art::TTreeProjectionProcessor
@@ -80,4 +81,12 @@ Processor:
     parameter:
       Type: art::TTreeProjection
       FileName: hist/phys/phys_@SETUP@.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_tp
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+#      FileName: hist/phys/40CaTp.hist.yaml
+      FileName: hist/phys/40CaTp_pph.hist.yaml
       OutputFilename: *histout

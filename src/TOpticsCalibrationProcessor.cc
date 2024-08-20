@@ -26,10 +26,10 @@ TOpticsCalibrationProcessor::TOpticsCalibrationProcessor()
   RegisterProcessorParameter("MatrixFileA","path to the matrix file A",
 			      fMatrixFileNameA,TString("path/to/file_A"));
   RegisterProcessorParameter("MatrixFileB","path to the matrix file B",
-			      fMatrixFileNameB,TString("path/to/file_B"));  
-  Register(fOffsetDelta("OffsetDelta","offset of Delta",0));
-  Register(fOffsetA("OffsetA","offset of Delta",0));
-  Register(fOffsetB("OffsetB","offset of Delta",0));  
+			      fMatrixFileNameB,TString("path/to/file_B"));
+  RegisterProcessorParameter("MatrixFileZ","path to the matrix file Z",
+			      fMatrixFileNameZ,TString("path/to/file_Z"));  
+  
 
   RegisterInputCollection("InputCollection",
                            "input collection",
@@ -93,13 +93,19 @@ void TOpticsCalibrationProcessor::Init(TEventCollection*){
      for(auto element : matrix) {
        std::string key = element.first.as<std::string>();
        Float_t value = element.second.as<Float_t>();       
-       Int_t term = KeyToInt(key);
-       
-       
-       if (term) {
+       Int_t term = 0;
+
+       if(key=="offset"){
 	 fTermsDelta.push_back(term);
 	 fCoefficientsDelta.push_back(value);
-       }
+       }else{      
+	 term=KeyToInt(key);	
+	 if (term) {
+	   fTermsDelta.push_back(term);
+	   fCoefficientsDelta.push_back(value);
+	 }
+       }       
+       
      }
    } catch (YAML::Exception& e) {
      SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
@@ -120,13 +126,19 @@ void TOpticsCalibrationProcessor::Init(TEventCollection*){
      for(auto element : matrix) {
        std::string key = element.first.as<std::string>();
        Float_t value = element.second.as<Float_t>();       
-       Int_t term = KeyToInt(key);
-       
-       if (term) {
+       Int_t term = 0;
+
+       if(key=="offset"){
 	 fTermsA.push_back(term);
 	 fCoefficientsA.push_back(value);
+       }else{      
+	 term=KeyToInt(key);	
+	 if (term) {
+	   fTermsA.push_back(term);
+	   fCoefficientsA.push_back(value);
+	 }
        }
-      }
+     }
    } catch (YAML::Exception& e) {
      SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
 				   e.what()));
@@ -136,6 +148,9 @@ void TOpticsCalibrationProcessor::Init(TEventCollection*){
 
    
    //B
+
+   fYBtgt=fYBXtgt=0.0;
+   
    std::ifstream finB(fMatrixFileNameB.Data());   
    if(!finB.is_open()) {
      SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileNameB.Data()));
@@ -148,20 +163,61 @@ void TOpticsCalibrationProcessor::Init(TEventCollection*){
      for(auto element : matrix) {
        std::string key = element.first.as<std::string>();
        Float_t value = element.second.as<Float_t>();       
-       Int_t term = KeyToInt(key);
-       
-	
-	if (term) {
-	  fTermsB.push_back(term);
-	  fCoefficientsB.push_back(value);
-	}
-      }
+       Int_t term = 0;
+
+       if(key=="offset"){
+	 fTermsB.push_back(term);
+	 fCoefficientsB.push_back(value);
+       }else if(key=="yb_tgt"){
+	 fYBtgt=value;
+       }else if(key=="ybx_tgt"){
+	 fYBXtgt=value;	 
+       }else{      
+	 term=KeyToInt(key);	
+	 if (term) {
+	   fTermsB.push_back(term);
+	   fCoefficientsB.push_back(value);
+	 }
+       }
+     }
    } catch (YAML::Exception& e) {
      SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
 				   e.what()));
      return;
    }
 
+
+   //Z
+   std::ifstream finZ(fMatrixFileNameZ.Data());   
+   if(!finZ.is_open()) {
+     SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileNameZ.Data()));
+     return;
+   }
+   try {
+
+     YAML::Node matrix;
+     matrix = YAML::Load(finZ);
+     for(auto element : matrix) {
+       std::string key = element.first.as<std::string>();
+       Float_t value = element.second.as<Float_t>();       
+       Int_t term = 0;
+
+       if(key=="offset"){
+	 fTermsZ.push_back(term);
+	 fCoefficientsZ.push_back(value);
+       }else{      
+	 term=KeyToInt(key);	
+	 if (term) {
+	   fTermsZ.push_back(term);
+	   fCoefficientsZ.push_back(value);
+	 }
+       }
+     }
+   } catch (YAML::Exception& e) {
+     SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
+				   e.what()));
+     return;
+   }
    
    
 }
@@ -181,11 +237,7 @@ void TOpticsCalibrationProcessor::Process(){
     kProcessed = kFALSE;    
   }
   else {
-    kProcessed = kTRUE;
-    Double_t Delta=0;
-    Double_t A=0;
-    Double_t B=0;
-    
+    kProcessed = kTRUE;    
     for (Int_t iData = 0; iData != nData; ++iData) {
       
       //TOpticsData *const outData = fOutData->ConstructedAt(iData);
@@ -202,10 +254,10 @@ void TOpticsCalibrationProcessor::Process(){
       xyab[3] = (track->GetB());
       
       
-      Double_t Delta = fOffsetDelta ;
-      Double_t A = fOffsetA;
-      Double_t B = fOffsetB;
-      
+      Double_t Delta = 0.0;
+      Double_t A = 0.0;
+      Double_t B = 0.0;
+      Double_t Z = 0.0;      
       
       for (Int_t i = 0, n = fTermsDelta.size(); i != n; ++i) {
 	Double_t elem = 1.;
@@ -228,7 +280,11 @@ void TOpticsCalibrationProcessor::Process(){
 	}
 	A += elem * fCoefficientsA[i];
       }
-      
+
+
+      if(fabs(fYBtgt)>0.0){
+	B += xyab[1]/(fYBtgt+fYBXtgt*xyab[0]);
+      }
       
       for (Int_t i = 0, n = fTermsB.size(); i != n; ++i) {
 	Double_t elem = 1.;
@@ -241,12 +297,22 @@ void TOpticsCalibrationProcessor::Process(){
 	B += elem * fCoefficientsB[i];
       }
       
-      
+      for (Int_t i = 0, n = fTermsZ.size(); i != n; ++i) {
+        Double_t elem = 1.;
+        for (Int_t j = 0; j != kDimension; ++j) {
+          if(fTermsZ[i]>0){
+            const Int_t power = (fTermsZ[i] >> (j * kShift) & kMask);
+            elem *= TMath::Power(xyab[j],power);
+          }
+        }
+        Z += elem * fCoefficientsZ[i];
+      }
       
       
       outData->SetDelta(Delta);
       outData->SetA(A);
       outData->SetB(B);
+      outData->SetZ(Z);      
       outData->SetProcessed(kProcessed);
     }
   }

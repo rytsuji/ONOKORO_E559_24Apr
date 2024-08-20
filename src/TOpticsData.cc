@@ -5,7 +5,7 @@ using art::TOpticsData;
 ClassImp(TOpticsData)
 
 TOpticsData::TOpticsData()
-  : fDelta(kInvalidD), fA(kInvalidD), fB(kInvalidD)
+  : fDelta(kInvalidD), fA(kInvalidD), fB(kInvalidD), fZ(kInvalidD)
 {
 }
 
@@ -15,7 +15,7 @@ TOpticsData::~TOpticsData()
 
 
 void art::TOpticsData::Clear(Option_t *) {
-  fDelta = fA = fB = kInvalidD;
+  fDelta = fA = fB = fZ = kInvalidD;
 }
 
 
