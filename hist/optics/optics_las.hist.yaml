@@ -4,12 +4,12 @@ anchor:
  - &dmax_ltgt 0.2
 
  - &abin_ltgt 1000
- - &amin_ltgt -1000
- - &amax_ltgt 1000
+ - &amin_ltgt -200
+ - &amax_ltgt 200
 
  - &bbin_ltgt 1000
- - &bmin_ltgt -1000
- - &bmax_ltgt 1000
+ - &bmin_ltgt -300
+ - &bmax_ltgt 300
 
  - &abin_lfp 1000
  - &amin_lfp -300
@@ -47,11 +47,18 @@ group:
        title: LAS Atgt vs Btgt
        x: ["ltgt.fA*1000", *abin_ltgt, *amin_ltgt, *amax_ltgt]
        y: ["ltgt.fB*1000", *bbin_ltgt, *bmin_ltgt, *bmax_ltgt]
-       
-     - name: delta_a_lfp
-       title: LAS delta vs Afp
-       x: ["ltgt.fDelta", *dbin_ltgt, *dmin_ltgt, *dmax_ltgt]
-       y: ["lfp.fA*1000", *abin_lfp, *amin_lfp, *amax_lfp]
 
- 
+     - name: a_ltgt_norm
+       title: LAS Atgt Normalized
+       x: ["ltgt.fA/0.026380874", 500, -5, 5]
+
+       
+     - name: b_ltgt_norm
+       title: LAS Btgt Normalized
+       x: ["ltgt.fB/0.041220115", 500, -5, 5]
+
+     - name: a_b_ltgt_norm
+       title: LAS Atgt vs Btgt Normalized
+       x: ["ltgt.fA/0.026380874", 500, -5, 5]
+       y: ["ltgt.fB/0.041220115", 500, -5, 5]
      

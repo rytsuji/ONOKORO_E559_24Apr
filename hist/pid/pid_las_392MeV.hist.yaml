@@ -1,0 +1,154 @@
+anchor:
+
+ - &tof ["tref_las.fTiming-tref_grtrig.fTiming", 600, 200, 1400]
+ 
+ - &rf1 ["fmod(tref_las.fTiming-rf1.fTiming+ 1194, 119.4)", 300, 0, 142]
+ - &rf2 ["fmod(tref_las.fTiming-rf2.fTiming+ 1194, 119.4)", 300, 0, 142]
+ - &rf3 ["fmod(tref_las.fTiming-rf3.fTiming+ 1194, 119.4)", 300, 0, 142]
+
+ - &tot ["Sum$(vdc_las_dt.fCharge)/(@vdc_las_dt.GetEntriesFast())",500,0,1000]
+
+ - &de1 ["pla_las_3.fCharge", 500, 0, 4000]
+ - &de2 ["Alt$(pla_las_5.fCharge,0)+Alt$(pla_las_5.fCharge,0)+Alt$(pla_las_6.fCharge,0)", 500, 0, 4000]
+ - &xpos ["vdc_las.fX",1000,-1000,1000]
+ - &tdiff ["pla_las_3.GetTDiff()",200,-50,50]
+
+ - &pveto "@pla_las_4.GetEntriesFast()==0 && @pla_las_5.GetEntriesFast()==0 && @pla_las_6.GetEntriesFast()==0"
+ - &coin "trig_coin.fID==0"
+
+group:
+ - name: pid_las
+   title: PID of LAS
+   contents:
+
+     - name: de1_tof_las
+       title: deltaE1 LAS vs  GR-LAS timing
+       x: *tof
+       y: *de1
+       cut: *coin
+     - name: de2_tof_las
+       title: deltaE2 LAS vs GR-LAS timing
+       x: *tof
+       y: *de2
+       cut: *coin
+     - name: tot_tof_las
+       title: TOT LAS vs GR-LAS timing
+       x: *tof
+       y: *tot
+       cut: *coin
+
+     - name: de1_rf1_las
+       title: deltaE1-RF1 LAS
+       x: *rf1
+       y: *de1
+     - name: de1_rf2_las
+       title: deltaE1-RF2 LAS
+       x: *rf2
+       y: *de1
+     - name: de1_rf3_las
+       title: deltaE1-RF3 LAS
+       x: *rf3
+       y: *de1
+
+     - name: de1_rf1_las_pveto
+       title: deltaE1-RF1 LAS w/ 2nd-layer plastic veto
+       x: *rf1
+       y: *de1
+       cut: *pveto
+     - name: de1_rf2_las_pveto
+       title: deltaE1-RF2 LAS w/ 2nd-layer plastic veto
+       x: *rf2
+       y: *de1
+       cut: *pveto       
+     - name: de1_rf3_las_pveto
+       title: deltaE1-RF3 LAS w/ 2nd-layer plastic veto
+       x: *rf3
+       y: *de1
+       cut: *pveto
+       
+     - name: de2_rf1_las
+       title: deltaE2-RF1 LAS
+       x: *rf1
+       y: *de2
+     - name: de2_rf2_las
+       title: deltaE2-RF2 LAS
+       x: *rf2
+       y: *de2
+     - name: de2_rf3_las
+       title: deltaE2-RF3 LAS
+       x: *rf3
+       y: *de2
+
+     - name: tot_rf1_las
+       title: TOT-RF1 LAS
+       x: *rf1
+       y: *tot
+     - name: tot_rf2_las
+       title: TOT-RF2 LAS
+       x: *rf2
+       y: *tot
+     - name: tot_rf3_las
+       title: TOT-RF3 LAS
+       x: *rf3
+       y: *tot
+
+     - name: tot_rf1_las_pveto
+       title: TOT-RF1 LAS w/ plaVeto
+       x: *rf1
+       y: *tot
+       cut: *pveto       
+     - name: tot_rf2_las_pveto
+       title: TOT-RF2 LAS w/ plaVeto
+       x: *rf2
+       y: *tot
+       cut: *pveto       
+     - name: tot_rf3_las_pveto
+       title: TOT-RF3 LAS w/ plaVeto
+       x: *rf3
+       y: *tot
+       cut: *pveto       
+
+     - name: x_de1_las
+       title: X-deltaE1 LAS
+       x: *xpos
+       y: *de1
+     - name: x_de2_las
+       title: X-deltaE2 LAS
+       x: *xpos
+       y: *de2
+     - name: x_tot_las
+       title: X-TOT LAS
+       x: *xpos
+       y: *tot
+
+     - name: tdiff_de1_las
+       title: TDiff-deltaE1 LAS
+       x: *tdiff
+       y: *de1
+     - name: tdiff_de2_las
+       title: TDiff-deltaE2 LAS
+       x: *tdiff
+       y: *de2  
+
+     - name: de1_de2_las
+       title: deltaE1-deltaE2 LAS
+       x: *de1
+       y: *de2
+     - name: tot_de1_las     
+       title: TOT-deltaE1 LAS
+       x: *tot
+       y: *de1
+
+
+
+
+
+
+
+
+
+
+
+
+
+     

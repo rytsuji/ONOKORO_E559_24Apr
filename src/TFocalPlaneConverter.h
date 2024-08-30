@@ -30,9 +30,13 @@ protected:
   TClonesArray *fMWDCTrackOut;//!                                                                                                                                  
   Int_t fVerbose;
 
-  TString    fMatrixFileName;
-  IntVec_t   fTerms;
-  FloatVec_t fCoefficients;
+  TString    fMatrixFileXName;
+  IntVec_t   fTermsX;
+  FloatVec_t fCoefficientsX;
+
+  TString    fMatrixFileYName;
+  IntVec_t   fTermsY;
+  FloatVec_t fCoefficientsY;
   
   
   Parameter<Double_t> fOffsetX; // unit of mm

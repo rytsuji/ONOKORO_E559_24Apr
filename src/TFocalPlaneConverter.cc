@@ -23,8 +23,12 @@ TFocalPlaneConverter::TFocalPlaneConverter()
   Register(fOffsetX("OffsetX","relative x position between VDC and coordinate",0));
   Register(fOffsetY("OffsetY","relative y position between VDC and coordinate",0));
   Register(fOffsetZ("OffsetZ","relative z position between VDC and coordinate",0));
-  RegisterProcessorParameter("MatrixFile","path to the matrix file",
-			      fMatrixFileName,TString("path/to/file"));
+
+  RegisterProcessorParameter("MatrixFileX","path to the matrix file",
+			      fMatrixFileXName,TString("path/to/file"));
+
+    RegisterProcessorParameter("MatrixFileY","path to the matrix file",
+			      fMatrixFileYName,TString("path/to/file"));
 
 
   RegisterInputCollection("InputCollection",
@@ -74,17 +78,16 @@ namespace {
 
 
 void TFocalPlaneConverter::Init(TEventCollection*){
-  std::ifstream fin(fMatrixFileName.Data());
+  std::ifstream finX(fMatrixFileXName.Data());
 
-
-  if(!fin.is_open()) {
-      SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileName.Data()));
+  if(!finX.is_open()) {
+      SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileXName.Data()));
       return;
    }
 
    try {
      YAML::Node matrix;
-     matrix = YAML::Load(fin);
+     matrix = YAML::Load(finX);
      for(auto element : matrix) {
        std::string key = element.first.as<std::string>();
        Float_t value = element.second.as<Float_t>();       
@@ -92,8 +95,8 @@ void TFocalPlaneConverter::Init(TEventCollection*){
        
        
        if (term) {
-	 fTerms.push_back(term);
-	 fCoefficients.push_back(value);
+	 fTermsX.push_back(term);
+	 fCoefficientsX.push_back(value);
        }
      }
    } catch (YAML::Exception& e) {
@@ -102,6 +105,34 @@ void TFocalPlaneConverter::Init(TEventCollection*){
      return;
    }
 
+
+   std::ifstream finY(fMatrixFileYName.Data());
+
+   if(!finY.is_open()) {
+     SetStateError(TString::Format("Cannot open configuration file: %s",fMatrixFileYName.Data()));
+     return;
+   }
+   
+   try {
+     YAML::Node matrix;
+     matrix = YAML::Load(finY);
+     for(auto element : matrix) {
+       std::string key = element.first.as<std::string>();
+       Float_t value = element.second.as<Float_t>();       
+       Int_t term = KeyToInt(key);
+       
+       
+       if (term) {
+	 fTermsY.push_back(term);
+	 fCoefficientsY.push_back(value);
+       }
+     }
+   } catch (YAML::Exception& e) {
+     SetStateError(TString::Format("Error Occurred while loading matrix file\n%s\n",
+				   e.what()));
+     return;
+   }
+   
 
 
    
@@ -144,13 +175,24 @@ void TFocalPlaneConverter::Process(){
       Double_t y = xyab[1]+xyab[3]*fOffsetZ+fOffsetY;      
       Double_t a = xyab[2];
       Double_t b = xyab[3];
-      for (Int_t i = 0, n = fTerms.size(); i != n; ++i) {
+      for (Int_t i = 0, n = fTermsX.size(); i != n; ++i) {
 	Double_t elem = 1.0;
 	for (Int_t j = 0; j != kDimension; ++j) {
-	  const Int_t power = (fTerms[i] >> (j * kShift) & kMask);
+	  const Int_t power = (fTermsX[i] >> (j * kShift) & kMask);
 	  elem *= TMath::Power(xyab[j],power);
 	}
-	x += elem * fCoefficients[i];
+	x += elem * fCoefficientsX[i];
+      }
+
+      xyab[0]=x;
+      
+      for (Int_t i = 0, n = fTermsY.size(); i != n; ++i) {
+	Double_t elem = 1.0;
+	for (Int_t j = 0; j != kDimension; ++j) {
+	  const Int_t power = (fTermsY[i] >> (j * kShift) & kMask);
+	  elem *= TMath::Power(xyab[j],power);
+	}
+	y += elem * fCoefficientsY[i];
       }
       
       //trIn->Copy(*trOut);

@@ -1,4 +1,4 @@
-2024年 6月 9日 日曜日 13:29:15 JST
+2024年 8月 26日 月曜日 17:09:44 JST
 shell/eff_gr.C(2078,"ppt")
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
@@ -24,7 +24,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 138870080 itrEnd = 139365552
+itrBegin = 123996736 itrEnd = 122894800
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -136,7 +136,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 104117296 itrEnd = 134081424
+itrBegin = 86055344 itrEnd = 116887680
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -248,7 +248,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 132732288 itrEnd = 132676688
+itrBegin = 93894224 itrEnd = 109385008
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -360,7 +360,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 132849152 itrEnd = 133546352
+itrBegin = 108986720 itrEnd = 118775648
 branch : eventheader
 branch : trig_raw
 branch : trig

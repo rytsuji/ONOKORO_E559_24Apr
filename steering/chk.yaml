@@ -102,6 +102,20 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/pid/pid_las.hist.yaml
       OutputFilename: *histout
+      
+  - name: hist_optics_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_gr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout
 
   - name: hist_optics
     type: art::TTreeProjectionProcessor
@@ -109,7 +123,8 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/optics/optics_corr.hist.yaml
       OutputFilename: *histout
-            
+
+
   - name: hist_eff_mhit_gr
     type: art::TTreeProjectionProcessor
     parameter:

@@ -1,0 +1,172 @@
+
+
+*******************************************************************************
+Tue Aug 20 16:41:03 2024
+
+
+FIT:    data read from "ppt_kf0.dat" u 1:2
+        format = x:z
+        #datapoints = 104
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.0942761053e+07   0.00e+00  2.13e+02    1.000000e+00   1.000000e+00
+   5 1.6237859213e+03  -1.15e-01  2.13e-03    5.379030e-01   2.803239e+02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 1623.79
+rel. change during last iteration : -1.14553e-06
+
+degrees of freedom    (FIT_NDF)                        : 102
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 3.98992
+variance of residuals (reduced chisquare) = WSSR/ndf   : 15.9195
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.537903         +/- 0.001303     (0.2423%)
+b               = 280.324          +/- 0.3932       (0.1403%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.099  1.000 
+
+
+*******************************************************************************
+Tue Aug 20 16:42:07 2024
+
+
+FIT:    data read from "ppt_kfp.dat" u 1:2
+        format = x:z
+        #datapoints = 71
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Aug 20 16:42:13 2024
+
+
+FIT:    data read from "ppt_kfp.dat" u 1:2
+        format = x:z
+        #datapoints = 71
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.2640329486e+07   0.00e+00  1.45e+02    1.000000e+00   1.000000e+00
+   5 2.0662804295e+03  -5.33e-02  1.45e-03    8.381102e-01   5.562484e+02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2066.28
+rel. change during last iteration : -5.33072e-07
+
+degrees of freedom    (FIT_NDF)                        : 69
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.4723
+variance of residuals (reduced chisquare) = WSSR/ndf   : 29.9461
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.83811          +/- 0.003281     (0.3915%)
+b               = 556.248          +/- 0.6719       (0.1208%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.257  1.000 
+
+
+*******************************************************************************
+Tue Aug 20 16:42:33 2024
+
+
+FIT:    data read from "ppt_kfn.dat" u 1:2
+        format = x:z
+        #datapoints = 61
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 1.9383567852e+07   0.00e+00  4.29e+02    8.381102e-01   5.562484e+02
+   3 3.9395110050e+02  -2.31e-01  4.29e-01    3.611012e-01  -4.958270e+00
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 393.951
+rel. change during last iteration : -2.3059e-06
+
+degrees of freedom    (FIT_NDF)                        : 59
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 2.58402
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.67714
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.361101         +/- 0.001143     (0.3165%)
+b               = -4.95827         +/- 0.3327       (6.71%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.106  1.000 
+
+
+*******************************************************************************
+Tue Aug 20 16:57:03 2024
+
+
+FIT:    data read from "ppt_kfp.dat" u 1:2
+        format = x:z
+        #datapoints = 71
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Tue Aug 20 16:57:13 2024
+
+
+FIT:    data read from "ppt_kfp.dat" u 1:2
+        format = x:z
+        #datapoints = 71
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x+b
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b            
+   0 2.2640329486e+07   0.00e+00  1.45e+02    1.000000e+00   1.000000e+00
+   5 2.0662804295e+03  -5.33e-02  1.45e-03    8.381102e-01   5.562484e+02
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 2066.28
+rel. change during last iteration : -5.33072e-07
+
+degrees of freedom    (FIT_NDF)                        : 69
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 5.4723
+variance of residuals (reduced chisquare) = WSSR/ndf   : 29.9461
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 0.83811          +/- 0.003281     (0.3915%)
+b               = 556.248          +/- 0.6719       (0.1208%)
+
+correlation matrix of the fit parameters:
+                a      b      
+a               1.000 
+b               0.257  1.000 

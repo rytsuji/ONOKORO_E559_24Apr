@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_las_ang
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_las_ang
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_ang; abs(ltgt.fA*1000)<50 && abs(ltgt.fB*1000)<60"
+
+
+  - name: stop_proc_las_ang
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_ang"
+

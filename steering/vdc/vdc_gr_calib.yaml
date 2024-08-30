@@ -23,7 +23,8 @@ Processor:
       OffsetX: 0.0
       OffsetY: 0.0
       OffsetZ: 44.232
-      MatrixFile: prm/mwdc/vdc_gr/fp/fp_gr.yaml
+      MatrixFileX: prm/vdc_gr/fp/fp_gr_x.yaml
+      MatrixFileY: prm/vdc_gr/fp/fp_gr_y.yaml      
       InputCollection:
         - gdc
       OutputCollection: gfp

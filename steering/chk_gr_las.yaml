@@ -7,13 +7,13 @@ Anchor:
   - &histout output/chk/run@NUM@.hist.root
   - &output output/chk/run@NUM@.root 
   - &dt2dl ppt
-  - &spectrometer ppt
-  - &gate_gr gate/gr/gate_gr_ppt_check.yaml
-  - &gate_las gate/las/gate_las_ppt_check.yaml
+#  - &spectrometer ppt
+#  - &gate_gr gate/gr/gate_gr_ppt_check.yaml
+#  - &gate_las gate/las/gate_las_ppt_check.yaml
 
-#  - &spectrometer ppt_Li_kf0
-#  - &gate_gr gate/gr/gate_gr_ppt_Li_kf0.yaml
-#  - &gate_las gate/las/gate_las_ppt_Li_kf0.yaml  
+  - &spectrometer ppt_Li_kfn
+  - &gate_gr gate/gr/gate_gr_ppt_Li_kfn.yaml
+  - &gate_las gate/las/gate_las_ppt_Li_kfn.yaml  
 
 Processor:
   - name: timer

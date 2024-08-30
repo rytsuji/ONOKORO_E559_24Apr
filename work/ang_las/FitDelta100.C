@@ -28,9 +28,9 @@
   //Draw
   for(int i=0;i<5;i++){
     for(int j=0;j<5;j++){
-      ha[i][j]=new TH1F(Form("ha[%d][%d]",i,j),Form("ha[%d][%d]",i,j),200,-0.2,0.2);
-      hy[i][j]=new TH1F(Form("hy[%d][%d]",i,j),Form("hy[%d][%d]",i,j),200,-200,200);
-      hb[i][j]=new TH1F(Form("hb[%d][%d]",i,j),Form("hb[%d][%d]",i,j),200,-0.1,0.1);
+      ha[i][j]=new TH1F(Form("ha[%d][%d]",i,j),Form("ha[%d][%d]",i,j),200,-0.3,0.3);
+      hy[i][j]=new TH1F(Form("hy[%d][%d]",i,j),Form("hy[%d][%d]",i,j),200,-250,250);
+      hb[i][j]=new TH1F(Form("hb[%d][%d]",i,j),Form("hb[%d][%d]",i,j),200,-0.2,0.2);
       TString drawa=Form("lfp.fA>>ha[%d][%d]",i,j);
       TString drawy=Form("lfp.fY>>hy[%d][%d]",i,j);
       TString drawb=Form("lfp.fB>>hb[%d][%d]",i,j);

@@ -1,0 +1,18 @@
+Processor:
+  - include:
+      name: tmpl/gate_las_392.tmpl.yaml
+      replace:
+        Q_LAS_MIN: 500
+        Q_LAS_MAX: 2600
+        T_LAS_MIN: 40
+        T_LAS_MAX: 55
+        RF: rf1
+
+#  - include: tmpl/gate_las_pveto.tmpl.yaml
+
+  - include:
+      name: tmpl/gate_las_tot.tmpl.yaml
+      replace:
+        QMIN: 80
+        QMAX: 155
+        CORRECTION: -0.0

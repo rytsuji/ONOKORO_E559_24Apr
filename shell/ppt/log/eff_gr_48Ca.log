@@ -1,4 +1,4 @@
-2024年 6月 9日 日曜日 13:29:15 JST
+2024年 8月 26日 月曜日 17:09:44 JST
 shell/eff_gr.C(2072,"ppt")
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
@@ -24,7 +24,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 121951184 itrEnd = 133290800
+itrBegin = 122507248 itrEnd = 131801888
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -136,7 +136,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 109733504 itrEnd = 119115520
+itrBegin = 124196640 itrEnd = 139472048
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -248,7 +248,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 103677248 itrEnd = 135604848
+itrBegin = 117108080 itrEnd = 116342384
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -360,7 +360,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 118843024 itrEnd = 119267248
+itrBegin = 139378272 itrEnd = 141823792
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -472,7 +472,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 112073664 itrEnd = 78984880
+itrBegin = 128198528 itrEnd = 128144240
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -584,7 +584,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 128357552 itrEnd = 127553344
+itrBegin = 116370800 itrEnd = 116355776
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -696,7 +696,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 91219600 itrEnd = 123152896
+itrBegin = 79353616 itrEnd = 111410752
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -808,7 +808,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 121355472 itrEnd = 120060608
+itrBegin = 134964880 itrEnd = 136800272
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -920,7 +920,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 125142752 itrEnd = 140520688
+itrBegin = 122817296 itrEnd = 122739264
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1032,7 +1032,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 118505056 itrEnd = 80631808
+itrBegin = 127654704 itrEnd = 129180592
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1144,7 +1144,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 138296144 itrEnd = 138200704
+itrBegin = 128841072 itrEnd = 137267152
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1256,7 +1256,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 101606496 itrEnd = 128856320
+itrBegin = 105801680 itrEnd = 120814560
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1368,7 +1368,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 121216608 itrEnd = 121588832
+itrBegin = 141219120 itrEnd = 141192960
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1480,7 +1480,7 @@ stop_proc
 hist_pid_gr
 hist_vdc_gr_track
 hist_vdc_eff_gr
-itrBegin = 118889824 itrEnd = 120224000
+itrBegin = 85334240 itrEnd = 123138480
 branch : eventheader
 branch : trig_raw
 branch : trig

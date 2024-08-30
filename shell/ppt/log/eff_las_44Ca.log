@@ -1,4 +1,4 @@
-2024年 6月 15日 土曜日 21:35:32 JST
+2024年 8月 26日 月曜日 17:10:12 JST
 shell/eff_las.C(2075,"ppt")
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
@@ -38,7 +38,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 133856144 itrEnd = 118279456
+itrBegin = 133095232 itrEnd = 134199072
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -165,7 +165,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 125367264 itrEnd = 123737072
+itrBegin = 136986960 itrEnd = 137238256
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -292,7 +292,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 131081136 itrEnd = 137565360
+itrBegin = 113772048 itrEnd = 138671408
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -419,7 +419,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 81818272 itrEnd = 114563904
+itrBegin = 139620656 itrEnd = 140911808
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -546,94 +546,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 116851824 itrEnd = 91056736
-branch : eventheader
-branch : trig_raw
-branch : trig
-branch : trig_gr
-branch : trig_las
-branch : trig_coin
-branch : rf_raw
-branch : rf
-branch : rf1
-branch : rf2
-branch : rf3
-branch : tref_las_raw
-branch : tref_grfcet_raw
-branch : tref_grtrig_raw
-branch : tref_las
-branch : tref_grfcet
-branch : tref_grtrig
-branch : pla_gr_raw
-branch : pla_gr_cal
-branch : pla_gr_1l_cal
-branch : pla_gr_1r_cal
-branch : pla_gr_2l_cal
-branch : pla_gr_2r_cal
-branch : pla_gr_1l
-branch : pla_gr_1r
-branch : pla_gr_2l
-branch : pla_gr_2r
-branch : pla_gr_1
-branch : pla_gr_2
-branch : vdc_gr_raw
-branch : vdc_gr_cal
-branch : vdc_gr_dt
-branch : vdc_gr_x1
-branch : vdc_gr_u1
-branch : vdc_gr_x2
-branch : vdc_gr_u2
-branch : vdc_gr_clust_x1
-branch : vdc_gr_clust_x2
-branch : vdc_gr_clust_u1
-branch : vdc_gr_clust_u2
-branch : vdc_gr
-branch : pla_las_raw
-branch : pla_las_cal
-branch : pla_las_1l_cal
-branch : pla_las_1r_cal
-branch : pla_las_2l_cal
-branch : pla_las_2r_cal
-branch : pla_las_3l_cal
-branch : pla_las_3r_cal
-branch : pla_las_4l_cal
-branch : pla_las_4r_cal
-branch : pla_las_5l_cal
-branch : pla_las_5r_cal
-branch : pla_las_6l_cal
-branch : pla_las_6r_cal
-branch : pla_las_3l
-branch : pla_las_3r
-branch : pla_las_4l
-branch : pla_las_4r
-branch : pla_las_5l
-branch : pla_las_5r
-branch : pla_las_6l
-branch : pla_las_6r
-branch : pla_las_3
-branch : pla_las_4
-branch : pla_las_5
-branch : pla_las_6
-branch : vdc_las_raw
-branch : vdc_las_cal
-branch : vdc_las_dt
-branch : vdc_las_x1
-branch : vdc_las_u1
-branch : vdc_las_v1
-branch : vdc_las_x2
-branch : vdc_las_u2
-branch : vdc_las_v2
-branch : vdc_las_clust_x1
-branch : vdc_las_clust_x2
-branch : vdc_las_clust_u1
-branch : vdc_las_clust_u2
-branch : vdc_las_clust_v1
-branch : vdc_las_clust_v2
-branch : vdc_las_xu
-branch : vdc_las_xv
-branch : vdc_las_uv
-branch : vdc_las
-include
+itrBegin = 74284432 itrEnd = 138816128
 shell/eff_las.C(2172,"ppt")
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
@@ -673,7 +586,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 131336208 itrEnd = 139800864
+itrBegin = 130168736 itrEnd = 130220672
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -800,7 +713,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 117200720 itrEnd = 119690704
+itrBegin = 129706416 itrEnd = 42629392
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -927,7 +840,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 102389088 itrEnd = 23481408
+itrBegin = 138421328 itrEnd = 139696544
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1054,7 +967,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 117022368 itrEnd = 133097776
+itrBegin = 134560512 itrEnd = 49517232
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1181,7 +1094,7 @@ stop_proc_las_pla_tot
 hist_pid_las
 hist_vdc_las_track
 hist_vdc_eff_las
-itrBegin = 106214496 itrEnd = 132551488
+itrBegin = 105877456 itrEnd = 121766384
 branch : eventheader
 branch : trig_raw
 branch : trig

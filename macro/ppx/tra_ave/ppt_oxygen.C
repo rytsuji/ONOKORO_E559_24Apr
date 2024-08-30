@@ -86,8 +86,13 @@
   sx_carbon0->Rebin(2);
   sx_oxygen0->Rebin(2);
 
+  h_mylar_raw->Rebin(2);
+  h_carbon_raw->Rebin(2);
+
   
   TFile *fout = new TFile("macro/ppx/output_sx/ppt_16O_tave.root","RECREATE");
+  h_mylar_raw->Write();
+  h_carbon_raw->Write();
   sx_mylar->Write();
   sx_carbon->Write();
   sx_oxygen->Write();

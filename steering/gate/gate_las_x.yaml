@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_las_x
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_las_x
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_x; abs(lfp.fX+400)<25"
+
+
+  - name: stop_proc_las_x
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_x"
+

@@ -1,4 +1,4 @@
-2024年 6月 8日 土曜日 12:27:14 JST
+2024年 8月 26日 月曜日 17:09:24 JST
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -19,9 +19,11 @@ proc_geometry_converter
 proc_geometry_converter_fp
 steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
+proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
-steering optics/optics.yaml steering/optics optics.yaml
+steering optics/optics_gr.yaml steering/optics optics_gr.yaml
 proc_opt_calib_gr
+steering optics/optics_las.yaml steering/optics optics_las.yaml
 proc_opt_calib_las
 loading pid/pid_calib.yaml
 steering pid/pid_calib.yaml steering/pid pid_calib.yaml
@@ -57,7 +59,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 69213520 itrEnd = 133898544
+itrBegin = 101662816 itrEnd = 122486528
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -148,16 +150,15 @@ branch : vdc_las
 'gdc'
 'vdc_las'
 'ldc'
+'lfp_prime'
 'gfp'
 'lfp'
 'pla_gr_1'
 'pla_gr_1'
-'gfp'
-TOF : 131.906 (ns)
+'vdc_gr'
 'pla_las_3'
 'vdc_las_dt'
-'lfp'
-TOF : 107.09 (ns)
+'vdc_las'
 'pid_gr'
 'pid_las'
 'pid_gr'
@@ -194,9 +195,11 @@ proc_geometry_converter
 proc_geometry_converter_fp
 steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
+proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
-steering optics/optics.yaml steering/optics optics.yaml
+steering optics/optics_gr.yaml steering/optics optics_gr.yaml
 proc_opt_calib_gr
+steering optics/optics_las.yaml steering/optics optics_las.yaml
 proc_opt_calib_las
 loading pid/pid_calib.yaml
 steering pid/pid_calib.yaml steering/pid pid_calib.yaml
@@ -232,7 +235,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 34881488 itrEnd = 122051840
+itrBegin = 109965728 itrEnd = 110002640
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -323,16 +326,15 @@ branch : vdc_las
 'gdc'
 'vdc_las'
 'ldc'
+'lfp_prime'
 'gfp'
 'lfp'
 'pla_gr_1'
 'pla_gr_1'
-'gfp'
-TOF : 131.906 (ns)
+'vdc_gr'
 'pla_las_3'
 'vdc_las_dt'
-'lfp'
-TOF : 107.09 (ns)
+'vdc_las'
 'pid_gr'
 'pid_las'
 'pid_gr'
@@ -369,9 +371,11 @@ proc_geometry_converter
 proc_geometry_converter_fp
 steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
+proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
-steering optics/optics.yaml steering/optics optics.yaml
+steering optics/optics_gr.yaml steering/optics optics_gr.yaml
 proc_opt_calib_gr
+steering optics/optics_las.yaml steering/optics optics_las.yaml
 proc_opt_calib_las
 loading pid/pid_calib.yaml
 steering pid/pid_calib.yaml steering/pid pid_calib.yaml
@@ -407,7 +411,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 111621344 itrEnd = 117136080
+itrBegin = 127230160 itrEnd = 89291072
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -498,16 +502,15 @@ branch : vdc_las
 'gdc'
 'vdc_las'
 'ldc'
+'lfp_prime'
 'gfp'
 'lfp'
 'pla_gr_1'
 'pla_gr_1'
-'gfp'
-TOF : 131.906 (ns)
+'vdc_gr'
 'pla_las_3'
 'vdc_las_dt'
-'lfp'
-TOF : 107.09 (ns)
+'vdc_las'
 'pid_gr'
 'pid_las'
 'pid_gr'

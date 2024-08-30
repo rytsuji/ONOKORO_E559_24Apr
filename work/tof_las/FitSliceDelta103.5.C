@@ -15,7 +15,7 @@
   hat->FitSlicesY();
   
   gApplication->ProcessLine("zon");
-  gApplication->ProcessLine("gcom delta100 run1036");
+  gApplication->ProcessLine("gcom delta103.5 run1036");
   gApplication->ProcessLine("ht hat_1");
   
   int Nbin=hat_1->GetXaxis()->GetNbins();  

@@ -18,9 +18,9 @@ set ytics nomirror
 #set y2tics
 
 
-plot "ppt.dat" u 1:2:3 axis x1y1 with yerrorbars pt 9  lc rgb "blue" title "^{A}Ca({/Times-New-Roman:Italic p,pt})"
+plot "ppt.dat" u 1:2:($3+0.2*$2) axis x1y1 with yerrorbars pt 9  lc rgb "blue" title "^{A}Ca({/Times-New-Roman:Italic p,pt})"
 
-replot "pph.dat" u 1:2:3 axis x1y1 with yerrorbars pt 4 lc rgb "red" title "^{A}Ca({/Times-New-Roman:Italic p,p}^{3}He)"
+replot "pph.dat" u 1:2:($3+0.2*$2) axis x1y1 with yerrorbars pt 4 lc rgb "red" title "^{A}Ca({/Times-New-Roman:Italic p,p}^{3}He)"
 
 
 
