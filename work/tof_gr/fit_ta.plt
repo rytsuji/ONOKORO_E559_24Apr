@@ -4,7 +4,7 @@ set tmargin 1
 set bmargin 5
 
 set xlabel 'x_{gfp}  (mm)' font "Arial,15"
-set ylabel '(t|a_{gfp})' font "Arial,15"
+set ylabel '(z_{gfp}|a_{gfp})' font "Arial,15"
 f(x)=p0+p1*x+p2*x*x
 #fit f(x) "fit/merge.dat" u 1:(-$3/112.64047) via p0,p1,p2
 #plot "fit/merge.dat" u 1:(-$3/112.64047)

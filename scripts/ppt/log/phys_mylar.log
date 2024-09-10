@@ -1,0 +1,229 @@
+2024年 9月 2日 月曜日 00:30:06 JST
+scripts/phys.C(2071,"ppt")
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing scripts/phys.C(2071,"ppt")...
+timer
+es_ttree
+steering gate/gate_coin.yaml steering/gate gate_coin.yaml
+gate_array_init_coin
+trigger_gates
+stop_proc_coin
+steering gate/las/gate_las_ppt.yaml steering/gate/las gate_las_ppt.yaml
+loading tmpl/gate_las_calib.tmpl.yaml
+steering/gate/las tmpl/gate_las_calib.tmpl.yaml steering/gate/las/tmpl gate_las_calib.tmpl.yaml
+gate_array_init_las_pid
+las_pid
+stop_proc_las_pid
+steering gate/gr/gate_gr_ppt.yaml steering/gate/gr gate_gr_ppt.yaml
+loading tmpl/gate_gr_calib.tmpl.yaml
+steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_calib.tmpl.yaml
+gate_array_init
+gr_charge
+stop_proc
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
+steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
+gate_array_init_gr_delta
+def_gate_gr_delta
+stop_proc_gr_delta
+hist_pid_gr
+hist_pid_las
+hist_vdc_gr_track
+hist_vdc_las_track
+hist_vdc_gr_las
+hist_optics_gr
+hist_optics_las
+hist_optics_corr
+hist_phys
+hist_tp
+itrBegin = 130508592 itrEnd = 122753792
+branch : gdc
+branch : gfp
+branch : ldc
+branch : lfp_prime
+branch : lfp
+branch : gtgt
+branch : ltgt
+branch : pid_gr
+branch : pid_las
+branch : tof_raw
+branch : tof
+branch : gr_rf1
+branch : gr_rf2
+branch : gr_rf3
+branch : las_rf1
+branch : las_rf2
+branch : las_rf3
+branch : trig_gr
+branch : trig_las
+branch : trig_coin
+branch : rf1
+branch : rf2
+branch : rf3
+branch : pgr
+branch : plas
+scripts/phys.C(2080,"ppt")
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing scripts/phys.C(2080,"ppt")...
+timer
+es_ttree
+steering gate/gate_coin.yaml steering/gate gate_coin.yaml
+gate_array_init_coin
+trigger_gates
+stop_proc_coin
+steering gate/las/gate_las_ppt.yaml steering/gate/las gate_las_ppt.yaml
+loading tmpl/gate_las_calib.tmpl.yaml
+steering/gate/las tmpl/gate_las_calib.tmpl.yaml steering/gate/las/tmpl gate_las_calib.tmpl.yaml
+gate_array_init_las_pid
+las_pid
+stop_proc_las_pid
+steering gate/gr/gate_gr_ppt.yaml steering/gate/gr gate_gr_ppt.yaml
+loading tmpl/gate_gr_calib.tmpl.yaml
+steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_calib.tmpl.yaml
+gate_array_init
+gr_charge
+stop_proc
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
+steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
+gate_array_init_gr_delta
+def_gate_gr_delta
+stop_proc_gr_delta
+hist_pid_gr
+hist_pid_las
+hist_vdc_gr_track
+hist_vdc_las_track
+hist_vdc_gr_las
+hist_optics_gr
+hist_optics_las
+hist_optics_corr
+hist_phys
+hist_tp
+itrBegin = 58513104 itrEnd = 133779440
+branch : gdc
+branch : gfp
+branch : ldc
+branch : lfp_prime
+branch : lfp
+branch : gtgt
+branch : ltgt
+branch : pid_gr
+branch : pid_las
+branch : tof_raw
+branch : tof
+branch : gr_rf1
+branch : gr_rf2
+branch : gr_rf3
+branch : las_rf1
+branch : las_rf2
+branch : las_rf3
+branch : trig_gr
+branch : trig_las
+branch : trig_coin
+branch : rf1
+branch : rf2
+branch : rf3
+branch : pgr
+branch : plas
+scripts/phys.C(2118,"ppt")
+Registering art::TStreamingModuleDecoderLRTDC
+Registering art::TStreamingModuleDecoderHRTDC
+Registering art::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderLRTDC64
+Registering art::streaming::v1::TStreamingModuleDecoderHRTDC
+Use mass table inside root since Art.MassTable is not defined in .rootrc
+Created art::TStreamingModuleDecoderHRTDC with decoder ID 2
+Created art::TStreamingModuleDecoderLRTDC with decoder ID 1
+Created art::TStreamingModuleDecoderLRTDC64 with decoder ID 3
+Created art::streaming::v1::TStreamingModuleDecoderHRTDC with decoder ID 5
+Created art::streaming::v1::TStreamingModuleDecoderLRTDC64 with decoder ID 6
+
+Processing scripts/phys.C(2118,"ppt")...
+timer
+es_ttree
+steering gate/gate_coin.yaml steering/gate gate_coin.yaml
+gate_array_init_coin
+trigger_gates
+stop_proc_coin
+steering gate/las/gate_las_ppt.yaml steering/gate/las gate_las_ppt.yaml
+loading tmpl/gate_las_calib.tmpl.yaml
+steering/gate/las tmpl/gate_las_calib.tmpl.yaml steering/gate/las/tmpl gate_las_calib.tmpl.yaml
+gate_array_init_las_pid
+las_pid
+stop_proc_las_pid
+steering gate/gr/gate_gr_ppt.yaml steering/gate/gr gate_gr_ppt.yaml
+loading tmpl/gate_gr_calib.tmpl.yaml
+steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_calib.tmpl.yaml
+gate_array_init
+gr_charge
+stop_proc
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
+steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
+gate_array_init_gr_delta
+def_gate_gr_delta
+stop_proc_gr_delta
+hist_pid_gr
+hist_pid_las
+hist_vdc_gr_track
+hist_vdc_las_track
+hist_vdc_gr_las
+hist_optics_gr
+hist_optics_las
+hist_optics_corr
+hist_phys
+hist_tp
+itrBegin = 132945808 itrEnd = 133027952
+branch : gdc
+branch : gfp
+branch : ldc
+branch : lfp_prime
+branch : lfp
+branch : gtgt
+branch : ltgt
+branch : pid_gr
+branch : pid_las
+branch : tof_raw
+branch : tof
+branch : gr_rf1
+branch : gr_rf2
+branch : gr_rf3
+branch : las_rf1
+branch : las_rf2
+branch : las_rf3
+branch : trig_gr
+branch : trig_las
+branch : trig_coin
+branch : rf1
+branch : rf2
+branch : rf3
+branch : pgr
+branch : plas

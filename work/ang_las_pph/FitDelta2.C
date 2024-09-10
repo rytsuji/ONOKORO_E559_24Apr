@@ -1,8 +1,9 @@
 {
-  Double_t da_tgt=16.0/606.5;                                                                                                                                
+  Double_t da_tgt=-16.0/606.5;                                                                                                                               
   Double_t db_tgt=25.0/606.5;  
-
-  TFile *_file0 = TFile::Open("output/las/run5451127_2.root");  
+  Double_t b_offset=2.288/1000.0;
+  //TFile *_file0 = TFile::Open("output/las/run5451127_2.root");
+  TFile *_file0 = TFile::Open("output/sieve/run5451127_2.root");    
   ofstream ofile("work/ang_las_pph/dat/fit2.dat");
   
   //X 
@@ -32,7 +33,8 @@
       hy[i][j]=new TH1F(Form("hy[%d][%d]",i,j),Form("hy[%d][%d]",i,j),150,-250,250);
       hb[i][j]=new TH1F(Form("hb[%d][%d]",i,j),Form("hb[%d][%d]",i,j),100,-0.2,0.2);
       TString drawa=Form("lfp.fA>>ha[%d][%d]",i,j);
-      TString drawy=Form("lfp.GetY(-448.191)>>hy[%d][%d]",i,j);
+      //TString drawy=Form("lfp.GetY(-448.191)>>hy[%d][%d]",i,j);
+      TString drawy=Form("lfp.GetY()-10.132>>hy[%d][%d]",i,j);
       TString drawb=Form("lfp.fB>>hb[%d][%d]",i,j);
       tree->Draw(drawa,acut[i] && ycut[j],"");
       tree->Draw(drawy,acut[i] && ycut[j],"");
@@ -70,7 +72,7 @@
 	bfp[i][j]=g1->GetParameter(1);		
 
         atgt[i][j]=da_tgt*(2-i);
-        btgt[i][j]=db_tgt*(2-j);	
+        btgt[i][j]=db_tgt*(2-j)+b_offset;	
 	
 
 
@@ -98,7 +100,7 @@
 	bfp[i][j]=g1->GetParameter(1);		
 
         atgt[i][j]=da_tgt*(2-i);
-        btgt[i][j]=db_tgt*(2-j);
+        btgt[i][j]=db_tgt*(2-j)+b_offset;
 	
 	ofile  << x << " ";
 	ofile  << afp[i][j] << " ";

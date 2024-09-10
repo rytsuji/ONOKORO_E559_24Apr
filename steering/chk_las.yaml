@@ -10,12 +10,12 @@ Anchor:
 #  - &gate_las gate/las/gate_las_ppt_kf0.yaml
 #  - &gate_las gate/las/gate_las_ppt_chkeff.yaml
 #  - &dt2dl_las 1033
-  - &dt2dl_las 1033
+  - &dt2dl_las 1044
 
 
   - &input data/run@NUM@.bld
-  - &histout output/las/run@NUM@.hist.root
-  - &output output/las/run@NUM@.root
+  - &histout output/las/run@NUM@_CH2.hist.root
+  - &output output/las/run@NUM@_CH2.root
 
 Processor:
   - name: timer

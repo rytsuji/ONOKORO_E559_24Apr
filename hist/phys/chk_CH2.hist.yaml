@@ -1,0 +1,78 @@
+anchor:
+ - &phi_gr ["pgr.GetPhi()",  1000,0,360]
+ - &phi_las ["fmod(plas.GetPhi()+360,360)",  1000,0,360]
+ - &theta_gr ["pgr.GetTheta()",  500,20,40]
+ - &theta_las ["plas.GetTheta()",  500,50,70]
+ - &tke_gr ["pgr.fTKE",  500,100,200]
+ - &tke_las ["plas.fTKE",  500,0,100]   
+ 
+group:
+ - name: phys
+   title: phys
+   contents:
+
+     - name: tke_gr_las
+       title: Energy GR vs LAS
+       x: *tke_gr
+       y: *tke_las
+
+     - name: sp
+       title: Sp
+       x: ["226.0-pgr.fTKE-plas.fTKE",500,-10,10]
+
+     - name: phi_gr_las
+       title: Phi GR vs LAS
+       x: *phi_gr
+       y: *phi_las
+
+     - name: theta_gr_las
+       title: Theta GR vs LAS
+       x: *theta_gr
+       y: *theta_las
+
+     - name: kinema_gr
+       title: E vs A GR
+       x: *theta_gr
+       y: *tke_gr
+
+     - name: kinema_las
+       title: E vs A LAS
+       x: *theta_las
+       y: *tke_las
+
+
+     - name: px_gr_las
+       title: Px GR vs LAS
+       x: ["pgr.GetPx()",  500,200,400]
+       y: ["plas.GetPx()",  500,-400,-200]
+
+     - name: py_gr_las
+       title: Py GR vs LAS
+       x: ["pgr.GetPy()",  500,-200,200]
+       y: ["plas.GetPy()", 500,-200,200]
+
+     - name: pz_gr_las
+       title: Pz GR vs LAS
+       x: ["pgr.GetPz()",  500,400,600]
+       y: ["plas.GetPz()",  500,100,200]              
+
+     - name: sub_phi
+       title: Subtraction of Phi
+       x: ["fmod(plas.GetPhi()-pgr.GetPhi()+360,360)",  500,90,270]
+
+     - name: sum_px
+       title: Sum of Px 
+       x: ["pgr.GetPx()+plas.GetPx()",  500,-100,100]
+
+     - name: sum_py
+       title: Sum of Py 
+       x: ["pgr.GetPy()+plas.GetPy()",  500,-100,100]
+
+     - name: sum_pz
+       title: Sum of Pz 
+       x: ["pgr.GetPz()+plas.GetPz()- 689.20409 ",  500,-100,100] #226MeV
+
+     - name: p_tot
+       title: total P       
+       x: ["sqrt(pow(pgr.GetPz()+plas.GetPz()-689.20409,2.0)+pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)) ",  500,-100,100]
+

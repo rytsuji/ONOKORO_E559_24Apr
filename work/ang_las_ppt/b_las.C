@@ -75,14 +75,14 @@ int b_las(){
   ofile  << "yyyxa: " << par[18] << std::endl;
   ofile  << "yyyaa: " << par[19] << std::endl;
 
-  ofile  << "bxx: " << par[20] << std::endl;
-  ofile  << "bxa: " << par[21] << std::endl;
-  ofile  << "baa: " << par[22] << std::endl;
+  //ofile  << "bxx: " << par[20] << std::endl;
+  //ofile  << "bxa: " << par[21] << std::endl;
+  //ofile  << "baa: " << par[22] << std::endl;
   ofile  << "x: " << par[23] << std::endl;
   ofile  << "xx: " << par[24] << std::endl;
   ofile  << "a: " << par[25] << std::endl;
   ofile  << "aa: " << par[26] << std::endl;
-  ofile  << "yy: " << par[27] << std::endl;              
+  //ofile  << "yy: " << par[27] << std::endl;              
   
 
   
@@ -198,7 +198,7 @@ void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag){
       val += par[25]*pow(a[i][j],1.0);
       val += par[26]*pow(a[i][j],2.0);
 
-      val += par[27]*pow(y[i][j],2.0);
+      //val += par[27]*pow(y[i][j],2.0);
 
       //if(fabs(b_tgt[i][j])>0.08) val=val*2.0;
    

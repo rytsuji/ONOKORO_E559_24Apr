@@ -15,10 +15,8 @@
   }
 
   int n_ave=5;
-  Double_t c[5]={1.0,1.0,1.0};
-
-  //int n_ave=4;
-  //Double_t c[12]={1.0,1.0,1.0,1.0};
+  Double_t c[5]={1.0,1.0,1.0,1.0,1.0};
+  
 
   Double_t dx=(xMax-xMin)/(double)nBin;
   TH1F *sx_tave=new TH1F("sx_tave", "",nBin,xMin,xMax);

@@ -44,7 +44,7 @@
   
   
   //Fit
-  ofstream ofile("work/ang_las/dat/delta103.5dat");
+  ofstream ofile("work/ang_las/dat/delta103.5.dat");
 
   Double_t afp[5][5];
   Double_t yfp[5][5];

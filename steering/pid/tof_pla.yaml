@@ -1,0 +1,31 @@
+
+Processor:
+  - name: proc_tof_pla_prm_calib
+    type: art::TParameterArrayLoader
+    parameter:
+      Name:     prm_tof_pla_calib
+      Type:     art::TAffineConverter
+      FileName: prm/tof_pla_calib.dat
+
+  - name: proc_tof_pla_subtraction
+    type: art::TTimingSubtractionProcessor
+    parameter:
+      StartTimingDetID: 0
+      MaxDetID: 1
+      UseMultipleStartTiming: 1
+      UseStartAsTimestamp: 1
+      ValidTimeRange: [-3000, 1000, 0]
+      InputCollection: pla_gr_1      
+      StartTimingCollection: pla_las_3
+      OutputCollection: tof_pla_raw
+      
+  - name: proc_tof_pla_calib
+    type: art::TDataCalibrationProcessor
+    parameter:
+      DataClass: ITiming
+      InputIsDigital: 0
+      DetectorIDOrigin: -100000000
+      ConverterArray: prm_tof_pla_calib
+      InputCollection: tof_pla_raw
+      OutputCollection: tof_pla
+      OutputTransparency:   0

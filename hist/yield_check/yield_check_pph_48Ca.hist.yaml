@@ -1,0 +1,10 @@
+include:
+  - name: hist/yield_check/yield_check.hist.tmpl.yaml  
+    replace:
+      Q_GR_MIN: 100
+      Q_GR_MAX: 4200
+      T_GR_MIN: 42
+      T_GR_MAX: 49
+      RF: rf2
+      #copy from gate_gr_pph.yaml
+      

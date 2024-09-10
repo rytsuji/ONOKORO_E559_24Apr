@@ -9,7 +9,7 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_las_x; abs(lfp.fX+400)<25"
+        - "gate_las_x; abs(lfp.fX-400)<25"
 
 
   - name: stop_proc_las_x

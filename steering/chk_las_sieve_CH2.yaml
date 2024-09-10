@@ -1,0 +1,120 @@
+# file : chk_las.yaml 
+# date : 2024.04.13 by R.TSUJI
+# lastest update : 2024.04.13 by R.TSUJI
+
+Anchor:
+#  - &gate_las gate/las/gate_las_2036.yaml
+#  - &gate_las_pid gate/las/gate_las_1033.yaml
+#  - &gate_las gate/las/gate_las_1044.yaml
+#  - &gate_las gate/las/gate_las_2020.yaml
+#  - &gate_las gate/las/gate_las_ppt_kf0.yaml
+#  - &gate_las gate/las/gate_las_ppt_chkeff.yaml
+#  - &dt2dl_las 1033
+  - &dt2dl_las 1044
+  - &gate_las gate/gate_las_x.yaml 
+
+  - &input data/run@NUM@.bld
+  - &histout output/sieve/run@NUM@_pph_fix.hist.root
+  - &output output/sieve/run@NUM@_pph_fix.root
+
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - name: es_rcnp
+    type: art::TRCNPEventStore_ts
+    parameter:
+      OutputTransparency: 1
+      InputFiles:
+         - *input
+
+  - name: mapper
+    type: art::TMappingProcessor
+    parameter:
+      OutputTransparency: 1
+      MapConfig: mapper_tamidaq.conf
+
+  - include: tref.yaml
+
+  - include: trig.yaml
+  - include: rf.yaml
+  - include: tref_chk.yaml
+
+
+  - include: pla/pla_gr.yaml
+
+  - include: pla/pla_las.yaml
+  - include:
+      name: vdc/vdc_las_rawtrack.yaml
+      replace:
+        DT2DL: *dt2dl_las
+  - include: vdc/vdc_las_calib.yaml
+#  - include: *gate_las_pid          
+#  - include: *gate_las      
+
+#optics calibration                                                                                                                                          
+  - include:
+      name: optics/optics_las_sieve.yaml
+      replace:
+        SETUP: pph
+  
+  - name: hist_pla_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pla/pla_las.hist.yaml	
+      OutputFilename: *histout
+
+  - name: hist_vdc_las_plane
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las_plane.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_las_rawtrack
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las_raw.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_vdc_las_rawtrack_xuv
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las_raw_xuv.hist.yaml 
+      OutputFilename: *histout
+
+  - name: hist_ldc
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/ldc.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_lfp
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_pid_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: outputtree
+    type: art::TOutputTreeProcessor
+    parameter:
+      FileName: *output      

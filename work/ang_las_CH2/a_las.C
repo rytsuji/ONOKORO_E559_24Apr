@@ -1,4 +1,4 @@
-const int nFile=6;
+const int nFile=5;
 
 std::vector<std::vector<double>> x;
 std::vector<std::vector<double>> a;
@@ -43,7 +43,7 @@ int a_las(){
   int migrad_stats = min->Migrad();
   migrad_stats = min->Migrad(); 
   
-  TString oname="work/ang_las/result/las_a.yaml"; 
+  TString oname="work/ang_las_CH2/result/las_a.yaml"; 
   ofstream ofile((std::string) oname);
   
   double par[nPrm]; //x0,x1,...,x4,a,xa,xxa,aa,xaa,xxaaa,...,xxaaaaa
@@ -70,11 +70,12 @@ int a_las(){
   ofile  << "xxaa: " << par[12] << std::endl;  
   ofile  << "xaaa: " << par[13] << std::endl;
   ofile  << "aaaa: " << par[14] << std::endl;
-  ofile  << "y: "  << par[15] << std::endl;
-  ofile  << "yy: " << par[16] << std::endl;
-  ofile  << "yyy: " << par[17] << std::endl;  
-  ofile  << "b: "  << par[18] << std::endl;
-  ofile  << "bb: " << par[19] << std::endl;      
+  ofile  << "yy: "  << par[15] << std::endl;
+  ofile  << "yyx: " << par[16] << std::endl;
+  ofile  << "yya: " << par[17] << std::endl;
+  //ofile  << "y: " << par[18] << std::endl;    
+
+
 
   /*
   ofile  << "yy: " << par[10] << std::endl;
@@ -122,12 +123,11 @@ int a_las(){
       val += par[13]*pow(x[i][j],1.0)*pow(a[i][j],3.0);
       val += par[14]*pow(a[i][j],4.0);
 
-      val += par[15]*pow(y[i][j],1.0);
-      val += par[16]*pow(y[i][j],2.0);
-      val += par[17]*pow(y[i][j],3.0);      
-      val += par[18]*pow(b[i][j],1.0);
-      val += par[19]*pow(b[i][j],2.0);      
 
+      val += par[15]*pow(y[i][j],2.0);
+      val += par[16]*pow(y[i][j],2.0)*x[i][j];
+      val += par[17]*pow(y[i][j],2.0)*a[i][j];
+      val += par[18]*pow(y[i][j],1.0);      
       /*
       val += par[10]*pow(y[i][j],2.0);
       val += par[11]*pow(b[i][j],2.0);
@@ -161,27 +161,28 @@ void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag){
     for(int j=0; j<x[i].size(); j++){
       val = -a_tgt[i][j];
 
-            val += par[0];
+      val += par[0];
       val += par[1]*x[i][j];
       val += par[2]*a[i][j];
       val += par[3]*pow(x[i][j],2.0);
       val += par[4]*x[i][j]*a[i][j];
       val += par[5]*pow(a[i][j],2.0);
-      val += par[6]*pow(x[i][j],3.0);
-      val += par[7]*pow(x[i][j],2.0)*a[i][j];
-      val += par[8]*pow(a[i][j],2.0)*x[i][j];                  
-      val += par[9]*pow(a[i][j],3.0);
-      val += par[10]*pow(x[i][j],4.0);
-      val += par[11]*pow(x[i][j],3.0)*a[i][j];
-      val += par[12]*pow(x[i][j],2.0)*pow(a[i][j],2.0);
-      val += par[13]*pow(x[i][j],1.0)*pow(a[i][j],3.0);
-      val += par[14]*pow(a[i][j],4.0);
+      //val += par[6]*pow(x[i][j],3.0);
+      //val += par[7]*pow(x[i][j],2.0)*a[i][j];
+      //val += par[8]*pow(a[i][j],2.0)*x[i][j];                  
+      //val += par[9]*pow(a[i][j],3.0);
+      //val += par[10]*pow(x[i][j],4.0);
+      //val += par[11]*pow(x[i][j],3.0)*a[i][j];
+      //val += par[12]*pow(x[i][j],2.0)*pow(a[i][j],2.0);
+      //val += par[13]*pow(x[i][j],1.0)*pow(a[i][j],3.0);
+      //val += par[14]*pow(a[i][j],4.0);
 
-      val += par[15]*pow(y[i][j],1.0);
-      val += par[16]*pow(y[i][j],2.0);
-      val += par[17]*pow(y[i][j],3.0);      
-      val += par[18]*pow(b[i][j],1.0);
-      val += par[19]*pow(b[i][j],2.0);      
+      val += par[15]*pow(y[i][j],2.0);
+      val += par[16]*pow(y[i][j],2.0)*x[i][j];
+      val += par[17]*pow(y[i][j],2.0)*a[i][j];
+      //val += par[18]*pow(y[i][j],1.0);      
+
+
       
       chisq += pow(val,2.0);
     }
@@ -198,8 +199,8 @@ void read_data(){
   b.resize(nFile);
   a_tgt.resize(nFile);
   b_tgt.resize(nFile);      
-  std::string dir="work/ang_las/dat/";
-  std::string file[nFile]={"delta100_neg.dat","delta93.dat","delta96.5.dat","delta100.dat","delta103.5.dat","delta107.dat"};
+  std::string dir="work/ang_las_CH2/dat/";
+  std::string file[nFile]={"delta93.dat","delta96.5.dat","delta100.dat","delta103.5.dat","delta107.dat"};
 
    
   for(int iFile=0;iFile<nFile;iFile++){
@@ -217,8 +218,8 @@ void read_data(){
       a[iFile].push_back(Val[1]);
       y[iFile].push_back(Val[2]);      
       b[iFile].push_back(Val[3]);
-      a_tgt[iFile].push_back(Val[4]);
-      b_tgt[iFile].push_back(Val[5]);                        
+      a_tgt[iFile].push_back(-Val[4]*592/606.5);
+      b_tgt[iFile].push_back(Val[5]*592/606.5);                        
     }    
   }
 }

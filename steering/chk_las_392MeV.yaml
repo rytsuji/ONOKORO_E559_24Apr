@@ -12,11 +12,13 @@ Anchor:
 #  - &dt2dl_las 1033
 #  - &gate_las gate/las/gate_las_ang_pph.yaml
   - &gate_las gate/gate_las_x.yaml
-  - &dt2dl_las 5451129
+  - &dt2dl_las 5451127
 
   - &input data/run@NUM@.bld
-  - &histout output/las/run@NUM@.hist.root
-  - &output output/las/run@NUM@.root
+#  - &histout output/las/run@NUM@_pph.hist.root
+#  - &output output/las/run@NUM@_pph.root
+  - &histout output/sieve/run@NUM@_chk_lo.hist.root
+  - &output output/sieve/run@NUM@_chk_lo.root
 
 Processor:
   - name: timer
@@ -50,7 +52,7 @@ Processor:
       replace:
         DT2DL: *dt2dl_las
 
-  - include: vdc/vdc_las_calib.yaml
+  - include: vdc/vdc_las_calib_392MeV.yaml
 #  - include: *gate_las    
   - include: optics/optics_las.yaml
   
@@ -107,7 +109,8 @@ Processor:
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
-      FileName: hist/optics/optics_las.hist.yaml
+      FileName: hist/optics/optics_las_392MeV.hist.yaml
+#      FileName: hist/optics/optics_las.hist.yaml
       OutputFilename: *histout
 
   - name: outputtree

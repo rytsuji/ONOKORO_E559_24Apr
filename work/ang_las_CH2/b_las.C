@@ -1,10 +1,5 @@
-const int nFile=6;
-
-const int MaxOrderTot=3;
-const int OrderX=3;
-const int OrderA=3;
-const int OrderY=3;
-const int OrderB=3;
+//const int nFile=6;
+const int nFile=5;
 
 std::vector<std::vector<double>> x;
 std::vector<std::vector<double>> a;
@@ -14,7 +9,7 @@ std::vector<std::vector<double>> a_tgt;
 std::vector<std::vector<double>> b_tgt;
 std::vector<std::vector<double>> bc;
 
-const int nPrm=27;
+const int nPrm=28;
 
 void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag);
 void read_data();
@@ -47,7 +42,7 @@ int b_las(){
   int migrad_stats = min->Migrad();
   migrad_stats = min->Migrad(); 
   
-  TString oname="work/ang_las/result/las_b.yaml"; 
+  TString oname="work/ang_las_CH2/result/las_b.yaml"; 
   ofstream ofile((std::string) oname);
   
   double par[nPrm]; //x0,x1,...,x4,a,xa,xxa,aa,xaa,xxaaa,...,xxaaaaa
@@ -86,7 +81,8 @@ int b_las(){
   ofile  << "x: " << par[23] << std::endl;
   ofile  << "xx: " << par[24] << std::endl;
   ofile  << "a: " << par[25] << std::endl;
-  ofile  << "aa: " << par[26] << std::endl;            
+  ofile  << "aa: " << par[26] << std::endl;
+  ofile  << "yy: " << par[27] << std::endl;              
   
 
   
@@ -131,6 +127,7 @@ int b_las(){
       val += par[15]*pow(y[i][j],3.0)*x[i][j];
       val += par[16]*pow(y[i][j],3.0)*a[i][j];
 
+      
       val += par[17]*pow(y[i][j],3.0)*x[i][j]*x[i][j];
       val += par[18]*pow(y[i][j],3.0)*x[i][j]*a[i][j];
       val += par[19]*pow(y[i][j],3.0)*a[i][j]*a[i][j];
@@ -144,9 +141,10 @@ int b_las(){
       val += par[25]*pow(a[i][j],1.0);
       val += par[26]*pow(a[i][j],2.0);
 
+      val += par[27]*pow(y[i][j],2.0);
 
-      
       bc[i].push_back(val);
+     
     }
   }
   
@@ -167,7 +165,7 @@ void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag){
       
       val += par[0];
       val += par[1]*y[i][j];
-      val += par[2]*b[i][j];  
+      //val += par[2]*b[i][j];  
       val += par[3]*y[i][j]*x[i][j];
       val += par[4]*y[i][j]*a[i][j];
       val += par[5]*y[i][j]*x[i][j]*x[i][j];
@@ -190,7 +188,7 @@ void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag){
       val += par[17]*pow(y[i][j],3.0)*x[i][j]*x[i][j];
       val += par[18]*pow(y[i][j],3.0)*x[i][j]*a[i][j];
       val += par[19]*pow(y[i][j],3.0)*a[i][j]*a[i][j];
-
+      
       //val += par[20]*b[i][j]*x[i][j]*x[i][j];                 
       //val += par[21]*b[i][j]*a[i][j]*x[i][j];
       //val += par[22]*b[i][j]*a[i][j]*a[i][j];      
@@ -199,10 +197,13 @@ void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag){
       val += par[24]*pow(x[i][j],2.0);
       val += par[25]*pow(a[i][j],1.0);
       val += par[26]*pow(a[i][j],2.0);
-    
-      //if(fabs(b_tgt[i][j])<0.08 && fabs(a_tgt[i][j]) <0.04){	
+
+      //val += par[27]*pow(y[i][j],2.0);
+
+      //if(fabs(b_tgt[i][j])>0.08) val=val*2.0;
+   
       chisq += pow(val,2.0);
-      //}
+   
     }
   }
   f = chisq;
@@ -217,8 +218,8 @@ void read_data(){
   b.resize(nFile);
   a_tgt.resize(nFile);
   b_tgt.resize(nFile);      
-  std::string dir="work/ang_las/dat/";
-  std::string file[nFile]={"delta100_neg.dat","delta93.dat","delta96.5.dat","delta100.dat","delta103.5.dat","delta107.dat"};
+  std::string dir="work/ang_las_CH2/dat/";
+  std::string file[nFile]={"delta93.dat","delta96.5.dat","delta100.dat","delta103.5.dat","delta107.dat"};
 
    
   for(int iFile=0;iFile<nFile;iFile++){
@@ -232,14 +233,14 @@ void read_data(){
       while(getline(SS, Str, ' ')){
 	Val.push_back(std::stod(Str));
       }
-
+      //if(fabs(Val[5])<0.05){
       x[iFile].push_back(Val[0]);
       a[iFile].push_back(Val[1]);
       y[iFile].push_back(Val[2]);      
       b[iFile].push_back(Val[3]);
-      a_tgt[iFile].push_back(Val[4]);
-      b_tgt[iFile].push_back(Val[5]);
-	
+      a_tgt[iFile].push_back(Val[4]*592/606.5);
+      b_tgt[iFile].push_back(Val[5]*592/606.5);
+      //}
     }    
   }
 }

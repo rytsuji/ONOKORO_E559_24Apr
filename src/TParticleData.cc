@@ -6,7 +6,7 @@ using art::TParticleData;
 ClassImp(TParticleData)
 
 TParticleData::TParticleData()
-: fMass(kInvalidD), fTheta(kInvalidD), fPhi(kInvalidD), fTKE(kInvalidD), fTOF(kInvalidD)
+: fMass(kInvalidD), fTheta(kInvalidD), fPhi(kInvalidD), fTKE(kInvalidD), fTOF(kInvalidD), fVelocity(kInvalidD) 
 {
 }
 
@@ -16,7 +16,7 @@ TParticleData::~TParticleData()
 
 
 void art::TParticleData::Clear(Option_t *) {
-  fMass = fTheta = fPhi = fTKE = fTOF = kInvalidD;
+  fMass = fTheta = fPhi = fTKE = fTOF = fVelocity = kInvalidD;
 }
 
 

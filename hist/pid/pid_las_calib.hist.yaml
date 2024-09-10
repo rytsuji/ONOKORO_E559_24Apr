@@ -9,7 +9,9 @@ anchor:
 
  - &x ["lfp.fX",1000,-1000,1000]
  - &a ["lfp.fA*1000",1000,-500,500] 
- - &vdc ["vdc_las.fX",1000,-1000,1000] 
+ - &vdc ["vdc_las.fX",1000,-1000,1000]
+
+ - &cut_triton "pid_las.fCharge>100"
 
 
 group:
@@ -46,7 +48,8 @@ group:
 
      - name: rf1_las
        title: RF1 LAS
-       x: *rf1       
+       x: *rf1
+       cut: *cut_triton
      - name: rf2_las
        title: RF2 LAS
        x: *rf2       
@@ -81,3 +84,14 @@ group:
        title: a-rf3 LAS
        x: *a   
        y: *rf3
+
+     - name: xv_rf1_las
+       title: x/v-rf1 LAS
+       x: ["lfp.fX/plas.GetVelocity()",1000,-20000,20000]
+       y: *rf1
+       cut: *cut_triton       
+     - name: av_rf1_las
+       title: a/v-rf1 LAS
+       x: ["lfp.fA/plas.GetVelocity()",1000,-10,10]   
+       y: *rf1       
+       cut: *cut_triton

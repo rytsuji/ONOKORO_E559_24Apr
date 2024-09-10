@@ -1,0 +1,10 @@
+include:
+  - name: yield_check.hist.tmpl.yaml
+    replace:
+      Q_GR_MIN: 0
+      Q_GR_MAX: 4200
+      T_GR_MIN: 42
+      T_GR_MAX: 49
+      RF: rf2
+      #copy from gate_gr_ppt.yaml
+      

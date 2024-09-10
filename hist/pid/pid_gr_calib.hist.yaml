@@ -2,9 +2,9 @@ anchor:
 
  - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())", 1000,-1000, 500]
  
- - &rf1 ["fmod(pla_gr_1.fTiming-pgr.GetTOF()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
- - &rf2 ["fmod(pla_gr_1.fTiming-pgr.GetTOF()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
- - &rf3 ["fmod(pla_gr_1.fTiming-pgr.GetTOF()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf1 ["fmod(pid_gr.fTiming-pgr.GetTOF()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf2 ["fmod(pid_gr.fTiming-pgr.GetTOF()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf3 ["fmod(pid_gr.fTiming-pgr.GetTOF()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
  - &x ["gfp.fX", 1000,-1000,1000]
  - &a ["gfp.fA*1000", 2000,-100,200] 
  - &vdc ["vdc_gr.fX", 1000,-1000,1000]

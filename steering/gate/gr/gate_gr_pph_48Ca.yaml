@@ -4,6 +4,6 @@ Processor:
       replace:
         Q_GR_MIN: 0
         Q_GR_MAX: 4000      
-        T_GR_MIN: 35.5
-        T_GR_MAX: 42
+        T_GR_MIN: 42
+        T_GR_MAX: 49
         RF: rf2

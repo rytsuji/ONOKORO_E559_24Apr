@@ -1,0 +1,155 @@
+anchor:
+ - &sx ["225.85-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+ - &tof_raw ["tof.fTiming",  1000, -1000, 1000]
+ 
+ - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &ac "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)"
+
+#carbon
+ - &tc_sx "((tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20) && abs(225.85-pgr.fTKE-plas.fTKE-27.4)<0.6"
+ - &ac_sx "((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)) && abs(225.85-pgr.fTKE-plas.fTKE-27.4)<0.6"
+ 
+ - &tc_tp- "abs(gtgt.fDelta+0.35/3)<0.175/3 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &tc_tp0 "abs(gtgt.fDelta+0.0)<0.175/3 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &tc_tp+ "abs(gtgt.fDelta-0.35/3)<0.175/3 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+
+ - &ac_tp- "abs(gtgt.fDelta+0.35/3)<0.175/3 && ((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320))"
+ - &ac_tp0 "abs(gtgt.fDelta+0.0)<0.175/3 && ((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320))"
+ - &ac_tp+ "abs(gtgt.fDelta-0.35/3)<0.175/3 && ((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320))"
+ 
+group:
+ - name: phys
+   title: phys
+   contents:
+
+     - name: tof
+       title: TOF GR-LAS
+       x: *tof
+
+     - name: tof_tc 
+       title: TOF GR-LAS with True coin
+       x: *tof
+       cut: *tc
+       
+     - name: tof_ac
+       title: TOF GR-LAS with Acc coin
+       x: *tof
+       cut: *ac
+
+     - name: tof_raw
+       title: TOF raw  GR-LAS
+       x: *tof_raw
+
+     - name: tke_las_gr
+       title: Energy LAS-GR with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *tc
+
+     - name: tke_las_gr_ac 
+       title: Energy LAS-GR with Acc coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *ac
+       
+     - name: tke_las_gr_nogate
+       title: Energy LAS-GR without gate 
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       
+     - name: sx
+       title: Sx with True coin
+       x: *sx
+       cut: *tc
+
+     - name: sx_ac
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac
+
+     - name: sx_nogate
+       title: Sx without gate
+       x: *sx
+       
+     - name: sx_tp-
+       title: Sx with True coin
+       x: *sx
+       cut: *tc_tp-
+
+     - name: sx_ac_tp-
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac_tp-
+
+     - name: sx_tp0
+       title: Sx with True coin
+       x: *sx
+       cut: *tc_tp0
+
+     - name: sx_ac_tp0
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac_tp0
+
+     - name: sx_tp+
+       title: Sx with True coin
+       x: *sx
+       cut: *tc_tp+
+
+     - name: sx_ac_tp+
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac_tp+
+
+     - name: p_perp_tc
+       title: Perpendicular Momentum  with True coin
+       x: ["sqrt( pow(pgr.GetPx()+plas.GetPx(),2.0) + pow(pgr.GetPy()+plas.GetPy(),2.0) )",500,0,500]                     
+       cut: *tc_sx
+
+     - name: p_perp_ac
+       title: Perpendicular Momentum  with Acc coin
+       x: ["sqrt( pow(pgr.GetPx()+plas.GetPx(),2.0) + pow(pgr.GetPy()+plas.GetPy(),2.0) )",500,0,500]              
+       cut: *ac_sx              
+
+     - name: p_para_tc
+       title: Parallel Momentum  with True coin
+       x: [pgr.GetPz()+plas.GetPz()-689.24245,500,-250,250]
+       cut: *tc_sx
+
+     - name: p_para_ac
+       title: Parallel Momentum  with Acc coin
+       x: [pgr.GetPz()+plas.GetPz()-689.24245,500,-250,250]
+       cut: *ac_sx
+
+     - name: p_tot_tc
+       title: Total Momentum  with True coin
+       x: ["sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-689.24245,2.0))",500,0,500]              
+       cut: *tc_sx                     
+       
+
+     - name: p_tot_ac
+       title: Total Momentum  with Acc coin
+       x: ["sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-689.24245,2.0))",500,0,500]              
+       cut: *ac_sx                     
+       
+     - name: tke_gr
+       title: TKE GR with true coin and Sx gate
+       x: ["pgr.fTKE",  500, 100, 200]
+       cut: *tc_sx
+
+     - name: tke_gr_ac
+       title: TKE GR with acc coin and Sx gate
+       x: ["pgr.fTKE",  500, 100, 200]
+       cut: *ac_sx
+       
+     - name: tke_las
+       title: TKE LAS with true coin and Sx gate
+       x: ["plas.fTKE",  500, 0, 100]
+       cut: *tc_sx
+
+     - name: tke_las_ac
+       title: TKE LAS with acc coin and Sx gate
+       x: ["plas.fTKE",  500, 0, 100]
+       cut: *ac_sx
+

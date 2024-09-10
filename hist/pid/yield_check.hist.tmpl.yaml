@@ -1,0 +1,83 @@
+anchor:
+
+ - &tof ["tof_pla.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+ 
+ - &tot ["Sum$(vdc_las_dt.fCharge)/(@vdc_las_dt.GetEntriesFast())",500,0,1000] 
+ - &de1 ["pla_las_3.fCharge", 500, 0, 4000]
+ - &xpos ["vdc_las.fX",1000,-1000,1000]
+ - &tdiff ["pla_las_3.GetTDiff()",200,-50,50]
+
+ - &pid_gr "(abs(pid_gr.fCharge-0.5*(@Q_GR_MIN@+@Q_GR_MAX@))<0.5*abs(@Q_GR_MAX@ - @Q_GR_MIN@)&& abs(fmod(pid_gr.fTiming-pgr.GetTOF()-@RF@.fTiming+1420.6750,71.03375)-0.5*( @T_GR_MIN@ + @T_GR_MAX@ ))<0.5*abs( @T_GR_MAX@ - @T_GR_MIN@ ))"
+ - &tc "((tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20) && (abs(pid_gr.fCharge-0.5*(@Q_GR_MIN@+@Q_GR_MAX@))<0.5*abs(@Q_GR_MAX@ - @Q_GR_MIN@)&& abs(fmod(pid_gr.fTiming-pgr.GetTOF()-@RF@.fTiming+1420.6750,71.03375)-0.5*( @T_GR_MIN@ + @T_GR_MAX@ ))<0.5*abs( @T_GR_MAX@ - @T_GR_MIN@ ))"
+ - &ac "((tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)) && (abs(pid_gr.fCharge-0.5*(@Q_GR_MIN@+@Q_GR_MAX@))<0.5*abs(@Q_GR_MAX@ - @Q_GR_MIN@)&& abs(fmod(pid_gr.fTiming-pgr.GetTOF()-@RF@.fTiming+1420.6750,71.03375)-0.5*( @T_GR_MIN@ + @T_GR_MAX@ ))<0.5*abs( @T_GR_MAX@ - @T_GR_MIN@ ))"
+ 
+group:
+ - name: yield_check
+   title: Yield check of (p,pX) with PID of LAS and GR
+   contents:
+
+     - name: tof
+       title: TOF GR-LAS with GR PID
+       x: *tof
+       cut: *pid_gr
+
+     - name: pla_tof 
+       title: TOF GR-LAS vs LAS Pla with GR PID
+       x: *tof
+       y: *de1       
+       cut: *pid_gr       
+       
+     - name: tot_tof 
+       title: TOF GR-LAS vs LAS TOT with GR PID
+       x: *tof
+       y: *tot       
+       cut: *pid_gr
+
+     - name: pla_x_tc
+       title: LAS Pla vs X with true coin
+       x: *xpos
+       y: *de1
+       cut: *tc
+       
+     - name: pla_x_ac
+       title: LAS Pla vs X with acc coin
+       x: *xpos
+       y: *de1      
+       cut: *ac       
+       
+     - name: tot_x_tc
+       title: LAS TOT vs X with true coin
+       x: *xpos
+       y: *tot
+       cut: *tc
+       
+     - name: tot_x_ac
+       title: LAS TOT vs X with acc coin
+       x: *xpos
+       y: *tot       
+       cut: *ac
+
+     - name: pla_tdiff_tc
+       title: LAS Pla vs Pla TDiff with true coin
+       x: *tdiff
+       y: *de1
+       cut: *tc
+       
+     - name: pla_tdiff_ac
+       title: LAS Pla vs Pla TDiff with acc coin
+       x: *tdiff
+       y: *de1      
+       cut: *ac       
+       
+     - name: tot_tdiff_tc
+       title: LAS TOT vs Pla TDiff with true coin
+       x: *tdiff
+       y: *tot
+       cut: *tc
+       
+     - name: tot_tdiff_ac
+       title: LAS TOT vs Pla TDiff with acc coin
+       x: *tdiff
+       y: *tot       
+       cut: *ac       
+

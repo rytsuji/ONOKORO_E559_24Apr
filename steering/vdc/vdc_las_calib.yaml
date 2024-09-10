@@ -32,8 +32,10 @@ Processor:
   - name: proc_geometry_converter_fp_las
     type: art::TFocalPlaneConverter
     parameter:
+#      OffsetY: -1.782
       MatrixFileX: prm/vdc_las/fp/fp_las_x.yaml
-      MatrixFileY: prm/vdc_las/fp/fp_las_y.yaml      
+      MatrixFileY: prm/vdc_las/fp/fp_dummy.yaml
+#      MatrixFileY: prm/vdc_las/fp/fp_las_y.yaml            
       InputCollection:
         - lfp_prime
       OutputCollection: lfp

@@ -5,8 +5,8 @@ Processor:
     type: art::TOpticsCalibrationProcessor
     parameter:
       MatrixFileDelta: prm/optics/las/las_delta.yaml
-      MatrixFileA: prm/optics/las/las_a.yaml
-      MatrixFileB: prm/optics/las/las_b.yaml
+      MatrixFileA: prm/optics/las/las_a_pph.yaml
+      MatrixFileB: prm/optics/las/las_b_pph.yaml
       MatrixFileZ: prm/optics/las/las_z.yaml      
       InputCollection:
         - lfp

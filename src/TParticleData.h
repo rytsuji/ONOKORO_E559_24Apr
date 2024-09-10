@@ -40,6 +40,11 @@ public:
     fTOF = tof;
   }
   Double_t GetTOF(){ return fTOF; }
+
+  void SetVelocity(Double_t velocity){
+    fVelocity = velocity;
+  }
+  Double_t GetVelocity(){ return fVelocity; }
   
   Bool_t IsProcessed() const { return kProcessed; }
   void SetProcessed(Bool_t val) { kProcessed = val; }
@@ -50,6 +55,7 @@ public:
   Double_t fPhi;
   Double_t fTKE;
   Double_t fTOF;
+  Double_t fVelocity;  
   Bool_t kProcessed;
 
  private:

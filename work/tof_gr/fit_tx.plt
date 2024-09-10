@@ -4,7 +4,7 @@ set tmargin 1
 set bmargin 5
 
 set xlabel 'x_{gfp}  (mm)' font "Arial,15"
-set ylabel 't const' font "Arial,15"
+set ylabel 'Z offset' font "Arial,15"
 
 f(x)=p0+p1*x
 #fit f(x) "fit/merge.dat" u 1:(-$2/112.64047) via p0,p1

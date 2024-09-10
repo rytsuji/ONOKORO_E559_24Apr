@@ -1,5 +1,5 @@
 {
-  TFile *_file0 = TFile::Open("output/las/run1034.root");  
+  TFile *_file0 = TFile::Open("output/las/run1034_1.root");  
   TF1 *g1=new TF1("g1","gaus(0)",-200,200);    
   TF1 *g3=new TF1("g3","gaus(0)+gaus(3)+gaus(6)",-200,200);  
   TF1 *g5=new TF1("g5","gaus(0)+gaus(3)+gaus(6)+gaus(9)+gaus(12)",-200,200);
@@ -8,8 +8,8 @@
   //TH1F *hx=new TH1F("hx","hx",1000,-1000,1000);
   //tree->Draw("lfp.fX>>hx","","");
   //hx->Fit("g1","","",-10,10);
-  double x=-450;//g1->GetParameter(1);
-  TCut xcut=Form("abs(lfp.fX-(%e))<10",x);
+  double x=-400;//g1->GetParameter(1);
+  TCut xcut=Form("abs(lfp.fX-(%e))<25",x);
   
   //A Y cut
   Double_t arange[6]={-0.26,-0.18,-0.1,-0.02,0.06,0.14};

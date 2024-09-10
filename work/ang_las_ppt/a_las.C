@@ -61,19 +61,19 @@ int a_las(){
   ofile  << "xx: " << par[3] << std::endl;
   ofile  << "xa: " << par[4] << std::endl;
   ofile  << "aa: " << par[5] << std::endl;
-  ofile  << "xxx: " << par[6] << std::endl;
-  ofile  << "xxa: " << par[7] << std::endl;
-  ofile  << "xaa: " << par[8] << std::endl;
-  ofile  << "aaa: " << par[9] << std::endl;
-  ofile  << "xxxx: " << par[10] << std::endl;
-  ofile  << "xxxa: " << par[11] << std::endl;
-  ofile  << "xxaa: " << par[12] << std::endl;  
-  ofile  << "xaaa: " << par[13] << std::endl;
-  ofile  << "aaaa: " << par[14] << std::endl;
+  //ofile  << "xxx: " << par[6] << std::endl;
+  //ofile  << "xxa: " << par[7] << std::endl;
+  //ofile  << "xaa: " << par[8] << std::endl;
+  //ofile  << "aaa: " << par[9] << std::endl;
+  //ofile  << "xxxx: " << par[10] << std::endl;
+  //ofile  << "xxxa: " << par[11] << std::endl;
+  //ofile  << "xxaa: " << par[12] << std::endl;  
+  //ofile  << "xaaa: " << par[13] << std::endl;
+  //ofile  << "aaaa: " << par[14] << std::endl;
   ofile  << "yy: "  << par[15] << std::endl;
   ofile  << "yyx: " << par[16] << std::endl;
   ofile  << "yya: " << par[17] << std::endl;
-  ofile  << "y: " << par[18] << std::endl;    
+  //ofile  << "y: " << par[18] << std::endl;    
 
 
 
@@ -127,7 +127,7 @@ int a_las(){
       val += par[15]*pow(y[i][j],2.0);
       val += par[16]*pow(y[i][j],2.0)*x[i][j];
       val += par[17]*pow(y[i][j],2.0)*a[i][j];
-      val += par[18]*pow(y[i][j],1.0);      
+      //val += par[18]*pow(y[i][j],1.0);      
       /*
       val += par[10]*pow(y[i][j],2.0);
       val += par[11]*pow(b[i][j],2.0);
@@ -167,20 +167,24 @@ void chi2(Int_t &npar,Double_t *gin,Double_t &f,Double_t *par,Int_t iflag){
       val += par[3]*pow(x[i][j],2.0);
       val += par[4]*x[i][j]*a[i][j];
       val += par[5]*pow(a[i][j],2.0);
+      
+      /*
       val += par[6]*pow(x[i][j],3.0);
       val += par[7]*pow(x[i][j],2.0)*a[i][j];
       val += par[8]*pow(a[i][j],2.0)*x[i][j];                  
       val += par[9]*pow(a[i][j],3.0);
+
+
       val += par[10]*pow(x[i][j],4.0);
       val += par[11]*pow(x[i][j],3.0)*a[i][j];
       val += par[12]*pow(x[i][j],2.0)*pow(a[i][j],2.0);
       val += par[13]*pow(x[i][j],1.0)*pow(a[i][j],3.0);
       val += par[14]*pow(a[i][j],4.0);
-
+      */
       val += par[15]*pow(y[i][j],2.0);
       val += par[16]*pow(y[i][j],2.0)*x[i][j];
       val += par[17]*pow(y[i][j],2.0)*a[i][j];
-      val += par[18]*pow(y[i][j],1.0);      
+      //val += par[18]*pow(y[i][j],1.0);      
 
 
       

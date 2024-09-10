@@ -1,8 +1,9 @@
   ###setting###
-angle: 51.23 #deg
+theta: 51.23 #deg
+phi: 0.0
 magfield: 610.965 #(mT)
   #### particle ###
-mass: 938.78 #(MeV)
+mass: 938.256 #(MeV)
 atomicnum: 1 
 massnum: 1
   #### GR ####

@@ -9,7 +9,8 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_las_ang; abs(ltgt.fA*1000)<50 && abs(ltgt.fB*1000)<60"
+#        - "gate_las_ang; abs(ltgt.fA*1000)<50 && abs(ltgt.fB*1000)<60"
+        - "gate_las_ang; abs(ltgt.fA*1000-15)<10 && abs(ltgt.fB*1000)<60"
 
 
   - name: stop_proc_las_ang

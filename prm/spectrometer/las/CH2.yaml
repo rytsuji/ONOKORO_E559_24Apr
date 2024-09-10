@@ -1,0 +1,10 @@
+  ###setting###
+theta: 58.5 #deg
+phi: 180.0
+magfield: 631.252 #(mT)
+  #### particle ###
+mass: 937.256 #(MeV)
+atomicnum: 1 
+massnum: 1
+  #### LAS ####
+rho: 1.75 #(m)

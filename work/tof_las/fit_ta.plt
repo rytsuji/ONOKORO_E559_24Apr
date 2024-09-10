@@ -5,11 +5,15 @@ set bmargin 5
 
 set xlabel 'x_{lfp}  (mm)' font "Arial,15"
 set ylabel '(z|a_{lfp})' font "Arial,15"
-f(x)=p0+p1*x+p2*x*x#+p3*x*x*x
-fit f(x) "fit/merge.dat" u 1:($3*0.17754523) via p0,p1,p2#,p3
+#f(x)=p0+p1*x+p2*x*x#+p3*x*x*x
+#f(x)=p0
+f(x)=p0+p1*x
+fit f(x) "fit/merge.dat" u 1:($3*0.17754523) via p0,p1#,p2#,p3
 plot "fit/merge.dat" u 1:($3*0.17754523)
 #set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e \n p1 = %e \n p2 = %e \n p2 = %e }", p0,p1,p2,p3)
-set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e \n p1 = %e \n p2 = %e }", p0,p1,p2)
+#set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e \n p1 = %e \n p2 = %e }", p0,p1,p2)
+set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e \n p1 = %e }", p0,p1)
+#set label 1 at graph 0.2,0.3 sprintf("{ p0 = %e }", p0)
 replot f(x)
 
 set terminal 'png'

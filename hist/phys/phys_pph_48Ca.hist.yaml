@@ -41,6 +41,11 @@ group:
        y: ["plas.fTKE", 500,   0, 100]
        cut: *ac
 
+     - name: tke_las_gr_nogate
+       title: Energy LAS-GR without gate 
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+
      - name: sx
        title: Sx with True coin
        x: *sx
@@ -55,7 +60,3 @@ group:
        title: Sx without gate
        x: *sx
 
-     - name: tke_las_gr_nogate
-       title: Energy LAS-GR without gate 
-       x: ["pgr.fTKE",  500, 100, 200]
-       y: ["plas.fTKE", 500,   0, 100]

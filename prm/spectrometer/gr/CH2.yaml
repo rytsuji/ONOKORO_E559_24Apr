@@ -1,0 +1,11 @@
+  ###setting###
+theta: 28.68 #deg
+phi: 0.0
+magfield: 654.264 #(mT)
+  #### particle ###
+mass: 938.256 #(MeV)
+atomicnum: 1 
+massnum: 1
+  #### GR ####
+rho: 3.0 #(m)
+#length: 20.0 #(m)

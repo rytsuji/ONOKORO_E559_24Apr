@@ -184,7 +184,6 @@ void TFocalPlaneConverter::Process(){
 	x += elem * fCoefficientsX[i];
       }
 
-      xyab[0]=x;
       
       for (Int_t i = 0, n = fTermsY.size(); i != n; ++i) {
 	Double_t elem = 1.0;

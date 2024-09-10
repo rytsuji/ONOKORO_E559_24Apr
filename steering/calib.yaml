@@ -17,12 +17,14 @@ Processor:
       
 #geometry & fp conversion      
   - include:  vdc/vdc_gr_calib.yaml
-  - include:  vdc/vdc_las_calib.yaml
-
+  - include:  vdc/vdc_las_calib.yaml    
+        
 #optics calibration
-  - include:  optics/optics_gr.yaml
-  - include:  optics/optics_las.yaml  
-
+  - include:
+      name: optics/optics_ppx.yaml
+      replace:
+        SETUP: @SETUP@
+        
 #tof and charge calibration
   - include:
       name: pid/pid_calib.yaml
@@ -30,6 +32,7 @@ Processor:
         SETUP: @SETUP@
 
   - include:  pid/tof.yaml
+#  - include:  pid/tof_pla.yaml
   - include:  pid/trig.yaml    
   - include:  pid/rf.yaml
 
@@ -119,3 +122,10 @@ Processor:
       Type: art::TTreeProjection
       FileName: hist/eff/trig.hist.yaml
       OutputFilename: *histout
+
+  - name: hist_yield
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/yield_check/yield_check_@SETUP@.hist.yaml
+      OutputFilename: *histout      

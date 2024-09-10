@@ -36,7 +36,9 @@ protected:
   Int_t fMassNumber;
   Double_t fRho;
   Double_t fMagneticField;
-  Double_t fAngle;
+  //  Double_t fAngle;
+  Double_t fTheta;
+  Double_t fPhi;  
   
 private:
   

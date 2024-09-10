@@ -1,4 +1,4 @@
-# file : chk.yaml 
+# file : chk.yamll 
 # date : 2024.4.13 by R.TSUJI
 # lastest update : 2024.04.13 by R.TSUJI
 
@@ -6,14 +6,14 @@ Anchor:
   - &input data/run@NUM@.bld
   - &histout output/chk/run@NUM@.hist.root
   - &output output/chk/run@NUM@.root 
-  - &dt2dl ppt
+  - &dt2dl 1044
 #  - &spectrometer ppt
 #  - &gate_gr gate/gr/gate_gr_ppt_check.yaml
 #  - &gate_las gate/las/gate_las_ppt_check.yaml
 
-  - &spectrometer ppt_Li_kfn
-  - &gate_gr gate/gr/gate_gr_ppt_Li_kfn.yaml
-  - &gate_las gate/las/gate_las_ppt_Li_kfn.yaml  
+  - &spectrometer CH2
+#  - &gate_gr gate/gr/gate_gr_ppt_Li_kfn.yaml
+#  - &gate_las gate/las/gate_las_ppt_Li_kfn.yaml  
 
 Processor:
   - name: timer
@@ -53,22 +53,25 @@ Processor:
       replace:
         DT2DL: *dt2dl
   - include: vdc/vdc_las_calib.yaml  		
-  - include:  optics/optics_las.yaml
+  - include:
+      name: optics/optics_las_sieve.yaml
+      replace:
+        SETUP: pph
 
-
+  #- include:  optics/optics_las.yaml
 
   - include:
       name: pid/pid_calib.yaml
       replace:
-        SETUP: ppt
+        SETUP: pph
   - include:  pid/tof.yaml
 
   - include:
       name: energy_calib/energy_calib.yaml
       replace:
         SETUP: *spectrometer
-  - include: *gate_gr
-  - include: *gate_las
+#  - include: *gate_gr
+#  - include: *gate_las
 
 
   - name: hist_pla_gr_track
@@ -182,11 +185,26 @@ Processor:
       FileName: hist/vdc/vdc_gr_las.hist.yaml
       OutputFilename: *histout
 
+  - name: hist_optics_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_gr.hist.yaml
+      OutputFilename: *histout      
+      
+  - name: hist_optics_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout      
+      
   - name: hist_phys
     type: art::TTreeProjectionProcessor
     parameter:
       Type: art::TTreeProjection
-      FileName: hist/phys/phys.hist.yaml
+#      FileName: hist/phys/phys.hist.yaml
+      FileName: hist/phys/chk_CH2.hist.yaml
       OutputFilename: *histout
 
   - name: outputtree
