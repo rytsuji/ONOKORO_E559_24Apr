@@ -3,7 +3,7 @@ Processor:
       name: tmpl/gate_gr_calib.tmpl.yaml
       replace:
         Q_GR_MIN: 0
-        Q_GR_MAX: 4000      
-        T_GR_MIN: 42
-        T_GR_MAX: 49
+        Q_GR_MAX: 4200      
+        T_GR_MIN: 40
+        T_GR_MAX: 51
         RF: rf2

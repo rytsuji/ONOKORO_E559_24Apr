@@ -114,15 +114,17 @@ void TSpectrometerProcessor::Process(){
       double rz=-A*sin(ThetaRad)+cos(ThetaRad);
 
       TVector3 r(rx,ry,rz);
+
+      double c=0.299792458;
       
-      double TKE = sqrt(fMass*fMass + pow(0.3*((double) fAtomicNumber)*fMagneticField*fRho*(1+Delta),2.0))-fMass;
+      double TKE = sqrt(fMass*fMass + pow(c*((double) fAtomicNumber)*fMagneticField*fRho*(1+Delta),2.0))-fMass;
       //double theta_lab = TMath::RadToDeg()*atan( sqrt( pow( tan( atan(A)+fAngle*TMath::DegToRad() ),2.0) + pow(B,2.0)) );
       //double phi_lab = TMath::RadToDeg()*atan(B/tan( atan(A)+fAngle));
       double theta_lab = TMath::RadToDeg()*r.Theta();
       double phi_lab = TMath::RadToDeg()*r.Phi();
       
-      double TOF = (Z/0.3)*sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
-      double velocity = 0.3/sqrt(1.0+pow(fMass/(0.3*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));      
+      double TOF = (Z/c)*sqrt(1.0+pow(fMass/(c*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));
+      double velocity = c/sqrt(1.0+pow(fMass/(c*fAtomicNumber*fMagneticField*fRho*(1+Delta)),2.0));      
       outData->SetTKE(TKE);
       outData->SetMass(fMass);
       outData->SetTheta(theta_lab);

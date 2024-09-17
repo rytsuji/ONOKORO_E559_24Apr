@@ -19,9 +19,10 @@ Processor:
   - include: gate/gate_coin.yaml  
   - include: *gate_las
   - include: *gate_gr
-  - include: gate/gate_las_ang.yaml
+#  - include: gate/ppx/gate_las_ang_@SETUP@_@TGT@.yaml
 #  - include: gate/gate_gr_ang.yaml    
   - include: gate/gate_gr_delta.yaml
+  - include: gate/gate_las_delta.yaml    
 
 
   - name: hist_pid_gr

@@ -1,4 +1,4 @@
-2024年 9月 2日 月曜日 00:30:06 JST
+2024年 9月 15日 日曜日 16:30:33 JST
 scripts/phys.C(2072,"ppt")
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
@@ -31,14 +31,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -48,8 +56,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 95242176 itrEnd = 112076096
+itrBegin = 106236816 itrEnd = 115893904
 branch : gdc
 branch : gfp
 branch : ldc
@@ -107,14 +114,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -124,8 +139,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 107690896 itrEnd = 133971952
+itrBegin = 109421456 itrEnd = 126031904
 branch : gdc
 branch : gfp
 branch : ldc
@@ -183,14 +197,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -200,8 +222,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 119496800 itrEnd = 135368640
+itrBegin = 117414512 itrEnd = 116732016
 branch : gdc
 branch : gfp
 branch : ldc
@@ -259,14 +280,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -276,8 +305,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 87643184 itrEnd = 128876080
+itrBegin = 119074208 itrEnd = 121528768
 branch : gdc
 branch : gfp
 branch : ldc
@@ -335,14 +363,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -352,8 +388,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 108592304 itrEnd = 122528096
+itrBegin = 134076096 itrEnd = 135008928
 branch : gdc
 branch : gfp
 branch : ldc
@@ -411,14 +446,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -428,8 +471,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 96660496 itrEnd = 110652016
+itrBegin = 89213024 itrEnd = 115281568
 branch : gdc
 branch : gfp
 branch : ldc
@@ -487,14 +529,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -504,8 +554,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 101321904 itrEnd = 116574624
+itrBegin = 119879296 itrEnd = 133619952
 branch : gdc
 branch : gfp
 branch : ldc
@@ -563,14 +612,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -580,8 +637,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 122638272 itrEnd = 125022256
+itrBegin = 88709184 itrEnd = 119113216
 branch : gdc
 branch : gfp
 branch : ldc
@@ -639,14 +695,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -656,8 +720,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 49630640 itrEnd = 139133520
+itrBegin = 118400864 itrEnd = 125460448
 branch : gdc
 branch : gfp
 branch : ldc
@@ -715,14 +778,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -732,8 +803,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 127320000 itrEnd = 50129600
+itrBegin = 122220496 itrEnd = 55841040
 branch : gdc
 branch : gfp
 branch : ldc
@@ -791,14 +861,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -808,8 +886,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 94187808 itrEnd = 119834768
+itrBegin = 109024112 itrEnd = 125578800
 branch : gdc
 branch : gfp
 branch : ldc
@@ -867,14 +944,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -884,8 +969,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 112279040 itrEnd = 112202144
+itrBegin = 111021968 itrEnd = 111255296
 branch : gdc
 branch : gfp
 branch : ldc
@@ -943,14 +1027,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -960,8 +1052,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 124519536 itrEnd = 133648352
+itrBegin = 32079440 itrEnd = 115937344
 branch : gdc
 branch : gfp
 branch : ldc
@@ -1019,14 +1110,22 @@ steering/gate/gr tmpl/gate_gr_calib.tmpl.yaml steering/gate/gr/tmpl gate_gr_cali
 gate_array_init
 gr_charge
 stop_proc
-steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
-gate_array_init_las_ang
-def_gate_las_ang
-stop_proc_las_ang
 steering gate/gate_gr_delta.yaml steering/gate gate_gr_delta.yaml
 gate_array_init_gr_delta
 def_gate_gr_delta
 stop_proc_gr_delta
+steering gate/gate_las_delta.yaml steering/gate gate_las_delta.yaml
+gate_array_init_las_delta
+def_gate_las_delta
+stop_proc_las_delta
+steering gate/gate_gr_ang.yaml steering/gate gate_gr_ang.yaml
+gate_array_init_gr_ang
+def_gate_gr_ang
+stop_proc_gr_ang
+steering gate/gate_las_ang.yaml steering/gate gate_las_ang.yaml
+gate_array_init_las_ang
+def_gate_las_ang
+stop_proc_las_ang
 hist_pid_gr
 hist_pid_las
 hist_vdc_gr_track
@@ -1036,8 +1135,7 @@ hist_optics_gr
 hist_optics_las
 hist_optics_corr
 hist_phys
-hist_tp
-itrBegin = 142208144 itrEnd = 141571568
+itrBegin = 138418688 itrEnd = 140034384
 branch : gdc
 branch : gfp
 branch : ldc

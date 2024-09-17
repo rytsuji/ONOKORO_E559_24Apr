@@ -9,7 +9,7 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_gr_ang; abs(gtgt.fA*1000)<15 && abs(gtgt.fB*1000)<30"
+        - "gate_gr_ang; abs(gtgt.fA*1000)<18 && abs(gtgt.fB*1000)<50 && abs(gtgt.fB*1000)<(3.75*gtgt.fA*1000+87.5) && abs(gtgt.fB*1000)<(-3.75*gtgt.fA*1000+87.5)"
 
 
   - name: stop_proc_gr_ang

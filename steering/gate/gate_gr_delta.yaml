@@ -9,7 +9,9 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_gr_delta; abs(gtgt.fDelta)<0.0175"
+        - "gate_gr_delta; abs(pgr.fTKE-150.0)<5.0"
+#        - "gate_gr_delta; abs(pgr.fTKE-149.0)<4.0"        
+#        - "gate_gr_delta; abs(gtgt.fDelta)<0.0175"
 
 
   - name: stop_proc_gr_delta

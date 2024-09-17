@@ -1,8 +1,8 @@
 Anchor:
   - &input output/calib/run@NUM@.root
   - &histout output/hist_phys/run@NUM@.hist.root
-  - &gate_gr gate/gr/gate_gr_ppt.yaml
-  - &gate_las gate/las/gate_las_ppt.yaml
+  - &gate_gr gate/gr/gate_gr_@SETUP@.yaml
+  - &gate_las gate/las/gate_las_@SETUP@.yaml
   
 Processor:
   - name: timer
@@ -15,13 +15,13 @@ Processor:
       OutputTransparency: 0
       TreeName: tree
       FileName: *input
-
   - include: gate/gate_coin.yaml  
   - include: *gate_las
   - include: *gate_gr
-  - include: gate/gate_las_ang.yaml
-#  - include: gate/gate_gr_ang.yaml    
-  - include: gate/gate_gr_delta.yaml
+#  - include: gate/gate_gr_delta.yaml
+#  - include: gate/gate_las_delta.yaml
+#  - include: gate/gate_gr_ang.yaml        
+#  - include: gate/gate_las_ang.yaml
 
 
   - name: hist_pid_gr

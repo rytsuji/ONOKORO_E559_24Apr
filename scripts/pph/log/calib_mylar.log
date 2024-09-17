@@ -1,4 +1,4 @@
-2024年 9月 1日 日曜日 22:21:05 JST
+2024年 9月 18日 水曜日 03:44:45 JST
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -17,8 +17,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -60,7 +59,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 115664928 itrEnd = 125020880
+hist_yield
+itrBegin = 106773568 itrEnd = 106767312
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -176,6 +176,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -194,8 +195,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -237,7 +237,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 135296640 itrEnd = 119563456
+hist_yield
+itrBegin = 104664944 itrEnd = 115628896
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -353,6 +354,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -371,8 +373,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -414,7 +415,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 118147968 itrEnd = 118632256
+hist_yield
+itrBegin = 60714416 itrEnd = 117773776
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -530,3 +532,4 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include

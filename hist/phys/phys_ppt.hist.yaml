@@ -59,3 +59,14 @@ group:
        title: Sx without gate
        x: *sx
 
+     - name: tke_gr_sx
+       title: Energy GR vs SX  with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: *sx
+       cut: *tc
+
+     - name: las_x_sx
+       title: LAS X vs SX  with True coin
+       x: ["lfp.fX",  500, -1000,1000]
+       y: *sx
+       cut: *tc       

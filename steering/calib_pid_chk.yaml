@@ -1,0 +1,151 @@
+Anchor:
+  - &input output/raw/run@NUM@.root
+  - &output output/calib_pid_chk/run@NUM@.root
+  - &histout output/calib_pid_chk/hist/run@NUM@.hist.root
+  
+  - &gate_gr_ang gate/ppx/ang_gr/gate_gr_ang_@SETUP@.yaml
+  - &gate_las_ang gate/ppx/ang_las/gate_las_ang_@SETUP@.yaml
+  - &gate_gr_energy gate/ppx/energy_gr/gate_gr_energy_@SETUP@.yaml
+  - &gate_las_energy gate/ppx/energy_las/gate_las_energy_@SETUP@.yaml
+
+  
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - name: es_ttree
+    type: art::TTreeEventStore
+    parameter:
+      MaxEventNum: 0
+      OutputTransparency: 0
+      TreeName: tree
+      FileName: *input
+      
+#geometry & fp conversion      
+  - include:  vdc/vdc_gr_calib.yaml
+  - include:  vdc/vdc_las_calib.yaml    
+        
+#optics calibration
+  - include:
+      name: optics/optics_ppx.yaml
+      replace:
+        SETUP: @SETUP@
+        
+#tof and charge calibration
+  - include:
+      name: pid/pid_calib.yaml
+      replace:
+        SETUP: @SETUP@
+
+  - include:  pid/tof.yaml
+#  - include:  pid/tof_pla.yaml
+  - include:  pid/trig.yaml    
+  - include:  pid/rf.yaml
+
+
+#energy calculation from spectrometer setup	
+  - include:
+      name: energy_calib/energy_calib.yaml
+      replace:
+        SETUP: @SETUP@
+        
+#  - include: gate/gate_coin.yaml
+  - include: *gate_gr_ang
+  - include: *gate_las_ang
+  - include: *gate_gr_energy    
+  - include: *gate_las_energy
+
+        
+  - name: outputtree
+    type: art::TOutputTreeProcessor
+    parameter:
+      FileName: *output
+
+  - name: hist_pid_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_gr_calib.hist.yaml 
+      OutputFilename: *histout
+
+  - name: hist_pid_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/pid/pid_las_calib.hist.yaml 
+      OutputFilename: *histout
+
+  - name: hist_vdc_gr_track
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr.hist.yaml
+      OutputFilename: *histout
+      
+  - name: hist_vdc_las_track
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_las.hist.yaml
+
+  - name: hist_vdc_gr_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/vdc/vdc_gr_las.hist.yaml
+      
+  - name: hist_optics_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_gr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_las.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_optics_corr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/optics/optics_corr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_mhit_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/mhit_gr_eff.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_mhit_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/mhit_las_eff.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_trig
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/eff/trig.hist.yaml
+      OutputFilename: *histout
+
+#  - name: hist_yield
+#    type: art::TTreeProjectionProcessor
+#    parameter:
+#      Type: art::TTreeProjection
+#      FileName: hist/yield_check/yield_check_@SETUP@.hist.yaml
+#      OutputFilename: *histout      
+
+  - name: hist_phys
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/phys/phys_@SETUP@.hist.yaml
+      OutputFilename: *histout      

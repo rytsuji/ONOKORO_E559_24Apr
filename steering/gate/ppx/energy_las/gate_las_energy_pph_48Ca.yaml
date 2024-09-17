@@ -1,0 +1,18 @@
+Processor:
+
+  - name: gate_array_init_las_energy
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_las_energy
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_las_energy; plas.fTKE>43 && plas.fTKE<60"
+
+  - name: stop_proc_las_energy
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_las_energy"
+

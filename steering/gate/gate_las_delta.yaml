@@ -9,8 +9,8 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_las_delta; -0.11<ltgt.fDelta && ltgt.fDelta<0.165"
-
+#        - "gate_las_delta; -0.11<ltgt.fDelta && ltgt.fDelta<0.165"
+        - "gate_las_delta; plas.fTKE>44 && plas.fTKE<62"
 
   - name: stop_proc_las_delta
     type: art::TGateStopProcessor

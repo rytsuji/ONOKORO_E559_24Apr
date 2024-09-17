@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_gr_ang
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_gr_ang
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gr_ang; abs(pgr.GetTheta()-50.5)<0.8 && abs(pgr.GetPhi())<3.5 && abs(pgr.GetPhi())<(4.0*pgr.GetTheta()-197.3) && abs(pgr.GetPhi())<(-5.0*pgr.GetTheta()+260)"
+
+
+  - name: stop_proc_gr_ang
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr_ang"
+

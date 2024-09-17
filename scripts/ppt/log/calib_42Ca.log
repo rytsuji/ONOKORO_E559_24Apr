@@ -1,4 +1,4 @@
-2024年 9月 1日 日曜日 22:23:20 JST
+2024年 9月 18日 水曜日 03:44:21 JST
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -17,8 +17,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -60,7 +59,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 48609520 itrEnd = 127233872
+hist_yield
+itrBegin = 118067504 itrEnd = 118047584
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -176,6 +176,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -194,8 +195,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -237,7 +237,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 122493376 itrEnd = 139360400
+hist_yield
+itrBegin = 111506864 itrEnd = 141396944
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -353,6 +354,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -371,8 +373,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -414,7 +415,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 29158768 itrEnd = 116301536
+hist_yield
+itrBegin = 103767264 itrEnd = 118215408
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -530,6 +532,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -548,8 +551,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -591,7 +593,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 122825440 itrEnd = 135497184
+hist_yield
+itrBegin = 136011440 itrEnd = 134223600
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -707,6 +710,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -725,8 +729,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -768,7 +771,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 29944960 itrEnd = 117587968
+hist_yield
+itrBegin = 113891424 itrEnd = 116119552
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -884,6 +888,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -902,8 +907,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -945,7 +949,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 64944720 itrEnd = 137131376
+hist_yield
+itrBegin = 136383024 itrEnd = 136240048
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1061,6 +1066,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -1079,8 +1085,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -1122,7 +1127,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 126992064 itrEnd = 142473648
+hist_yield
+itrBegin = 120589712 itrEnd = 120344432
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1238,6 +1244,7 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -1256,8 +1263,7 @@ es_ttree
 steering vdc/vdc_gr_calib.yaml steering/vdc vdc_gr_calib.yaml
 proc_geometry_converter
 proc_geometry_converter_fp
-loading vdc/vdc_las_calib_ppx.yaml
-steering vdc/vdc_las_calib_ppx.yaml steering/vdc vdc_las_calib_ppx.yaml
+steering vdc/vdc_las_calib.yaml steering/vdc vdc_las_calib.yaml
 proc_geometry_converter_las
 proc_geometry_converter_fp_las_prime
 proc_geometry_converter_fp_las
@@ -1299,7 +1305,8 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-itrBegin = 143322960 itrEnd = 142730832
+hist_yield
+itrBegin = 140103376 itrEnd = 143223504
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1415,3 +1422,4 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
+include

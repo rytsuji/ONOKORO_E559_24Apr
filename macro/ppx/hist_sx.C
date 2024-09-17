@@ -154,9 +154,10 @@ void hist_sx(std::string  reaction,std::string  target){
   Double_t dOmega_gr=0.0056; //str
   //Double_t dOmega_gr=0.0018; //str
 
-  Double_t dOmega_las=0.012; //str
+  //Double_t dOmega_las=0.012; //str
   //Double_t dOmega_las=0.0024; //str  
 
+  Double_t dOmega_las=0.14*4.0*TMath::DegToRad(); //str
 
   //Double_t dOmega_las=0.0119; //str
   Double_t targetTilted=1.0/cos(60.0*TMath::DegToRad());

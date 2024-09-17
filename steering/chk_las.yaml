@@ -9,8 +9,8 @@ Anchor:
 #  - &gate_las gate/las/gate_las_2020.yaml
 #  - &gate_las gate/las/gate_las_ppt_kf0.yaml
 #  - &gate_las gate/las/gate_las_ppt_chkeff.yaml
-#  - &dt2dl_las 1033
-  - &dt2dl_las 1044
+  - &dt2dl_las 1033
+#  - &dt2dl_las 1044
 
 
   - &input data/run@NUM@.bld
@@ -48,7 +48,7 @@ Processor:
       name: vdc/vdc_las_rawtrack.yaml
       replace:
         DT2DL: *dt2dl_las
-#  - include: *gate_las  
+  - include: *gate_las  
   - include: vdc/vdc_las_calib.yaml
   - include: optics/optics_las.yaml
   

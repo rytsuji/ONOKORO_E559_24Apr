@@ -4,6 +4,6 @@ Processor:
       replace:
         Q_GR_MIN: 100
         Q_GR_MAX: 4200      
-        T_GR_MIN: 42 #5sigma
-        T_GR_MAX: 49 #5sigma
+        T_GR_MIN: 42 
+        T_GR_MAX: 49
         RF: rf2

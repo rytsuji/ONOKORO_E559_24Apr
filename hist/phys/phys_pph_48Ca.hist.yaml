@@ -1,5 +1,5 @@
 anchor:
- - &sx ["225.9-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+ - &sx ["225.39-pgr.fTKE-plas.fTKE", 1000, 0, 50]
  - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
  - &tof_raw ["tof.fTiming",  1000, -1000, 1000]
  - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
@@ -60,3 +60,14 @@ group:
        title: Sx without gate
        x: *sx
 
+     - name: tke_gr_sx
+       title: Energy GR vs SX  with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: *sx
+       cut: *tc
+
+     - name: las_x_sx
+       title: LAS X vs SX  with True coin
+       x: ["lfp.fX",  500, -1000,1000]
+       y: *sx
+       cut: *tc

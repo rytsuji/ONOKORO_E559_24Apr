@@ -3,9 +3,9 @@ Processor:
   - include:
       name: tmpl/gate_las_calib.tmpl.yaml
       replace:
-        Q_LAS_MIN: 98 # 4sigma
-        Q_LAS_MAX: 500
-        T_LAS_MIN: 25
+        Q_LAS_MIN: 100 #>4sigma
+        Q_LAS_MAX: 1000
+        T_LAS_MIN: 10
         T_LAS_MAX: 60
         RF: rf1
 
