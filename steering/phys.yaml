@@ -3,6 +3,11 @@ Anchor:
   - &histout output/hist_phys/run@NUM@.hist.root
   - &gate_gr gate/gr/gate_gr_@SETUP@.yaml
   - &gate_las gate/las/gate_las_@SETUP@.yaml
+
+  - &gate_gr_ang gate/ppx/ang_gr/gate_gr_ang_@SETUP@.yaml
+  - &gate_las_ang gate/ppx/ang_las/gate_las_ang_@SETUP@.yaml
+  - &gate_gr_energy gate/ppx/energy_gr/gate_gr_energy_@SETUP@.yaml
+  - &gate_las_energy gate/ppx/energy_las/gate_las_energy_@SETUP@.yaml  
   
 Processor:
   - name: timer
@@ -18,11 +23,10 @@ Processor:
   - include: gate/gate_coin.yaml  
   - include: *gate_las
   - include: *gate_gr
-#  - include: gate/gate_gr_delta.yaml
-#  - include: gate/gate_las_delta.yaml
-#  - include: gate/gate_gr_ang.yaml        
-#  - include: gate/gate_las_ang.yaml
-
+  - include: *gate_gr_energy
+  - include: *gate_las_energy          
+  - include: *gate_gr_ang
+  - include: *gate_las_ang
 
   - name: hist_pid_gr
     type: art::TTreeProjectionProcessor

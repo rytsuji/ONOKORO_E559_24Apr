@@ -11,7 +11,9 @@ Processor:
       Definitions:
 #        - "gate_las_ang; abs(ltgt.fA*1000)<50 && abs(ltgt.fB*1000)<60"
 #        - "gate_las_ang; abs(ltgt.fA*1000-15)<10 && abs(ltgt.fB*1000)<60"
-        - "gate_las_ang; abs(plas.GetTheta()-51.7)<2.0 && abs(ltgt.fB*1000)<70" #pph 40Ca
+
+        - "gate_las_ang; abs(plas.GetTheta()-51.5)<2.5 && abs(fmod(plas.GetPhi()+360.0,360.0)-180)<3.5"
+
 
 
 

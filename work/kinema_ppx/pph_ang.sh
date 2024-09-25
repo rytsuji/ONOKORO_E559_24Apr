@@ -26,3 +26,8 @@ root -b -q ppX_ang.C\(2\,3\,31.80\,146\,\"dat/pph_48Ca_pos.dat\"\) &
 root -b -q ppX_ang.C\(2\,3\,31.80\,136\,\"dat/pph_48Ca_neg.dat\"\)
 
 
+root -b -q ppX_ang.C\(2\,4\,26.280\,141\,\"dat/pph_48Ca_12C_center.dat\"\) & 
+root -b -q ppX_ang.C\(2\,4\,26.280\,146\,\"dat/pph_48Ca_12C_pos.dat\"\) &
+root -b -q ppX_ang.C\(2\,4\,26.280\,136\,\"dat/pph_48Ca_12C_neg.dat\"\)
+
+

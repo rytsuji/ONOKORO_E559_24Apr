@@ -1,6 +1,6 @@
 #include <yaml-cpp/yaml.h>
 
-void hist_sx(std::string  reaction,std::string  target){
+int hist_sx(std::string  reaction,std::string  target){
 
   double scale=1.0/8.0; //scale of accidental coincidence 
   double TotalBI=0.0;
@@ -12,7 +12,7 @@ void hist_sx(std::string  reaction,std::string  target){
   Double_t fMass = node["mass"].as<Double_t>();
   Int_t fAtomicNumber = node["atomicnum"].as<Int_t>();
   Double_t fRho = node["rho"].as<Double_t>();
-  Double_t dE_gr=sqrt(fMass*fMass+pow(0.3*(Double_t) fAtomicNumber*fMagneticField*fRho*(1.0+0.0175),2.0))-sqrt(fMass*fMass+pow(0.3*(Double_t) fAtomicNumber*fMagneticField*fRho*(1.0-0.0175),2.0));
+  Double_t dE_gr=0;//sqrt(fMass*fMass+pow(0.3*(Double_t) fAtomicNumber*fMagneticField*fRho*(1.0+0.0175),2.0))-sqrt(fMass*fMass+pow(0.3*(Double_t) fAtomicNumber*fMagneticField*fRho*(1.0-0.0175),2.0));
 
   //target
   fstream target_info(Form("macro/ppx/target/%s.txt",target.c_str()));
@@ -120,7 +120,8 @@ void hist_sx(std::string  reaction,std::string  target){
     Double_t c_mc=mg*ml-( (kl+kc)*mg - (kg+kc)*ml)/(GateWidth*kg);    
     //Double_t mc=(-b_mc-sqrt(pow(b_mc,2.0)-4*c_mc))/2;
     Double_t mc=-((kl+kc)*mg-(kg+kc)*ml)/(kl-kg);
-    eff_daq=kc/mc;
+    //eff_daq=kc/mc;
+    eff_daq=(kg/mg)*(kl/ml);
 
     std::cout << "  Live/Trigger (count/s), eff DAQ"  << std::endl;
     std::cout << " GR   : " << kg  << "  " << mg <<  "  " << kg/mg << std::endl;
@@ -151,15 +152,27 @@ void hist_sx(std::string  reaction,std::string  target){
   }
 
 
-  Double_t dOmega_gr=0.0056; //str
-  //Double_t dOmega_gr=0.0018; //str
+  Double_t dOmega_gr=0.00;
+  Double_t dOmega_las=0.00;
 
-  //Double_t dOmega_las=0.012; //str
-  //Double_t dOmega_las=0.0024; //str  
+  if(reaction == "ppt"){
+    dE_gr=153.0-145.0;
+    dOmega_gr=0.00289662;
+    dOmega_las=0.0112459;
+  }else if(reaction=="pph"){
+    dE_gr=153.0-145.0;
+    dOmega_gr=0.00289662;
+    dOmega_las=0.0112459;
+  }else if(reaction=="pph_48Ca"){
+    dE_gr=146.0-136.0;
+    dOmega_gr=0.00292287;
+    dOmega_las=0.0109863;
+  }else{
+    return 0;
+  }
+  
 
-  Double_t dOmega_las=0.14*4.0*TMath::DegToRad(); //str
-
-  //Double_t dOmega_las=0.0119; //str
+  
   Double_t targetTilted=1.0/cos(60.0*TMath::DegToRad());
   std::cout << "-----------------------" << std::endl;
   std::cout  << "  Beam Current (nA)  : " << TotalBI/TotalTime << std::endl;  
@@ -212,8 +225,9 @@ void hist_sx(std::string  reaction,std::string  target){
   sx_ac->Sumw2(0);
   sx_ac->SetLineColor(2);
 
-  //TFIle *fout = new TFile(Form(macro/ppx/output_sx/%s%s.root,reaction.c_str(),target.c_str()),"RECREATE")
-  TFile *fout = new TFile(Form("macro/ppx/output_sx/%s_%s_momentum.root",reaction.c_str(),target.c_str()),"RECREATE");
+
+  //TFile *fout = new TFile(Form("macro/ppx/output_sx/%s_%s_momentum.root",reaction.c_str(),target.c_str()),"RECREATE");
+  TFile *fout = new TFile(Form("output/ppx/%s_%s.root",reaction.c_str(),target.c_str()),"RECREATE");
   //fout->mkdir("phys"); 
   //phys->cd();
   fout->Add(sx);
@@ -225,7 +239,7 @@ void hist_sx(std::string  reaction,std::string  target){
   sx_ac->Write();  
 
   //fout->Close();
-
+  return 0;
 }
 
 

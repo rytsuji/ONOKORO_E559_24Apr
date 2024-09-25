@@ -60,14 +60,71 @@ group:
        title: Sx without gate
        x: *sx
 
-     - name: tke_gr_sx
+     - name: tke_gr_sx_tc
        title: Energy GR vs SX  with True coin
        x: ["pgr.fTKE",  500, 100, 200]
        y: *sx
        cut: *tc
 
+     - name: tke_gr_sx_ac
+       title: Energy GR vs SX  with Acc coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: *sx
+       cut: *ac
+
+       
      - name: las_x_sx
        title: LAS X vs SX  with True coin
        x: ["lfp.fX",  500, -1000,1000]
        y: *sx
        cut: *tc
+
+     - name: px_sx_tc
+       title: Px vs SX  with True coin
+       x: ["pgr.GetPx()+plas.GetPx()",200,-100,100]               
+       y: *sx
+       cut: *tc
+
+     - name: px_sx_ac
+       title: Px vs SX  with Acc coin
+       x: ["pgr.GetPx()+plas.GetPx()",200,-100,100]               
+       y: *sx
+       cut: *ac
+
+     - name: py_sx_tc
+       title: Py vs SX  with True coin
+       x: ["pgr.GetPy()+plas.GetPy()",200,-100,100]               
+       y: *sx
+       cut: *tc
+
+     - name: py_sx_ac
+       title: Py vs SX  with Acc coin
+       x: ["pgr.GetPy()+plas.GetPy()",200,-100,100]               
+       y: *sx
+       cut: *ac
+
+     - name: pz_sx_tc
+       title: Pz vs SX  with True coin
+       x: ["pgr.GetPz()+plas.GetPz()-688.63139",200,-100,100]               
+       y: *sx
+       cut: *tc
+
+     - name: pz_sx_ac
+       title: Pz vs SX  with Acc coin
+       x: ["pgr.GetPz()+plas.GetPz()-688.63139",200,-100,100]               
+       y: *sx
+       cut: *ac
+
+     - name: p_sx_tc
+       title: P vs SX  with True coin
+       x: ["sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-688.63139,2.0))",150,0,150]               
+       y: *sx
+       cut: *tc
+
+     - name: p_sx_ac
+       title: P vs SX  with Acc coin
+       x: ["sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-688.63139,2.0))",150,0,150]               
+       y: *sx
+       cut: *ac              
+
+

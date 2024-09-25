@@ -10,7 +10,7 @@ Processor:
     parameter:
       Definitions:
 #        - "gate_gr_energy; abs(pgr.fTKE-150.0)<5.0"
-        - "gate_gr_energy; abs(pgr.fTKE-141.0)<5.0"        
+        - "gate_gr_energy; abs(pgr.fTKE-141.0)<5.0"
 #        - "gate_gr_energy; abs(gtgt.fEnergy)<0.0175"
 
 

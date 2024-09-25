@@ -1,4 +1,3 @@
-
 {
   double lmargin=0.05;
   double tmargin=0.05;
@@ -8,7 +7,10 @@
 
   double dy=(1.0-tmargin-bmargin)/(double) NPad;
   
-  TCanvas *c1 = new TCanvas("c1","c1",800,1600);  
+  //TCanvas *c1 = new TCanvas("c1","c1",800,1600);
+  //TCanvas *c1 = new TCanvas("c1","c1",500,1000);
+
+  TCanvas *c1 = new TCanvas("c1","c1",2000,3000);  
 
   c1->cd();
   TLatex xtitle;
@@ -21,7 +23,7 @@
   ytitle.SetTextAlign(22);
   ytitle.SetNDC(1);
   ytitle.SetTextAngle(90);
-  ytitle.DrawLatex(lmargin*0.6,0.5,"#scale[0.8]{#it{d#sigma/dE_{p}d#Omega_{p}d#Omega_{X}dS_{X}} (#it{#mu}b/MeV#upoint str^{2}  per 100 keV)}");
+  ytitle.DrawLatex(lmargin*0.6,0.5,"#scale[0.8]{#it{d#sigma/dE_{p}d#Omega_{p}d#Omega_{X}dS_{X}} (#it{#mu}b/MeV#upoint str^{2}  per 200 keV)}");
   
   //TPad *pad0 = new TPad("pad0", "pad0",0.0,1.0-0.25*1,1.00,1.00);
 
@@ -71,8 +73,8 @@
 
   
   pad3->cd();
-  gApplication->ProcessLine(".x macro/ppx/edit_hist/ppt_48Ca_last.C");
-  gApplication->ProcessLine(".x macro/ppx/edit_hist/ppt_48Ca_last.C");
+  gApplication->ProcessLine(".x macro/ppx/edit_hist/ppt_48Ca.C");
+  gApplication->ProcessLine(".x macro/ppx/edit_hist/ppt_48Ca.C");
   
 
 

@@ -1,12 +1,14 @@
 {
+  double scale=1/(1.0-0.05/(0.21250000+0.05));
   //
-  TFile *file_42Ca = TFile::Open("macro/ppx/output_sx/pph_42Ca_tave.root");
+  //TFile *file_42Ca = TFile::Open("macro/ppx/output_sx/pph_42Ca_tave.root");
+  TFile *file_42Ca = TFile::Open("output/ppx/pph_42Ca.tra_ave.root ");
   
 
   Double_t ymin=-0.0499;
-  Double_t ymax=0.4999;
+  Double_t ymax=0.9999;
   
-  sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(15),sx_tave->FindBin(40));
+  //sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(15),sx_tave->FindBin(40));
   
   sx_tave->SetMinimum(ymin);
   sx_tave->SetMaximum(ymax);
@@ -33,22 +35,22 @@
   t0.SetTextAngle(90);
   //t0.DrawLatex(Sh,y0+0.06,"#scale[1.2]{gnd (7/2^{-})}");
 
-  Double_t y1=0.1;
+  Double_t y1=0.15;
   TArrow a1(Sh+E1,y1,Sh+E1,y1+0.05,0.01,"<|");
   a1.Draw();
   TLatex t1;
   t1.SetTextAlign(12);
   t1.SetTextAngle(90);
-  t1.DrawLatex(Sh+E1,y1+0.06,"#scale[1.2]{3/2^{+}}");
+  t1.DrawLatex(Sh+E1-0.5,y1+0.06,Form("#scale[%f]{3/2^{+}}",0.75*scale));
 
-  Double_t y2=0.3;
+  Double_t y2=0.55;
   TArrow a2(Sh+E2,y2,Sh+E2,y2+0.05,0.01,"<|");
   a2.Draw();
   TLatex t2;
   t2.SetTextAlign(12);
   t2.SetTextAngle(90);
-  t2.DrawLatex(Sh+E2-0.4,y2+0.05,"#scale[1.2]{2.35 MeV}");
-  t2.DrawLatex(Sh+E2+0.4,y2+0.05,"#scale[1.2]{(1/2^{+})}");  
+  t2.DrawLatex(Sh+E2-1.0,y2+0.05,Form("#scale[%f]{2.35 MeV}",0.75*scale));
+  t2.DrawLatex(Sh+E2+0.5,y2+0.05,Form("#scale[%f]{(1/2^{+}) and ^{13}C}",0.75*scale));  
 
   Double_t y3=0.25;
   TArrow a3(Sh+E3,0.025,Sh+E3,0.075,0.01,"|>");
@@ -56,7 +58,7 @@
   TLatex t3;
   t3.SetTextAlign(12);
   t3.SetTextAngle(90);
-  t3.DrawLatex(Sh+E3-0.25,-0.04,"#scale[1.2]{5/2^{+}}");
+  t3.DrawLatex(Sh+E3-0.5,-0.04,Form("#scale[%f]{5/2^{+}}",0.75*scale));
 
   Double_t y4=0.10;
   TArrow a4(Sh+E4,0.025,Sh+E4,0.075,0.01,"|>");
@@ -64,14 +66,29 @@
   TLatex t4;
   t4.SetTextAlign(12);
   t4.SetTextAngle(90);
-  t4.DrawLatex(Sh+E4+0.25,-0.04,"#scale[1.2]{1/2^{+}}");
+  t4.DrawLatex(Sh+E4+0.5,-0.04,Form("#scale[%f]{1/2^{+}}",0.75*scale));
 
+  Double_t St_16O=22.793;
+  Double_t E1_16O=3089.443/1000.;
+  TLatex t_16O;
+  t_16O.SetTextAlign(12);
+  t_16O.SetTextAngle(90);
 
+  Double_t y0_16O=0.18;
+  //TArrow a0_16O(St_16O,y0_16O,St_16O,y0_16O+0.05,0.01,"<|");
+  //a0_16O.Draw();
+  //t_16O.DrawLatex(St_16O,y0_16O+0.06,Form("#scale[%f]{^{13}C}",0.75*scale));
+  Double_t y1_16O=0.7;
+  TArrow a1_16O(St_16O+E1_16O,y1_16O,St_16O+E1_16O,y1_16O+0.05,0.01,"<|");
+  a1_16O.Draw();
+  t_16O.DrawLatex(St_16O+E1_16O+1.5,y1_16O+0.06,Form("#scale[%f]{^{13}C}",0.75*scale));
+
+  
   TLatex title;
   title.SetTextAlign(11);
   title.SetNDC(1);
-  title.DrawLatex(.65,.8,"#scale[1.5]{^{42}Ca(#it{p,p}^{3}He)}");
-  title.DrawLatex(.65,.7,"#scale[1.2]{#it{S}_{^{3}He}=20.236 MeV}");
+  title.DrawLatex(.65,.8,Form("#scale[%f]{^{42}Ca(#it{p,p}^{3}He)}",0.75*scale));
+  title.DrawLatex(.65,.7,Form("#scale[%f]{#it{S}_{^{3}He}=20.236 MeV}",0.75*scale));
 
   //TF1 *f_40Ca = new TF1("f_40Ca","([0]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[1])/[8],2))+([2]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[3])/[8],2))+([4]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[5])/[8],2))+([6]/sqrt(2.*TMath::Pi()*[8]*[8]))*exp(-0.5*pow((x-[7])/[8],2))",-1000,1000);
   TF1 *f_40Ca = new TF1("f_40Ca","([0]/sqrt(2.*TMath::Pi()*[10]*[10]))*exp(-0.5*pow((x-[1])/[10],2))+([2]/sqrt(2.*TMath::Pi()*[10]*[10]))*exp(-0.5*pow((x-[3])/[10],2))+([4]/sqrt(2.*TMath::Pi()*[10]*[10]))*exp(-0.5*pow((x-[5])/[8],2))+([6]/sqrt(2.*TMath::Pi()*[10]*[10]))*exp(-0.5*pow((x-[7])/[10],2))+([8]/sqrt(2.*TMath::Pi()*[10]*[10]))*exp(-0.5*pow((x-[9])/[10],2))",-1000,1000);

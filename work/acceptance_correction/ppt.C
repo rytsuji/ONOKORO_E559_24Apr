@@ -10,8 +10,8 @@ void ppt(int target,double Q, double theta_gr, double theta_las, double BGR,TStr
   ofstream ofile(name); 
   
   int N=100000;
-  int N_kf=100;
-  int N_theta=100;  
+  int N_kf=50;
+  int N_theta=50;  
   
   double kf_max=100.0; //MeV/c
   //double theta_cm_range[2]={60.0,80.0};
@@ -26,9 +26,10 @@ void ppt(int target,double Q, double theta_gr, double theta_las, double BGR,TStr
   double Z[4]={1.,1.,2.,2.};
   double mx=m_clust[clust];
 
-  //0: 40Ca, 1:42Ca, 2: 44Ca, 3: 48Ca
-  double m_target[4]={37214.06,39073.32,40933.36,44656.51};
 
+  //0: 40Ca, 1:42Ca, 2: 44Ca, 3: 48Ca 4: 12C, 5: 16O                                                                                                             
+  double m_target[6]={37214.06,39073.32,40933.36,44656.51,11174.67,14894.82};
+  
   double mt=m_target[target];
   double mr=mt-mx+Q;
   //Q: Q value  > 0

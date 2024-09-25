@@ -9,7 +9,7 @@ void pph_48Ca(int target,double Q, double theta_gr, double theta_las, double BGR
 
   ofstream ofile(name); 
   
-  int N=100000;
+  int N=500000;
   int N_kf=50;
   int N_theta=50;  
   
@@ -26,9 +26,9 @@ void pph_48Ca(int target,double Q, double theta_gr, double theta_las, double BGR
   double Z[4]={1.,1.,2.,2.};
   double mx=m_clust[clust];
 
-  //0: 40Ca, 1:42Ca, 2: 44Ca, 3: 48Ca
-  double m_target[4]={37214.06,39073.32,40933.36,44656.51};
-
+  //0: 40Ca, 1:42Ca, 2: 44Ca, 3: 48Ca 4: 12C, 5: 16O                                                                                                             
+  double m_target[6]={37214.06,39073.32,40933.36,44656.51,11174.67,14894.82};
+  
   double mt=m_target[target];
   double mr=mt-mx+Q;
   //Q: Q value  > 0
@@ -130,7 +130,7 @@ void pph_48Ca(int target,double Q, double theta_gr, double theta_las, double BGR
 	//r.Sphere(x[0],x[1],x[2],1);
 
 	
-	double phi_cm=phi_rand.Uniform(-15.0,15.0);
+	double phi_cm=phi_rand.Uniform(-30.0,30.0);
 	x[0]=sin(theta_cm*TMath::DegToRad())*cos(phi_cm*TMath::DegToRad());
 	x[1]=sin(theta_cm*TMath::DegToRad())*sin(phi_cm*TMath::DegToRad());
 	x[2]=cos(theta_cm*TMath::DegToRad());

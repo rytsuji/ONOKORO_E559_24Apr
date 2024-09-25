@@ -10,7 +10,7 @@ set xlabel 'mass number A' font "Arial,18"
 set xrange [38:50]
 
 set ylabel ' TDX ({/Symbol m}b/MeV・str^2)' font "Arial,15"
-set yrange [0:2.5]
+set yrange [0:3.5]
 set ytics nomirror
 
 #set y2label '^{A}Ca({/Times-New-Roman:Italic p,ph}) TDX ({/Symbol m}b/str^{2}・MeV)' font "Arial,15"
@@ -18,9 +18,11 @@ set ytics nomirror
 #set y2tics
 
 
-plot "ppt.dat" u 1:2:($3+0.2*$2) axis x1y1 with yerrorbars pt 9  lc rgb "blue" title "^{A}Ca({/Times-New-Roman:Italic p,pt})"
+#plot "ppt.dat" u 1:2:($3+0.1*$2) axis x1y1 with yerrorbars pt 9  lc rgb "red" title "^{A}Ca({/Times-New-Roman:Italic p,pt})"
+plot "ppt.dat" u 1:2:($3) axis x1y1 with yerrorbars pt 9  lc rgb "red" title "^{A}Ca({/Times-New-Roman:Italic p,pt})"
 
-replot "pph.dat" u 1:2:($3+0.2*$2) axis x1y1 with yerrorbars pt 4 lc rgb "red" title "^{A}Ca({/Times-New-Roman:Italic p,p}^{3}He)"
+#replot "pph.dat" u 1:2:($3+0.1*$2) axis x1y1 with yerrorbars pt 4 lc rgb "blue" title "^{A}Ca({/Times-New-Roman:Italic p,p}^{3}He)"
+replot "pph.dat" u 1:2:($3) axis x1y1 with yerrorbars pt 4 lc rgb "blue" title "^{A}Ca({/Times-New-Roman:Italic p,p}^{3}He)"
 
 
 

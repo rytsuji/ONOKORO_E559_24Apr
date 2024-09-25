@@ -24,11 +24,11 @@ void tra_ave_pph(TString infile){
   int n_ave=5;
   //Double_t c[5]={1.0,1.0,1.0,1.0,1.0};
 
-  Double_t c[5]={TMath::Gaus(-2*dx,0,0.38),
-		 TMath::Gaus(-dx,0,0.38),
-		 TMath::Gaus(0,0,0.38),
-		 TMath::Gaus(2*dx,0,0.38),
-		 TMath::Gaus(dx,0,0.38)};
+  Double_t c[5]={TMath::Gaus(-2*dx,0,0.37),
+		 TMath::Gaus(-dx,0,0.37),
+		 TMath::Gaus(0,0,0.37),
+		 TMath::Gaus(2*dx,0,0.37),
+		 TMath::Gaus(dx,0,0.37)};
   
   //int n_ave=4;
   //Double_t c[12]={1.0,1.0,1.0,1.0};

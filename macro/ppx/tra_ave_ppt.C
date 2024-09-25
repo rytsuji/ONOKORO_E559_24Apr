@@ -24,11 +24,11 @@ void tra_ave_ppt(TString infile){
   int n_ave=5;
   //Double_t c[5]={1.0,1.0,1.0,1.0,1.0};
 
-  Double_t c[5]={TMath::Gaus(-2*dx,0,0.22),
-		 TMath::Gaus(-dx,0,0.22),
-		 TMath::Gaus(0,0,0.22),
-		 TMath::Gaus(2*dx,0,0.22),
-		 TMath::Gaus(dx,0,0.22)};
+  Double_t c[5]={TMath::Gaus(-2*dx,0,0.19),
+		 TMath::Gaus(-dx,0,0.19),
+		 TMath::Gaus(0,0,0.19),
+		 TMath::Gaus(2*dx,0,0.19),
+		 TMath::Gaus(dx,0,0.19)};
   
   //int n_ave=4;
   //Double_t c[12]={1.0,1.0,1.0,1.0};

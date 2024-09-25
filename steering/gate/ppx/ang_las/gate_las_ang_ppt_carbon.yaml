@@ -9,7 +9,10 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_las_ang; abs(ltgt.fA*1000)<50 && abs(ltgt.fB*1000)<70"
+#        - "gate_las_ang; abs(ltgt.fA*1000)<50 && abs(ltgt.fB*1000)<60"
+#        - "gate_las_ang; abs(ltgt.fA*1000-15)<10 && abs(ltgt.fB*1000)<60"
+
+        - "gate_las_ang; abs(plas.GetTheta()-50.572)<3.0 && abs(fmod(plas.GetPhi()+360.0,360.0)-180)<3.5"
 
 
 

@@ -1,5 +1,5 @@
 anchor:
- - &sx ["225.39-pgr.fTKE-plas.fTKE", 1000, 0, 50]
+ - &sx ["225.39+0.41-pgr.fTKE-plas.fTKE", 1000, 0, 50]
  - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
  - &tof_raw ["tof.fTiming",  1000, -1000, 1000]
  - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"

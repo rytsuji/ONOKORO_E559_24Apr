@@ -9,7 +9,8 @@ Processor:
     type: art::TTreeFormulaGateProcessor
     parameter:
       Definitions:
-        - "gate_las_energy; plas.fTKE>44 && plas.fTKE<62"
+#        - "gate_las_energy; plas.fTKE>44 && plas.fTKE<62"
+        - "gate_las_energy; plas.fTKE>44 && plas.fTKE<65"
 
   - name: stop_proc_las_energy
     type: art::TGateStopProcessor

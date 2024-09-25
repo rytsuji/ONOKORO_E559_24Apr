@@ -1,74 +1,43 @@
-
 {
-  double offset=0.05/(0.05+0.17);
-  //
-  TFile *file_16O = TFile::Open("macro/ppx/output_sx/ppt_16O_tave.root");
+
+  Double_t scale=0.66348429*(48.0080/10.47)/(12.0/10.65); 
+  //scale=2.0;
+  TFile *file_mylar=TFile::Open("output/ppx/ppt_mylar.tra_ave.root");
+  TFile *file_carbon=TFile::Open("output/ppx/ppt_carbon.tra_ave.root");
+
+  //TFile *fout = new TFile(Form("output/ppx/ppt_oxygen.root"),"RECREATE");
+  TH1F *h_oxygen;
+  TH1F *h_oxygen0;  
+  TH1F *h_mylar   =( (TH1F*) file_mylar->Get("sx_tave"));
+  TH1F *h_mylar0  =( (TH1F*) file_mylar->Get("sx_tave0"));
+  TH1F *h_carbon  =( (TH1F*) file_carbon->Get("sx_tave"));
+  TH1F *h_carbon0 =( (TH1F*) file_carbon->Get("sx_tave0"));
+
+  int Nbin=h_mylar->GetXaxis()->GetNbins();
+  double xmin=h_mylar->GetXaxis()->GetXmin();
+  double xmax=h_mylar->GetXaxis()->GetXmax();    
   
-
-  Double_t ymin=-0.1499;
-  Double_t ymax=0.7999;
-
-  sx_oxygen->GetXaxis()->SetRange(sx_oxygen->FindBin(18),sx_oxygen->FindBin(38));
-
-  sx_oxygen->SetLabelSize(0.06*(1-offset),"xy");
+  h_oxygen   = new TH1F("h_oxygen","h_oxygen",Nbin,xmin,xmax);
+  h_oxygen0  = new TH1F("h_oxygen0","h_oxygen0",Nbin,xmin,xmax);  
+  h_oxygen->Sumw2();
+  h_oxygen0->Sumw2(0);  
   
-  sx_oxygen->SetMinimum(ymin);
-  sx_oxygen->SetMaximum(ymax);
+  h_oxygen->Add(h_mylar,1.0);
+  h_oxygen->Add(h_carbon,-scale);
 
-  sx_oxygen->SetStats(0);
-  sx_oxygen0->SetStats(0);
-  sx_oxygen->Draw();
-  sx_oxygen0->Draw("same");
-  Double_t St=22.559;
-  Double_t E1=474.45/1000.0;
-  Double_t E2=980.476/1000.0;
-  Double_t E3=1424.3/1000.0;
-  Double_t E4=1639.15/1000.0;
-  Double_t E5=2188.22/1000.0;
-  Double_t E6=2747.9/1000.0;
+  h_oxygen0->Add(h_mylar0,1.0);
+  h_oxygen0->Add(h_carbon0,-scale);  
 
-  /*
-  Double_t y0=0.1;
-  TArrow a0(St,y0,St,y0+0.05,0.01,"<|");
-  a0.Draw(); 
-  TLatex t0;
-  t0.SetTextAlign(12);
-  t0.SetTextAngle(90);
-  t0.DrawLatex(St-0.4,y0+0.06,Form("#scale[%e]{gnd (3/2^{+})}",1.2*(1.0-offset)));
-  Double_t y1=0.11;
-  TArrow a1(St+E1,y1,St+E1,y1+0.05,0.01,"<|");
-  a1.Draw();
-  TLatex t1;
-  t1.SetTextAlign(12);
-  t1.SetTextAngle(90);
-  t1.DrawLatex(St+E1+0.4,y1+0.06,Form("#scale[%e]{0.47 MeV (1/2^{+})}",1.2*(1.0-offset)));
-  */
-  /*
-  Double_t y2=0.07;
-  TArrow a2(St+E2,y2,St+E2,y2+0.05,0.01,"<|");
-  a2.Draw();
-  TLatex t2;
-  t2.SetTextAlign(11);                                                                                                                   
-  t2.DrawLatex(St+E2,y2+0.07,"#scale[0.75]{#frac{5}{2}^{+}, #frac{7}{2}^{+}}");  
-  */
+  //h_mylar->Write();
+  //h_mylar0->Write();
 
-  
-  TLatex title;
-  title.SetTextAlign(11);
-  title.SetNDC(1);
-  title.DrawLatex(.65,offset+0.8*(1-offset),Form("#scale[%e]{^{16}O#it{(p,pt)}}",1.5*(1.0-offset)));
-  title.DrawLatex(.65,offset+0.7*(1-offset),Form("#scale[%e]{#it{S_{t}}=25.032 MeV}",1.2*(1.0-offset)));
-  
+  //h_carbon->Write();
+  //h_carbon0->Write();
 
+  //h_oxyegn->Write();
+  //h_oxygen0->Write();
 
-  /*
-  TText *t = new TText(.5,.5,"Preliminary");
-  t->SetNDC(1);
-  t->SetTextAlign(22);
-  t->SetTextColorAlpha(kRed, 0.9);
-  t->SetTextFont(43);
-  t->SetTextSize(40);
-  t->SetTextAngle(-45);
-  t->Draw("same");
-  */
+  gApplication->ProcessLine("zon");
+  gApplication->ProcessLine("ht h_oxygen");
+  gApplication->ProcessLine("ht h_oxygen0 same");  
 }
