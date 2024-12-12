@@ -5,12 +5,13 @@
 Anchor:
 #  - &gate_gr gate/gr/gate_gr_2020.yaml
 #  - &gate_gr gate/gr/gate_gr_2036.yaml
-  - &gate_gr gate/gr/gate_gr_1033.yaml
+#  - &gate_gr gate/gr/gate_gr_2108.yaml
 #  - &gate_gr gate/gr/gate_gr_1044.yaml
 #  - &gate_gr gate/gr/gate_gr_ppt_chkeff.yaml
-#  - &gate_gr gate/gr/gate_gr_contami.yaml
-  - &dt2dl_gr 1033
-#  - &dt2dl_gr 2020
+#  - &gate_gr gate/gr/gate_gr_Li_pp.yaml
+  - &gate_gr gate/gr/gate_gr_pph_48Ca_raw.yaml 
+#  - &dt2dl_gr 1033
+  - &dt2dl_gr 2137
 #  - &dt2dl_gr 1044
 
 
@@ -42,6 +43,7 @@ Processor:
   - include: tref_chk.yaml
 
   - include: pla/pla_gr.yaml
+  - include: *gate_gr    
   - include:
       name: vdc/vdc_gr_rawtrack.yaml
       replace:
@@ -50,18 +52,18 @@ Processor:
   - include: optics/optics_gr.yaml  
 
 #tof and charge calibration
-#  - include:
-#      name: pid/pid_calib_gr.yaml
-#      replace:
-#        SETUP: contami
+  - include:
+      name: pid/pid_calib_gr.yaml
+      replace:
+        SETUP: Li_pp
 
 #energy calculation from spectrometer setup
   - include:
       name: energy_calib/energy_calib_gr.yaml
       replace:
-        SETUP: contami
+        SETUP: pp_Li
 
-  - include: *gate_gr
+
   
   - name: hist_pla_gr
     type: art::TTreeProjectionProcessor

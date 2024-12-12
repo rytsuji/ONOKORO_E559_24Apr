@@ -1,4 +1,4 @@
-2024年 9月 18日 水曜日 03:44:45 JST
+2024年 10月 12日 土曜日 22:25:32 JST
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -59,8 +59,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 100692512 itrEnd = 116677264
+itrBegin = 86125664 itrEnd = 112182304
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -176,7 +175,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -237,8 +235,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 128053728 itrEnd = 130380480
+itrBegin = 121509328 itrEnd = 121304912
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -354,7 +351,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -415,8 +411,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 50022992 itrEnd = 101671264
+itrBegin = 123437360 itrEnd = 134068912
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -532,7 +527,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -593,8 +587,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 133000432 itrEnd = 134010688
+itrBegin = 125670432 itrEnd = 124606560
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -710,7 +703,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -771,8 +763,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 102377808 itrEnd = 117191408
+itrBegin = 64716672 itrEnd = 140084224
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -888,4 +879,3 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include

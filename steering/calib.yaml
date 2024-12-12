@@ -123,9 +123,9 @@ Processor:
       FileName: hist/eff/trig.hist.yaml
       OutputFilename: *histout
 
-  - name: hist_yield
-    type: art::TTreeProjectionProcessor
-    parameter:
-      Type: art::TTreeProjection
-      FileName: hist/yield_check/yield_check_@SETUP@.hist.yaml
-      OutputFilename: *histout      
+#  - name: hist_yield
+#    type: art::TTreeProjectionProcessor
+#    parameter:
+#      Type: art::TTreeProjection
+#      FileName: hist/yield_check/yield_check_@SETUP@.hist.yaml
+#      OutputFilename: *histout      

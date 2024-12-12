@@ -1,0 +1,4 @@
+include:
+  - name: hist/phys/ex/tmpl/phys_ppt.hist.yaml
+    replace:
+      SX: 24.996

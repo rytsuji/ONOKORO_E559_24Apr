@@ -1,0 +1,10 @@
+Processor:
+
+
+  - name: proc_pla_las_calib
+    type: art::TMeanChargeProcessor
+    parameter:
+      InputCollectionTiming: pla_las_3
+      InputCollectionCharge: vdc_las_dt
+      ValidChargeRange: [0,1000,0]
+      OutputCollection: mean_tot_las

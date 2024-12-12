@@ -119,10 +119,10 @@ void TTimingTrefValidatorLR::Process()
 	 Double_t timing1 = timingData1->GetTiming();
 	 Double_t timing2 = timingData2->GetTiming();
 	 if ( (0.5*(timing1+timing2)-tref < fValidTimeMin || fValidTimeMax < 0.5*(timing1+timing2)-tref ) ||  timing1-timing2 < fValidTDiffMin || fValidTDiffMax < timing1-timing2  ) {
-	   if(0.5*(timing1+timing2)-tref < fValidTimeMin){
-	     latestHit1=iHit1;
-	     latestHit2=iHit2;
-	   }
+	   //if(0.5*(timing1+timing2)-tref < fValidTimeMin){
+	   //latestHit1=iHit1;
+	   //latestHit2=iHit2;
+	   //}
 	   continue;
 	 }
 	 const TDataObject *const data1 = static_cast<TDataObject*>((*fInput1)->At(iHit1));

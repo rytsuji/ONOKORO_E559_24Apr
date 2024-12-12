@@ -1,0 +1,120 @@
+anchor:
+ - &rf1 ["fmod(pla_las_3.fTiming-rf1.fTiming+1420.6750,142.06750)", 500, 0, 142.5]
+ - &rf2 ["fmod(pla_las_3.fTiming-rf2.fTiming+1420.6750,142.06750)", 500, 0, 142.5]
+ - &rf3 ["fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750)", 500, 0, 142.5]
+ - &de1 ["pla_las_3.fCharge", 1000, 0, 5000]
+ - &de1l ["pla_las_3l.fCharge", 1000, 0, 10000]
+ - &de1r ["pla_las_3r.fCharge", 1000, 0, 10000] 
+ - &xpos ["vdc_las.fX",600,-1000,1000]
+ - &tdiff ["pla_las_3.GetTDiff()",1000,-40,0]
+# - &tot ["Sum$(vdc_las_dt.fCharge)/(@vdc_las_dt.GetEntriesFast())",500,0,500]
+ - &tot ["mean_tot_las.fCharge",500,0,500] 
+# - &cut_rf "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-30)<25"
+ - &cut_rf "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-32.5)<7.5"
+# - &cut_rf_totveto "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-30)<25 && @vdc_las_dt.GetEntriesFast()==0"
+ - &cut_rf_totveto "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-32.5)<7.5 && @vdc_las_dt.GetEntriesFast()==0"
+# - &cut_rf_tot "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-30)<25 && Sum$(vdc_las_dt.fCharge)/(@vdc_las_dt.GetEntriesFast())>120"
+ - &cut_rf_tot "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-32.5)<7.5 && mean_tot_las.fCharge>100"
+ - &cut_rf_track "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-32.5)<7.5 && vdc_las@.GetEntriesFast()>0"
+ - &cut_rf_tot_track "abs(fmod(pla_las_3.fTiming-rf3.fTiming+1420.6750,142.06750/2.0)-32.5)<7.5 && mean_tot_las.fCharge>100 && vdc_las@.GetEntriesFast()>0"    
+group:
+ - name: run_summary_las
+   title: LAS Run Summary
+   contents:
+     
+     - name: rf1_de1
+       title: LAS RF1 vs plastic1 Charge
+       x: *rf1
+       y: *de1
+     - name: rf2_de1
+       title: LAS RF2 vs plastic1 Charge
+       x: *rf2
+       y: *de1
+     - name: rf3_de1
+       title: LAS RF3 vs plastic1 Charge
+       x: *rf3
+       y: *de1
+     - name: rf1_tot
+       title: LAS RF1 vs VDC TOT
+       x: *rf1
+       y: *tot
+     - name: rf2_tot
+       title: LAS RF2 vs VDC TOT
+       x: *rf2
+       y: *tot
+     - name: rf3_tot
+       title: LAS RF3 vs VDC TOT
+       x: *rf3
+       y: *tot
+
+     - name: x_ql1
+       title: LAS X vs plastic1L Charge
+       x: *xpos
+       y: *de1l
+     - name: x_qr1
+       title: LAS X vs plastic1R Charge
+       x: *xpos
+       y: *de1r
+     - name: x_tot
+       title: LAS X vs VDC TOT
+       x: *xpos
+       y: *tot
+     - name: tot_de1
+       title: LAS VDC TOT VS plastic3 Charge
+       x: *tot
+       y: *de1       
+       
+       
+     - name: x_ql1_rfgate
+       title: LAS X vs plastic1L Charge with RF gate
+       x: *xpos
+       y: *de1l
+       cut: *cut_rf       
+     - name: x_qr1_rfgate
+       title: LAS X vs plastic1R Charge with RF gate
+       x: *xpos
+       y: *de1r
+       cut: *cut_rf
+     - name: x_tot_rfgate
+       title: LAS X vs VDC TOT with RF gate
+       x: *xpos
+       y: *tot
+       cut: *cut_rf       
+     - name: tot_de1_rfgate
+       title: LAS VDC TOT VS plastic3 Charge with RF gate
+       x: *tot
+       y: *de1       
+       cut: *cut_rf
+
+     - name: tot
+       title: LAS VDC TOT
+       x: *tot
+     - name: tot_rfgate
+       title: LAS VDC TOT with RF gate
+       x: *tot       
+       cut: *cut_rf
+
+     - name: de1
+       title: LAS plastic3 Charge
+       x: *de1
+     - name: de1_rfgate
+       title: LAS plastic3 Charge with RF gate
+       x: *de1       
+       cut: *cut_rf
+     - name: de1_rftotgate
+       title: LAS plastic3 Charge with RF and TOTVeto gate
+       x: *de1       
+       cut: *cut_rf_totveto
+     - name: de1_rf_totvetogate
+       title: LAS plastic3 Charge with RF and TOT gate
+       x: *de1       
+       cut: *cut_rf_tot
+     - name: de1_rf_track
+       title: LAS plastic3 Charge with RF and Tracking gate
+       x: *de1       
+       cut: *cut_rf_track
+     - name: de1_rf_tot_track
+       title: LAS plastic3 Charge with RF and TOT and Tracking gate
+       x: *de1       
+       cut: *cut_rf_tot_track                     
+       

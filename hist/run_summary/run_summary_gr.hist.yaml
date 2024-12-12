@@ -1,0 +1,36 @@
+anchor:
+ - &rf1 ["fmod(pla_gr_1.fTiming-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf2 ["fmod(pla_gr_1.fTiming-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf3 ["fmod(pla_gr_1.fTiming-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &de1 ["pla_gr_1.fCharge", 1000, 0, 5000]
+ - &de1l ["pla_gr_1l.fCharge", 1000, 0, 5000]
+ - &de1r ["pla_gr_1r.fCharge", 1000, 0, 5000] 
+ - &xpos ["vdc_gr.fX",600,-600,600]
+ - &tdiff ["pla_gr_1.GetTDiff()",1000,-30,30]
+ 
+group:
+ - name: run_summary_gr
+   title: GR Run Summary
+   contents:
+     
+     - name: de1_rf1_gr
+       title: GR RF1 vs plastic1 Charge
+       x: *rf1
+       y: *de1
+     - name: de1_rf2_gr
+       title: GR RF2 vs plastic1 Charge
+       x: *rf2
+       y: *de1
+     - name: de1_rf3_gr
+       title: GR RF3 vs plastic1 Charge
+       x: *rf3
+       y: *de1       
+     - name: ql1_x
+       title: GR X vs plastic1L Charge
+       x: *xpos
+       y: *de1l
+     - name: qr1_x
+       title: GR X vs plastic1R Charge
+       x: *xpos
+       y: *de1r
+

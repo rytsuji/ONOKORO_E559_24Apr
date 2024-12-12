@@ -4,19 +4,27 @@
 
 Anchor:
 #  - &gate_las gate/las/gate_las_2036.yaml
-  - &gate_las gate/las/gate_las_1033.yaml
+#  - &gate_las gate/las/gate_las_1033.yaml
+#  - &gate_las gate/las/gate_las_2108.yaml
 #  - &gate_las gate/las/gate_las_1044.yaml
 #  - &gate_las gate/las/gate_las_2020.yaml
 #  - &gate_las gate/las/gate_las_ppt_kf0.yaml
 #  - &gate_las gate/las/gate_las_ppt_chkeff.yaml
-  - &dt2dl_las 1033
-#  - &dt2dl_las 1044
+  - &gate_las gate/las/gate_las_ppt_raw.yaml
+#  - &dt2dl_las 2108
+  - &dt2dl_las ppt
 
 
   - &input data/run@NUM@.bld
-  - &histout output/las/run@NUM@_CH2.hist.root
-  - &output output/las/run@NUM@_CH2.root
-
+  - &histout output/las/run@NUM@.hist.root
+  - &output output/las/run@NUM@.root
+#  - &input data/run2103.bld
+#  - &input data/run2106.bld
+#  - &input data/run2162.bld 
+#  - &input data/run2163.bld    
+#  - &histout output/las/pph_48Ca_dt2dl.hist.root
+#  - &output output/las/pph_48Ca_dt2dl.root
+  
 Processor:
   - name: timer
     type: art::TTimerProcessor
@@ -48,7 +56,8 @@ Processor:
       name: vdc/vdc_las_rawtrack.yaml
       replace:
         DT2DL: *dt2dl_las
-  - include: *gate_las  
+  - include: *gate_las 
+  - include: vdc/vdc_las_dt2dl.yaml   
   - include: vdc/vdc_las_calib.yaml
   - include: optics/optics_las.yaml
   

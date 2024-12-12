@@ -1,0 +1,130 @@
+anchor:
+ - &sx ["225.52-pgr.fTKE-plas.fTKE-@SX@", 1200, -10, 50]
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+ - &tof_raw ["tof.fTiming",  1000, -1000, 1000]
+ - &tc "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &ac "(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)"
+
+ 
+group:
+ - name: phys
+   title: phys
+   contents:
+
+     - name: tof
+       title: TOF GR-LAS
+       x: *tof
+
+     - name: tof_tc 
+       title: TOF GR-LAS with True coin
+       x: *tof
+       cut: *tc
+       
+     - name: tof_ac
+       title: TOF GR-LAS with Acc coin
+       x: *tof
+       cut: *ac
+
+     - name: tof_raw
+       title: TOF raw  GR-LAS
+       x: *tof_raw
+
+     - name: tke_las_gr
+       title: Energy LAS-GR with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *tc
+
+     - name: tke_las_gr_ac 
+       title: Energy LAS-GR with Acc coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       cut: *ac
+
+     - name: tke_las_gr_nogate
+       title: Energy LAS-GR without gate 
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: ["plas.fTKE", 500,   0, 100]
+       
+     - name: sx
+       title: Sx with True coin
+       x: *sx
+       cut: *tc
+
+     - name: sx_ac
+       title: Sx with Acc coin
+       x: *sx
+       cut: *ac
+
+     - name: sx_nogate
+       title: Sx without gate
+       x: *sx
+
+     - name: tke_gr_sx_tc
+       title: Energy GR vs SX  with True coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: *sx
+       cut: *tc
+
+     - name: tke_gr_sx_ac
+       title: Energy GR vs SX  with Acc coin
+       x: ["pgr.fTKE",  500, 100, 200]
+       y: *sx
+       cut: *ac
+
+       
+     - name: las_x_sx
+       title: LAS X vs SX  with True coin
+       x: ["lfp.fX",  500, -1000,1000]
+       y: *sx
+       cut: *tc
+
+     - name: px_sx_tc
+       title: Px vs SX  with True coin
+       x: ["pgr.GetPx()+plas.GetPx()",200,-100,100]               
+       y: *sx
+       cut: *tc
+
+     - name: px_sx_ac
+       title: Px vs SX  with Acc coin
+       x: ["pgr.GetPx()+plas.GetPx()",200,-100,100]               
+       y: *sx
+       cut: *ac
+
+     - name: py_sx_tc
+       title: Py vs SX  with True coin
+       x: ["pgr.GetPy()+plas.GetPy()",200,-100,100]               
+       y: *sx
+       cut: *tc
+
+     - name: py_sx_ac
+       title: Py vs SX  with Acc coin
+       x: ["pgr.GetPy()+plas.GetPy()",200,-100,100]               
+       y: *sx
+       cut: *ac
+
+     - name: pz_sx_tc
+       title: Pz vs SX  with True coin
+       x: ["pgr.GetPz()+plas.GetPz()-688.63139",200,-100,100]               
+       y: *sx
+       cut: *tc
+
+     - name: pz_sx_ac
+       title: Pz vs SX  with Acc coin
+       x: ["pgr.GetPz()+plas.GetPz()-688.63139",200,-100,100]               
+       y: *sx
+       cut: *ac
+
+     - name: p_sx_tc
+       title: P vs SX  with True coin
+       x: ["sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-688.63139,2.0))",150,0,150]               
+       y: *sx
+       cut: *tc
+
+     - name: p_sx_ac
+       title: P vs SX  with Acc coin
+       x: ["sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-688.63139,2.0))",150,0,150]               
+       y: *sx
+       cut: *ac              
+
+

@@ -3,8 +3,8 @@ set rmargin 15
 set tmargin 1
 set bmargin 5
 
-set tics font "Arial,50"
-set key font"Arial,50"
+set tics font "Arial,15"
+set key font"Arial,15"
 
 set xlabel 'mass number A' font "Arial,15"
 set xrange [38:50]

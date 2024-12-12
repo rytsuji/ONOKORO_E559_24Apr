@@ -1,4 +1,4 @@
-2024年 9月 18日 水曜日 03:44:45 JST
+2024年 10月 12日 土曜日 22:25:32 JST
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -59,8 +59,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 122756304 itrEnd = 134630832
+itrBegin = 21958512 itrEnd = 110192208
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -176,7 +175,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -237,8 +235,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 99195584 itrEnd = 115307248
+itrBegin = 107916400 itrEnd = 122656544
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -354,7 +351,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -415,8 +411,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 101076608 itrEnd = 116846224
+itrBegin = 24043920 itrEnd = 113653504
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -532,7 +527,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -593,8 +587,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 107638144 itrEnd = 109988720
+itrBegin = 127029728 itrEnd = 112569648
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -710,7 +703,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -771,8 +763,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 123010144 itrEnd = 132234384
+itrBegin = 113103296 itrEnd = 116028016
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -888,7 +879,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -949,8 +939,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 108311408 itrEnd = 123754464
+itrBegin = 79624112 itrEnd = 110044608
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1066,7 +1055,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -1127,8 +1115,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 93191056 itrEnd = 125196448
+itrBegin = 110430736 itrEnd = 124698976
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1244,7 +1231,6 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include
 Registering art::TStreamingModuleDecoderLRTDC
 Registering art::TStreamingModuleDecoderHRTDC
 Registering art::TStreamingModuleDecoderLRTDC64
@@ -1305,8 +1291,7 @@ hist_optics_corr
 hist_mhit_gr
 hist_mhit_las
 hist_trig
-hist_yield
-itrBegin = 123096256 itrEnd = 138445952
+itrBegin = 91364176 itrEnd = 117513808
 branch : eventheader
 branch : trig_raw
 branch : trig
@@ -1422,4 +1407,3 @@ branch : vdc_las
 'rf3'
 'gtgt'
 'ltgt'
-include

@@ -1,0 +1,9 @@
+Processor:
+  - include:
+      name: tmpl/gate_gr_calib.tmpl.yaml
+      replace:
+        Q_GR_MIN: 100
+        Q_GR_MAX: 4200      
+        T_GR_MIN: 40 #10sigma 
+        T_GR_MAX: 51
+        RF: rf2

@@ -17,6 +17,7 @@ set(SOURCES
   TSpectrometerProcessor.cc
   TParticleData.cc
   TRFSubtractionProcessor.cc
+  TMeanChargeProcessor.cc  
   )
 
 set(HEADERS
@@ -36,6 +37,7 @@ set(HEADERS
   TSpectrometerProcessor.h
   TParticleData.h
   TRFSubtractionProcessor.h
+  TMeanChargeProcessor.h  
   )
 
 add_library(${LIB_NAME} SHARED ${SOURCES})

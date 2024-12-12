@@ -1,0 +1,12 @@
+#Pb(p,p) @27.78deg
+Processor:
+  - include:
+      name: tmpl/gate_gr_2layer.tmpl.yaml
+      replace:
+        Q_GR_MIN1: 0
+        Q_GR_MAX1: 20000      
+        Q_GR_MIN2: 0
+        Q_GR_MAX2: 20000
+        T_GR_MIN: 38
+        T_GR_MAX: 70
+        RF: rf2

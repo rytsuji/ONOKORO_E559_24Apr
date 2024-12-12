@@ -1,0 +1,39 @@
+Anchor:
+  - &input output/raw/run@NUM@.root
+  - &histout output/run_summary/run@NUM@.hist.root
+  
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - name: es_ttree
+    type: art::TTreeEventStore
+    parameter:
+      MaxEventNum: 0
+      OutputTransparency: 0
+      TreeName: tree
+      FileName: *input
+
+  - include: mean_tot/mean_tot_las.yaml      
+  - include: gate/gate_coin.yaml
+
+  - name: hist_trig
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/run_summary/trig.hist.yaml
+      OutputFilename: *histout    
+    
+  - name: hist_gr
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/run_summary/run_summary_gr.hist.yaml
+      OutputFilename: *histout
+
+  - name: hist_las
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/run_summary/run_summary_las_@SETUP@.hist.yaml
+      OutputFilename: *histout

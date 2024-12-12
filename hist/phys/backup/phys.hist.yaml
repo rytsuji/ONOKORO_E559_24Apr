@@ -1,9 +1,8 @@
 anchor:
- - &tc "tof.fTiming>-10 && tof.fTiming<50"
-# - &tc "tof.fTiming>2 && tof.fTiming<45"
-# - &ac "(tof.fTiming>-150 && tof.fTiming<-10) || (tof.fTiming>50 && tof.fTiming<200)"
- - &ac "(tof.fTiming>-580 && tof.fTiming<-10) || (tof.fTiming>50 && tof.fTiming<340)"
-# - &ac "( abs(tof.fTiming+295)<285 && fmod(tof.fTiming+1420.6750,71.033750)>2 && fmod(tof.fTiming+1420.6750,71.033750)<45) || (abs(tof.fTiming-195)<145  && fmod(tof.fTiming+1420.6750,71.033750)>2 && fmod(tof.fTiming+1420.6750,71.033750)<45)" 
+ - &sx ["226.464-pgr.fTKE-plas.fTKE", 250, 0, 50]
+ - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())",  2000, -1000, 1000]
+ - &tc "abs(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20"
+ - &ac "abs(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<320 && abs(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>20" 
  
 group:
  - name: phys
@@ -12,16 +11,16 @@ group:
 
      - name: tof
        title: TOF GR-LAS
-       x: ["tof.fTiming",  2000, -1000, 1000]
+       x: *tof
 
-     - name: tof_tc 
-       title: TOF GR-LAS with True coin
-       x: ["tof.fTiming",  2000, -1000, 1000]
+     - name: sx_tc
+       title: Sx tc
+       x: *sx
        cut: *tc
-       
-     - name: tof_ac
-       title: TOF GR-LAS with Acc coin
-       x: ["tof.fTiming",  2000, -1000, 1000]
+
+     - name: sx_ac
+       title: Sx ac
+       x: *sx
        cut: *ac
 
      - name: tke_las_gr
@@ -30,27 +29,18 @@ group:
        y: ["plas.fTKE", 500,   0, 100]
        cut: *tc
 
-     - name: tke_las_gr_ac 
-       title: Energy LAS-GR with Acc coin
+     - name: tke_gr_sx
+       title: Energy GR vs Sx
        x: ["pgr.fTKE",  500, 100, 200]
-       y: ["plas.fTKE", 500,   0, 100]
-       cut: *ac
-
-     - name: sx
-       title: Sx with True coin
-       x: ["226.0-pgr.fTKE-plas.fTKE", 250, 0, 50]
+       y: *sx
        cut: *tc
-
-     - name: sx_ac
-       title: Sx with Acc coin
-       x: ["226.0-pgr.fTKE-plas.fTKE", 250, 0, 50]
-       cut: *ac
-
+       
+     - name: tke_las_sx
+       title: Energy LAS vs Sx
+       x: ["plas.fTKE", 500,   0, 100]       
+       y: *sx       
+       cut: *tc
+       
      - name: sx_nogate
        title: Sx without gate
-       x: ["226.0-pgr.fTKE-plas.fTKE", 500, -50, 50]
-
-     - name: tke_las_gr_nogate
-       title: Energy LAS-GR without gate 
-       x: ["pgr.fTKE",  500, 100, 200]
-       y: ["plas.fTKE", 500,   0, 100]
+       x: *sx

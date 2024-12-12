@@ -1,0 +1,19 @@
+Processor:
+
+  - name: gate_array_init_gr_pid
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: gr_pid
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+        - "gate_gr_pid; abs( fmod(pla_gr_1.fTiming - @RF@.fTiming + 1420.6750, 71.033750)  - ( @T_GR_MIN@ + @T_GR_MAX@ )/2. ) < abs( @T_GR_MAX@ -@T_GR_MIN@)/2. && pla_gr_1.fCharge> @Q_GR_MIN@ && pla_gr_1.fCharge < @Q_GR_MAX@"
+
+
+  - name: stop_proc_gr_pid
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr_pid"
+

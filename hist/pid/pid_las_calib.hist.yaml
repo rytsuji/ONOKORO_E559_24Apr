@@ -1,9 +1,9 @@
 anchor:
 
  - &tof ["tof.fTiming-(pgr.GetTOF()-plas.GetTOF())", 1000, -1000, 500]
- - &rf1 ["fmod(pid_las.fTiming-plas.GetTOF()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142]
- - &rf2 ["fmod(pid_las.fTiming-plas.GetTOF()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142]
- - &rf3 ["fmod(pid_las.fTiming-plas.GetTOF()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142]
+ - &rf1 ["fmod(pid_las.fTiming-plas.GetTOF()-rf1.fTiming+1420.6750,142.06750)", 300, 0, 142.5]
+ - &rf2 ["fmod(pid_las.fTiming-plas.GetTOF()-rf2.fTiming+1420.6750,142.06750)", 300, 0, 142.5]
+ - &rf3 ["fmod(pid_las.fTiming-plas.GetTOF()-rf3.fTiming+1420.6750,142.06750)", 300, 0, 142.5]
 
  - &de1 ["pid_las.fCharge",1000,0,500]
 

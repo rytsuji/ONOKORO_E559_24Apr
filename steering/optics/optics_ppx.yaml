@@ -23,7 +23,7 @@ Processor:
 #      MatrixFileDelta: prm/optics/las/las_delta.yaml
       MatrixFileA: prm/optics/las/las_a_@SETUP@.yaml
       MatrixFileB: prm/optics/las/las_b_@SETUP@.yaml
-      MatrixFileZ: prm/optics/las/las_z.yaml
+      MatrixFileZ: prm/optics/las/las_z_@SETUP@.yaml
       InputCollection:
         - lfp
       OutputCollection: ltgt

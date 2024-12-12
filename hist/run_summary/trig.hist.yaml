@@ -1,0 +1,10 @@
+anchor:
+ 
+group:
+ - name: trigger
+   title: Trigger
+   contents:
+     
+     - name: trig_coin
+       title: Coin trigger
+       x: ["(trig_coin.fID==0)",2,0,2]

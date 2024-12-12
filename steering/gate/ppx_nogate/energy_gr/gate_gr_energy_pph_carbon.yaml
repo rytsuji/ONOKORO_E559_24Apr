@@ -1,0 +1,21 @@
+Processor:
+
+  - name: gate_array_init_gr_energy
+    type: art::TGateArrayInitializer
+    parameter:
+      OutputTransparency: 1
+
+  - name: def_gate_gr_energy
+    type: art::TTreeFormulaGateProcessor
+    parameter:
+      Definitions:
+#        - "gate_gr_energy; abs(pgr.fTKE-150.0)<5.0"
+        - "gate_gr_energy; pgr.fTKE>146.0 && pgr.fTKE<153.0"        
+#        - "gate_gr_energy; abs(gtgt.fEnergy)<0.0175"
+
+
+  - name: stop_proc_gr_energy
+    type: art::TGateStopProcessor
+    parameter:
+      GateName: "gate_gr_energy"
+

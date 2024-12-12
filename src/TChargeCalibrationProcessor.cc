@@ -135,63 +135,70 @@ void TChargeCalibrationProcessor::Process(){
     const ITiming *const timingData = dynamic_cast<const ITiming*>(inDataT);
     Double_t timing = timingData->GetTiming();
 
+    int nValidQ=0;
     Double_t charge = 0;
     
     if(fChargeType == 2){
-
       //Plastic
-
       const TDataObject *const inDataQ = static_cast<TDataObject*>((*fChargeInput)->At(0));
       const ICharge *const chargeData = dynamic_cast<const ICharge*>(inDataQ);
       charge = chargeData->GetCharge();      
-      
+      nValidQ=1;
     }else if(fChargeType == 0){
-
+      
       const Int_t nDataQ = (*fChargeInput)->GetEntriesFast();
       //Mean TOT
-
+      
       for(int iDataQ=0; iDataQ < nDataQ; iDataQ++){
 	const TDataObject *const inDataQ = static_cast<TDataObject*>((*fChargeInput)->At(iDataQ));
 	const ICharge *const chargeData = dynamic_cast<const ICharge*>(inDataQ);
-	charge += ( (Double_t) chargeData->GetCharge() )/( (Double_t) nDataQ );
+	if(isfinite(chargeData->GetCharge())){
+	  charge += ( (Double_t) chargeData->GetCharge() );
+	  nValidQ++;
+	}
       }
-    }else{
-      
     }
-
+    
+    
+    
     TObject *const outData = fOutput->ConstructedAt(0);    
     Double_t outTiming=timing;
-    Double_t outCharge=charge;
-    
-    const TMWDCTrackingResult *const inTrackData = static_cast<TMWDCTrackingResult*>((*fTrackInput)->At(0));
-    const TTrack *const track= dynamic_cast<const TTrack*> (inTrackData->GetTrack());
-      
-    Double_t xyab[kDimension];      
-    xyab[0] = track->GetX();
-    xyab[1] = track->GetY();
-    xyab[2] = (track->GetA());
-    xyab[3] = (track->GetB());
-    /*
-    TOpticsData *const inData = static_cast<TOpticsData*>((*fOpticsInput)->At(0));
-    double Delta = inData->GetDelta();
-    */
-    for (Int_t i = 0, n = fTermsCharge.size(); i != n; ++i) {
-      Double_t elem = 1.;
-      for (Int_t j = 0; j != kDimension; ++j) {
-	const Int_t power = (fTermsCharge[i] >> (j * kShift) & kMask);
-	elem *= TMath::Power(xyab[j],power);
-      }
-      outCharge += elem * fCoefficientsCharge[i];
-    }
-    
     ITiming *const outDataT = dynamic_cast<ITiming*>(outData);
     outDataT->SetTiming(outTiming);
-    ICharge *const outDataQ = dynamic_cast<ICharge*>(outData);
-    outDataQ->SetCharge(outCharge);
+    
+    if(nValidQ>0){
+      Double_t outCharge=charge/(Double_t) nValidQ;
+      const TMWDCTrackingResult *const inTrackData = static_cast<TMWDCTrackingResult*>((*fTrackInput)->At(0));
+      const TTrack *const track= dynamic_cast<const TTrack*> (inTrackData->GetTrack());
+      
+      Double_t xyab[kDimension];      
+      xyab[0] = track->GetX();
+      xyab[1] = track->GetY();
+      xyab[2] = (track->GetA());
+      xyab[3] = (track->GetB());
+      /*
+	TOpticsData *const inData = static_cast<TOpticsData*>((*fOpticsInput)->At(0));
+	double Delta = inData->GetDelta();
+      */
+      for (Int_t i = 0, n = fTermsCharge.size(); i != n; ++i) {
+	Double_t elem = 1.;
+	for (Int_t j = 0; j != kDimension; ++j) {
+	  const Int_t power = (fTermsCharge[i] >> (j * kShift) & kMask);
+	  elem *= TMath::Power(xyab[j],power);
+	}
+	outCharge += elem * fCoefficientsCharge[i];
+      }
+      
+      ICharge *const outDataQ = dynamic_cast<ICharge*>(outData);
+      outDataQ->SetCharge(outCharge);
+      
+    }
+    
+    
     
   }
   return;
 }
-  
+
 
 

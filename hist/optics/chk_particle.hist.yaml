@@ -1,0 +1,12 @@
+group:
+ - name: chk_particle
+   title: GR/LAS particle
+   contents:   
+     - name: pgr
+       title: GR
+       x: ["pgr@.GetEntriesFast()", 5,0,5]
+       cut: "vdc_gr@.GetEntriesFast()>0"
+     - name: plas
+       title: LAS
+       x: ["plas@.GetEntriesFast()", 5,0,5]
+       cut: "vdc_las@.GetEntriesFast()>0"       

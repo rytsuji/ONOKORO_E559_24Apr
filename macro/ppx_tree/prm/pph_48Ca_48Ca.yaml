@@ -1,0 +1,22 @@
+Tinc: 225.48
+#TMinGR: 135
+#TMaxGR: 147
+#TMinLAS: 42
+#TMaxLAS: 68
+TMinGR: 136
+TMaxGR: 146
+TMinLAS: 44
+TMaxLAS: 69
+OmegaGR: 0.00292287
+OmegaLAS: 0.0109863
+
+angGR: "abs(pgr.GetTheta()-50.5)<0.8 && abs(pgr.GetPhi())<3.5 && abs(pgr.GetPhi())<(4.0*pgr.GetTheta()-197.3) && abs(pgr.GetPhi())<(-5.0*pgr.GetTheta()+260)"
+angLAS: "abs(plas.GetTheta()-49)<3 && abs(fmod(plas.GetPhi()+360.0,360.0)-180)<3.5"
+#scale: 0.45203103
+scale: 0.35634431
+fName: "pph_48Ca_48Ca.root"
+
+#angGR: "1"
+#angLAS: "1"
+#scale: 0.42776734
+#fName: "pph_40Ca_scale.root"

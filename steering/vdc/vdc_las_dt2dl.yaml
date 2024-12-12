@@ -1,0 +1,43 @@
+alias:
+  - &timegate [-1590,-1300]
+
+Processor:
+
+# calibration processor
+  - name: proc_vdc_calib_x1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_x1
+      TimingGate: *timegate
+#      ChargeGate: *chargegate      
+  - name: proc_vdc_calib_x2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_x2
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_u1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_u1
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_u2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_u2
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_v1
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_v1
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+  - name: proc_vdc_calib_v2
+    type: art::TMWDCCalibrationProcessor
+    parameter:
+      InputCollection: vdc_las_v2
+      TimingGate: *timegate
+#      ChargeGate: *chargegate
+     
