@@ -43,7 +43,7 @@ int a_gr(){
   int migrad_stats = min->Migrad();
   migrad_stats = min->Migrad(); 
   
-  TString oname="work/ang_gr/dat/gr_a.yaml"; 
+  TString oname="work/ang_gr/result/gr_a.yaml"; 
   ofstream ofile((std::string) oname);
   
   double par[nPrm]; //x0,x1,...,x4,a,xa,xxa,aa,xaa,xxaaa,...,xxaaaaa
