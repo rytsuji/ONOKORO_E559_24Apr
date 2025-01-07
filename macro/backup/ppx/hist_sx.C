@@ -15,7 +15,7 @@ int hist_sx(std::string  reaction,std::string  target){
   Double_t dE_gr=0;//sqrt(fMass*fMass+pow(0.3*(Double_t) fAtomicNumber*fMagneticField*fRho*(1.0+0.0175),2.0))-sqrt(fMass*fMass+pow(0.3*(Double_t) fAtomicNumber*fMagneticField*fRho*(1.0-0.0175),2.0));
 
   //target
-  fstream target_info(Form("macro/ppx/target/%s.txt",target.c_str()));
+  fstream target_info(Form("macro/backup/ppx/target/%s.txt",target.c_str()));
   std::string line_target;
   getline(target_info,line_target);
   std::istringstream strs_target(line_target);

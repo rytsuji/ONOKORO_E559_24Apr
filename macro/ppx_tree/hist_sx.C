@@ -4,8 +4,7 @@ int hist_sx(std::string  reaction,std::string  target){
 
   //scale of accidental coincidence 
   double scale_acc=1.0/8.0;
-  //double scale_acc=1.0/6.0;
-  int nBin=100;
+  int nBin=1000;
   double xMin=0.0;
   double xMax=50.0;
 
@@ -43,7 +42,6 @@ int hist_sx(std::string  reaction,std::string  target){
   TCut TLAS=Form("abs(plas.fTKE>%f && plas.fTKE <%f)",TMinLAS,TMaxLAS);  
 
   TCut TC="(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-35 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<35";
-  //TCut AC="(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-100) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>100 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)";
   TCut AC="(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-35) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>35 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)";
   
   //read runlist
@@ -149,7 +147,7 @@ int hist_sx(std::string  reaction,std::string  target){
     Double_t mg = (Double_t) ScaData(std::stoi(run[i]),5)/dT;
     Double_t ml = (Double_t) ScaData(std::stoi(run[i]),17)/dT;
     Double_t GateWidth=1.0e-6; //10 (us)
-    eff_daq= kl/ml;
+    eff_daq= kg/mg;
 
     std::cout << "  Live/Trigger (count/s), eff DAQ"  << std::endl;
     std::cout << " GR   : " << kg  << "  " << mg <<  "  " << kg/mg << std::endl;
@@ -182,7 +180,7 @@ int hist_sx(std::string  reaction,std::string  target){
 
 
   //target thhickness
-  fstream target_info(Form("macro/ppx/target/%s.txt",target.c_str()));
+  fstream target_info(Form("macro/ppx_tree/target/%s.txt",target.c_str()));
   std::string line_target;
   getline(target_info,line_target);
   std::istringstream strs_target(line_target);

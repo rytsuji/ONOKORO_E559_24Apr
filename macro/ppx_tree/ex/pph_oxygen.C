@@ -9,7 +9,8 @@
   TH1F *h_oxygen = (TH1F*)file_mylar->Get("sx")->Clone("h_oxygen");
   TH1F *h_oxygen0 = (TH1F*)file_mylar->Get("sx0")->Clone("h_oxygen0");
   
-  Double_t scale_carbon=0.66348429*(48.0080/10.47)/(12.0/10.65);
+  //Double_t scale_carbon=0.66348429*(48.0080/10.47)/(12.0/10.65);
+  Double_t scale_carbon=10.0/4.0;
   h_carbon->Scale(scale_carbon);
   h_carbon0->Scale(scale_carbon);
   h_carbon0->Sumw2(0);

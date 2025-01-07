@@ -1,20 +1,20 @@
 {
 
-  double theta_las[2]={TMath::DegToRad()*45.9,
-		       TMath::DegToRad()*52.7};
+  double theta_las[2]={TMath::DegToRad()*46,
+		       TMath::DegToRad()*52};
   
   double phi_las[2]={TMath::DegToRad()*(-3.5),
 		     TMath::DegToRad()*(3.5)};
   
   double theta_gr[4]={TMath::DegToRad()*49.7,
-		      TMath::DegToRad()*50.1,
+		      TMath::DegToRad()*50.2,
 		      TMath::DegToRad()*51.3,
 		      TMath::DegToRad()*51.7};
   double phi_gr[4]={TMath::DegToRad()*1.5,
 		    TMath::DegToRad()*3.5,
 		    TMath::DegToRad()*3.5,
 		    TMath::DegToRad()*1.5};
-
+  
   double domega_gr=2*phi_gr[1]*(-cos(theta_gr[2])+cos(theta_gr[1]));
 
 

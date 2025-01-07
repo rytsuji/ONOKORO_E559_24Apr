@@ -1,5 +1,5 @@
 {
-  int bin=10;
+  int bin=20; //1MeV
   double scale=1.0;
  
   //double scale_ppt=1.0;
@@ -7,9 +7,9 @@
   double scale_ppt=1.46;
   double xmin=-1;
   double xmax=20;
-  double ymin=-0.05; 
+  double ymin=-0.05*2.0; 
   //double ymax=0.175; 
-  double ymax=0.17;
+  double ymax=0.17*2.0;
 
   TLine *lz = new TLine(xmin,0,xmax,0);
   lz->SetLineStyle(2);
