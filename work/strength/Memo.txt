@@ -1,9 +1,0 @@
-40Ca(p,pt)/(p,p3He)
-5/2+ 1/2+ Sterngth estimeted with gaus fitting
-
-ppt/pph.dat
-gate| 5/2+ TDX | 5/2+ TDX err | 1/2+ TDX | 1/2+ TDX err
-
-gate1 without gate
-gate2 with energy gate
-gate3 with energy and anugular gate
