@@ -1,0 +1,41 @@
+Processor:
+##################################################################################################
+  - name: MyTRandomNumberEventStore
+    type: art::TRandomNumberEventStore
+    parameter:
+      Max: 1  # [Float_t] the maximum value
+      MaxLoop: @maxevt@  # [Int_t] the maximum number of loop
+      Min: 0  # [Float_t] the minimum value
+      OutputCollection: dim1  # [TString] output name of random values
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)
+##################################################################################################
+  - name: MyTRandomNumberEventStore
+    type: art::TRandomNumberEventStore
+    parameter:
+      Max: 1  # [Float_t] the maximum value
+      MaxLoop: @maxevt@  # [Int_t] the maximum number of loop
+      Min: 0  # [Float_t] the minimum value
+      OutputCollection: dim2  # [TString] output name of random values
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)
+##################################################################################################
+  - name: MyTRandomNumberEventStore
+    type: art::TRandomNumberEventStore
+    parameter:
+      Max: 1  # [Float_t] the maximum value
+      MaxLoop: @maxevt@  # [Int_t] the maximum number of loop
+      Min: 0  # [Float_t] the minimum value
+      OutputCollection: dim3  # [TString] output name of random values
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)
+##################################################################################################
+  - name: MyTRandomNumberEventStore
+    type: art::TRandomNumberEventStore
+    parameter:
+      Max: 1  # [Float_t] the maximum value
+      MaxLoop: @maxevt@  # [Int_t] the maximum number of loop
+      Min: 0  # [Float_t] the minimum value
+      OutputCollection: dim4  # [TString] output name of random values
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)

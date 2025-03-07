@@ -2,25 +2,25 @@
  
   double scale=1/(1.0-0.05/(0.21250000+0.05));  
   double offset=0.0;
-  //
-  //TFile *file_48Ca = TFile::Open("macro/ppx/output_sx/ppt_48Ca_tave.root");
-  TFile *file_48Ca = TFile::Open("output/ppx/ppt_48Ca.tra_ave.root ");
 
-  Double_t ymin=-0.0499/10;
-  Double_t ymax=1.199/10;
+  TFile *file_48Ca = TFile::Open("output/calib_pid/hist_sx/ppt_48Ca.root");
+  Double_t ymin=-0.0499/10.;
+  Double_t ymax=1.199/10.;
+  sx->Rebin(4);
+  sx0->Rebin(4);
 
-  sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(10),sx_tave->FindBin(45));
+  sx->GetXaxis()->SetRange(sx->FindBin(10),sx->FindBin(45));
 
-  sx_tave->SetLabelSize(0.05*scale,"xy");
-  //sx_tave->SetLabelSize(0.1,"xy");
+  sx->SetLabelSize(0.05*scale,"xy");
+  //sx->SetLabelSize(0.1,"xy");
   
-  sx_tave->SetMinimum(ymin);
-  sx_tave->SetMaximum(ymax);
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
 
-  sx_tave->SetStats(0);
-  sx_tave0->SetStats(0);
-  sx_tave->Draw();
-  sx_tave0->Draw("same");
+  sx->SetStats(0);
+  sx0->SetStats(0);
+  sx->Draw();
+  sx0->Draw("same");
   Double_t St=22.559;
   Double_t E1=474.45/1000.0;
   Double_t E2=980.476/1000.0;
@@ -42,7 +42,7 @@
   Double_t y1=0.25/10;
   TArrow a1(St+E1,y1,St+E1,y1+0.05/5,0.01,"<|");
 
-  TArrow a1(St+E1,y1+0.05/5,St+E1+0.5,y1+0.1/5,0.01,"");
+  TArrow a1_1(St+E1,y1+0.05/5,St+E1+0.5,y1+0.1/5,0.01,"");
   a1_1.Draw();
   TLatex t1;
   t1.SetTextAlign(12);
@@ -76,9 +76,11 @@
 			0.02,St+E1,
 			//0.01,St+E2,
 			0.2);
-  sx_tave->Fit("f_48Ca","E","",21.5,23.5);
+
+  f_48Ca->FixParameter(0,0.0);
+  sx->Fit("f_48Ca","E","",21.5,23.5);
   
-  int Nbin=sx_tave->GetXaxis()->GetNbins();
+  int Nbin=sx->GetXaxis()->GetNbins();
   double tdx=f_48Ca->GetParameter(2)/((double) 50.0/Nbin);
   double tdx_err=f_48Ca->GetParError(2)/((double) 50.0/Nbin);
 

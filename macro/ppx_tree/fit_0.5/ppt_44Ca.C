@@ -1,24 +1,26 @@
 {
   //
   double scale=1.0;
-  //TFile *file_44Ca = TFile::Open("macro/ppx/output_sx/ppt_44Ca_tave.root");
-  TFile *file_44Ca = TFile::Open("output/ppx/ppt_44Ca.tra_ave.root ");
+  TFile *file_44Ca = TFile::Open("output/calib_pid/hist_sx/ppt_44Ca.root");
 
   Double_t ymin=-0.0499/10.;
   Double_t ymax=1.199/10.;
+
+  sx->Rebin(4);
+  sx0->Rebin(4);
   
-  sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(10),sx_tave->FindBin(45));
+  sx->GetXaxis()->SetRange(sx->FindBin(10),sx->FindBin(45));
   
-  sx_tave->SetMinimum(ymin);
-  sx_tave->SetMaximum(ymax);
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
   
-  sx_tave->SetLabelSize(0.075/scale,"xy");  
-  //sx_tave->SetLabelSize(0.1,"y");
+  sx->SetLabelSize(0.075/scale,"xy");  
+  //sx->SetLabelSize(0.1,"y");
   
-  sx_tave->SetStats(0);
-  sx_tave0->SetStats(0);
-  sx_tave->Draw();
-  sx_tave0->Draw("same");
+  sx->SetStats(0);
+  sx0->SetStats(0);
+  sx->Draw();
+  sx0->Draw("same");
   
   Double_t St=20.859;
   Double_t E1=980.476/1000.0;
@@ -83,8 +85,8 @@
   //f_44Ca->SetParameters(0.05,St+E1,
   //0.02,St+E2,
   //0.2);
-  sx_tave->Fit("f_44Ca","E","",21.5,22.8);
-  int Nbin=sx_tave->GetXaxis()->GetNbins();
+  sx->Fit("f_44Ca","E","",21.5,22.8);
+  int Nbin=sx->GetXaxis()->GetNbins();
   //double tdx=f_44Ca->GetParameter(2)/((double) 50.0/Nbin);
   //double tdx_err=f_44Ca->GetParError(2)/((double) 50.0/Nbin);
   double tdx=f_44Ca->GetParameter(0)/((double) 50.0/Nbin);

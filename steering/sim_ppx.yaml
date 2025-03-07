@@ -1,0 +1,42 @@
+Anchor:
+  - &maxevt 1000000
+  - &output output/sim/NDimSphere.root
+  - &histout output/sim/NDimSphere.hist.root  
+  - &gate_gr_ang gate/ppx/ang_gr/gate_gr_ang_ppt.yaml
+  - &gate_las_ang gate/ppx/ang_las/gate_las_ang_ppt.yaml
+  - &gate_gr_energy gate/ppx/energy_gr/gate_gr_energy_ppt.yaml
+  - &gate_las_energy gate/ppx/energy_las/gate_las_energy_ppt.yaml
+#  - &gate_gr_ang gate/ppx/ang_gr/gate_gr_ang_@SETUP@.yaml
+#  - &gate_las_ang gate/ppx/ang_las/gate_las_ang_@SETUP@.yaml
+#  - &gate_gr_energy gate/ppx/energy_gr/gate_gr_energy_@SETUP@.yaml
+#  - &gate_las_energy gate/ppx/energy_las/gate_las_energy_@SETUP@.yaml  
+  
+Processor:
+  - name: timer
+    type: art::TTimerProcessor
+
+  - include:
+      name: sim/rand.yaml
+      replace:
+        maxevt: *maxevt
+
+  - include: *gate_gr_energy
+  - include: *gate_las_energy
+  - include: *gate_gr_ang
+  - include: *gate_las_ang
+        
+  - name: MyTOutputTreeProcessor
+    type: art::TOutputTreeProcessor
+    parameter:
+      FileName: *output  # [TString] The name of output file
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      SplitLevel: 0  # [Int_t] Split level of tree defined in TTree (default is changed to be 0)
+      TreeName: tree  # [TString] The name of output tree
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)
+
+  - name: hist_phys
+    type: art::TTreeProjectionProcessor
+    parameter:
+      Type: art::TTreeProjection
+      FileName: hist/phys/phys_sim.hist.yaml
+      OutputFilename: *histout      

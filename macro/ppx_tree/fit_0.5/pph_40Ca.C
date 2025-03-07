@@ -1,24 +1,27 @@
 {
   double scale=1;
-  TFile *file_40Ca = TFile::Open("output/ppx/pph_40Ca.tra_ave.root ");
+  TFile *file_40Ca = TFile::Open("output/calib_pid/hist_sx/pph_40Ca.root");
   
 
   Double_t ymin=-0.0499/10;
   Double_t ymax=1.199/10;
 
-  sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(10),sx_tave->FindBin(45));
-  //sx_tave->GetXaxis()->SetTitle("S_{X} (MeV)"); 
-  //sx_tave->GetYaxis()->SetTitle("#it{d#sigma/dE_{p}d#Omega_{p}d#Omega_{X}dS_{X}} (#it{#mu}b/MeV#upoint str^{2}  per 200 keV)");
+  sx->Rebin(4);
+  sx0->Rebin(4);
   
-  sx_tave->SetMinimum(ymin);
-  sx_tave->SetMaximum(ymax);
+  sx->GetXaxis()->SetRange(sx->FindBin(10),sx->FindBin(45));
+  //sx->GetXaxis()->SetTitle("S_{X} (MeV)"); 
+  //sx->GetYaxis()->SetTitle("#it{d#sigma/dE_{p}d#Omega_{p}d#Omega_{X}dS_{X}} (#it{#mu}b/MeV#upoint str^{2}  per 200 keV)");
+  
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
 
-  sx_tave->SetLabelSize(0.075*scale,"xy");  
+  sx->SetLabelSize(0.075*scale,"xy");  
 
-  sx_tave->SetStats(0);
-  sx_tave0->SetStats(0);
-  sx_tave->Draw();
-  sx_tave0->Draw("same");
+  sx->SetStats(0);
+  sx0->SetStats(0);
+  sx->Draw();
+  sx0->Draw("same");
   
   Double_t Sh=18.830; // 3/2+                                                                                                                              
   Double_t E1=1409.84/1000.0; //1/2+                                                                                                                         
@@ -140,12 +143,12 @@
   //f_40Ca->FixParameter(6, 0);
   
 
-  sx_tave->Fit("f_40Ca","E","",18.75,23.0);
+  sx->Fit("f_40Ca","E","",18.75,23.0);
 
-
-  int Nbin=sx_tave->GetXaxis()->GetNbins();
-  double tdx=f_40Ca->GetParameter(2)/((double) 50.0/Nbin);
-  double tdx_err=f_40Ca->GetParError(2)/((double) 50.0/Nbin);
+  double dx=sx->GetXaxis()->GetXmax()-sx->GetXaxis()->GetXmin();
+  int Nbin=sx->GetXaxis()->GetNbins();
+  double tdx=f_40Ca->GetParameter(2)/((double) dx/Nbin);
+  double tdx_err=f_40Ca->GetParError(2)/((double) dx/Nbin);
 
   TF1 *f_40Ca_peak = new TF1("f_40Ca_peak","gausn",f_40Ca->GetParameter(3)-2.0,f_40Ca->GetParameter(3)+2.0);
   f_40Ca_peak->SetParameters(f_40Ca->GetParameter(2),

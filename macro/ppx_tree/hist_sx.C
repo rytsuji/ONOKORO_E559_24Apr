@@ -1,5 +1,5 @@
 #include <yaml-cpp/yaml.h>
-
+Double_t GRand(Double_t sigma);
 int hist_sx(std::string  reaction,std::string  target){
 
   //scale of accidental coincidence 
@@ -8,6 +8,8 @@ int hist_sx(std::string  reaction,std::string  target){
   double xMin=0.0;
   double xMax=50.0;
 
+  double IsSmear=0.0;
+  
   bool IsAccidetalCorrection=1.0;//true
   
   //input check
@@ -35,6 +37,9 @@ int hist_sx(std::string  reaction,std::string  target){
   Double_t scale = node["scale"].as<Double_t>();
   std::string fName  = node["fName"].as<std::string>();        
   Double_t dTGR=TMaxGR-TMinGR;
+
+  Double_t offset = node["offset"].as<Double_t>(); //Offset of Sx
+  Double_t sigma = node["sigma"].as<Double_t>();  //change resolution of Sx 
   //Gate
   TCut AGR = Form("%s",(node["angGR"].as<std::string>()).c_str());
   TCut ALAS = Form("%s",(node["angLAS"].as<std::string>()).c_str());
@@ -75,9 +80,11 @@ int hist_sx(std::string  reaction,std::string  target){
     ha[i] = new TH1F(Form("ha[%d]",i),"",nBin,xMin,xMax);
     hs[i] = new TH1F(Form("hs[%d]",i),"",nBin,xMin,xMax);        
     
-    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE>>ht[%d]",Tinc,i),
+    //tree->Draw(Form("%f-pgr.fTKE-plas.fTKE+%f+GRand(%f)>>ht[%d]",Tinc,offset,sigma,i),
+    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE+%f+GRand(%f)>>ht[%d]",Tinc,offset,sigma*IsSmear,i),
     	       AGR && ALAS && TGR && TLAS && TC ,"goff");
-    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE>>ha[%d]",Tinc,i),
+    //tree->Draw(Form("%f-pgr.fTKE-plas.fTKE+%f+GRand(%f)>>ha[%d]",Tinc,offset,sigma,i),
+    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE+%f+GRand(%f)>>ha[%d]",Tinc,offset,sigma*IsSmear,i),
 	       AGR && ALAS && TGR && TLAS && AC ,"goff");
 
     ht[i]->Sumw2();
@@ -278,4 +285,6 @@ int hist_sx(std::string  reaction,std::string  target){
   return 0;
 }
 
+Double_t GRand(Double_t sigma)
+{     return gRandom->Gaus(0.0,sigma);   }
 

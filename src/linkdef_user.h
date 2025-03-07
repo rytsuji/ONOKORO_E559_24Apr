@@ -35,6 +35,7 @@
 #pragma link C++ class art::TParticleData+;
 #pragma link C++ class art::TRFSubtractionProcessor+;
 #pragma link C++ class art::TMeanChargeProcessor+;
+#pragma link C++ class art::TParticleDataGenerator+;
 
 #endif // __CINT__
 

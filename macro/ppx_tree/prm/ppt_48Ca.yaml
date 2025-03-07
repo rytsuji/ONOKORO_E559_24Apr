@@ -10,4 +10,6 @@ OmegaLAS: 0.00993821
 angGR: "abs(pgr.GetTheta()-51.2)<1.0 && abs(pgr.GetPhi())<3.5 && abs(pgr.GetPhi())<(4.0*pgr.GetTheta()-199.3) && abs(pgr.GetPhi())<(-5.0*pgr.GetTheta()+262.5)"
 angLAS: "abs(plas.GetTheta()-51)<3 && abs(fmod(plas.GetPhi()+360.0,360.0)-180)<3.5"
 scale: 1.0
+offset: 0.0
+sigma: 0.25
 fName: "ppt_48Ca.root"

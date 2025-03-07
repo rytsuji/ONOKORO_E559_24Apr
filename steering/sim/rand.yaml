@@ -1,0 +1,31 @@
+Processor:
+
+  - name: MyTRandomNumberEventStoreGR
+    type: art::TParticleDataGenerator
+    parameter:
+      MaxLoop: @maxevt@  
+      Mass: 938.272
+      TMin: 145
+      TMax: 155
+      ThetaMin: 50.2
+      ThetaMax: 52.2
+      PhiMin: -3.5
+      PhiMax: 3.5            
+      OutputCollection: pgr  # [TString] output name of random values
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)
+
+  - name: MyTRandomNumberEventStoreLAS
+    type: art::TParticleDataGenerator
+    parameter:
+      MaxLoop: @maxevt@  
+      Mass: 2808.873
+      TMin: 44.0
+      TMax: 69.0
+      ThetaMin: 48.0
+      ThetaMax: 54.0
+      PhiMin: 176.5
+      PhiMax: 183.5            
+      OutputCollection: plas  # [TString] output name of random values
+      OutputTransparency: 0  # [Bool_t] Output is persistent if false (default)
+      Verbose: 1  # [Int_t] verbose level (default 1 : non quiet)      

@@ -1,7 +1,7 @@
 #include <yaml-cpp/yaml.h>
 
 double dTGRcorr(double SxVal, double Tinc, double TMinGR, double TMaxGR, double TMinLAS, double TMaxLAS);
-
+Double_t GRand(Double_t sigma);
 int hist_ex(std::string  reaction,std::string  target,std::string Sx){
   
   //scale of accidental coincidence 
@@ -74,6 +74,9 @@ int hist_ex(std::string  reaction,std::string  target,std::string Sx){
   Double_t OmegaGR = node["OmegaGR"].as<Double_t>();
   Double_t OmegaLAS = node["OmegaLAS"].as<Double_t>();
   Double_t scale = 1.0;//node["scale"].as<Double_t>();
+  Double_t offset = node["offset"].as<Double_t>(); //Offset of Sx
+  Double_t sigma = node["sigma"].as<Double_t>();  //change resolution of Sx
+  
   std::string fName  = node["fName"].as<std::string>();        
   Double_t dTGR=TMaxGR-TMinGR;
 
@@ -119,11 +122,13 @@ int hist_ex(std::string  reaction,std::string  target,std::string Sx){
 
 
     
-    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE-%f>>ht[%d]",Tinc,SxVal,i),
-	       ( AGR && ALAS && TGR && TLAS && TC)*Form("dTGRcorr(%f-pgr.fTKE-plas.fTKE,%f,%f,%f,%f,%f)",Tinc,Tinc,TMinGR,TMaxGR,TMinLAS,TMaxLAS),
+    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE-%f+%f+GRand(%f)>>ht[%d]",Tinc,SxVal,offset,sigma,i),
+	       AGR && ALAS && TGR && TLAS && TC,
+	       //( AGR && ALAS && TGR && TLAS && TC)*Form("dTGRcorr(%f-pgr.fTKE-plas.fTKE,%f,%f,%f,%f,%f)",Tinc,Tinc,TMinGR,TMaxGR,TMinLAS,TMaxLAS),
 	       "goff");
-    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE-%f>>ha[%d]",Tinc,SxVal,i),
-	       ( AGR && ALAS && TGR && TLAS && AC)*Form("dTGRcorr(%f-pgr.fTKE-plas.fTKE,%f,%f,%f,%f,%f)",Tinc,Tinc,TMinGR,TMaxGR,TMinLAS,TMaxLAS),
+    tree->Draw(Form("%f-pgr.fTKE-plas.fTKE-%f+%f+GRand(%f)>>ha[%d]",Tinc,SxVal,offset,sigma,i),
+	       AGR && ALAS && TGR && TLAS && AC,
+	       //( AGR && ALAS && TGR && TLAS && AC)*Form("dTGRcorr(%f-pgr.fTKE-plas.fTKE,%f,%f,%f,%f,%f)",Tinc,Tinc,TMinGR,TMaxGR,TMinLAS,TMaxLAS),
 	       "goff");
 
     double Integral_signal_1run = ht[i]->Integral(ht[i]->FindBin(Integral_range[0]),ht[i]->FindBin(Integral_range[1]));
@@ -198,7 +203,7 @@ int hist_ex(std::string  reaction,std::string  target,std::string Sx){
     Double_t mg = (Double_t) ScaData(std::stoi(run[i]),5)/dT;
     Double_t ml = (Double_t) ScaData(std::stoi(run[i]),17)/dT;
     Double_t GateWidth=1.0e-6; //10 (us)
-    eff_daq= kl/ml;
+    eff_daq= kg/mg;
 
     std::cout << "  Live/Trigger (count/s), eff DAQ"  << std::endl;
     std::cout << " GR   : " << kg  << "  " << mg <<  "  " << kg/mg << std::endl;
@@ -373,3 +378,6 @@ double dTGRcorr(double SxVal, double Tinc, double TMinGR, double TMaxGR, double 
 
   return scale;
 }
+
+Double_t GRand(Double_t sigma)
+{     return gRandom->Gaus(0.0,sigma);   }

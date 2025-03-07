@@ -1,7 +1,7 @@
 {
 
-  double theta_las[2]={TMath::DegToRad()*(50.7-2.5),
-		       TMath::DegToRad()*(50.7+2.5)};
+  double theta_las[2]={TMath::DegToRad()*(48.0),
+		       TMath::DegToRad()*(54.0)};
   
   double phi_las[2]={TMath::DegToRad()*(-3.5),
 		     TMath::DegToRad()*(3.5)};

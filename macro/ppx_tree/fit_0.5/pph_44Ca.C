@@ -2,23 +2,27 @@
   double scale=1;
   //
   //TFile *file_44Ca = TFile::Open("macro/ppx/output_sx/pph_44Ca_tave.root");
-  TFile *file_44Ca = TFile::Open("output/ppx/pph_44Ca.tra_ave.root ");  
+  TFile *file_44Ca = TFile::Open("output/calib_pid/hist_sx/pph_44Ca.root ");  
 
   Double_t ymin=-0.0499/10;
   Double_t ymax=1.199/10;
-  sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(10),sx_tave->FindBin(45));  
+
+  sx->Rebin(4);
+  sx0->Rebin(4);
+
+  sx->GetXaxis()->SetRange(sx->FindBin(10),sx->FindBin(45));  
 
   
-  sx_tave->SetMinimum(ymin);
-  sx_tave->SetMaximum(ymax);
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
 
 
-  sx_tave->SetLabelSize(0.075*scale,"xy");
+  sx->SetLabelSize(0.075*scale,"xy");
 
-  sx_tave->SetStats(0);
-  sx_tave0->SetStats(0);
-  sx_tave->Draw();
-  sx_tave0->Draw("same");
+  sx->SetStats(0);
+  sx0->SetStats(0);
+  sx->Draw();
+  sx0->Draw("same");
   
   Double_t Sh=23.332; // 7/2-                                                                                                                              
   Double_t E1=1033.94/1000.0; //3/2+                                                                                                                         
@@ -106,12 +110,12 @@
 			0.5/10,26.5,
 			0.4);
  
-  //sx_tave->Fit("f_44Ca","E","",22.0,26.8);
-  sx_tave->Fit("f_44Ca","E","",22.0,27.0);  
-
-  int Nbin=sx_tave->GetXaxis()->GetNbins();
-  double tdx=f_44Ca->GetParameter(4)/((double) 50.0/Nbin);
-  double tdx_err=f_44Ca->GetParError(4)/((double) 50.0/Nbin);
+  //sx->Fit("f_44Ca","E","",22.0,26.8);
+  sx->Fit("f_44Ca","E","",22.0,27.0);  
+  double dx=sx->GetXaxis()->GetXmax()-sx->GetXaxis()->GetXmin();
+  int Nbin=sx->GetXaxis()->GetNbins();
+  double tdx=f_44Ca->GetParameter(4)/((double) dx/Nbin);
+  double tdx_err=f_44Ca->GetParError(4)/((double) dx/Nbin);
 
   TF1 *f_44Ca_peak = new TF1("f_44Ca_peak","gausn",f_44Ca->GetParameter(5)-2.0,f_44Ca->GetParameter(5)+2.0);
   f_44Ca_peak->SetParameters(f_44Ca->GetParameter(4),
@@ -150,7 +154,7 @@
 			0.5);
   
 
-  sx_tave->Fit("f_44Ca","E","",23.0,27.0);
+  sx->Fit("f_44Ca","E","",23.0,27.0);
   */
 
   //TF1 *f_44Ca = new TF1("f_44Ca","([0]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[1])/[6],2))+([2]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[3])/[6],2))+([4]/sqrt(2.*TMath::Pi()*[6]*[6]))*exp(-0.5*pow((x-[5])/[6],2))",-1000,1000);

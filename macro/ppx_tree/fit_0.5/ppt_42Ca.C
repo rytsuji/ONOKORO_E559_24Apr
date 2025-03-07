@@ -1,24 +1,24 @@
 {
   //
   double scale=1.0;
-  //TFile *file_42Ca = TFile::Open("macro/ppx/output_sx/ppt_42Ca_tave.root");
-  TFile *file_42Ca = TFile::Open("output/ppx/ppt_42Ca.tra_ave.root ");
+  TFile *file_42Ca = TFile::Open("output/calib_pid/hist_sx/ppt_42Ca.root");
+  Double_t ymin=-0.0499/10.;
+  Double_t ymax=1.199/10.;
+  sx->Rebin(4);
+  sx0->Rebin(4);
   
-  Double_t ymin=-0.0499/10;
-  Double_t ymax=1.199/10;
+  sx->GetXaxis()->SetRange(sx->FindBin(10),sx->FindBin(45));
   
-  sx_tave->GetXaxis()->SetRange(sx_tave->FindBin(10),sx_tave->FindBin(45));
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
   
-  sx_tave->SetMinimum(ymin);
-  sx_tave->SetMaximum(ymax);
+  sx->SetLabelSize(0.075/scale,"xy");
+  //sx->SetLabelSize(0.1,"y");
   
-  sx_tave->SetLabelSize(0.075/scale,"xy");
-  //sx_tave->SetLabelSize(0.1,"y");
-  
-  sx_tave->SetStats(0);
-  sx_tave0->SetStats(0);
-  sx_tave->Draw();
-  sx_tave0->Draw("same");
+  sx->SetStats(0);
+  sx0->SetStats(0);
+  sx->Draw();
+  sx0->Draw("same");
   
   Double_t St=19.690;
   Double_t E1=2522.75/1000.0;
@@ -64,9 +64,9 @@
 
   //gROOT->LoadMacro("macro/function/def_4gaus.C");
   TF1 *f_42Ca=new TF1("f_42Ca","gausn",-100,100);
-  sx_tave->Fit("f_42Ca","E","",20.5,24.0);
+  sx->Fit("f_42Ca","E","",20.5,24.0);
 
-  int Nbin=sx_tave->GetXaxis()->GetNbins();
+  int Nbin=sx->GetXaxis()->GetNbins();
   double tdx=f_42Ca->GetParameter(0)/((double) 50.0/Nbin);
   double tdx_err=f_42Ca->GetParError(0)/((double) 50.0/Nbin);
 

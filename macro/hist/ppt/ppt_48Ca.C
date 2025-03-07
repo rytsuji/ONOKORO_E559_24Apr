@@ -1,0 +1,142 @@
+{
+ 
+  //double scale=1/(1.0-0.05/(0.21250000+0.05));
+  double scale=1.0;
+  double offset=0.0;
+
+  TFile *file_48Ca = TFile::Open("output/calib_pid/hist_sx/ppt_48Ca.root");
+  Double_t ymin=-0.0499/10.;
+  Double_t ymax=1.499/10.;
+  sx->Rebin(4);
+  sx0->Rebin(4);
+
+  sx->GetXaxis()->SetRange(sx->FindBin(15),sx->FindBin(40));
+
+  //sx->SetLabelSize(0.05*scale,"xy");
+  //sx->SetLabelSize(0.1,"xy");
+  sx->SetLabelSize(0.045,"xy");
+  sx->SetTitleSize(0.045,"xy");
+  sx->SetTitle("");
+  sx->GetXaxis()->SetTitle("#mbox{S_{X}} (MeV)");
+  //sx->GetYaxis()->SetTitle("#mbox{d#sigma/dT_{p}d#Omega_{p}d#Omega_{X}} (#mbox{#mu}b/MeV#upoint str^{2}  per 200 keV)");
+  sx->GetXaxis()->CenterTitle(true);
+  sx->GetYaxis()->CenterTitle(true);
+  
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
+
+  sx->SetStats(0);
+  sx0->SetStats(0);
+  sx->Draw();
+  sx0->Draw("same");
+  Double_t St=22.559;
+  Double_t E1=474.45/1000.0;
+  Double_t E2=980.476/1000.0;
+  Double_t E3=1424.3/1000.0;
+  Double_t E4=1639.15/1000.0;
+  Double_t E5=2188.22/1000.0;
+  Double_t E6=2747.9/1000.0;
+
+
+  Double_t y0=0.1/10;
+  TArrow a0(St,y0,St,y0+0.05/5,0.01,"<|");
+  a0.Draw();
+  TArrow a0_1(St,y0+0.05/5,St-1.0,y0+0.1/5,0.01,"");
+  a0_1.Draw(); 
+  TLatex t0;
+  t0.SetTextAlign(12);
+  t0.SetTextAngle(90);
+  t0.DrawLatex(St-1.0,y0+0.11/5,Form("#scale[%e]{gnd (3/2^{+})}",0.75*scale));
+
+  Double_t y1=0.03;
+  TArrow a1(St+E1,y1,St+E1,y1+0.05/5,0.01,"<|");
+  TArrow a1_1(St+E1,y1+0.05/5,St+E1+0.5,y1+0.1/5,0.01,"");
+  a1.Draw();
+  a1_1.Draw();
+  TLatex t1;
+  t1.SetTextAlign(12);
+  t1.SetTextAngle(90);
+  t1.DrawLatex(St+E1+0.5,y1+0.11/5,Form("#scale[%e]{0.47 MeV (1/2^{+})}",0.75*scale));
+  /*
+  Double_t St_16O=25.032;
+  Double_t E1_16O=2.3649;
+  TLatex t_16O;
+  t_16O.SetTextAlign(12);
+  t_16O.SetTextAngle(90);
+
+  Double_t y0_16O=0.3/10;
+  TArrow a0_16O(St_16O,y0_16O,St_16O,y0_16O+0.05/5,0.01,"<|");
+  a0_16O.Draw();
+  t_16O.DrawLatex(St_16O,y0_16O+0.06/5,"#scale[0.75]{^{13}N}");
+  
+  Double_t E2_16O=3.547;  
+  Double_t y2_16O=0.7/10;
+  TArrow a2_16O(St_16O+E2_16O,y2_16O,St_16O+E2_16O,y2_16O+0.05/5,0.01,"<|");
+  a2_16O.Draw();
+  t_16O.DrawLatex(St_16O+E2_16O,y2_16O+0.06/5,Form("#scale[%e]{^{13}N}",0.75*scale));  
+  */
+
+  //fitting
+  TF1 *f_48Ca = new TF1("f_48Ca","([0]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[1])/[4],2))+([2]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[3])/[4],2))",-600,600);
+  
+  f_48Ca->SetParameters(0.005,St-0.2,
+			0.02,St+E1,
+			//0.01,St+E2,
+			0.2);
+
+  f_48Ca->FixParameter(0,0.0);
+  sx->Fit("f_48Ca","E","",21.5,23.5);
+
+  //TDX
+  int Nbin=sx->GetXaxis()->GetNbins();
+  double dx=sx->GetXaxis()->GetXmax()-sx->GetXaxis()->GetXmin();
+  double tdx=f_48Ca->GetParameter(2)/((double) dx/Nbin);
+  double tdx_err=f_48Ca->GetParError(2)/((double) dx/Nbin);
+  
+  
+  //Draw fitting result of 1/2+
+  double sigma=f_48Ca->GetParameter(4);
+  TF1 *f_48Ca_peak = new TF1("f_48Ca_peak","gausn",f_48Ca->GetParameter(3)-2.0,f_48Ca->GetParameter(3)+2.0);
+  f_48Ca_peak->SetParameters(f_48Ca->GetParameter(2),
+                             f_48Ca->GetParameter(3),
+                             sigma);
+
+  f_48Ca_peak->SetLineColor(2);
+  f_48Ca_peak->SetLineWidth(1);
+  f_48Ca_peak->SetLineStyle(2);
+  f_48Ca_peak->SetFillColor(2);
+  f_48Ca_peak->SetFillStyle(3114);
+  f_48Ca_peak->Draw("same C");
+
+
+  double scale_16O=(0.21808865/(10.0/47.952))*0.329;
+  TF1 *f_16O = new TF1("f_16O",
+                       "([0]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[1])/[4],2))+([2]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[3])/[4],2))",
+                       -1000,1000);
+  f_16O->SetParameters(0.1*((double) dx/Nbin)*scale_16O,2.48938e+01,
+                       0.355*((double) dx/Nbin)*scale_16O,2.84556e+01,
+                       sigma);
+  f_16O->SetLineColor(3);
+  f_16O->SetLineStyle(2);
+  f_16O->SetFillColor(3);
+  f_16O->SetFillStyle(3214);
+  f_16O->Draw("same C");
+  
+  TLatex title;
+  title.SetTextAlign(11);
+  title.SetNDC(1);
+  title.DrawLatex(.55,offset+0.8,Form("#scale[%e]{^{48}Ca(#it{p,pt})^{45}K}",1.0*scale));
+  //title.DrawLatex(.55,offset+0.725,Form("#scale[%e]{#it{S_{t}}=22.559 MeV}",0.8*scale));
+  //title.DrawLatex(.55,.65,Form("#scale[%e]{TDX = %8.3f #pm %8.3f}",0.8*scale,tdx,tdx_err))
+  std::cout << "TDX of 48Ca(p,pt) : " << tdx << " +/- " << tdx_err << std::endl;
+  /*
+  TText *t = new TText(.5,.5,"Preliminary");
+  t->SetNDC(1);
+  t->SetTextAlign(22);
+  t->SetTextColorAlpha(kRed, 0.9);
+  t->SetTextFont(43);
+  t->SetTextSize(40);
+  t->SetTextAngle(-45);
+  t->Draw("same");
+  */
+}

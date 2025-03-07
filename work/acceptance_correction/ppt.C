@@ -9,7 +9,7 @@ void ppt(int target,double Q, double theta_gr, double theta_las, double BGR,TStr
 
   ofstream ofile(name); 
   
-  int N=100000;
+  int N=1000000;
   int N_kf=50;
   int N_theta=50;  
   

@@ -1,0 +1,11 @@
+Processor:
+
+  - name: proc_particle_data
+    type: art::TParticleDataSimulator
+    parameter:
+      Mass: 938.272
+      InputCollectionKineticE: dim1
+      InputCollectionTheta: dim2
+      InputCollectionPhi: dim3      
+      OutputCollection: pgr
+      OutputTransparency: 0

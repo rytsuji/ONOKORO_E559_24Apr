@@ -5,5 +5,8 @@
   TCut elas="plas.fTKE>44 && plas.fTKE<68";
   TCut tc="(tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))>-20 && (tof.fTiming-(pgr.GetTOF()-plas.GetTOF()))<20";
   TCut ac="(tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>-320 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<-20) || (tof.fTiming-(pgr.GetTOF()-plas.GetTOF())>20 && tof.fTiming-(pgr.GetTOF()-plas.GetTOF())<320)";
-    
+
+  tree->SetAlias("kF","sqrt(pow(pgr.GetPx()+plas.GetPx(),2.0)+pow(pgr.GetPy()+plas.GetPy(),2.0)+pow(pgr.GetPz()+plas.GetPz()-688.71661,2.0))");
+  tree->SetAlias("Sx","226.0-pgr.fTKE-plas.fTKE");
+  
 }

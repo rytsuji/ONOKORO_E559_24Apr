@@ -1,0 +1,81 @@
+{
+  double scale=1.0;
+  TFile *file_40Ca = TFile::Open("output/calib_pid/hist_ex/ppt_40Ca_40Ca.root");
+  //TH1F *sx=(TH1F*)file_40Ca->Get("sx")->Clone("sx");
+  //TH1F *sx0=(TH1F*)file_40Ca->Get("sx0")->Clone("sx0");
+
+  Double_t ymin=-0.00499;
+  Double_t ymax=0.1499;
+
+  sx->SetLineColor(2);
+  sx0->SetLineColor(2);
+  sx->SetMarkerColor(2);
+  sx0->SetMarkerColor(2);
+
+
+  sx->Rebin(8);
+  sx0->Rebin(8);
+
+
+
+  sx->SetTitle("");
+  sx->GetXaxis()->SetTitle("#mbox{E_{X}} (MeV)");
+  //sx->GetYaxis()->SetTitle("#mbox{d#sigma/dT_{p}d#Omega_{p}d#Omega_{X}} (#mbox{#mu}b/MeV#upoint str^{2}  per 200 keV)");                                        
+  sx->SetLabelSize(0.045,"xy");
+  sx->SetTitleSize(0.045,"xy");
+  sx->GetXaxis()->CenterTitle(true);
+  sx->GetYaxis()->CenterTitle(true);
+  sx->SetStats(0);
+
+  double scale_16O=(0.21808865/(11.8/39.962))*0.0943;
+  int Nbin=sx->GetXaxis()->GetNbins();
+  double dx=sx->GetXaxis()->GetXmax()-sx->GetXaxis()->GetXmin();
+
+  double St=24.996;
+  TF1 *f_16O_ppt = new TF1("f_16O_ppt",
+                       "([0]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[1])/[4],2))+([2]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[3])/[4],2))",
+		       -1000,1000);
+  f_16O_ppt->SetParameters(0.1*((double) dx/Nbin)*scale_16O,2.48938e+01-St,
+		       0.355*((double) dx/Nbin)*scale_16O,2.84556e+01-St,
+		       3.10261e-01);
+
+  sx->Add(f_16O_ppt,-1.0);
+  sx0->Add(f_16O_ppt,-1.0);  
+
+  sx->GetXaxis()->SetRange(sx->FindBin(-1),sx->FindBin(20));
+  sx->SetMinimum(ymin);
+  sx->SetMaximum(ymax);
+  
+  sx->Draw();
+  sx0->Draw("same");
+
+
+  
+  TFile *file_40Ca_pph = TFile::Open("output/calib_pid/hist_ex/pph_40Ca_40Ca.root");
+  sx->Rebin(8);
+  sx0->Rebin(8);
+
+  double Sh=18.830;
+  TF1 *f_16O_pph= new TF1("f_16O_pph",
+			  "([0]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[1])/[4],2))+([2]/sqrt(2.*TMath::Pi()*[4]*[4]))*exp(-0.5*pow((x-[3])/[4],2))",
+			  -1000,1000);
+  f_16O_pph->SetParameters(0.191*((double) dx/Nbin)*scale_16O,2.28804e+01-Sh,
+			   0.503*((double) dx/Nbin)*scale_16O,2.62719e+01-Sh,
+			   3.10261e-01);
+
+  sx->Add(f_16O_pph,-1.0);
+  sx0->Add(f_16O_pph,-1.0);  
+
+
+
+
+  sx->Scale(1.0/1.64);
+  sx0->Scale(1.0/1.64);
+  sx0->Sumw2(0);
+
+  sx->Draw("same E1");
+  sx0->Draw("same");
+
+  
+  
+}
